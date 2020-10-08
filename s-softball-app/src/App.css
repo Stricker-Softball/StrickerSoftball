@@ -2,10 +2,35 @@
   box-sizing: border-box; 
 }
 
+:root {
+  --main-lightyellow:  rgb(250, 233, 140);
+  --main-yellow: rgb(255, 250, 104);  
+  --main-darkyellow: rgb(136, 126, 73);
+
+  --pink: rgb(255,102,102);
+  --pink-light: rgb(226,138,126);
+  /* --red: rgb(255,102,102); */
+  --red :  rgb(219,13,64);
+  --red-dark: rgb(219,13,64);
+  /* --red: rgb(24,24,24); */
+  --light-black: rgb(24,24,24);
+  --black: black;
+
+  --main-padding: 15px;  
+}
+
 .App {
   text-align: center;
   font-family: "Lucida Console", Courier, monospace;
   font-weight: 900;
+  height: 100vh;
+}
+
+.container{
+  padding: 35px;
+  padding-top: 0;
+  height: 91%;
+  background: var(--red);
 }
 
 
