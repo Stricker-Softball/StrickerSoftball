@@ -14,7 +14,6 @@ function App() {
         <Navbar />
         <div className='container'>
           <Route exact path="/" render={props => <Home {...props} />} />
-
         </div>
       </div>
     </>
