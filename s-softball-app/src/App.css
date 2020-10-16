@@ -9,12 +9,13 @@
 
   --pink: rgb(255,102,102);
   --pink-light: rgb(226,138,126);
-  /* --red: rgb(255,102,102); */
-  --red :  rgb(219,13,64);
+  --red: rgb(255,102,102);
+  /* --red :  rgb(219,13,64); */
   --red-dark: rgb(219,13,64);
   /* --red: rgb(24,24,24); */
   --light-black: rgb(24,24,24);
   --black: black;
+  --black-transparent: rgba(0, 0, 0, 0.73);
 
   --main-padding: 15px;  
 }
@@ -24,14 +25,27 @@
   font-family: "Lucida Console", Courier, monospace;
   font-weight: 900;
   min-height: 100vh;
-  height: 100vh;
+  /* height: 100vh; */
+  background-image: url('./images/Softball-big.jpg');
+  background-image: url('./images/softball-field-background.jpg');
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
 }
 
 .container{
   padding: 35px;
   padding-top: 0;
   height: 91%;
-  background: var(--red);
+  /* background-color: var(--red); */
+  /* background-image: url('./images/behind-the-plate.jpg');
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center; */
 }
 
+.button-main{
+
+}
 

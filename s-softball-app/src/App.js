@@ -4,6 +4,7 @@ import { Route } from "react-router-dom";
 
 import Navbar from './components/Navbar/Navbar.js'
 import Home from './components/Home/Home.js';
+import Footer from './components/Footer/Footer.js';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <div className='container'>
           <Route exact path="/" render={props => <Home {...props} />} />
         </div>
+        <Footer />
       </div>
     </>
   );
