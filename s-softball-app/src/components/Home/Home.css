@@ -11,18 +11,26 @@
 } */
 
 .Home{
-    background: white;
+    background: var(--black-transparent);
     height: 100%; 
     padding-top: 1px;  
+    color: white;
     
 }
 
 .Home .images{
+  display: flex;
+  justify-content: center;
 
 }
 
 .Home .images img{
   height: 280px;
-  width: 430px;
+  width: 480px;
   object-fit: cover;
+  padding: 0 15px;
+}
+.Home .sillouete{
+  height: 300px;
+  border-radius: 90%;
 }
