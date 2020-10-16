@@ -1,0 +1,28 @@
+.Footer{
+    height: 230px;
+    margin: 0 35px;
+    background-color: var(--black-transparent);
+    color: white;
+    display:flex;
+    flex-direction: column;
+}
+.Footer .footer-section{
+    background-color: var(--black-transparent);
+    display:flex;
+    justify-content: space-between;
+    padding: 0 20%;
+
+}
+.Footer .footer-section .sub-section{
+
+    
+}
+/* .Footer .footer-section .info{
+
+}
+.Footer .footer-section .copyright{
+
+}
+.Footer .footer-section .social{
+
+} */
