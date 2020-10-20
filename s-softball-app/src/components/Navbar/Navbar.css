@@ -15,6 +15,7 @@
     min-height: 9%;
     padding: 10px 5px 20px;
     /* display: flex; */
+    font-family: 'Luckiest Guy', cursive;
 
 }
 
@@ -34,18 +35,19 @@
     background: var(--main-lightyellow);
     color: black;
     font-size: 1.2rem;
-    padding: 10px 18px;
+    padding: 6px 20px 8px;
     display: inline-block;
     border-right: 2px dashed var(--red);
 }
+
 .Navbar .Navbar-items a:hover{
-    background:   var(--main-darkyellow);
-    color:  white;
-}
-.Navbar .Navbar-items a:active{
     background: var(--main-yellow);
     color: black;
 
+}
+.Navbar .Navbar-items a:active{
+    background:   var(--main-darkyellow);
+    color:  white;
 }
 .Navbar .Navbar-items a:first-child{
     border-top-left-radius: 10px;
