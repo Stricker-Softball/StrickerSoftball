@@ -1,16 +1,30 @@
 .Footer{
-    height: 230px;
+    /* height: 440px; */
     margin: 0 35px;
     background-color: var(--black-transparent);
     color: white;
     display:flex;
     flex-direction: column;
+
 }
 .Footer .footer-section{
     background-color: var(--black-transparent);
     display:flex;
-    justify-content: space-between;
-    padding: 0 20%;
+    flex-direction: row;
+    justify-content: space-around;
+    /* padding: 20% 20%; */
+
+
+}
+.Footer .footer-section .sub-section{
+    width: 50%;
+    margin: 40px 0;
+}
+
+.Footer .footer-section .sub-section .sub-container{
+    text-align: left;
+    margin: 0 auto;
+    width: 337px;
 
 }
 /* .Footer .footer-section .sub-section{
