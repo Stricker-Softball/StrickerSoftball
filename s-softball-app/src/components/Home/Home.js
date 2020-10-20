@@ -15,8 +15,8 @@ function Home() {
             </div>
             <h2>Coaching and lessons for all levels</h2>
             <div className='buttons'>
-                <button>Lessons</button>
-                <button>Coaches</button>
+                <button className='button-main'>Lessons</button>
+                <button className='button-main'>Coaches</button>
             </div>
             <img className='sillouete' src={Sillouete} alt='sillouete' />
 

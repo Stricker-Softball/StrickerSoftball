@@ -15,13 +15,13 @@ function Footer() {
                         <h4>Subscribe!</h4>
                         <div className='sub-input'>
                             <input />
-                            <button>Sign Up</button>
+                            <button className='button-main'>Sign Up</button>
                         </div>
                     </div>
                 </div>
                 <div className='sub-section info'>
                     <div className='sub-container'>
-                        <p>Based out of <span>Geneva, IL</span> with lessons At <span>Bring It! Sports</span></p>
+                        <p>Based out of <span>Geneva, IL</span> with lessons at <span>Bring It! Sports</span></p>
                         <span>303 N. 4th Street St. Charles</span>
                     </div>
                 </div>

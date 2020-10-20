@@ -18,9 +18,10 @@
     
 }
 
+/* images */
 .Home .images{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 
 }
 
@@ -28,9 +29,38 @@
   height: 280px;
   width: 480px;
   object-fit: cover;
-  padding: 0 15px;
+  margin: 20px 10px 30px;
+  border-radius: 15px;
+  box-shadow: 0px 3px 5px white;
 }
 .Home .sillouete{
-  height: 300px;
+  height: 325px;
   border-radius: 90%;
+  margin: 75px auto;
+  border: 15px solid var(--red);
+  box-shadow: 0px 3px 8px white;
+}
+
+/* buttons */
+.Home .buttons{
+  /* width:40%; */
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.Home .buttons button:first-child{
+  margin-right: 200px;
+}
+
+/* text */
+.Home h1{
+  font-size: 3.1rem;
+  text-shadow: -5px 5px 5px var(--red);
+  padding: 35px 50px;
+}
+.Home h2{
+  font-size: 2.7rem;
+  text-shadow: -5px 5px 5px var(--red);
+  margin-bottom: 80px;
 }

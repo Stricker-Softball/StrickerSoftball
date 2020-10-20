@@ -1,6 +1,6 @@
 .Footer{
     /* height: 440px; */
-    margin: 0 35px;
+    margin: 0 5%;
     background-color: var(--black-transparent);
     color: white;
     display:flex;
@@ -26,6 +26,35 @@
     margin: 0 auto;
     width: 337px;
 
+}
+.Footer .social-icons{
+    display: flex;
+    justify-content: space-between;
+}
+.Footer .social-icons img{
+    width: 60px;
+}
+.Footer .sub-input{
+    display: flex;
+    justify-content: space-between;
+}
+.Footer .sub-input input{
+    background-color: var(--black-transparent);
+    border: 2px solid var(--red);
+    outline-style: solid;
+    outline-color: white;
+    outline-width: 2px;
+    padding: 10px;
+    color: white;
+    font-size: .9rem;
+    width: 200px;
+}
+.Footer .sub-input button{
+    padding: 5px 0;
+    box-shadow: 0 0 20px black;
+    font-size: 1rem;
+    border-radius: 6px;
+    width: 100px;
 }
 /* .Footer .footer-section .sub-section{
 
