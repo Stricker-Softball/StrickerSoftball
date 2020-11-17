@@ -8,7 +8,7 @@
 
 }
 .Footer .footer-section{
-    background-color: var(--black-transparent);
+    background-color: none;
     display:flex;
     flex-direction: row;
     justify-content: space-around;
