@@ -39,6 +39,10 @@
     display: inline-block;
     border-right: 2px dashed var(--red);
 }
+.Navbar .Navbar-items a::selection {
+    color: none;
+    background: none;
+}
 
 .Navbar .Navbar-items a:hover{
     background: var(--main-yellow);
@@ -57,4 +61,13 @@
     border-right:   none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+.Navbar .Navbar-items .events span{
+    font-size: .8rem;
+    font-family: "Lucida Console", Courier, monospace;
+    text-decoration: underline;
+}
+.Navbar .Navbar-items .events span::selection{
+    color: none;
+    background: none;
 }
