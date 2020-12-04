@@ -34,6 +34,9 @@
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .container{
@@ -45,6 +48,13 @@
   background-repeat: no-repeat, repeat;
   background-size: cover;
   background-position: center; */
+}
+
+.container-after{
+  background: var(--black-transparent);
+  height: 100%; 
+  padding-top: .1px;  
+  color: white;
 }
 
 .button-main:focus{
