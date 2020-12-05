@@ -1,0 +1,117 @@
+.Coaches{
+    /* background-image: url('../../images/fence-texture-1.png') */
+    background-image: url('../../images/fence-texture-1.png');
+}
+.Coaches h1{
+    font-size: 1.5rem;
+    padding: 30px 0 10px;
+    text-shadow: -3px -2px 0px black;
+}
+.Coaches h2{
+    font-size: 2.6rem;
+    /* text-shadow: -4px 2px 0px rgba(54,163,250, 1); */
+    border-bottom: 4px solid rgba(54,163,250, 1);
+    margin: 20px 110px;
+    padding-bottom: 30px;
+    border-radius: 20px;
+}
+
+
+.Coaches .coach-container {
+    display:flex;
+    /* background:blue; */
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.Coaches .coach-container .coach-card{
+    background: rgba(212, 15, 64, .5);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    
+    
+}
+.Coaches .coach-container .card-2nd{
+    /* (54,153,236) */
+    background: rgba(54,163,250, .5);
+
+}
+.Coaches .coach-container .card-2nd h2{
+    /* text-shadow: -4px 2px 0px rgba(212, 15, 64, 1); */
+    border-bottom: 4px solid rgba(212, 15, 64, 1);
+}
+
+.Coaches .coach-container .coach-card.deactive{
+    /* display: none; */
+}
+
+
+/* images */
+.Coaches .coach-container .coach-card .img-div{
+    height: 200px;
+    margin: 30px auto 75px;
+
+}
+.Coaches .coach-container .coach-card .img-div .img-overflow{
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.Coaches .coach-container .coach-card .img-div img{
+    width: 150px;
+    border-radius: 10px;
+}
+
+
+/* buttons */
+.Coaches .coach-container .coach-card .button-main{
+    border: 4px solid rgba(54,163,250, 1);
+    margin: 40px 0;
+}
+.Coaches .coach-container .coach-card .button-main:hover{
+    border: 4px solid rgba(124,193,255, 1);
+}
+.Coaches .coach-container .coach-card .button-main::after{
+    border: 2px solid #ccc;
+}
+.Coaches .coach-container .coach-card .btn-div{
+    
+}
+.Coaches .coach-container .card-2nd .button-main{
+    border: 4px solid rgba(240, 15, 64, 1);
+}
+.Coaches .coach-container .card-2nd .button-main:hover{
+    border: 4px solid rgba(250, 70, 134, 1);
+}
+
+
+
+/* POP UP STYLES */
+/* ================================= */
+
+.popup-main{
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: scroll;
+    position: fixed;
+    z-index: 1000;
+    background: rgba(0,0,0, .7);
+    display: flex;
+    /* display:none; */
+}
+.popup-main.deactive{
+    display: none;
+}
+.popup-main .popup-window{
+    width: 300px;
+    min-height: 300px;
+    background-color: var(--red);
+    margin: auto auto;
+}
