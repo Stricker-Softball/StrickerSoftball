@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './Coaches.css';
 
 import SuePortriat from '../../images/coaches/sue-portrait.png';
-import SueHitting from '../../images/coaches/sue-hitting.png';
+// import SueHitting from '../../images/coaches/sue-hitting.png';
 import MegPortrait from '../../images/coaches/megan-portrait.png';
-import MegHitting from '../../images/coaches/megan-hitting.jpg';
+// import MegHitting from '../../images/coaches/megan-hitting.jpg';
 import JenaPortrait from '../../images/coaches/jennah-portrait.png';
 import JenyPortrait from '../../images/coaches/jenny-portrait.png';
 // import AllyPortrait from '../../images/coaches/ally-portrait.png';
@@ -15,7 +15,7 @@ import LukePortrait from '../../images/coaches/luke-portrait.png';
 
 let coaches = [
     {
-        first_name: 'sue', last_name: 'Stricker', images: [SuePortriat, SueHitting], color: 'red',
+        first_name: 'sue', last_name: 'Stricker', images: [SuePortriat, SuePortriat], color: 'red',
         description: `Coach Sue Stricker has been playing and coaching the game for over 20 years. She is currently the General Manager at Bring It Sports where she gives private, small group, and team lessons. Her CUDIT Concentric Hitting lessons bring her hitters in the area to a level like no other.
 
     Sue has coached area teams such as the Wasco Diamonds 14U (Head Coach), Homer Hawks Gold 16U and 18U (Assistant Coach), The Northern Illinois Lightning (Head Coach) 14U and 16U, and the St. Charles Angels (Head Coach). She has also coached Varsity and J.V. High School teams.
@@ -53,7 +53,7 @@ Email:   Megan_stricker@yahoo.com`
     //     first_name: 'Dot', last_name: '', images: DotPortrait, color: 'blue'
     // },
     {
-        first_name: 'Luke', last_name: 'Stricker', images: LukePortrait, color: 'blue',
+        first_name: 'Luke', last_name: 'Stricker', images: [LukePortrait], color: 'blue',
         description: 
         `Coach Luke is a certified speed and agility instructor through Nesta.  Luke grew up playing travel baseball and travel soccer from an early age.  He continued his sports career in both High School and College.  He graduated with a degree in Biology with an emphasis on EMT certification, anatomy, and Speed and Agility.  
 
@@ -101,7 +101,10 @@ function Coaches() {
                                 <h2 className='name'>COACH {coach.first_name.toUpperCase()}</h2>
                                 <div className='img-div'>
                                     <div className='img-overflow'>
-                                        <img src={coach.images} alt={coach.first_name} />
+                                        {coach.images.map((image, index) => {
+                                            return  <img src={image} alt={`${coach.first_name} ${index}`} />
+                                        })}
+                                        {/* <img src={coach.images[0]} alt={coach.first_name} /> */}
                                     </div>
                                 </div>
                                 <div className='btn-div'>
