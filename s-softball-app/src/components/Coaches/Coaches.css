@@ -28,7 +28,7 @@
 
 .Coaches .coach-container .coach-card{
     background: rgba(212, 15, 64, .8);
-    width: 40%;
+    width: 500px;
     display: flex;
     flex-direction: column;
     margin: 20px 3px;
@@ -58,18 +58,25 @@
 
 }
 .Coaches .coach-container .coach-card .img-div .img-overflow{
-    width: 150px;
-    height: 200px;
+    width: 120px;
+    height: 150px;
     border-radius: 10px;
     overflow: hidden;
+    margin: 26px 3px 0;
 }
+.Coaches .coach-container .coach-card .img-div .active{
+    width: 150px;
+    height: 200px;
+    margin: 0;
+}
+
 .Coaches .coach-container .coach-card .img-div img{
     width: 100%;
     border-radius: 10px;
     opacity: .8;
     background-color: whitesmoke;
 }
-.Coaches .coach-container .coach-card .img-div img.active{
+.Coaches .coach-container .coach-card .img-div .active img{
     opacity: 1.0;
 }
 .Coaches .coach-container .coach-card .img-div .index0{

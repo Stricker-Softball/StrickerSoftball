@@ -105,12 +105,11 @@ function Coaches() {
                                         {coach.images.map((image, index) => {
                                             return(
                                                 
-                                            <div className={`img-overflow index${index}`}>  
+                                            <div className={`img-overflow index${index} ${index==0 && ` active`}`}>  
                                             
-                                            <img className={index==0 && ` active`} src={image} alt={`${coach.first_name} ${index}`} />
+                                            <img  src={image} alt={`${coach.first_name} ${index}`} />
                                             </div>
                                         )})}
-                                        {/* <img src={coach.images[0]} alt={coach.first_name} /> */}
                                     
                                 </div>
                                 <div className='btn-div'>
