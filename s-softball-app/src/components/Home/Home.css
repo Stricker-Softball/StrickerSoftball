@@ -11,10 +11,8 @@
 } */
 
 .Home{
-    background: var(--black-transparent);
     height: 100%; 
-    padding-top: 1px;  
-    color: white;
+
     
 }
 
@@ -27,11 +25,16 @@
 
 .Home .images img{
   height: 280px;
-  width: 480px;
+  width: 48%;
   object-fit: cover;
-  margin: 20px 10px 30px;
-  border-radius: 15px;
-  box-shadow: 0px 3px 5px white;
+  margin: 20px 0 120px;
+  /* border-radius: 15px; */
+  /* box-shadow: -2px 3px 10px white; */
+  border-top: 4px solid var(--red);
+  border-bottom: 4px solid var(--red);
+}
+.Home .images img:first-child{
+  margin-right: 4%;
 }
 .Home .sillouete{
   height: 325px;
@@ -44,7 +47,7 @@
 /* buttons */
 .Home .buttons{
   /* width:40%; */
-  margin: 40px auto;
+  margin: 40px auto 100px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -55,12 +58,15 @@
 
 /* text */
 .Home h1{
-  font-size: 3.1rem;
-  text-shadow: -5px 5px 5px var(--red);
-  padding: 35px 50px;
+  font-size: 3.6rem;
+  text-shadow: -6px 0px 0px var(--red);
+  padding: 10px 30px;
+  color: var(--main-lightyellow);
 }
 .Home h2{
-  font-size: 2.7rem;
-  text-shadow: -5px 5px 5px var(--red);
-  margin-bottom: 80px;
+  font-size: 2.4rem;
+  /* text-shadow: -2px 0px 0px white; */
+  color: var(--red-dark);
+  margin-bottom: 50px;
+  
 }

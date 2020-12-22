@@ -9,16 +9,17 @@ function Navbar() {
                 <NavLink to='/'>
                     Home
                 </NavLink>
-                <NavLink to='/softballlessons'>
+                <a className='events' >
+                    Events <span>V</span>
+                </a>
+                <NavLink to='/lessons'>
                     Softball Lessons
                 </NavLink>
-                <NavLink to='/wphg'>
-                    Weekly Power Hitting Groups
-                </NavLink>
-                <NavLink to='/bookonline'>
+
+                {/* <NavLink to='/bookonline'>
                     Book Online
-                </NavLink>
-                <NavLink to='/meetthecoaches'>
+                </NavLink> */}
+                <NavLink to='/meetthecoach'>
                     Meet The Coaches
                 </NavLink>
                 <NavLink to='/coach2coach'>

@@ -34,9 +34,12 @@ function Footer() {
                 <div className='sub-section social'>
                     <div className='sub-container'>
                         <div className='social-icons'>
-                            <img src={FacebookIcon} alt='facebook' />
+                            <div className='image facebook'><div></div></div>
+                            <div className='image instagram'><div></div></div>
+                            <div className='image twitter'><div></div></div>
+                            {/* <img src={FacebookIcon} alt='facebook' />
                             <img src={instaIcon} alt='instagram' />
-                            <img src={twitterIcon} alt='twitter' />
+                            <img src={twitterIcon} alt='twitter' /> */}
                         </div>
                     </div>
                 </div>

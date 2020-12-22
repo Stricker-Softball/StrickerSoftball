@@ -32,16 +32,20 @@
 }
 .Navbar .Navbar-items a{
     text-decoration: none;
-    background: var(--main-lightyellow);
+    background: var(--main-yellow);
     color: black;
     font-size: 1.2rem;
     padding: 6px 20px 8px;
     display: inline-block;
     border-right: 2px dashed var(--red);
 }
+.Navbar .Navbar-items a::selection {
+    color: none;
+    background: none;
+}
 
 .Navbar .Navbar-items a:hover{
-    background: var(--main-yellow);
+    background: var(--main-lightyellow);
     color: black;
 
 }
@@ -57,4 +61,13 @@
     border-right:   none;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+.Navbar .Navbar-items .events span{
+    font-size: .8rem;
+    font-family: "Lucida Console", Courier, monospace;
+    text-decoration: underline;
+}
+.Navbar .Navbar-items .events span::selection{
+    color: none;
+    background: none;
 }
