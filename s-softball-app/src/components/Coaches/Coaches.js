@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Coaches.css';
+import './Coaches.scss';
 
 import SuePortriat from '../../images/coaches/sue-portrait.png';
 // import SueHitting from '../../images/coaches/sue-hitting.png';
@@ -54,8 +54,8 @@ Email:   Megan_stricker@yahoo.com`
     // },
     {
         first_name: 'Luke', last_name: 'Stricker', images: [LukePortrait], color: 'blue',
-        description: 
-        `Coach Luke is a certified speed and agility instructor through Nesta.  Luke grew up playing travel baseball and travel soccer from an early age.  He continued his sports career in both High School and College.  He graduated with a degree in Biology with an emphasis on EMT certification, anatomy, and Speed and Agility.  
+        description:
+            `Coach Luke is a certified speed and agility instructor through Nesta.  Luke grew up playing travel baseball and travel soccer from an early age.  He continued his sports career in both High School and College.  He graduated with a degree in Biology with an emphasis on EMT certification, anatomy, and Speed and Agility.  
 
         Luke has been involved in training young athletes in baseball, softball, soccer and Lacrosse.  His focus now remains in  teaching young athletes speed and agility , foot work , and correct muscle movement for hitting and fielding.
         `
@@ -98,19 +98,20 @@ function Coaches() {
                     {coaches.map((coach, index) => {
                         return (
                             <div className={`${coach.color === 'blue' ? 'coach-card card-2nd' : 'coach-card'}`}>
-                                
+
                                 <h2 className='name'>COACH {coach.first_name.toUpperCase()}</h2>
                                 <div className='img-div'>
-                                
-                                        {coach.images.map((image, index) => {
-                                            return(
-                                                
-                                            <div className={`img-overflow index${index} ${index==0 && ` active`}`}>  
-                                            
-                                            <img  src={image} alt={`${coach.first_name} ${index}`} />
+
+                                    {coach.images.map((image, index) => {
+                                        return (
+
+                                            <div className={`img-overflow index${index} ${index == 0 && ` active`}`}>
+
+                                                <img src={image} alt={`${coach.first_name} ${index}`} />
                                             </div>
-                                        )})}
-                                    
+                                        )
+                                    })}
+
                                 </div>
                                 <div className='btn-div'>
                                     <button onClick={() => handlePopup(coach)} className='button-main'>Profile</button>
