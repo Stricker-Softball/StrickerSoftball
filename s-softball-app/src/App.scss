@@ -1,3 +1,4 @@
+@import "utilities/variable.scss";
 *{
   box-sizing: border-box; 
 }
@@ -22,7 +23,11 @@
   --black-transparent: rgba(0, 0, 0, 0.73);
 
   --main-padding: 15px;  
+
+  --tablet-point:  1005px;
+  --phone-point:  705px;
 }
+
 
 .disable-select {
   -webkit-user-select: none;  
