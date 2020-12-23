@@ -1,5 +1,5 @@
 import React from 'react';
-import './Lessons.css';
+import './Lessons.scss';
 
 
 function Lessons() {
