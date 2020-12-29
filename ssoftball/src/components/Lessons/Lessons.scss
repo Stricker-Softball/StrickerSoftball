@@ -10,9 +10,112 @@
   --main-padding: 15px;  
 } */
 
-.Lessons h1{
-    font-size: 3.6rem;
-    text-shadow: -6px 0px 0px var(--red-dark);
-    padding: 10px 30px;
-    color: var(--main-lightyellow);
+.Lessons{
+
+    h1{
+      font-size: 3.6rem;
+      text-shadow: -6px 0px 0px var(--red-dark);
+      padding: 10px 30px;
+      color: var(--main-lightyellow);
+    }
+    .intro-section{
+      background:rgba(255, 55, 105, .55);
+
+      p{
+        font-size: 1.2rem;
+      }
+      .stricker-softball-png{
+        width: 250px;
+      }
+ 
+      /* images */
+      .stricker-softball-png{
+        margin: 70px 0 60px;
+      }
+      .images{
+        display: flex;
+        justify-content:space-around;
+        margin: 150px 0 150px;
+        padding-bottom: 250px;
+        
+        img{
+          height: 280px;
+          width: 48%;
+          object-fit: cover;
+          margin: 20px 0 120px;
+          /* border-radius: 15px; */
+          /* box-shadow: -2px 3px 10px white; */
+          border-top: 5px solid rgba(0,0,0,.7);
+          border-bottom: 5px solid rgba(0,0,0,.7);
+        }
+        img:first-child{
+          margin-right: 4%;
+        }
+
+      }
+      
+    }
+
+    .heart-ball{
+      width: 400px;
+    }
+
+  
+    .info-container{
+      position: relative;
+      height: 100%;
+      margin-bottom:400px; 
+      .info-section{
+        position: absolute;
+        background: var(--main-yellow);
+        color: black;
+        width: 90%;
+        left: 5%;
+        top: -390px;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 40px 20px;
+        
+        .section{
+          width: 48%;
+          padding: 20px;
+          border-left: 3px solid var(--red);
+          // margin: 30px 0;
+        }
+        .section:first-child{
+          border-left: none;
+          border-right: 3px solid var(--red);
+        }
+        .section h2{
+          color: var(--red);
+          font-weight: bolder;
+          font-style: oblique;
+          margin-bottom: 40px;
+        }
+        .section.group-session p{
+          line-height: 220%;
+        }
+        .section .section-text{
+          display:flex;
+          flex-direction: column;
+          .lesson-price{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            .lesson-listing{
+              display:flex;
+              justify-content: space-between;
+              margin-right: 20px;
+              p{
+                margin: 8px 0;
+              }
+            }
+
+          }
+        }
+
+
+      }
+    }
   }
+  
