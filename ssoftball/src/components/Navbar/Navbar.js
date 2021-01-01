@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from "react-router-dom";
-import './Navbar.css';
+import './Navbar.scss';
 
 function Navbar() {
     return (
@@ -23,7 +23,7 @@ function Navbar() {
                     Meet The Coaches
                 </NavLink>
                 <NavLink to='/coach2coach'>
-                    Coach 2 Coach
+                    Contacts
                 </NavLink>
             </nav>
 

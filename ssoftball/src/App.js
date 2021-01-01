@@ -7,6 +7,7 @@ import Home from './components/Home/Home.js';
 import Footer from './components/Footer/Footer.js';
 import Lessons from './components/Lessons/Lessons.js';
 import Coaches from './components/Coaches/Coaches.js';
+import Contacts from './components/Contact/Contact.js';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route exact path="/" render={props => <Home {...props} />} />
             <Route path="/lessons" render={props => <Lessons {...props} />} />
             <Route path="/meetthecoach" render={props => <Coaches {...props} />} />
+            <Route path="/lessons" render={() => <Contacts />} />
           </div>
         </div>
         <Footer />

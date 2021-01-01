@@ -9,6 +9,7 @@
 
   --main-padding: 15px;  
 } */
+@import '../../utilities/variable.scss';
 
 .Home{
     height: 100%; 
@@ -69,4 +70,34 @@
   color: var(--red-dark);
   margin-bottom: 50px;
   
+}
+
+
+// Media query phone 
+//@at-root
+
+@media (max-width: $phone){
+  .Home{
+    .images{
+      justify-content: center;
+      flex-wrap: wrap;
+      img{
+        height: 170px;
+        margin: 20px 0 90px;
+        width: 96%;
+        
+      }
+      img:first-child{
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      
+    }
+    .buttons{
+      button:first-child{
+        margin-right: 0;
+        margin-bottom: 60px;
+      }
+    }
+  }
 }

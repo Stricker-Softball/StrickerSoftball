@@ -1,5 +1,5 @@
 import React from 'react';
-import './Home.css';
+import './Home.scss';
 
 import EqupmentPile from '../../images/equipment-pile.jpg';
 import MitGlove from '../../images/mit-glove.jpg';
