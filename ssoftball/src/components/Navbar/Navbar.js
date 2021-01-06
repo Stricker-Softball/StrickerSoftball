@@ -22,7 +22,7 @@ function Navbar() {
                 <NavLink to='/meetthecoach'>
                     Meet The Coaches
                 </NavLink>
-                <NavLink to='/coach2coach'>
+                <NavLink to='/contacts'>
                     Contacts
                 </NavLink>
             </nav>
