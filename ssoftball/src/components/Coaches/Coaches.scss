@@ -65,15 +65,15 @@ Coach Cards
 }
 .Coaches .coach-container .coach-card .img-div .img-overflow{
     width: 120px;
-    height: 150px;
+    height: 200px;
     border-radius: 10px;
     overflow: hidden;
-    margin: 26px 3px 0;
+    transition: width .7s ;
+ 
 }
 .Coaches .coach-container .coach-card .img-div .active{
     width: 150px;
     height: 200px;
-    margin: 0;
 }
 
 .Coaches .coach-container .coach-card .img-div img{
@@ -81,8 +81,33 @@ Coach Cards
     border-radius: 10px;
     opacity: .89;
     background-color: whitesmoke;
+    margin: 25px 3px 0px;
+    transition: margin .4s, opactiy .4s;
+}
+.Coaches .coach-container .coach-card .img-div img:hover{
+    transition: margin .4s, opactiy .4s;
+    margin: 0px 3px 0px;
+    opacity: 1.0;
 }
 .Coaches .coach-container .coach-card .img-div .active img{
+    margin: 0px 3px 0px;
+}
+.Coaches .coach-container .coach-card .img-div div:last-child img{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.Coaches .coach-container .coach-card .img-div .img-overflow:hover{
+    width: 150px;
+    height:200px;
+    // margin: 0 4px 0;
+    transition: width .7s;
+ 
+
+}
+.Coaches .coach-container .coach-card .img-div .active img{
+    opacity: 1.0;
+}
+.Coaches .coach-container .coach-card .img-div .active img:hover{
     opacity: 1.0;
 }
 .Coaches .coach-container .coach-card .img-div .index0{
@@ -152,6 +177,7 @@ Coach Cards
     margin: auto auto;
     position: relative;
     border: 3px solid var(--red);
+    padding-bottom: 45px;
 }
 
 /* Media Queries -- phone and tablet styles 
@@ -175,6 +201,18 @@ Coach Cards
     background-color: rgba(0,0,0,.5);
 }
 .popup-main .popup-window .close-x:hover{
+    color: rgb(155,155,155);
+    background-color: rgba(0,0,0,.6);
+}
+
+.popup-main .popup-window .close-button{
+    position: absolute;
+    bottom: 0;
+    right: 44.85%;
+    padding: 12px 25px;
+    background-color: rgba(0,0,0,.5);
+}
+.popup-main .popup-window .close-button:hover{
     color: rgb(155,155,155);
     background-color: rgba(0,0,0,.6);
 }

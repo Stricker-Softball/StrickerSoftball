@@ -4,7 +4,7 @@ import './Coaches.scss';
 import SuePortriat from '../../images/coaches/sue-portrait.png';
 // import SueHitting from '../../images/coaches/sue-hitting.png';
 import MegPortrait from '../../images/coaches/megan-portrait.png';
-// import MegHitting from '../../images/coaches/megan-hitting.jpg';
+import MegHitting from '../../images/edits/megan-hitting-1.jpg';
 import JenaPortrait from '../../images/coaches/jennah-portrait.png';
 import JenyPortrait from '../../images/coaches/jenny-portrait.png';
 // import AllyPortrait from '../../images/coaches/ally-portrait.png';
@@ -27,7 +27,7 @@ let coaches = [
     Sue is currently the Certified CUDIT Concentric Hitting Coach of four teams and gives lessons to athletes of all ages. Be ready to transform your swing and mindset when working with Coach Sue Stricker!`
     },
     {
-        first_name: 'Megan', last_name: 'Stricker', images: [MegPortrait], color: 'blue',
+        first_name: 'Megan', last_name: 'Stricker', images: [MegPortrait, MegHitting, MegHitting], color: 'blue',
         description:
             `Megan  Stricker is a former girls travel softball player of 12 years.  She then went on to play college ball at Waubonsee Community College and Clarke University In Iowa.    In the past she served as an Assistant Coach for the 14U Wasco Diamonds travel program, and Geneva Park District Youth Softball.   She helped take her team to National competition where they won first place in the “A” division. She has been giving private and group lessons as well as running Offensive and Defensive clinics with larger groups for establishments including Geneva Baseball, The Geneva Park District, The Oswego Outlaws  and Elite Sports training. She is looking forward to bringing her expertise to the brand new facility that Bring It! Sports Academy has to offer.
 
@@ -89,6 +89,7 @@ function Coaches() {
                     <div className='close-x disable-select' onClick={() => handlePopup()} >X</div>
                     <h1>{popupCoach.first_name.toUpperCase()} {popupCoach.last_name.toUpperCase()}</h1>
                     {popupCoach.description && <div className='popup-text'>{popupCoach.description}</div>}
+                    <div className='close-button disable-select' onClick={() => handlePopup()} >CLOSE</div>
 
                 </div>
             </div>
