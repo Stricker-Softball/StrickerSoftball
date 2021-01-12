@@ -15,7 +15,7 @@ import LukePortrait from '../../images/coaches/luke-portrait.png';
 
 let coaches = [
     {
-        first_name: 'sue', last_name: 'Stricker', images: [SuePortriat, SuePortriat, SuePortriat], color: 'red',
+        first_name: 'sue', last_name: 'Stricker', images: [SuePortriat], color: 'red',
         description: `Coach Sue Stricker has been playing and coaching the game for over 20 years. She is currently the General Manager at Bring It Sports where she gives private, small group, and team lessons. Her CUDIT Concentric Hitting lessons bring her hitters in the area to a level like no other.
 
     Sue has coached area teams such as the Wasco Diamonds 14U (Head Coach), Homer Hawks Gold 16U and 18U (Assistant Coach), The Northern Illinois Lightning (Head Coach) 14U and 16U, and the St. Charles Angels (Head Coach). She has also coached Varsity and J.V. High School teams.
