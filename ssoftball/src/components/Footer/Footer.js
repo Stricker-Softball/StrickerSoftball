@@ -29,7 +29,7 @@ function Footer() {
             <div className='footer-section'>
                 <div className='sub-section copyright'>
                     <div className='sub-container'>
-                        <span>©2018 by Building 360 Performance</span></div>
+                        <span>©2020 by Building 360 Performance</span></div>
                 </div>
                 <div className='sub-section social'>
                     <div className='sub-container'>
