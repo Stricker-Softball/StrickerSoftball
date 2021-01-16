@@ -9,9 +9,9 @@ function Navbar() {
                 <NavLink to='/'>
                     Home
                 </NavLink>
-                <a className='events' >
+                {/* <a className='events' >
                     Events <span>V</span>
-                </a>
+                </a> */}
                 <NavLink to='/lessons'>
                     Softball Lessons
                 </NavLink>

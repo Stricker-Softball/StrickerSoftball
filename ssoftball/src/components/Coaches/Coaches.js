@@ -39,27 +39,22 @@ Cell:     630-306-8176
 Email:   Megan_stricker@yahoo.com`
     },
     {
-        first_name: 'Jennah', last_name: 'Perryman', images: [JenaPortrait], color: 'blue',
-        description:
-            `Jennah Perryman is a retired softball player with 10 years of elite travel ball experience. She was a four year varsity starter for Elgin High School where she was awarded the following accolades: 4-time All- Conference, 4-time All-District Selectee, Chicago Sun-Times Top 100 player, and two time Adidas Features selectee. She continued her career at The University of Missouri- St. Louis playing 3rd base, 2nd base, and catcher where she was a four year starter. She was awarded with Freshman of the Year, Third Team D2CCA All Region, Second Team All Great Lakes Valley Conference, Second Team NFCA Midwest Region, and NCAA D2 All-American. After finishing her career she served as the Assistant Student Coach for the UMSL Tritons Softball Team. She has trained and facilitated pitching clinics, defensive clinics and hitting clinics across the Midwest. She is driven to bring her knowledge, techniques and love of softball to mold her clients into the collegiate prospects of tomorrow.`
-    },
-    {
-        first_name: 'Jenny', last_name: '', images: [JenyPortrait], color: 'red'
-    },
-    // {
-    //     first_name: 'ally', last_name: '', images: AllyPortrait, color: 'red'
-    // },
-    // {
-    //     first_name: 'Dot', last_name: '', images: DotPortrait, color: 'blue'
-    // },
-    {
         first_name: 'Luke', last_name: 'Stricker', images: [LukePortrait], color: 'blue',
         description:
             `Coach Luke is a certified speed and agility instructor through Nesta.  Luke grew up playing travel baseball and travel soccer from an early age.  He continued his sports career in both High School and College.  He graduated with a degree in Biology with an emphasis on EMT certification, anatomy, and Speed and Agility.  
 
         Luke has been involved in training young athletes in baseball, softball, soccer and Lacrosse.  His focus now remains in  teaching young athletes speed and agility , foot work , and correct muscle movement for hitting and fielding.
         `
-    }
+    },
+
+    {
+        first_name: 'Jennah', last_name: 'Perryman', images: [JenaPortrait], color: 'red',
+        description:
+            `Jennah Perryman is a retired softball player with 10 years of elite travel ball experience. She was a four year varsity starter for Elgin High School where she was awarded the following accolades: 4-time All- Conference, 4-time All-District Selectee, Chicago Sun-Times Top 100 player, and two time Adidas Features selectee. She continued her career at The University of Missouri- St. Louis playing 3rd base, 2nd base, and catcher where she was a four year starter. She was awarded with Freshman of the Year, Third Team D2CCA All Region, Second Team All Great Lakes Valley Conference, Second Team NFCA Midwest Region, and NCAA D2 All-American. After finishing her career she served as the Assistant Student Coach for the UMSL Tritons Softball Team. She has trained and facilitated pitching clinics, defensive clinics and hitting clinics across the Midwest. She is driven to bring her knowledge, techniques and love of softball to mold her clients into the collegiate prospects of tomorrow.`
+    },
+
+
+
 ]
 
 function Coaches() {
@@ -98,7 +93,7 @@ function Coaches() {
                 <div className='coach-container'>
                     {coaches.map((coach, index) => {
                         return (
-                            <div className={`${coach.color === 'blue' ? 'coach-card card-2nd' : 'coach-card'}`}>
+                            <div className={`${coach.color === 'blue' ? 'coach-card card-2nd' : 'coach-card'}`} key={`coach${index}`}>
 
                                 <h2 className='name'>COACH {coach.first_name.toUpperCase()}</h2>
                                 <div className='img-div'>
@@ -106,7 +101,7 @@ function Coaches() {
                                     {coach.images.map((image, index) => {
                                         return (
 
-                                            <div className={`img-overflow index${index} ${index == 0 && ` active`}`}>
+                                            <div className={`img-overflow index${index} ${index == 0 && ` active`}`} key={`image${coach.first_name}${index}`}>
 
                                                 <img src={image} alt={`${coach.first_name} ${index}`} />
                                             </div>
