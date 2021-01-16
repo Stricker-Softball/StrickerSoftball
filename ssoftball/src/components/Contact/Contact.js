@@ -28,8 +28,8 @@ function Contact() {
     }
 
     return (
-        <div className="Contact">
-            <div className='contact-container'>
+        <div className="Contact" >
+            <div className='contact-container' id='contact'>
                 <h2>Contact Us</h2>
                 <div className='contact-section'>
                     <div className='contact-info'>
