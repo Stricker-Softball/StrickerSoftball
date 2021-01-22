@@ -130,3 +130,20 @@
       }
 
 }
+
+// phone styles 
+// ========================
+
+@media (max-width: $phone){
+    .Contact .contact-section {
+
+        .contact-info{
+            flex-direction: column;
+        }
+        .label{
+            margin: 0;
+            width: 100%;
+        }
+    
+    }
+}
