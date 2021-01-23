@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+
+
+//styles
+//===========================================================
+.menu-main{
+    display: none;
+    flex-direction:column;
+    align-items: center;
+    height: 0vh;
+    // position: relative;
+}
+@media (max-width: 860px){
+    .menu-main{
+        display:flex;
+    }
+}
+
+.menu-app-container{
+    position: fixed;
+    top: 15px;
+    left: 50%;  
+    z-index: 99;
+    opacity: 0.9;
+    display:flex;
+    align-items:center;
+    background: var(--main-yellow);
+    width: 90px;
+    color: var(--red);
+    font-family:Lobster;
+    margin: 0 auto;
+    border: 4px solid var(--red);
+    border-radius: 15px;
+    margin-left: -45px;
+    z-index: 20000;
+}
+.menu-app-body{
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // width: 100%;
+    // height: 1vh;
+    // transition: filter 0.5s ease;
+}
+
+//Menu Item
+// .menu-item-container{
+//     opacity: 0;
+//     animation: 1s appear forwards;
+// }
+// .menu-item-menuitem {
+//     font-family:'Open Sans, sans-serif';
+//     font-size: 1.2rem;
+//     padding: 1rem 0;
+//     margin: 0 5%;
+//     cursor: pointer;
+//     transition: color 0.2s ease-in-out;
+//     animation: 0.5s slideIn forwards;
+
+// }
+// .menu-item-line {
+//     width: 90%;
+//     height: 1px;
+//     background: gray;
+//     margin: 0 auto;
+//     animation: 0.5s shrink forwards;
+// }
+
+//Menu -menu
+
+.menu-menu-container{
+    // position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: var(--main-yellow);
+    opacity: 0.98;
+    color: var(--red);
+    transition: height 0.3s ease;
+    z-index: 2;
+}
+.menu-menu-menulist {
+    padding-top:88px;
+  }
