@@ -54,7 +54,7 @@
   flex-wrap: wrap;
 }
 .Home .buttons button:first-child{
-  margin-right: 200px;
+  margin-right: 190px;
 }
 
 /* text */
@@ -94,6 +94,9 @@
       
     }
     .buttons{
+      button{
+        width:79%;
+      }
       button:first-child{
         margin-right: 0;
         margin-bottom: 60px;

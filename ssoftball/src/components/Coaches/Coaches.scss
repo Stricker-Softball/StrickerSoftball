@@ -11,18 +11,18 @@
 }
 .Coaches h2{
     font-size: 2.6rem;
-    /* text-shadow: -4px 2px 0px rgba(54,163,250, 1); */
+
     border-bottom: 4px solid rgba(54,0,0, .8);
     margin: 40px 0 20px;
     width: auto;
     padding-bottom: 30px;
-    /* border-radius: 20px; */
+
 }
 
 
 .Coaches .coach-container {
     display:flex;
-    /* background:blue; */
+
     justify-content: center;
     flex-wrap: wrap;
 
@@ -46,14 +46,10 @@ Coach Cards
     background: rgba(54,163,250, .8);
 
 }
-.Coaches .coach-container .card-2nd h2{
-    /* text-shadow: -4px 2px 0px rgba(212, 15, 64, 1); */
-    /* border-bottom: 4px solid rgba(212, 15, 64, 1); */
-}
 
-.Coaches .coach-container .coach-card.deactive{
-    /* display: none; */
-}
+// .Coaches .coach-container .coach-card.deactive{
+
+// }
 
 
 /* images */
@@ -134,9 +130,9 @@ Coach Cards
 .Coaches .coach-container .coach-card .button-main::after{
     border: 2px solid #ccc;
 }
-.Coaches .coach-container .coach-card .btn-div{
+// .Coaches .coach-container .coach-card .btn-div{
     
-}
+// }
 .Coaches .coach-container .card-2nd .button-main{
     border: 4px solid rgba(240, 15, 64, 1);
 }
