@@ -137,6 +137,11 @@
 
 @media (max-width: $phone){
     .Contact .contact-section {
+        input{
+            font-size: 1rem;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
 
         .contact-info{
             flex-direction: column;
