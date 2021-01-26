@@ -118,6 +118,24 @@ Coach Cards
 }
 
 
+@media (max-width: $phone){
+    .Coaches .coach-container .coach-card .img-div{
+        // margin-bottom: 200px;
+        flex-wrap: wrap;
+        .index0{
+            order: 1;
+        }
+        .index1{
+            order: 2;
+            display: none;
+        }
+        .index2{ 
+            order: 3;
+            display: none;
+        }
+    }
+}
+
 /* buttons */
 /* ==================================== */
 .Coaches .coach-container .coach-card .button-main{
@@ -205,7 +223,8 @@ Coach Cards
 .popup-main .popup-window .close-button{
     position: absolute;
     bottom: 0;
-    right: 44.85%;
+    right: 40%;
+    width: 20%;
     padding: 12px 25px;
     background-color: rgba(0,0,0,.5);
 }
@@ -237,8 +256,15 @@ Coach Cards
 */
 
 @media (max-width: $phone){
+    .popup-main .popup-window .close-button{
+        right: 33%;
+        width: 34%;
+    }
     .popup-main .popup-window .popup-text{
         padding: 30px 25px 60px;
+    }
+    .popup-main .popup-window h1{
+        font-size: 3.0rem;
     }
 }
 
