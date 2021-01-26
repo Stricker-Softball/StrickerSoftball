@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { withRouter } from 'react-router-dom';
 import './MenuNav.scss';
+
 /* App.jsx */
 let textColor = 'rgb(255,0,130)'
 
@@ -14,8 +15,37 @@ function App (props){
     
     function handleLinkClick(link) {
       setMenuOpen(false);
-        props.history.push(link)
+      window.scrollTo(0,0)
+      props.history.push(link)
     }
+
+    
+        // determine scroll
+
+        const [pinText, setPinText] = useState('down');
+        const [scrollNum, setScroll] = useState(window.scrollY);
+    
+        function updateScroll() {
+            if (window.scrolly !== scrollNum) {
+                setScroll(window.scrollY)
+            }
+    
+        }
+    
+        window.addEventListener('scroll', () => updateScroll());
+    
+        useEffect(() => {
+            if (window.scrollY < 30) {
+                if (pinText != 'down') {
+                    setPinText('down');
+                }
+            } else {
+                if (pinText != 'up') {
+                    setPinText('up');
+                }
+            }
+        });
+
     
     const styles= 
     {
@@ -26,18 +56,13 @@ function App (props){
         alignItems: 'center',
         width: '100%',
         height: menuOpen ? '100vh':'0vh',
-        transition: 'filter 0.5s ease',
-        transition: 'height 1s ease'
+        transition: 'filter .7s ease',
+        transition: 'height .7s ease',
         },
     }
 
-    let nav_item_list = [
-    {name:'Home', link:'/'},
-    // {name:'Events', link:'/events'},
-    {name:'Softball Lessons', link:'/lessons'},
-    {name:'Meet The Coaches', link:'/meetthecoach'},
-    {name:'Contacts', link:'/contacts'}
-    ]
+    let nav_item_list = props.nav_item_list;
+
     const menuItems = nav_item_list.map((val,index)=>{
     return (
         <MenuItem 
@@ -48,7 +73,7 @@ function App (props){
       
     return(
     <div>
-        <div className='menu-app-container'>
+        <div className={`menu-app-container ${pinText}`}>
         <MenuButton open={menuOpen} onClick={()=> handleMenuClick()} color='white'/>
         </div>
         <Menu open={menuOpen}>
@@ -136,16 +161,9 @@ function Menu (props){
     let [open, setOpen] = useState(props.open ? props.open : false)
 
     useEffect( () => {
-        // if(nextProps.open !== open){
             setOpen(props.open)
-        //   }
     }, [props.open])
       
-    // componentWillReceiveProps(nextProps){
-    //   if(nextProps.open !== this.state.open){
-    //     this.setState({open:nextProps.open});
-    //   }
-    // }
     
 
       const styles={
@@ -256,7 +274,7 @@ function Main (props){
         height: '100vh',
     }
     }
-    
+
     return (
     <div className='menu-main'>
         <App {...props} />
