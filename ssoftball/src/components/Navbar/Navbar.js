@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { NavLink } from "react-router-dom";
 import './Navbar.scss';
 
@@ -13,6 +13,8 @@ function Navbar(props) {
     function handleMenuClick() {
         setMenuOpen(false)
     }
+
+    // Nav item list
 
     let nav_item_list = [
         {name:'Home', link:'/'},
@@ -37,8 +39,8 @@ function Navbar(props) {
                     </NavLink>
                 })}
             </nav>
-            <div className='menu-div'>
-                <MenuNav {...props}/>
+            <div className={`menu-div`}>
+                <MenuNav {...props} nav_item_list={nav_item_list}/>
             </div>
         </div>
     );
