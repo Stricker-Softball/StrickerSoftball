@@ -1,32 +1,47 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import { NavLink } from "react-router-dom";
 import './Navbar.scss';
 
-function Navbar() {
+import MenuNav from './Menu/MenuNav.js';
+
+function Navbar(props) {
+    let [menuOpen, setMenuOpen] = useState(false)
+
+    function handleMenuClick() {
+        setMenuOpen(!menuOpen)
+    }
+    function handleMenuClick() {
+        setMenuOpen(false)
+    }
+
+    // Nav item list
+
+    let nav_item_list = [
+        {name:'Home', link:'/'},
+        // {name:'Events', link:'/events'},
+        {name:'Softball Lessons', link:'/lessons'},
+        {name:'Meet The Coaches', link:'/meetthecoach'},
+        {name:'Contacts', link:'/contacts'}
+    ]
+
     return (
         <div className="Navbar">
             <nav className={'Navbar-items'}>
-                <NavLink to='/'>
-                    Home
-                </NavLink>
-                {/* <a className='events' >
-                    Events <span>V</span>
-                </a> */}
-                <NavLink to='/lessons'>
-                    Softball Lessons
-                </NavLink>
-
-                {/* <NavLink to='/bookonline'>
-                    Book Online
-                </NavLink> */}
-                <NavLink to='/meetthecoach'>
-                    Meet The Coaches
-                </NavLink>
-                <NavLink to='/contacts'>
-                    Contacts
-                </NavLink>
+ 
+                {nav_item_list.map((item) => {
+                    if (item.name === "Events"){
+                        return <NavLink className='events' to={item.link}>
+                            {item.name} <span>V</span>
+                        </NavLink>
+                    }
+                    return <NavLink to={item.link}>
+                        {item.name}
+                    </NavLink>
+                })}
             </nav>
-
+            <div className={`menu-div`}>
+                <MenuNav {...props} nav_item_list={nav_item_list}/>
+            </div>
         </div>
     );
 }

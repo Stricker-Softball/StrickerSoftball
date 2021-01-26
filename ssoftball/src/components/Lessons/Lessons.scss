@@ -9,6 +9,7 @@
 
   --main-padding: 15px;  
 } */
+@import '../../utilities/variable.scss';
 
 .Lessons{
 
@@ -58,13 +59,15 @@
 
     .heart-ball{
       width: 400px;
+      max-width: 100%;
     }
 
   
     .info-container{
       position: relative;
       height: 100%;
-      margin-bottom:400px; 
+      margin-bottom:400px;
+      z-index: 1; 
       .info-section{
         position: absolute;
         background: var(--main-yellow);
@@ -119,3 +122,66 @@
     }
   }
   
+// phone styles 
+// =================================
+@media (max-width: $phone){
+  .Lessons{
+
+    h1{
+      font-size: 3rem;
+      text-shadow: -6px 0px 0px var(--red-dark);
+      padding: 10px 30px;
+      color: var(--main-lightyellow);
+    }
+    .intro-section{
+      /* images */
+      .images{
+        display: flex;
+        justify-content:space-around;
+        margin: 150px 0 150px;
+        padding-bottom: 250px;
+        flex-wrap: wrap;
+        
+        img{
+          height: 280px;
+          width: 98%;
+          // object-fit: cover;
+          // margin: 20px 0 120px;
+        }
+        img:first-child{
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
+      }
+    }
+    .info-container{
+      margin-bottom: 732px;
+      .info-section{
+        position: absolute;
+        background: var(--main-yellow);
+        color: black;
+        width: 96%;
+        left: 2%;
+        top: -390px;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 40px 20px;
+        flex-wrap: wrap;
+        
+        .section{
+          width: 98%;
+          padding: 1%;
+          border-left: none;
+          border-top: 3px solid var(--red);
+
+        }
+        .section:first-child{
+          border-right: none;
+          border-top: none;
+          border-bottom: 3px solid var(--red);
+          margin-bottom: 5px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    width: 95%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+
+
+//styles
+//===========================================================
+.menu-main{
+    display: none;
+    flex-direction:column;
+    align-items: center;
+    height: 0vh;
+}
+@media (max-width: 860px){
+    .menu-main{
+        display:flex;
+    }
+}
+
+.menu-app-container{
+    position: absolute;;
+    top: 20px;
+    left: 50%;  
+    z-index: 99;
+    opacity: 0.9;
+    display:flex;
+    align-items:center;
+    background: var(--main-yellow);
+    width: 90px;
+    color: var(--red);
+    font-family:Lobster;
+    margin: 0 auto;
+    border: 4px solid var(--red);
+    border-radius: 15px;
+    margin-left: -45px;
+    z-index: 20000;
+    transition: top .2s ease;
+}
+.menu-app-container.up{
+  top: -17px;
+}
+
+
+
+.menu-menu-container{
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background: var(--main-yellow);
+    opacity: 0.98;
+    color: var(--red);
+    transition: height 1s ease;
+    z-index: 2;
+}
+.menu-menu-menulist {
+    padding-top:88px;
+  }

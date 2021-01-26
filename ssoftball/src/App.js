@@ -14,10 +14,9 @@ function App() {
     <>
 
       <div className="App">
-        {/* <Route path="/user/:id" render={props => <Users {...props} />} /> */}
 
         <div className='container'>
-          <Navbar />
+          <Route path="/" render={props => <Navbar {...props} />} />
           <div className='container-after'>
             <Route exact path="/" render={props => <Home {...props} />} />
             <Route path="/lessons" render={props => <Lessons {...props} />} />

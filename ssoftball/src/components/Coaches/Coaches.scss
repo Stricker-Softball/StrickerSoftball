@@ -11,18 +11,18 @@
 }
 .Coaches h2{
     font-size: 2.6rem;
-    /* text-shadow: -4px 2px 0px rgba(54,163,250, 1); */
+
     border-bottom: 4px solid rgba(54,0,0, .8);
     margin: 40px 0 20px;
     width: auto;
     padding-bottom: 30px;
-    /* border-radius: 20px; */
+
 }
 
 
 .Coaches .coach-container {
     display:flex;
-    /* background:blue; */
+
     justify-content: center;
     flex-wrap: wrap;
 
@@ -34,6 +34,7 @@ Coach Cards
 .Coaches .coach-container .coach-card{
     background: rgba(212, 15, 64, .8);
     width: 500px;
+    min-width: 30%;
     display: flex;
     flex-direction: column;
     margin: 20px 2.5%;
@@ -45,14 +46,10 @@ Coach Cards
     background: rgba(54,163,250, .8);
 
 }
-.Coaches .coach-container .card-2nd h2{
-    /* text-shadow: -4px 2px 0px rgba(212, 15, 64, 1); */
-    /* border-bottom: 4px solid rgba(212, 15, 64, 1); */
-}
 
-.Coaches .coach-container .coach-card.deactive{
-    /* display: none; */
-}
+// .Coaches .coach-container .coach-card.deactive{
+
+// }
 
 
 /* images */
@@ -121,6 +118,24 @@ Coach Cards
 }
 
 
+@media (max-width: $phone){
+    .Coaches .coach-container .coach-card .img-div{
+        // margin-bottom: 200px;
+        flex-wrap: wrap;
+        .index0{
+            order: 1;
+        }
+        .index1{
+            order: 2;
+            display: none;
+        }
+        .index2{ 
+            order: 3;
+            display: none;
+        }
+    }
+}
+
 /* buttons */
 /* ==================================== */
 .Coaches .coach-container .coach-card .button-main{
@@ -133,9 +148,9 @@ Coach Cards
 .Coaches .coach-container .coach-card .button-main::after{
     border: 2px solid #ccc;
 }
-.Coaches .coach-container .coach-card .btn-div{
+// .Coaches .coach-container .coach-card .btn-div{
     
-}
+// }
 .Coaches .coach-container .card-2nd .button-main{
     border: 4px solid rgba(240, 15, 64, 1);
 }
@@ -208,7 +223,8 @@ Coach Cards
 .popup-main .popup-window .close-button{
     position: absolute;
     bottom: 0;
-    right: 44.85%;
+    right: 40%;
+    width: 20%;
     padding: 12px 25px;
     background-color: rgba(0,0,0,.5);
 }
@@ -240,8 +256,15 @@ Coach Cards
 */
 
 @media (max-width: $phone){
+    .popup-main .popup-window .close-button{
+        right: 33%;
+        width: 34%;
+    }
     .popup-main .popup-window .popup-text{
         padding: 30px 25px 60px;
+    }
+    .popup-main .popup-window h1{
+        font-size: 3.0rem;
     }
 }
 

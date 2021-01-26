@@ -71,3 +71,24 @@
     color: none;
     background: none;
 }
+
+// Tablet styles
+// ===============/
+
+@media (max-width: 860px){
+    .Navbar{
+        min-height: 100px;
+        .Navbar-items{
+            display: none;
+            background: red
+        }
+    }
+}
+.menu-div{
+    position: fixed;
+    left: 0;
+    top: 0px;
+    z-index: 200;
+    // width: 100vw;
+}
+
