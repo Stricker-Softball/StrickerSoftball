@@ -6,7 +6,13 @@ import FacebookIcon from '../../images/social/facebook.png';
 import instaIcon from '../../images/social/instagram.png';
 import twitterIcon from '../../images/social/twitter.png';
 
-function Footer() {
+function Footer(props) {
+
+    function handleLinkClick(link) {
+        window.scrollTo(0,0)
+        window.open(link, "_blank");
+      }
+
     return (
         <div className="Footer">
             <div className='footer-section'>
@@ -34,9 +40,15 @@ function Footer() {
                 <div className='sub-section social'>
                     <div className='sub-container'>
                         <div className='social-icons'>
-                            <div className='image facebook'><div></div></div>
-                            <div className='image instagram'><div></div></div>
-                            <div className='image twitter'><div></div></div>
+                            <div className='image facebook' 
+                            onClick={() => handleLinkClick('https://www.facebook.com/sftbllcoach/')}>
+                                <div></div></div>
+                            <div className='image instagram'
+                            onClick={() => handleLinkClick('https://www.instagram.com/sftbllcoach/')}>
+                                <div></div></div>
+                            <div className='image twitter'
+                            onClick={() => handleLinkClick('https://www.twitter.com/SueStricker1/')}>
+                                <div></div></div>
                             {/* <img src={FacebookIcon} alt='facebook' />
                             <img src={instaIcon} alt='instagram' />
                             <img src={twitterIcon} alt='twitter' /> */}
