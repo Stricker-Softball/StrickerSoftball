@@ -1,0 +1,28 @@
+@import '../../utilities/variable.scss';
+
+.Events{
+    img{
+        width: 740px;
+        margin: 25px 0 ;
+        border-radius: 20px;
+    }
+    h1{
+        font-size: 3.6rem;
+        text-shadow: -6px 0px 0px var(--red);
+        padding: 10px 30px;
+        color: var(--main-lightyellow);
+      }
+      
+}
+@media (max-width: $phone +45px){
+    .Events{
+        img{
+            width: 99.5%;
+            margin: 25px 0 ;
+            border-radius: 20px;
+        }
+        h1{
+            font-size: 3.2rem;
+          }
+      }
+    }

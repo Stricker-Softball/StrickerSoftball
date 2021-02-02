@@ -18,7 +18,7 @@ function Navbar(props) {
 
     let nav_item_list = [
         {name:'Home', link:'/'},
-        // {name:'Events', link:'/events'},
+        {name:'Events', link:'/events'},
         {name:'Softball Lessons', link:'/lessons'},
         {name:'Meet The Coaches', link:'/meetthecoach'},
         {name:'Contacts', link:'/contacts'}
@@ -29,11 +29,7 @@ function Navbar(props) {
             <nav className={'Navbar-items'}>
  
                 {nav_item_list.map((item) => {
-                    if (item.name === "Events"){
-                        return <NavLink className='events' to={item.link}>
-                            {item.name} <span>V</span>
-                        </NavLink>
-                    }
+                    
                     return <NavLink to={item.link}>
                         {item.name}
                     </NavLink>
