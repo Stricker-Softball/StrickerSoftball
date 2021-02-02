@@ -8,6 +8,7 @@ import Footer from './components/Footer/Footer.js';
 import Lessons from './components/Lessons/Lessons.js';
 import Coaches from './components/Coaches/Coaches.js';
 import Contacts from './components/Contact/Contact.js';
+import Events from './components/Events/Events.js';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" render={props => <Navbar {...props} />} />
           <div className='container-after'>
             <Route exact path="/" render={props => <Home {...props} />} />
+            <Route path="/events" render={props => <Events {...props} />} />
             <Route path="/lessons" render={props => <Lessons {...props} />} />
             <Route path="/meetthecoach" render={props => <Coaches {...props} />} />
             <Route path="/lessons" render={() => <Contacts />} />
