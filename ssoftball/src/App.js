@@ -9,6 +9,7 @@ import Lessons from './components/Lessons/Lessons.js';
 import Coaches from './components/Coaches/Coaches.js';
 import Contacts from './components/Contact/Contact.js';
 import Events from './components/Events/Events.js';
+import EditEvents from './components/Events/EditEvents/EditEvents.js';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path="/meetthecoach" render={props => <Coaches {...props} />} />
             <Route path="/lessons" render={() => <Contacts />} />
             <Route path="/contacts" render={() => <Contacts />} />
+            <Route path="/admin/events/edit" render={props => <EditEvents {...props} />} />
           </div>
         </div>
         <Footer />

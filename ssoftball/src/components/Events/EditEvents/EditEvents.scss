@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+.EditEvents{
+    padding-bottom: 30px;
+    input{
+        font-size: 1.6rem;
+        text-shadow: -4px 0px 0px var(--red);
+        color: var(--main-yellow);
+        background-color: black;
+        max-width: 90%;
+        width: 80%;
+        text-align: center;
+    }
+    textarea{
+        background-color: black;
+        text-align: center;
+        width: 80%;
+        min-height: 500px;
+        white-space: pre-wrap;
+        line-height: 1.8rem;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.05rem;
+        color: white;
+    }
+    button{
+        display: flex;
+        margin: 30px auto 0;
+        padding: 10px 25px;
+        font-size: 1.3rem;
+        color: black;
+        background: var(--main-yellow);
+
+    }
+    button:disabled{
+        background-color: var(--red);
+        // color: var(--red);
+
+    }
+    .body-test{
+        // white-space: pre-wrap;
+    }
+}
