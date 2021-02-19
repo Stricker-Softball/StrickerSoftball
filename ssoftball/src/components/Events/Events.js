@@ -45,7 +45,7 @@ function Events(props) {
     <div className='Events'>
         <h1>Events</h1>
         
-        <img src={SpringEvent} alt='springevent'/>
+        {/* <img src={SpringEvent} alt='springevent'/> */}
         
         <div className='event-list'>
             {events.map((item) =>{
