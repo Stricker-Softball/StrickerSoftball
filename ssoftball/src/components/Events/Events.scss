@@ -22,7 +22,7 @@
       }
 
     .event-list{
-        display:none;
+        display:flex;
         padding-bottom: 5px;
         flex-wrap: wrap;
         .event-item{
