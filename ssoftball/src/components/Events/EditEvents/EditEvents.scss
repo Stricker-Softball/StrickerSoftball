@@ -22,7 +22,7 @@
         font-size: 1.05rem;
         color: white;
     }
-    button{
+    .events-submit{
         display: flex;
         margin: 30px auto 0;
         padding: 10px 25px;
@@ -31,10 +31,13 @@
         background: var(--main-yellow);
 
     }
-    button:disabled{
+    .events-submit:disabled{
         background-color: var(--red);
         // color: var(--red);
 
+    }
+    .delete-link{
+        margin-top: 50px;
     }
     .body-test{
         // white-space: pre-wrap;
