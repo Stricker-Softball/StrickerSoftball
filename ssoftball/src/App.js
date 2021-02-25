@@ -10,6 +10,7 @@ import Coaches from './components/Coaches/Coaches.js';
 import Contacts from './components/Contact/Contact.js';
 import Events from './components/Events/Events.js';
 import EditEvents from './components/Events/EditEvents/EditEvents.js';
+import DeleteEvents from './components/Events/EditEvents/DeleteEvents.js';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/lessons" render={() => <Contacts />} />
             <Route path="/contacts" render={() => <Contacts />} />
             <Route path="/admin/events/edit" render={props => <EditEvents {...props} />} />
+            <Route path="/admin/events/delete" render={props => <DeleteEvents {...props}/>} />
           </div>
         </div>
         <Footer />
