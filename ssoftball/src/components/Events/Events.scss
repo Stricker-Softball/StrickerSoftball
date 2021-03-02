@@ -11,7 +11,8 @@
     h1{
         font-size: 3.6rem;
         text-shadow: -6px 0px 0px var(--red);
-        padding: 10px 30px;
+        padding: 50px 30px 10px;
+        margin: 0;
         color: var(--main-lightyellow);
       }
       p{
@@ -23,15 +24,15 @@
 
     .event-list{
         display:flex;
-        padding-bottom: 5px;
+        padding-bottom: 55px;
         flex-wrap: wrap;
         .event-item{
             background: rgba(0, 0, 0, 0.45);
             border: 3px solid var(--red);
             outline: 3px solid white;
-            width: 90%;
-            margin: 20px auto;
-            padding-bottom: 20px;
+            width: 80%;
+            margin: 20px auto 20px;
+            padding-bottom: 45px;
             h3{
                 font-size: 1.6rem;
                 text-shadow: -4px 0px 0px var(--red);
@@ -57,6 +58,9 @@
     .Events{
         .event-list{
             display:flex;
+            .event-item{
+                width: 97%;
+            }
         }
         img{
             display:none
