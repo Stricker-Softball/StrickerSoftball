@@ -1,0 +1,42 @@
+.delete-events{
+    .edit-link{
+        margin-bottom: 50px;
+    }
+    .events-list{
+        margin: 0 auto;
+        padding-bottom: 85px;
+        .events-item{
+            margin: 0 auto;
+            width: 80%;
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid white;
+            .id-section{
+                display: flex;
+                p{
+                    margin-right: 20px;
+                }
+                .delete-button{
+                    width: 70px;
+                    padding:5px 10px;
+                    height: 40px;
+                    background: red;
+                    color:white;
+                }
+                .delete-button:hover{
+                    background-color: rgb(170, 0, 0);
+                }
+                .delete-button:active{
+                    background-color: rgb(90, 0, 0);
+                }
+                div{
+                    width:66px;
+                }
+            }
+
+        }
+    }
+}

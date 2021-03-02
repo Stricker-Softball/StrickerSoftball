@@ -70,11 +70,14 @@ function EditEvents(props) {
                 value={fields.body}
             />
             
-            <button type='submit' disabled={!validateForm()}>Submit</button>
+            <button className='events-submit' type='submit' disabled={!validateForm()}>Submit</button>
 
         </form>
         {/* <div className='body-test'>{fields.body}</div> */}
-        
+        <button className='button-main delete-link' onClick={() => {
+            window.scrollTo(0, 0)
+            props.history.push('/admin/events/delete')
+        }}>Delete Events</button>
     </div>
     );
 }
