@@ -26,8 +26,21 @@ function DeleteEvents(props) {
           fetchData();
         }, []);
 
-    function submitDelete(id){
-        console.log(id)
+    async function submitDelete(id){
+        async function fetchEvents() {
+            const result = await axios(
+                'https://stricker-softball.herokuapp.com/api/events/'
+            )
+            setEvents(result.data);
+          }
+        async function fetchData() {
+            const result = await axios.delete(
+                `https://stricker-softball.herokuapp.com/api/events/${id}`
+            )
+            console.log(result.data, id);
+            fetchEvents();
+          }
+          fetchData();
 
     }
     
