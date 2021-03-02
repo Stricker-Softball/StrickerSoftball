@@ -26,22 +26,41 @@ function DeleteEvents(props) {
           fetchData();
         }, []);
 
+    function submitDelete(id){
+        console.log(id)
+
+    }
     
         
     return (
 
-    <div className='DeleteEvents'>
+    <div className='delete-events'>
         <h1>Delete an Event</h1>
         <div className='events-list'>
+            <div className='events-item'>
+                <h3>Title</h3>
+                <div className='id-section'>
+                    <p>ID #</p>
+                    <div></div>
+                </div>
+            </div>
             {events.map(item => {
                 return (
-                    <div clasName='events-item'>
+                    <div className='events-item'>
                         <h3>{item.title}</h3>
-                        <p>{item.id}</p>
+                        <div className='id-section'>
+                            <p>{item.id}</p>
+                            <button className='delete-button' onClick={() => submitDelete(item.id)}>Delete</button>
+                        </div>
                     </div>
                 )
             })}
         </div>
+
+        <button className='button-main edit-link' onClick={() => {
+            window.scrollTo(0, 0)
+            props.history.push('/admin/events/edit')
+        }}>Edit Events</button>
         
     </div>
     );
