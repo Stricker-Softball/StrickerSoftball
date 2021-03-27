@@ -36,11 +36,17 @@ function Events(props) {
     return (
 
         <div className='Events'>
-            <h1>Events</h1>
-
-            {/* <img src={SpringEvent} alt='springevent'/> */}
-
+            <h1>Academy</h1>
             <div className='event-list'>
+                {eventImages.map((item) => {
+                    return (
+                        <div className='event-item' style={{paddingBottom:'0'}}>
+                            <embed src={item} width="100%" height="800px" />
+                        </div>
+                    )
+                })}
+
+            
                 {events.map((item) => {
                     return (
                         <div className='event-item'>
@@ -49,13 +55,7 @@ function Events(props) {
                         </div>)
                 })}
 
-                {eventImages.map((item) => {
-                    return (
-                        <div className='event-item' style={{paddingBottom:'0'}}>
-                            <embed src={item} width="100%" height="800px" />
-                        </div>
-                    )
-                })}
+                
             </div>
 
             <p onClick={() => {
