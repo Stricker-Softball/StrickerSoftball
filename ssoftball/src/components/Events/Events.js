@@ -41,7 +41,11 @@ function Events(props) {
                 {eventImages.map((item) => {
                     return (
                         <div className='event-item' style={{paddingBottom:'0'}}>
-                            <embed src={item} width="100%" height="800px" />
+                            {/* <embed src={item} width="100%" height="800px" /> */}
+                            <object data={item} width="100%" height="800px">
+                                <p>Oops! Your browser doesn't support PDFs!</p>
+                                <p><a href={item}>Download Instead</a></p>
+                            </object>
                         </div>
                     )
                 })}
