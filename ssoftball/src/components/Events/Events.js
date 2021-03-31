@@ -41,14 +41,10 @@ function Events(props) {
                     return (
                         <div className='event-item' style={{paddingBottom:'0'}}>
                             {/* <embed src={item} width="100%" height="800px" /> */}
-                            {/* <object data={item} width="100%" height="800px">
+                            <object data={item.file} width="100%" height="800px">
                                 <p>Oops! Your browser doesn't support PDFs!</p>
-                                <p><a href={item}>Download Instead</a></p>
-                            </object> */}
-                            <iframe 
-                                title ='PDF'
-                                src={`/pdfjs-2.6.347-dist/web/viewer.html?file=${item.url}`}
-                                ></iframe>
+                                <p><a href={item.url}>Download Instead</a></p>
+                            </object>
                         </div>
                     )
                 })}
