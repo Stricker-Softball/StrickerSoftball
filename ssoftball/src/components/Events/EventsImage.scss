@@ -1,0 +1,24 @@
+.EventsImage{
+    position: fixed;
+    width: 100vw;
+    display: flex;
+}
+
+#drag-img {
+    cursor: move;
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+  
+  #imgContainer {
+    overflow: hidden;
+    background: red;
+    height: 500px;
+    width: 500px;
+  }
+  
+  .zoomButton {
+    width: 200px;
+    height: 50px;
+  }

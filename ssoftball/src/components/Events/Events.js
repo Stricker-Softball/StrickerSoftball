@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Events.scss';
-// import { Document, Page, pdfjs  } from 'react-pdf';
 
-
-// pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+import EventsImage from './EventsImage.js';
 
 import sbllAcademyMemberships from '../../images/pdf/SoftballAcademyMemberships.pdf';
 import sbllAcademy from '../../images/pdf/StrickerSoftballAcademy.pdf';
 import sbllAprilMay from '../../images/pdf/StrickerSoftballAcademyAprilMay.pdf';
 import sbllSummer from '../../images/pdf/StrickerSoftballAcademySummer.pdf';
+// import bb from '../../../public/web/viewer.html'
 
 
 function Events(props) {
     const [events, setEvents] = useState(props.eventList || []);
     const [eventImages, setEventImage] = useState([
-        sbllAcademy,
-        sbllAcademyMemberships,
-        sbllAprilMay,
-        sbllSummer
+        { file:sbllAcademy, url:'https://drive.google.com/file/d/14x_pOGtmrhgEooQtePSsIG6ph1FQj10i/view?usp=sharing'},
+        { file:sbllAcademyMemberships, url:'https://drive.google.com/file/d/14x_pOGtmrhgEooQtePSsIG6ph1FQj10i/view?usp=sharing'},
+        { file:sbllAprilMay, url:'https://drive.google.com/file/d/14x_pOGtmrhgEooQtePSsIG6ph1FQj10i/view?usp=sharing'},
+        { file:sbllSummer, url:'https://drive.google.com/file/d/14x_pOGtmrhgEooQtePSsIG6ph1FQj10i/view?usp=sharing'},
     ])
 
     useEffect(() => {
@@ -42,9 +41,9 @@ function Events(props) {
                     return (
                         <div className='event-item' style={{paddingBottom:'0'}}>
                             {/* <embed src={item} width="100%" height="800px" /> */}
-                            <object data={item} width="100%" height="800px">
+                            <object data={item.file} width="100%" height="800px">
                                 <p>Oops! Your browser doesn't support PDFs!</p>
-                                <p><a href={item}>Download Instead</a></p>
+                                <p><a href={item.url}>Download Instead</a></p>
                             </object>
                         </div>
                     )
@@ -61,6 +60,7 @@ function Events(props) {
 
                 
             </div>
+            <EventsImage/>
 
             <p onClick={() => {
                 window.scrollTo(0, 0)
