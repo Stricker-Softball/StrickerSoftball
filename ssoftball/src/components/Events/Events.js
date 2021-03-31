@@ -41,14 +41,13 @@ function Events(props) {
                 {eventImages.map((item) => {
                     return (
                         <>
-                        <div className='event-item' style={{paddingBottom:'0',overflow:'hidden',height:600}}>
-                            {/* <embed src={item} width="100%" height="800px" /> */}
+                        <div className='event-item' style={{paddingBottom:'0',overflow:'hidden'}}>
                             <object data={item.file} style={{width:"100%", height:"600px"}}>
                                 <p>Oops! Your browser doesn't support PDFs!</p>
                                 <p><a href={item.url}>Download Instead</a></p>
                             </object>
                             
-                            {/* <MobilePDFReader url={item.url}/> */}
+
                         </div>
                         <a className='button-main pdf-link ' target="_blank" href={item.url}>{item.name} link</a>
                         </>
