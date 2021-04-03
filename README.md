@@ -38,4 +38,4 @@ These contribution guidelines have been adapted from [this good-Contributing.md-
 
 ## :one: Contributors
 
-|                                       [Dakotah Hitze](https://github.com/HitzeD)                                        |:-----------------------------------------------------------------------------------------------------------: | [ <img src="https://static.licdn.com/sc/h/al2o9zrvru7aqj8e1x2rzsrca" width="15"> ](https://www.linkedin.com/in/dakotah-hitze-2a9042100/) |
+|                                      [Nick Stricker](https://github.com/NickStrick)                                        || [<img src="https://github.com/favicon.ico" width="15"> ](https://github.com/NickStrick) |
