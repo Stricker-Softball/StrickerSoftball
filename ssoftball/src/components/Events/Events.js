@@ -49,7 +49,7 @@ function Events(props) {
                             
 
                         </div>
-                        <a className='button-main pdf-link ' target="_blank" href={item.url}>{item.name} link</a>
+                        <a className=' pdf-link ' target="_blank" href={item.url}>{item.name} link</a>
                         </>
                     )
                 })}
@@ -65,7 +65,7 @@ function Events(props) {
 
                 
             </div>
-            <EventsImage/>
+            {/* <EventsImage/> */}
 
             <p onClick={() => {
                 window.scrollTo(0, 0)
