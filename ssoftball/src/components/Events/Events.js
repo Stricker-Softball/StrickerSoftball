@@ -17,16 +17,16 @@ function Events(props) {
     const [eventImages, setEventImage] = useState([
         {  name:'Stricker Softball Academy June',
             file:<iframe src="https://drive.google.com/file/d/1DU65I6glpspxbAoAzQWf57k32GjqwDua/preview" width="640" height="480"></iframe>, 
-            url:'<iframe src="https://drive.google.com/file/d/1DU65I6glpspxbAoAzQWf57k32GjqwDua/preview" width="640" height="480"></iframe>'
+            url:'https://drive.google.com/file/d/1DU65I6glpspxbAoAzQWf57k32GjqwDua/view'
         },
         {  name:'Softball Academy Memberships',
             file:<iframe src="https://drive.google.com/file/d/1pcSqS4AziOgHuIJgq93nNVYPvUm8txDm/preview" width="640" height="480"></iframe>, 
-            url:'<iframe src="https://drive.google.com/file/d/1pcSqS4AziOgHuIJgq93nNVYPvUm8txDm/preview" width="640" height="480"></iframe>'
+            url:'https://drive.google.com/file/d/1pcSqS4AziOgHuIJgq93nNVYPvUm8txDm/view'
         }, 
         {  name:'Stricker Softball Academy Summer',
             file:<iframe src="https://drive.google.com/file/d/1Fa1OiGzq21NCED3QBCwsqQruEHKYmVk-/preview" width="640" height="480"></iframe>, 
-            url:'<iframe src="https://drive.google.com/file/d/1Fa1OiGzq21NCED3QBCwsqQruEHKYmVk-/preview" width="640" height="480"></iframe>'
-        },
+            url:'https://drive.google.com/file/d/1Fa1OiGzq21NCED3QBCwsqQruEHKYmVk-/view'
+        }
         
     ])
 
@@ -57,7 +57,7 @@ function Events(props) {
                             
 
                         </div>
-                        {item.url && <a className=' pdf-link ' target="_blank" href={item.url.split("\"")[1]}>{item.name} link</a>}
+                        {item.url && <a className=' pdf-link ' target="_blank" href={item.url}>{item.name} Page</a>}
                         </>
                     )
                 })}
