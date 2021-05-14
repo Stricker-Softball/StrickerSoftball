@@ -22,6 +22,11 @@ function Home(props) {
                 <button className='button-main' onClick={() => buttonPress('/lessons')}>Lessons</button>
                 <button className='button-main' onClick={() => buttonPress('/meetthecoach')}> Coaches</button>
             </div>
+            
+            <div className='buttons-bottom'>
+                <button className='button-main' onClick={() => buttonPress('/events')}>Academy</button>
+            </div>
+            <h2>Take a look at our Academy Events</h2>
             <img className='sillouete' src={Sillouete} alt='sillouete' />
 
         </div>
