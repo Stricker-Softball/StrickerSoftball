@@ -15,10 +15,19 @@ import sbllSummer from '../../images/pdf/StrickerSoftballAcademySummer.pdf';
 function Events(props) {
     const [events, setEvents] = useState(props.eventList || []);
     const [eventImages, setEventImage] = useState([
-        { name:'Stricker Softball Academy',file:sbllAcademy, url:'https://drive.google.com/file/d/14x_pOGtmrhgEooQtePSsIG6ph1FQj10i/view?usp=sharing'},
-        {  name:'Softball Academy Memberships',file:sbllAcademyMemberships, url:'https://drive.google.com/file/d/1pcSqS4AziOgHuIJgq93nNVYPvUm8txDm/view?usp=sharing'},
-        {  name:'Stricker Softball Academy AprilMay',file:sbllAprilMay, url:'https://drive.google.com/file/d/1svjs_YFO6VxSpAVnzoN2Jti0sYSHHk3D/view?usp=sharing'},
-        {  name:'Stricker Softball Academy Summer',file:sbllSummer, url:'https://drive.google.com/file/d/1Fa1OiGzq21NCED3QBCwsqQruEHKYmVk-/view?usp=sharing'},
+        {  name:'Stricker Softball Academy June',
+            file:<iframe src="https://drive.google.com/file/d/1DU65I6glpspxbAoAzQWf57k32GjqwDua/preview" width="640" height="480"></iframe>, 
+            url:'<iframe src="https://drive.google.com/file/d/1DU65I6glpspxbAoAzQWf57k32GjqwDua/preview" width="640" height="480"></iframe>'
+        },
+        {  name:'Softball Academy Memberships',
+            file:<iframe src="https://drive.google.com/file/d/1pcSqS4AziOgHuIJgq93nNVYPvUm8txDm/preview" width="640" height="480"></iframe>, 
+            url:'<iframe src="https://drive.google.com/file/d/1pcSqS4AziOgHuIJgq93nNVYPvUm8txDm/preview" width="640" height="480"></iframe>'
+        }, 
+        {  name:'Stricker Softball Academy Summer',
+            file:<iframe src="https://drive.google.com/file/d/1Fa1OiGzq21NCED3QBCwsqQruEHKYmVk-/preview" width="640" height="480"></iframe>, 
+            url:'<iframe src="https://drive.google.com/file/d/1Fa1OiGzq21NCED3QBCwsqQruEHKYmVk-/preview" width="640" height="480"></iframe>'
+        },
+        
     ])
 
     useEffect(() => {
@@ -39,17 +48,16 @@ function Events(props) {
             <h1>Academy</h1>
             <div className='event-list'>
                 {eventImages.map((item) => {
+                    // let itemURL = item.url.split("\"")[1]
+                    // console.log(itemURL)
                     return (
                         <>
                         <div className='event-item' style={{paddingBottom:'0',overflow:'hidden'}}>
-                            <object data={item.file} style={{width:"100%", height:"600px"}}>
-                                <p>Oops! Your browser doesn't support PDFs!</p>
-                                <p><a href={item.url}>Download Instead</a></p>
-                            </object>
+                            {item.file}
                             
 
                         </div>
-                        <a className=' pdf-link ' target="_blank" href={item.url}>{item.name} link</a>
+                        {item.url && <a className=' pdf-link ' target="_blank" href={item.url.split("\"")[1]}>{item.name} link</a>}
                         </>
                     )
                 })}
