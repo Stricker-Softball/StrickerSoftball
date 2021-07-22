@@ -9,21 +9,26 @@ import sbllAcademyMemberships from '../../images/pdf/SoftballAcademyMemberships.
 import sbllAcademy from '../../images/pdf/StrickerSoftballAcademy.pdf';
 import sbllAprilMay from '../../images/pdf/StrickerSoftballAcademyAprilMay.pdf';
 import sbllSummer from '../../images/pdf/StrickerSoftballAcademySummer.pdf';
+import sbll4th from  '../../images/pdf/StrickerSoftballAcademySummer.pdf';
 // import bb from '../../../public/web/viewer.html'
 
 
 function Events(props) {
     const [events, setEvents] = useState(props.eventList || []);
     const [eventImages, setEventImage] = useState([
-        {  name:'Stricker Softball Academy June',
-            file:<iframe src="https://drive.google.com/file/d/1DU65I6glpspxbAoAzQWf57k32GjqwDua/preview" width="640" height="480"></iframe>, 
-            url:'https://drive.google.com/file/d/1DU65I6glpspxbAoAzQWf57k32GjqwDua/view'
+        // {  name:'4th Announcement',
+        //     file:<iframe src="https://drive.google.com/file/d/1DU65I6glpspxbAoAzQWf57k32GjqwDua/preview" width="640" height="480"></iframe>, 
+        //     url:'https://drive.google.com/file/d/1DU65I6glpspxbAoAzQWf57k32GjqwDua/view'
+        // },
+        {  name:'Academy June Through August',
+            file:<iframe src="https://drive.google.com/file/d/1m-1jbEL4BlCEYggyHKpWNYsK9bip2lLU/preview" width="640" height="480"></iframe>, 
+            url:'https://drive.google.com/file/d/1m-1jbEL4BlCEYggyHKpWNYsK9bip2lLU/view'
         },
         {  name:'Softball Academy Memberships',
             file:<iframe src="https://drive.google.com/file/d/1pcSqS4AziOgHuIJgq93nNVYPvUm8txDm/preview" width="640" height="480"></iframe>, 
             url:'https://drive.google.com/file/d/1pcSqS4AziOgHuIJgq93nNVYPvUm8txDm/view'
         }, 
-        {  name:'Stricker Softball Academy Summer',
+        {  name:'Softball Academy Summer',
             file:<iframe src="https://drive.google.com/file/d/1Fa1OiGzq21NCED3QBCwsqQruEHKYmVk-/preview" width="640" height="480"></iframe>, 
             url:'https://drive.google.com/file/d/1Fa1OiGzq21NCED3QBCwsqQruEHKYmVk-/view'
         }
