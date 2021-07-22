@@ -21,8 +21,8 @@ function Events(props) {
         //     url:'https://drive.google.com/file/d/1DU65I6glpspxbAoAzQWf57k32GjqwDua/view'
         // },
         {  name:'Academy June Through August',
-            file:<iframe src="https://drive.google.com/file/d/1m-1jbEL4BlCEYggyHKpWNYsK9bip2lLU/preview" width="640" height="480"></iframe>, 
-            url:'https://drive.google.com/file/d/1m-1jbEL4BlCEYggyHKpWNYsK9bip2lLU/view'
+            file:<iframe src="https://drive.google.com/file/d/1Zr22l0rjT1-aVodomwMGkb80RDTToRDw/preview" width="640" height="480"></iframe>, 
+            url:'https://drive.google.com/file/d/1Zr22l0rjT1-aVodomwMGkb80RDTToRDw/view'
         },
         {  name:'Softball Academy Memberships',
             file:<iframe src="https://drive.google.com/file/d/1pcSqS4AziOgHuIJgq93nNVYPvUm8txDm/preview" width="640" height="480"></iframe>, 
