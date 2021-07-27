@@ -41,7 +41,7 @@
             iframe{
                 width: 100%;
                 height: 1060px;
-                overflow: hidden;
+                pointer-events:none;
             }
             h3{
                 font-size: 1.6rem;
