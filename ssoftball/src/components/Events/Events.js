@@ -30,26 +30,26 @@ function Events(props) {
         //     url:'https://drive.google.com/file/d/1Fa1OiGzq21NCED3QBCwsqQruEHKYmVk-/view'
         // },
         {  
-            name:'Fall 2021 Announcements',
-            file:"https://drive.google.com/file/d/1In1ZTB2mpDnf5WN1yG-U-fteVl04Vb32/preview",
-            url:'https://drive.google.com/file/d/1In1ZTB2mpDnf5WN1yG-U-fteVl04Vb32/view'
+            name:'Fall 2021 Speed and Agility',
+            file:"https://drive.google.com/file/d/1_zcwl1VjYza9MkUk449-JbECfGdB5ifY/preview",
+            url:'https://drive.google.com/file/d/1_zcwl1VjYza9MkUk449-JbECfGdB5ifY/view'
         },
         {  
-            name:'Group Hitting - Fall 2021',
-            file:"https://drive.google.com/file/d/1PBstStvukTLeQwzeD3MAczmT-Ff4vDI1/preview",
-            url:'https://drive.google.com/file/d/1PBstStvukTLeQwzeD3MAczmT-Ff4vDI1/view'
+            name:'Fall 2021 Group Hitting',
+            file:"https://drive.google.com/file/d/1OBX2sQk4pIhDn2E6iCXFUuAaBsFnlmPK/preview",
+            url:'https://drive.google.com/file/d/1OBX2sQk4pIhDn2E6iCXFUuAaBsFnlmPK/view'
         },
         {  
-            name:'Footwork & Speed and Agility - Fall 2021',
-            file:"https://drive.google.com/file/d/1csjc2gw1W_gZuFrLL6SuA7qGJkIF1ZI7/preview",
-            url:'https://drive.google.com/file/d/1csjc2gw1W_gZuFrLL6SuA7qGJkIF1ZI7/view'
+            name:'Fall 2021 Throwing and Fielding Brochure',
+            file:"https://drive.google.com/file/d/1fqNrwa-KbhC4AlbxyrT1o6F8RPN2Mxcp/preview",
+            url:'https://drive.google.com/file/d/1fqNrwa-KbhC4AlbxyrT1o6F8RPN2Mxcp/view'
         },
         
-        {  
-            name:'Clinic Scholarship',
-            file:"https://drive.google.com/file/d/1kNQ1oBlggKkTrHAWP8JuKnjVQor0Ot-P/preview",
-            url:'https://drive.google.com/file/d/1kNQ1oBlggKkTrHAWP8JuKnjVQor0Ot-P/view'
-        },
+//         {  
+//             name:'Clinic Scholarship',
+//             file:"https://drive.google.com/file/d/1kNQ1oBlggKkTrHAWP8JuKnjVQor0Ot-P/preview",
+//             url:'https://drive.google.com/file/d/1kNQ1oBlggKkTrHAWP8JuKnjVQor0Ot-P/view'
+//         },
     ]
     
 
