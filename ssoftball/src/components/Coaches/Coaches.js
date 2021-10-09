@@ -41,10 +41,20 @@ Email:   Megan_stricker@yahoo.com`
     {
         first_name: 'Luke', last_name: 'Stricker', images: [LukePortrait], color: 'blue',
         description:
-            `Coach Luke is a certified speed and agility instructor through Nesta.  Luke grew up playing travel baseball and travel soccer from an early age.  He continued his sports career in both High School and College.  He graduated with a degree in Biology with an emphasis on EMT certification, anatomy, and Speed and Agility.  
+            `Coach Luke Stricker has been a certified speed and agility instructor through Nesta since 2019. Luke grew up playing travel baseball and travel soccer from an early age where his love of sports developed. . He continued his sports career Playing both High School and College sports. He graduated with a degree in Biology with an emphasis on EMT certification, anatomy, and Speed and Agility.  
 
-        Luke has been involved in training young athletes in baseball, softball, soccer and Lacrosse.  His focus now remains in  teaching young athletes speed and agility , foot work , and correct muscle movement for hitting and fielding.
-        `
+
+        Luke has been involved in training young athletes in many different sports including baseball, softball, soccer and Lacrosse. His focus now remains in teaching young athletes speed and agility , foot work , and correct muscle movement for hitting, throwing and fielding. Luke continues to stay up to date on the latest drills, and exercises available so he can pass that knowledge on to your young athletes. 
+        
+        A.C.E. Certified/ Safe Sport Certified
+        
+
+
+
+Contact Info
+Cell:     630-303-8329
+Email:   Luke.a.stricker@gmail.com`
+    },
     },
 
     {
