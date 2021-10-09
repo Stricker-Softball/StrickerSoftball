@@ -55,7 +55,6 @@ Contact Info
 Cell:     630-303-8329
 Email:   Luke.a.stricker@gmail.com`
     },
-    },
 
     {
         first_name: 'Jennah', last_name: 'Perryman', images: [JenaPortrait], color: 'red',
