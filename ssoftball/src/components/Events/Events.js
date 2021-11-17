@@ -30,20 +30,11 @@ function Events(props) {
         //     url:'https://drive.google.com/file/d/1Fa1OiGzq21NCED3QBCwsqQruEHKYmVk-/view'
         // },
         {  
-            name:'Fall 2021 Speed and Agility',
-            file:"https://drive.google.com/file/d/1_zcwl1VjYza9MkUk449-JbECfGdB5ifY/preview",
-            url:'https://drive.google.com/file/d/1_zcwl1VjYza9MkUk449-JbECfGdB5ifY/view'
+            name:'WINTER 2022 CLINICS',
+            file:"https://drive.google.com/file/d/1B2jQMaMJfAmyNW-shqfgXS0DT5ub_PBp/preview",
+            url:'https://drive.google.com/file/d/1B2jQMaMJfAmyNW-shqfgXS0DT5ub_PBp/view'
         },
-        {  
-            name:'Fall 2021 Group Hitting',
-            file:"https://drive.google.com/file/d/1OBX2sQk4pIhDn2E6iCXFUuAaBsFnlmPK/preview",
-            url:'https://drive.google.com/file/d/1OBX2sQk4pIhDn2E6iCXFUuAaBsFnlmPK/view'
-        },
-        {  
-            name:'Fall 2021 Throwing and Fielding Brochure',
-            file:"https://drive.google.com/file/d/1fqNrwa-KbhC4AlbxyrT1o6F8RPN2Mxcp/preview",
-            url:'https://drive.google.com/file/d/1fqNrwa-KbhC4AlbxyrT1o6F8RPN2Mxcp/view'
-        },
+        
         
 //         {  
 //             name:'Clinic Scholarship',
