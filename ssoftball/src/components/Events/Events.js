@@ -17,25 +17,20 @@ function Events(props) {
     const [events, setEvents] = useState(props.eventList || []);
     const [eventsGroup, setEGroup] = useState([{title:'Clinics'}]);
     eventsGroup[0].events = [
-        // {  name:'Academy June Through August',
-        //     file:<iframe src="https://drive.google.com/file/d/1Zr22l0rjT1-aVodomwMGkb80RDTToRDw/preview" width="640" height="480"></iframe>, 
-        //     url:'https://drive.google.com/file/d/1Zr22l0rjT1-aVodomwMGkb80RDTToRDw/view'
-        // },
-        // {  name:'Softball Academy Memberships',
-        //     file:<iframe src="https://drive.google.com/file/d/1pcSqS4AziOgHuIJgq93nNVYPvUm8txDm/preview" width="640" height="480"></iframe>, 
-        //     url:'https://drive.google.com/file/d/1pcSqS4AziOgHuIJgq93nNVYPvUm8txDm/view'
-        // }, 
-        // {  name:'Softball Academy Summer',
-        //     file:<iframe src="https://drive.google.com/file/d/1Fa1OiGzq21NCED3QBCwsqQruEHKYmVk-/preview" width="640" height="480"></iframe>, 
-        //     url:'https://drive.google.com/file/d/1Fa1OiGzq21NCED3QBCwsqQruEHKYmVk-/view'
-        // },
+         
+        {  name:'Throwing And Fielding',
+            file:"https://drive.google.com/file/d/1FIOmXoLk9SALT4bgF5lOa25m2M588fK4/preview", 
+            url:"https://drive.google.com/file/d/1FIOmXoLk9SALT4bgF5lOa25m2M588fK4/view"
+        },
+        {  name:'Hitting Circuit',
+            file:"https://drive.google.com/file/d/1KWB7zxwecwpI-VzHl_uPhikjL587fAGB/preview", 
+            url:"https://drive.google.com/file/d/1KWB7zxwecwpI-VzHl_uPhikjL587fAGB/view"
+        },
         {  
             name:'WINTER 2022 CLINICS',
             file:"https://drive.google.com/file/d/1B2jQMaMJfAmyNW-shqfgXS0DT5ub_PBp/preview",
             url:'https://drive.google.com/file/d/1B2jQMaMJfAmyNW-shqfgXS0DT5ub_PBp/view'
         },
-        
-        
 //         {  
 //             name:'Clinic Scholarship',
 //             file:"https://drive.google.com/file/d/1kNQ1oBlggKkTrHAWP8JuKnjVQor0Ot-P/preview",
