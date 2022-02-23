@@ -6,7 +6,7 @@ import SuePortriat from '../../images/coaches/sue-portrait.png';
 import MegPortrait from '../../images/coaches/megan-portrait.png';
 import MegHitting from '../../images/edits/megan-hitting-1.jpg';
 import JenaPortrait from '../../images/coaches/jennah-portrait.png';
-import JenyPortrait from '../../images/coaches/jenny-portrait.png';
+import KristinClose from '../../images/coaches/kristinclose.jpg';
 import KristinPortait from '../../images/coaches/kristin.jpg';
 import HuntPortrait from '../../images/coaches/hunter.jpg';
 import LukePortrait from '../../images/coaches/luke-portrait.png';
@@ -27,7 +27,7 @@ let coaches = [
     Sue is currently the Certified CUDIT Concentric Hitting Coach of four teams and gives lessons to athletes of all ages. Be ready to transform your swing and mindset when working with Coach Sue Stricker!`
     },
     {
-        first_name: 'Kristin', last_name: 'McCue', images: [KristinPortait], color: 'blue',
+        first_name: 'Kristin', last_name: 'McCue', images: [KristinClose, KristinPortait, KristinPortait], color: 'blue',
         description:
             `Kristin is a former girls travel softball player of 10 years, primarily playing catcher and 3rd base throughout her career. She later went on to run collegiate cross country. Currently working as a registered dietitian, Kristin is focused on fundamentals and fueling young athletes. She is available for private and group lessons as well as clinics. `
     },
