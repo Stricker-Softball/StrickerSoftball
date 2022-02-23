@@ -6,7 +6,7 @@ import SuePortriat from '../../images/coaches/sue-portrait.png';
 import MegPortrait from '../../images/coaches/megan-portrait.png';
 import MegHitting from '../../images/edits/megan-hitting-1.jpg';
 import JenaPortrait from '../../images/coaches/jennah-portrait.png';
-import KristinClose from '../../images/coaches/kristinclose.jpg';
+import KristinClose from '../../images/coaches/kristinclose.png';
 import KristinPortait from '../../images/coaches/kristin.jpg';
 import HuntPortrait from '../../images/coaches/hunter.jpg';
 import LukePortrait from '../../images/coaches/luke-portrait.png';
