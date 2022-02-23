@@ -7,8 +7,8 @@ import MegPortrait from '../../images/coaches/megan-portrait.png';
 import MegHitting from '../../images/edits/megan-hitting-1.jpg';
 import JenaPortrait from '../../images/coaches/jennah-portrait.png';
 import JenyPortrait from '../../images/coaches/jenny-portrait.png';
-// import AllyPortrait from '../../images/coaches/ally-portrait.png';
-// import DotPortrait from '../../images/coaches/dot-portrait.png';
+import KristinPortait from '../../images/coaches/kristin.jpg';
+import HuntPortrait from '../../images/coaches/hunter.jpg';
 import LukePortrait from '../../images/coaches/luke-portrait.png';
 
 
@@ -27,16 +27,9 @@ let coaches = [
     Sue is currently the Certified CUDIT Concentric Hitting Coach of four teams and gives lessons to athletes of all ages. Be ready to transform your swing and mindset when working with Coach Sue Stricker!`
     },
     {
-        first_name: 'Megan', last_name: 'Stricker', images: [MegPortrait, MegHitting, MegHitting], color: 'blue',
+        first_name: 'Kristin', last_name: 'McCue', images: [KristinPortait], color: 'blue',
         description:
-            `Megan  Stricker is a former girls travel softball player of 12 years.  She then went on to play college ball at Waubonsee Community College and Clarke University In Iowa.    In the past she served as an Assistant Coach for the 14U Wasco Diamonds travel program, and Geneva Park District Youth Softball.   She helped take her team to National competition where they won first place in the “A” division. She has been giving private and group lessons as well as running Offensive and Defensive clinics with larger groups for establishments including Geneva Baseball, The Geneva Park District, The Oswego Outlaws  and Elite Sports training. She is looking forward to bringing her expertise to the brand new facility that Bring It! Sports Academy has to offer.
-
-
-
-
-Contact Info
-Cell:     630-306-8176
-Email:   Megan_stricker@yahoo.com`
+            `Kristin is a former girls travel softball player of 10 years, primarily playing catcher and 3rd base throughout her career. She later went on to run collegiate cross country. Currently working as a registered dietitian, Kristin is focused on fundamentals and fueling young athletes. She is available for private and group lessons as well as clinics. `
     },
     {
         first_name: 'Luke', last_name: 'Stricker', images: [LukePortrait], color: 'blue',
@@ -55,12 +48,28 @@ Contact Info
 Cell:     630-303-8329
 Email:   Luke.a.stricker@gmail.com`
     },
-
     {
-        first_name: 'Jennah', last_name: 'Perryman', images: [JenaPortrait], color: 'red',
+        first_name: 'Hunter', last_name: 'Siler', images: [HuntPortrait], color: 'red',
         description:
-            `Jennah Perryman is a retired softball player with 10 years of elite travel ball experience. She was a four year varsity starter for Elgin High School where she was awarded the following accolades: 4-time All- Conference, 4-time All-District Selectee, Chicago Sun-Times Top 100 player, and two time Adidas Features selectee. She continued her career at The University of Missouri- St. Louis playing 3rd base, 2nd base, and catcher where she was a four year starter. She was awarded with Freshman of the Year, Third Team D2CCA All Region, Second Team All Great Lakes Valley Conference, Second Team NFCA Midwest Region, and NCAA D2 All-American. After finishing her career she served as the Assistant Student Coach for the UMSL Tritons Softball Team. She has trained and facilitated pitching clinics, defensive clinics and hitting clinics across the Midwest. She is driven to bring her knowledge, techniques and love of softball to mold her clients into the collegiate prospects of tomorrow.`
+            `Hunter Siler grew up playing travel baseball and basketball. During high school he was a 3-sport athlete all 4 years of school. After competing in Track and Field events up through his college career he will now be graduating with a degree in Finance and a minor in Coaching and Youth Sport Development from Aurora University. 
+
+            He has been a strength and agility coach since early on when he started Track & Field camps during his high school seasons for middle school athletes in the area. He has experience in baseball,football, and track and field throwing events. Hunter Siler will work with each athlete to ensure they are getting what they need case-by-case. `
     },
+    {
+        first_name: 'Megan', last_name: 'Stricker', images: [MegPortrait, MegHitting, MegHitting], color: 'red',
+        description:
+            `Megan  Stricker is a former girls travel softball player of 12 years.  She then went on to play college ball at Waubonsee Community College and Clarke University In Iowa.    In the past she served as an Assistant Coach for the 14U Wasco Diamonds travel program, and Geneva Park District Youth Softball.   She helped take her team to National competition where they won first place in the “A” division. She has been giving private and group lessons as well as running Offensive and Defensive clinics with larger groups for establishments including Geneva Baseball, The Geneva Park District, The Oswego Outlaws  and Elite Sports training. She is looking forward to bringing her expertise to the brand new facility that Bring It! Sports Academy has to offer.
+
+
+
+
+Contact Info
+Cell:     630-306-8176
+Email:   Megan_stricker@yahoo.com`
+    },
+    
+
+    
 
 
 
