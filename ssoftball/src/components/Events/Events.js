@@ -19,8 +19,8 @@ function Events(props) {
     eventsGroup[0].events = [
 
          {  name:'2022 Spring Group Brochure',
-            file:"https://drive.google.com/file/d/1JIDxnWZIYbZwptzL0A7kBTLk6a7MR8Hb/preview", 
-            url:"https://drive.google.com/file/d/1JIDxnWZIYbZwptzL0A7kBTLk6a7MR8Hb/view"
+            file:"https://drive.google.com/file/d/1JmS_rBpgrr2AQTgI1r0A4BaIze891LC5/preview", 
+            url:"https://drive.google.com/file/d/1JmS_rBpgrr2AQTgI1r0A4BaIze891LC5/view"
         },
         {  name:'Registration Form',
             file:"https://drive.google.com/file/d/1Q6Y_LA8DPorXUbTwaXcOBcpO321z76fD/preview", 
