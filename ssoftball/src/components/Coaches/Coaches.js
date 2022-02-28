@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import './Coaches.scss';
 
+
+import BatImg from '../../images/batSilo.png';
 import SuePortriat from '../../images/coaches/sue-portrait.png';
 // import SueHitting from '../../images/coaches/sue-hitting.png';
 import MegPortrait from '../../images/coaches/megan-portrait.png';
@@ -15,7 +17,7 @@ import LukePortrait from '../../images/coaches/luke-portrait.png';
 
 let coaches = [
     {
-        first_name: 'sue', last_name: 'Stricker', images: [SuePortriat], color: 'red',
+        first_name: 'sue', last_name: 'Stricker', images: [SuePortriat,BatImg,BatImg], color: 'red',
         description: `Coach Sue Stricker has been playing and coaching the game for over 20 years. She is currently the Head Coach for the Wasco Daimonds 14 U team, and the General Manager at Bring It Sports where she gives private, small group, and team lessons. Her CUDIT Concentric Hitting lessons bring her hitters in the area to a level like no other.
 
     Sue has coached area teams such as the Wasco Diamonds 14U (Head Coach), Homer Hawks Gold 16U and 18U (Assistant Coach), The Northern Illinois Lightning (Head Coach) 14U and 16U, and the St. Charles Angels (Head Coach). She has also coached Varsity and J.V. High School teams.
@@ -28,7 +30,7 @@ let coaches = [
     },
     
     {
-        first_name: 'Luke', last_name: 'Stricker', images: [LukePortrait], color: 'blue',
+        first_name: 'Luke', last_name: 'Stricker', images: [LukePortrait,BatImg,BatImg], color: 'blue',
         description:
             `Coach Luke Stricker has been a certified speed and agility instructor through Nesta since 2019. Luke grew up playing travel baseball and travel soccer from an early age where his love of sports developed. . He continued his sports career Playing both High School and College sports. He graduated with a degree in Biology with an emphasis on EMT certification, anatomy, and Speed and Agility.  
 
@@ -49,7 +51,7 @@ Email:   Luke.a.stricker@gmail.com`
             `Kristin is a former girls travel softball player of 10 years, primarily playing catcher and 3rd base throughout her career. She later went on to run collegiate cross country. Currently working as a registered dietitian, Kristin is focused on fundamentals and fueling young athletes. She is available for private and group lessons as well as clinics. `
     },
     {
-        first_name: 'Hunter', last_name: 'Siler', images: [HuntPortrait], color: 'red',
+        first_name: 'Hunter', last_name: 'Siler', images: [HuntPortrait,BatImg,BatImg], color: 'red',
         description:
             `Hunter Siler grew up playing travel baseball and basketball. During high school he was a 3-sport athlete all 4 years of school. After competing in Track and Field events up through his college career he will now be graduating with a degree in Finance and a minor in Coaching and Youth Sport Development from Aurora University. 
 
