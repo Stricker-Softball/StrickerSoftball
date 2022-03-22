@@ -16,6 +16,13 @@ import sbll4th from  '../../images/pdf/StrickerSoftballAcademySummer.pdf';
 function Events(props) {
     const [events, setEvents] = useState(props.eventList || []);
     const [eventsGroup, setEGroup] = useState([{title:'Clinics'}]);
+    eventsGroup[0].links = [
+        {
+            link:'https://docs.google.com/forms/d/e/1FAIpQLSdwHUuwZlNp1hWYEGPqPyT1xND-jpHbhXUicZuKzTau9Gxtzg/viewform?usp=sf_link',
+            name:'Registration Form',
+            description:'View and Register for  our Clinics',
+        }
+    ]
     eventsGroup[0].events = [
 
          {  name:'2022 Spring Group Brochure',
@@ -58,13 +65,24 @@ function Events(props) {
     return (
 
         <div className='Events'>
-            
+                
                 {eventsGroup.map((group) => {
-                    // console.log(group)
+                    // Pdf's
                     return (
                         <>
                         <h1>{group.title}</h1>
                         <div className='event-list'>
+                        {group.links.map((item) => {
+                            return (
+                                <>
+                                <div className='event-item' style={{paddingBottom:'0',overflow:'hidden'}}>
+                                    {item.description}
+                                    </div>
+                                {item.link && <a className='clinic-link pdf-link ' target="_blank" href={item.link}>{item.name}</a>}
+                                
+                                </>
+                            )
+                        })}
                         {group.events.map((item) => {
                             // console.log(item)
                             return (
@@ -72,11 +90,7 @@ function Events(props) {
                                 {item.url && <a className=' pdf-link ' target="_blank" href={item.url}>{item.name}</a>}
                                 <div className='event-item' style={{paddingBottom:'0',overflow:'hidden'}}>
                                     <iframe frameborder="0" scrolling="no" allowtransparency="true" src={item.file} ></iframe>
-
-                                    
-
                                 </div>
-                                
                                 </>
                             )
                         })}
