@@ -110,5 +110,13 @@
     background-color: black;
     border-radius: 10px;
     padding: 15px 14px 16px;
-    margin-top: 30px;
+    margin: 15px auto 25px;
+}
+.clinic-link:hover{
+    color: var(--red);
+    background-color: rgb(59, 59, 59);
+}
+.link-description{
+    color: white;
+    margin-top:40px;
 }

@@ -29,10 +29,6 @@ function Events(props) {
             file:"https://drive.google.com/file/d/1JmS_rBpgrr2AQTgI1r0A4BaIze891LC5/preview", 
             url:"https://drive.google.com/file/d/1JmS_rBpgrr2AQTgI1r0A4BaIze891LC5/view"
         },
-        {  name:'Registration Form',
-            file:"https://drive.google.com/file/d/1Q6Y_LA8DPorXUbTwaXcOBcpO321z76fD/preview", 
-            url:"https://drive.google.com/file/d/1Q6Y_LA8DPorXUbTwaXcOBcpO321z76fD/view"
-        },
         {  name:'Throwing And Fielding',
             file:"https://drive.google.com/file/d/1FIOmXoLk9SALT4bgF5lOa25m2M588fK4/preview", 
             url:"https://drive.google.com/file/d/1FIOmXoLk9SALT4bgF5lOa25m2M588fK4/view"
@@ -75,7 +71,7 @@ function Events(props) {
                         {group.links.map((item) => {
                             return (
                                 <>
-                                <div className='event-item' style={{paddingBottom:'0',overflow:'hidden'}}>
+                                <div className='link-description' style={{paddingBottom:'0',overflow:'hidden'}}>
                                     {item.description}
                                     </div>
                                 {item.link && <a className='clinic-link pdf-link ' target="_blank" href={item.link}>{item.name}</a>}
