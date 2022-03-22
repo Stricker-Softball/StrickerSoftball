@@ -111,8 +111,9 @@
     border-radius: 10px;
     padding: 15px 14px 16px;
     margin: 15px auto 25px;
+    width:45%;
 }
-.clinic-link:hover{
+.Events .event-list .clinic-link:hover{
     color: var(--red);
     background-color: rgb(59, 59, 59);
 }
