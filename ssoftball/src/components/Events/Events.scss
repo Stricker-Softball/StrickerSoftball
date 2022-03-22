@@ -101,7 +101,7 @@
           }
       }
     }
-.clinic-link{
+    .Events .event-list .clinic-link{
     cursor:pointer;
     font-size: 1.3rem;
     font-family: 'Roboto', sans-serif;
@@ -116,7 +116,7 @@
     color: var(--red);
     background-color: rgb(59, 59, 59);
 }
-.link-description{
+.Events .event-list .link-description{
     color: white;
     margin-top:40px;
 }
