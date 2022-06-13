@@ -25,9 +25,9 @@ function Events(props) {
     ]
     eventsGroup[0].events = [
 
-         {  name:'2022 Spring Group Brochure',
-            file:"https://drive.google.com/file/d/1JmS_rBpgrr2AQTgI1r0A4BaIze891LC5/preview", 
-            url:"https://drive.google.com/file/d/1JmS_rBpgrr2AQTgI1r0A4BaIze891LC5/view"
+         {  name:'2022 Summer Group Brochure',
+            file:"https://drive.google.com/file/d/1iklF7Mlm4gBM37Gkd_ueQz2ArDag76jz/preview", 
+            url:"https://drive.google.com/file/d/1iklF7Mlm4gBM37Gkd_ueQz2ArDag76jz/view"
         },
         {  name:'Throwing And Fielding',
             file:"https://drive.google.com/file/d/1FIOmXoLk9SALT4bgF5lOa25m2M588fK4/preview", 
