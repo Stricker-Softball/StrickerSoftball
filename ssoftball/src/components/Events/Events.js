@@ -25,10 +25,10 @@ function Events(props) {
     ]
     eventsGroup[0].events = [
 
-         {  name:'2022 Summer Group Brochure',
-            file:"https://drive.google.com/file/d/1iklF7Mlm4gBM37Gkd_ueQz2ArDag76jz/preview", 
-            url:"https://drive.google.com/file/d/1iklF7Mlm4gBM37Gkd_ueQz2ArDag76jz/view"
-        },
+//          {  name:'2022 Summer Group Brochure',
+//             file:"https://drive.google.com/file/d/1iklF7Mlm4gBM37Gkd_ueQz2ArDag76jz/preview", 
+//             url:"https://drive.google.com/file/d/1iklF7Mlm4gBM37Gkd_ueQz2ArDag76jz/view"
+//         },
         {  name:'Throwing And Fielding',
             file:"https://drive.google.com/file/d/1FIOmXoLk9SALT4bgF5lOa25m2M588fK4/preview", 
             url:"https://drive.google.com/file/d/1FIOmXoLk9SALT4bgF5lOa25m2M588fK4/view"
@@ -37,12 +37,6 @@ function Events(props) {
             file:"https://drive.google.com/file/d/1KWB7zxwecwpI-VzHl_uPhikjL587fAGB/preview", 
             url:"https://drive.google.com/file/d/1KWB7zxwecwpI-VzHl_uPhikjL587fAGB/view"
         },
-        
-//         {  
-//             name:'Clinic Scholarship',
-//             file:"https://drive.google.com/file/d/1kNQ1oBlggKkTrHAWP8JuKnjVQor0Ot-P/preview",
-//             url:'https://drive.google.com/file/d/1kNQ1oBlggKkTrHAWP8JuKnjVQor0Ot-P/view'
-//         },
     ]
     
 
