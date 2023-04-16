@@ -25,18 +25,22 @@ function Events(props) {
     ]
     eventsGroup[0].events = [
 
-         {  name:'2022 Summer Group Brochure',
-            file:"https://drive.google.com/file/d/1iklF7Mlm4gBM37Gkd_ueQz2ArDag76jz/preview", 
-            url:"https://drive.google.com/file/d/1iklF7Mlm4gBM37Gkd_ueQz2ArDag76jz/view"
+         {  name:'2023 Spring Group Brochure',
+            file:"https://drive.google.com/file/d/1v8N-LtZ_P5L3HAXGfujwTpR4wHWbTRgb/preview", 
+            url:"https://drive.google.com/file/d/1v8N-LtZ_P5L3HAXGfujwTpR4wHWbTRgb/view"
         },
-        {  name:'Throwing And Fielding',
-            file:"https://drive.google.com/file/d/1FIOmXoLk9SALT4bgF5lOa25m2M588fK4/preview", 
-            url:"https://drive.google.com/file/d/1FIOmXoLk9SALT4bgF5lOa25m2M588fK4/view"
+        {  name:'2023 Spring Brochure 7-12 year olds',
+            file:"https://drive.google.com/file/d/1Tcx-hmSiFMqD32PBaYYBKcqF_-U9q99T/preview", 
+            url:"https://drive.google.com/file/d/1Tcx-hmSiFMqD32PBaYYBKcqF_-U9q99T/view"
         },
-        {  name:'Hitting Circuit',
-            file:"https://drive.google.com/file/d/1KWB7zxwecwpI-VzHl_uPhikjL587fAGB/preview", 
-            url:"https://drive.google.com/file/d/1KWB7zxwecwpI-VzHl_uPhikjL587fAGB/view"
-        },
+        // {  name:'Throwing And Fielding',
+        //     file:"https://drive.google.com/file/d/1FIOmXoLk9SALT4bgF5lOa25m2M588fK4/preview", 
+        //     url:"https://drive.google.com/file/d/1FIOmXoLk9SALT4bgF5lOa25m2M588fK4/view"
+        // },
+        // {  name:'Hitting Circuit',
+        //     file:"https://drive.google.com/file/d/1KWB7zxwecwpI-VzHl_uPhikjL587fAGB/preview", 
+        //     url:"https://drive.google.com/file/d/1KWB7zxwecwpI-VzHl_uPhikjL587fAGB/view"
+        // },
         
 //         {  
 //             name:'Clinic Scholarship',
