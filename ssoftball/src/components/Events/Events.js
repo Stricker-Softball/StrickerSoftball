@@ -24,8 +24,12 @@ function Events(props) {
         }
     ]
     eventsGroup[0].events = [
-
-         {  name:'2023 Spring Group Brochure',
+        // https://drive.google.com/file/d/1j5eQ4yEmTyPbnekrbXihZ389LQOCkVo-/view?usp=sharing
+        {  name:'Spring Hitting Velocity Camp',
+            file:"https://drive.google.com/file/d/1j5eQ4yEmTyPbnekrbXihZ389LQOCkVo-/preview", 
+            url:"https://drive.google.com/file/d/1j5eQ4yEmTyPbnekrbXihZ389LQOCkVo-/view"
+        },
+        {  name:'2023 Spring Group Brochure',
             file:"https://drive.google.com/file/d/1v8N-LtZ_P5L3HAXGfujwTpR4wHWbTRgb/preview", 
             url:"https://drive.google.com/file/d/1v8N-LtZ_P5L3HAXGfujwTpR4wHWbTRgb/view"
         },
