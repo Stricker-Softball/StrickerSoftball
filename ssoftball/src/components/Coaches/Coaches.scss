@@ -143,6 +143,7 @@ Coach Cards
 }
 .Coaches .coach-container .coach-card .button-main:hover{
     border: 4px solid rgba(124,193,255, 1);
+    cursor: pointer;
 }
 .Coaches .coach-container .coach-card .button-main::after{
     border: 2px solid #ccc;
@@ -155,6 +156,7 @@ Coach Cards
 }
 .Coaches .coach-container .card-2nd .button-main:hover{
     border: 4px solid rgba(250, 70, 134, 1);
+    cursor: pointer;
 }
 
 .Coaches .end-quote{
@@ -217,6 +219,7 @@ Coach Cards
 .popup-main .popup-window .close-x:hover{
     color: rgb(155,155,155);
     background-color: rgba(0,0,0,.6);
+    cursor: pointer;
 }
 
 .popup-main .popup-window .close-button{
@@ -230,6 +233,7 @@ Coach Cards
 .popup-main .popup-window .close-button:hover{
     color: rgb(155,155,155);
     background-color: rgba(0,0,0,.6);
+    cursor: pointer;
 }
 
 /* Popup Content  */

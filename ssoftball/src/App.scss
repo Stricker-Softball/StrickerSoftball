@@ -80,7 +80,7 @@
   background: var(--main-lightyellow);
   color: black;
   border: 4px dashed var(--red-dark);
-
+  cursor: pointer;
 }
 .button-main:active{
   background:   var(--main-darkyellow);
