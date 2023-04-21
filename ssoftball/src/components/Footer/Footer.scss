@@ -50,6 +50,7 @@ import twitterIcon from '../../images/social/twitter.png'; */
 }
 .Footer .social-icons .image div:hover{
     background: rgba(255,255,255, .475);
+    cursor: pointer;
 }
 .Footer .social-icons .image div:active{
     background: rgba(0,0,0, .475);
