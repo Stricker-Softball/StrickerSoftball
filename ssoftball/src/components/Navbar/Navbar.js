@@ -18,7 +18,7 @@ function Navbar(props) {
 
     let nav_item_list = [
         {name:'Home', link:'/'},
-        {name:'Clinics', link:'/events'},
+        {name:'Clinics & Registration', link:'/events'},
         {name:'Softball Lessons', link:'/lessons'},
         {name:'Meet The Coaches', link:'/meetthecoach'},
         {name:'Contacts', link:'/contacts'}
