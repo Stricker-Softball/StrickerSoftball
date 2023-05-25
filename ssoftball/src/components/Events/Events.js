@@ -54,7 +54,7 @@ function Events(props) {
     // }, []);
 
 
-    console.log(eventsGroup)
+//     console.log(eventsGroup)
     return (
 
         <div className='Events'>
