@@ -203,7 +203,6 @@ function MenuButton (props){
         setOpen(!open)
     }
     
-
       const styles = {
         container: {
           height: '54px',
@@ -221,6 +220,10 @@ function MenuButton (props){
           borderRadius: '5px',
           paddingLeft: open ? '14px':'4px',
 
+        },
+        menuText: {
+          marginLeft: open ? '-10px':'0px',
+          color: color
         },
         line: {
           height: '3px',
@@ -249,6 +252,7 @@ function MenuButton (props){
         <div style={styles.container} 
           onClick={ props.onClick ?  props.onClick: 
             ()=> { handleClick();}}>
+              <div style={styles.menuText} >MENU</div>
           <div style={{...styles.line,...styles.lineTop}}/>
           <div style={{...styles.line,...styles.lineMiddle}}/>
           <div style={{...styles.line,...styles.lineBottom}}/>
