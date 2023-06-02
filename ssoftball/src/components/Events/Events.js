@@ -35,7 +35,7 @@ function Events(props) {
         {  name:'Summer 2023 Hitting Velocity Camp ',
             file:"https://drive.google.com/file/d/1JaRKRYNrsMhFs_Z4oc1B_5Rm25getqKt/preview", 
             url:"https://drive.google.com/file/d/1JaRKRYNrsMhFs_Z4oc1B_5Rm25getqKt/view"
-        }.
+        },
         {  name:'2023 7 - 12 year olds',
             file:"https://drive.google.com/file/d/1Tcx-hmSiFMqD32PBaYYBKcqF_-U9q99T/preview", 
             url:"https://drive.google.com/file/d/1Tcx-hmSiFMqD32PBaYYBKcqF_-U9q99T/view"
