@@ -23,7 +23,7 @@ function Home(props) {
             <div className='buttons-bottom'>
                 <button className='button-main' onClick={() => buttonPress('/meetthecoach')}> Coaches</button>
             </div>
-            <p>Softball Science was created by 2 Women who have a vast
+            <p class='science-paragraph'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Softball Science was created by 2 Women who have a vast
 history in the softball realm of today's world. Let’s face it
 technology has become a part of our whole world. We have
 taken our over 30 years of coaching experience along with our
