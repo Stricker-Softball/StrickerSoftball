@@ -24,10 +24,10 @@ function Events(props) {
         }
     ]
     eventsGroup[0].events = [
-        {  name:'Mission Statement',
-            file:"https://drive.google.com/file/d/1IX6dn6G7iwxYFdoGSOoOfhSJ4ePsNprr/preview", 
-            url:"https://drive.google.com/file/d/1IX6dn6G7iwxYFdoGSOoOfhSJ4ePsNprr/view"
-        },
+        // {  name:'Mission Statement',
+        //     file:"https://drive.google.com/file/d/1IX6dn6G7iwxYFdoGSOoOfhSJ4ePsNprr/preview", 
+        //     url:"https://drive.google.com/file/d/1IX6dn6G7iwxYFdoGSOoOfhSJ4ePsNprr/view"
+        // },
         {  name:'Questions',
             file:"https://drive.google.com/file/d/1lLEGRyXc0A-3n68ro6_cqgzSVKcH5cIK/preview", 
             url:"https://drive.google.com/file/d/1lLEGRyXc0A-3n68ro6_cqgzSVKcH5cIK/view"
