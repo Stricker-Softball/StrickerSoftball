@@ -12,7 +12,7 @@ function Home(props) {
     }
     return (
         <div className="Home">
-            <h1>Stricker Softball & Softball Science</h1>
+            <h1><span>Softball Science</span><span>&</span><span>Stricker Softball</span></h1>
             
             <h2>Coaching and lessons for all levels</h2>
             <div className='buttons'>
@@ -29,6 +29,7 @@ technology has become a part of our whole world. We have
 taken our over 30 years of coaching experience along with our
 experience in the technology field, available to us and brought
 them together to create Softball Science.
+
 At Softball Science we have created a metrically driven program
 specifically designed to enhance the raw power behind your
 softball swing. All we need from you is to bring YOUR swing from

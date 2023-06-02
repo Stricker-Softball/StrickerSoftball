@@ -59,6 +59,9 @@ function Events(props) {
 
 
 //     console.log(eventsGroup)
+    function PdfClick(link) {
+        window.open(link, '_blank');
+    }
     return (
 
         <div className='Events'>
@@ -84,8 +87,8 @@ function Events(props) {
                             // console.log(item)
                             return (
                                 <>
-                                {item.url && <a className=' pdf-link ' target="_blank" href={item.url}>{item.name}</a>}
-                                <div className='event-item' style={{paddingBottom:'0',overflow:'hidden'}}>
+                                {item.url && <a className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>}
+                                <div className='event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
                                     <iframe frameborder="0" scrolling="no" allowtransparency="true" src={item.file} ></iframe>
                                 </div>
                                 </>
