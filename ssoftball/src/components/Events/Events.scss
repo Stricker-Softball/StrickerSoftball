@@ -69,6 +69,26 @@
     }
       
 }
+.Events .event-list .clinic-link{
+    transition: all 0.3s;
+}
+.Events .event-list .event-link{
+    cursor:pointer;
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+.Events .event-list .event-link:hover{
+    color: var(--red);
+    background-color: rgb(59, 59, 59);
+}
+.Events .event-list .clinic-link:hover{
+    color: var(--red);
+    background-color: rgb(59, 59, 59);
+}
+.Events .event-list .link-description{
+    color: white;
+    margin-top:40px;
+}
 @media (max-width: 1200px){
     .Events p{
         display: none;
@@ -80,7 +100,9 @@
             display:flex;
             .event-item{
                 width: 97%;
-                display: none;
+                min-width: 200px;
+                aspect-ratio : 1 / 1;
+                margin-top:0;
             }
             .pdf-link{
                 cursor:pointer;
@@ -90,6 +112,9 @@
                 border: 3px dashed var(--main-lightyellow);
                 background-color: black;
                 border-radius: 10px;
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+                border-bottom: 3px solid transparent;
                 padding: 15px 14px 16px;
                 margin-top: 30px;
             }
@@ -113,21 +138,4 @@
     padding: 15px 14px 16px;
     margin: 15px auto 25px;
     width:85%;
-}
-
-.Events .event-list .event-link{
-    cursor:pointer;
-    border-radius: 10px;
-}
-.Events .event-list .event-link:hover{
-    color: var(--red);
-    background-color: rgb(59, 59, 59);
-}
-.Events .event-list .clinic-link:hover{
-    color: var(--red);
-    background-color: rgb(59, 59, 59);
-}
-.Events .event-list .link-description{
-    color: white;
-    margin-top:40px;
 }

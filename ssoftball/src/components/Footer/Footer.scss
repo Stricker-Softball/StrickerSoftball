@@ -43,13 +43,18 @@ import twitterIcon from '../../images/social/twitter.png'; */
     height: 60px;
     border-radius: 14px;
     overflow: hidden;
+    transition: all 0.3s;
 }
 .Footer .social-icons .image div{
     width: 60px;
     height: 60px;
+    transition: all 0.3s;
+}
+.Footer .social-icons .image:hover{
+    box-shadow: 0px 0px 15px 8px rgba(0,0,0, .475);
 }
 .Footer .social-icons .image div:hover{
-    background: rgba(255,255,255, .475);
+    background: rgba(255,255,255, .275);
     cursor: pointer;
 }
 .Footer .social-icons .image div:active{

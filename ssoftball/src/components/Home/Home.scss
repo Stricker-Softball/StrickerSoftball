@@ -41,7 +41,7 @@
   border-radius: 90%;
   margin: 75px auto;
   border: 15px solid var(--red);
-  box-shadow: 0px 3px 8px white;
+  box-shadow: 0px 10px 8px var(--red);
 }
 
 /* buttons */
@@ -125,3 +125,92 @@
     }
   }
 }
+
+@keyframes rotateAnimation {
+  0% {
+    offset-distance: 0%;
+    transform: rotate(0);
+  }
+  2% {
+    offset-distance: 0%;
+    transform: rotate(0);
+  }
+  98% {
+    offset-distance: 100%;
+    transform: rotate(360deg) ;
+  }
+  100% {
+    offset-distance: 100%;
+    transform: rotate(360deg) ;
+  }
+}
+@keyframes dnaAnimation {
+  from {
+    // transform: rotate(0deg);
+    transform: scale(0.95,1)  rotate(-5deg);
+  }
+  to {
+    // transform: rotate(30deg);
+    transform: scale(1,1) rotate(5deg);
+  }
+}
+@keyframes beakerAnimation {
+  from {
+    transform: scale(1,0.95)  rotate(5deg);
+  }
+  to {
+    transform: scale(1,1) rotate(-5deg);
+  }
+}
+
+.rollingContainer {
+  position: relative;
+  width: 90%;
+  height: 200px; /* Adjust height as needed */
+  overflow: visible;
+  // min-width: 580px;
+  margin: 0 auto;
+}
+
+#softballGroup2 {
+  animation: rotateAnimation 4.5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation-direction: alternate;
+  position: absolute;
+  top: 0;
+  left: 0;
+  offset-path: path('M-200,200 L990,200');
+  // offset-path: path('m 202.12,52.491225 c 3.31251,-3.67658 9.10988,-1.554326 11.56362,1.965794 4.25681,6.106786 0.90896,14.34608 -5.12478,17.779745 -8.73843,4.972849 -19.65657,0.279213 -23.99586,-8.283763 -5.74075,-11.328536 0.34175,-24.995957 11.44274,-30.211989 13.90291,-6.532567 30.34978,0.957749 36.42811,14.601731 7.33722,16.469791 -1.57076,35.711912 -17.76071,42.644233 -19.03258,8.149499 -41.07928,-2.181898 -48.86036,-20.919698 -8.96668,-21.592884 2.79176,-46.45016 24.07869,-55.076478 24.15158,-9.7871929 51.82351,3.400736 61.2926,27.237666 10.61006,26.709172 -4.00907,57.198683 -30.39665,67.508724 -29.26598,11.43467 -62.57522,-4.61692 -73.72485,-33.555636 -12.26059,-31.822194 5.2244,-67.9527938 36.71462,-79.9409665 34.37797,-13.0875275 73.33121,5.8315987 86.15709,39.8736025 13.91526,36.933404 -6.43857,78.71028 -43.03259,92.37321 -39.48856,14.74365 -84.0899,-7.04535 -98.58933,-46.191569 -10.35797,-27.964909 -3.87292,-60.061453 15.98043,-82.20198927');
+  // offset-path: path("M768.500,470.000 L768.500,287.000C768.500,259.386 746.114,237.000 718.500,237.000L425.500,237.000L54.000,237.000 C26.386,237.000 4.000,214.614 4.000,187.000 L4.000,4.000");
+}
+
+.beakerContainer{
+  animation: beakerAnimation 1.2s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation-direction: alternate;
+}
+.dnaContainer{
+  animation: dnaAnimation 1.2s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation-direction: alternate;
+}
+.svgBar{
+  display:flex;
+  position: relative;
+  flex-wrap: wrap;
+  padding:15px;
+  justify-content: center;
+}
+.svgContainer{
+  max-height: 110px;
+}
+@media only screen and (max-width: 700px) {
+  #softballGroup2{
+    offset-path: path('M150,200 L590,200');
+  }
+}
+// 1301px 
+// 600px 

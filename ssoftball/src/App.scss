@@ -72,21 +72,6 @@
   padding-top: .1px;  
   color: white;
 }
-
-.button-main:focus{
-  outline: none;
-}
-.button-main:hover{
-  background: var(--main-lightyellow);
-  color: black;
-  border: 4px dashed var(--red-dark);
-  cursor: pointer;
-}
-.button-main:active{
-  background:   var(--main-darkyellow);
-  color:  white;
-}
-
 .button-main{
   font-family: 'Luckiest Guy', cursive;
   background-color: var(--main-yellow);
@@ -97,8 +82,24 @@
   color: black;
   font-weight: bold;
   border-radius: 12px;
-  
+  transition: all 0.3s;
 }
+.button-main:focus{
+  outline: none;
+}
+.button-main:hover{
+  background: var(--main-lightyellow);
+  color: black;
+  border: 4px dashed var(--red-dark);
+  box-shadow: 0px 0px 15px 8px rgba(0,0,0, .575);
+  cursor: pointer;
+}
+.button-main:active{
+  background:   var(--main-darkyellow);
+  color:  white;
+}
+
+
 
 
 

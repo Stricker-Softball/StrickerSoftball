@@ -38,6 +38,7 @@
     padding: 6px 20px 8px;
     display: inline-block;
     border-right: 2px dashed var(--red);
+    transition: all 0.3s;
 }
 .Navbar .Navbar-items a::selection {
     color: none;
@@ -46,7 +47,7 @@
 
 .Navbar .Navbar-items a:hover{
     background: var(--main-lightyellow);
-    color: black;
+    color: var(--red);
 
 }
 .Navbar .Navbar-items a:active{
