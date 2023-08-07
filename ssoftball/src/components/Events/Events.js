@@ -24,22 +24,26 @@ function Events(props) {
         }
     ]
     eventsGroup[0].events = [
-        // {  name:'Mission Statement',
-        //     file:"https://drive.google.com/file/d/1IX6dn6G7iwxYFdoGSOoOfhSJ4ePsNprr/preview", 
-        //     url:"https://drive.google.com/file/d/1IX6dn6G7iwxYFdoGSOoOfhSJ4ePsNprr/view"
-        // },
+        {  name:'Monthly Memberships',
+            file:"https://drive.google.com/file/d/1FWwYMbJoQ0bPpM18o_rFxXlPOhUtMuGR/preview", 
+            url:"https://drive.google.com/file/d/1FWwYMbJoQ0bPpM18o_rFxXlPOhUtMuGR/view"
+        },
+        {  name:'Fall 2023 Softball Science Announcement',
+        file:"https://drive.google.com/file/d/1vItOWaz0XXArYJhQ8_tERKtT_74P7Io-/preview", 
+        url:"https://drive.google.com/file/d/1vItOWaz0XXArYJhQ8_tERKtT_74P7Io-/view"
+    },
         {  name:'Questions',
             file:"https://drive.google.com/file/d/1lLEGRyXc0A-3n68ro6_cqgzSVKcH5cIK/preview", 
             url:"https://drive.google.com/file/d/1lLEGRyXc0A-3n68ro6_cqgzSVKcH5cIK/view"
         },
-        {  name:'Summer 2023 Hitting Velocity Camp ',
-            file:"https://drive.google.com/file/d/1JaRKRYNrsMhFs_Z4oc1B_5Rm25getqKt/preview", 
-            url:"https://drive.google.com/file/d/1JaRKRYNrsMhFs_Z4oc1B_5Rm25getqKt/view"
-        },
-        {  name:'2023 7 through 12 year olds',
-            file:"https://drive.google.com/file/d/1Tcx-hmSiFMqD32PBaYYBKcqF_-U9q99T/preview", 
-            url:"https://drive.google.com/file/d/1Tcx-hmSiFMqD32PBaYYBKcqF_-U9q99T/view"
-        },
+        // {  name:'Summer 2023 Hitting Velocity Camp ',
+        //     file:"https://drive.google.com/file/d/1JaRKRYNrsMhFs_Z4oc1B_5Rm25getqKt/preview", 
+        //     url:"https://drive.google.com/file/d/1JaRKRYNrsMhFs_Z4oc1B_5Rm25getqKt/view"
+        // },
+        // {  name:'2023 7 through 12 year olds',
+        //     file:"https://drive.google.com/file/d/1Tcx-hmSiFMqD32PBaYYBKcqF_-U9q99T/preview", 
+        //     url:"https://drive.google.com/file/d/1Tcx-hmSiFMqD32PBaYYBKcqF_-U9q99T/view"
+        // },
 //             {  name:'Summer 2023 Hitting Velocity Camp',
 //             file:"https://drive.google.com/file/d/1kYz6yz6_-t0uWYJbhetrfF_cMTXff2Ot/preview", 
 //             url:"https://drive.google.com/file/d/1kYz6yz6_-t0uWYJbhetrfF_cMTXff2Ot/view"
