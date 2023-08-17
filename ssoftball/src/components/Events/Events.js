@@ -74,7 +74,7 @@ function Events(props, e) {
     // }, []);
 
 
-//     console.log(eventsGroup)
+    console.log(eventsGroup)
     function PdfClick(link) {
         window.open(link, '_blank');
     }

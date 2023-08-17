@@ -21,7 +21,7 @@ function Navbar(props) {
         {name:'Clinics & Registration', link:'/clinics'},
         {name:'Memberships', link:'/members'},
         {name:'Q & A', link:'/questions'},
-        {name:'Classes', link:'/class'},
+        {name:'Classes', link:'/classes'},
         {name:'Coaches & Lessons', link:'/meetthecoach'},
         {name:'Contacts', link:'/contacts'}
     ]

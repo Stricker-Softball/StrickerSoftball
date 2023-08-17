@@ -79,7 +79,7 @@ function App() {
             <Route path="/clinics" render={props => <Events key={1} {...props} eventList={events} sectionList={sectionListObject.clinics}/>} />
             <Route path="/questions" render={props => <Events key={2}  {...props} eventList={events} sectionList={sectionListObject.questions}/>} />
             <Route path="/members" render={props => <Events key={3}  {...props} eventList={events} sectionList={sectionListObject.members}/>} />
-            <Route path="/class" render={props => <Events key={3}  {...props} eventList={events} sectionList={sectionListObject.classes}/>} />
+            <Route path="/classes" render={props => <Events key={4}  {...props} eventList={events} sectionList={sectionListObject.classes}/>} />
             <Route path="/meetthecoach" render={props => <Coaches {...props} />} /><Route path="/meetthecoach" render={props => <Lessons {...props} />} />
             <Route path="/lessons" render={() => <Contacts />} />
             <Route path="/contacts" render={() => <Contacts />} />
