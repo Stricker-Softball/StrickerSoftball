@@ -40,7 +40,7 @@ function Events(props, e) {
                 url:"https://drive.google.com/file/d/1HFpfZ5GhqVkYunBwSOm0ieihDwUMAyoy/view"
             }
         ]
-        eventsGroup[1] = {};
+        eventsGroup[1] = {links: []};
         eventsGroup[1].title = 'Class Descriptions'
         eventsGroup[1].events = [
             {
