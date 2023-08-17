@@ -23,6 +23,7 @@ function Events(props, e) {
             description:'View and Register for  our Clinics',
         }
     ]
+    eventsGroup[0].events = []
     if(!props.match.path.includes('clinic')){
         eventsGroup[0].links = []
     }
@@ -30,34 +31,32 @@ function Events(props, e) {
         eventsGroup[0].title = 'Questions & Answers'
     }else if(props.match.path.includes('member')){
         eventsGroup[0].title = 'Memberships'
+    }else if(props.match.path.includes('class')){
+        eventsGroup[0].title = 'Classes'
+        eventsGroup[0].events = [
+            {
+                name:'Class Schedule',
+                file:"https://drive.google.com/file/d/1HFpfZ5GhqVkYunBwSOm0ieihDwUMAyoy/preview", 
+                url:"https://drive.google.com/file/d/1HFpfZ5GhqVkYunBwSOm0ieihDwUMAyoy/view"
+            }
+        ]
+        eventsGroup[1] = {};
+        eventsGroup[1].title = 'Class Descriptions'
+        eventsGroup[1].events = [
+            {
+                name:'Plyometric Open Gym',
+                file:"https://drive.google.com/file/d/1OqyHhmU3KLGPsvLqWEMSJCgZRuoecZBR/preview", 
+                url:"https://drive.google.com/file/d/1OqyHhmU3KLGPsvLqWEMSJCgZRuoecZBR/view"
+            },
+            {
+                name:'Velocity Class',
+                file:"https://drive.google.com/file/d/1y9Y5vw3FXhVscK4FuJKTuJVCXp9ULOIK/preview", 
+                url:"https://drive.google.com/file/d/1y9Y5vw3FXhVscK4FuJKTuJVCXp9ULOIK/view"
+            }
+        ]
     }
 
-    eventsGroup[0].events = [
-        {  name:'Monthly Memberships',
-            file:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/preview", 
-            url:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/view"
-        },
-        {  name:'Fall 2023 Softball Science Announcement',
-        file:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/preview", 
-        url:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/view"
-    },
-        {  name:'Questions',
-            file:"https://drive.google.com/file/d/1lLEGRyXc0A-3n68ro6_cqgzSVKcH5cIK/preview", 
-            url:"https://drive.google.com/file/d/1lLEGRyXc0A-3n68ro6_cqgzSVKcH5cIK/view"
-        },
-        // {  name:'Summer 2023 Hitting Velocity Camp ',
-        //     file:"https://drive.google.com/file/d/1JaRKRYNrsMhFs_Z4oc1B_5Rm25getqKt/preview", 
-        //     url:"https://drive.google.com/file/d/1JaRKRYNrsMhFs_Z4oc1B_5Rm25getqKt/view"
-        // },
-        // {  name:'2023 7 through 12 year olds',
-        //     file:"https://drive.google.com/file/d/1Tcx-hmSiFMqD32PBaYYBKcqF_-U9q99T/preview", 
-        //     url:"https://drive.google.com/file/d/1Tcx-hmSiFMqD32PBaYYBKcqF_-U9q99T/view"
-        // },
-//             {  name:'Summer 2023 Hitting Velocity Camp',
-//             file:"https://drive.google.com/file/d/1kYz6yz6_-t0uWYJbhetrfF_cMTXff2Ot/preview", 
-//             url:"https://drive.google.com/file/d/1kYz6yz6_-t0uWYJbhetrfF_cMTXff2Ot/view"
-//         }
-    ]
+    
     if(props.sectionList && props.sectionList.length){
         eventsGroup[0].events = props.sectionList;
         // console.log(eventsGroup[0].events )

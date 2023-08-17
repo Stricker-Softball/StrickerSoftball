@@ -32,6 +32,10 @@ function App() {
     //     file:"https://drive.google.com/file/d/1h5fbzNDLwHNfIH7t2EqJWviLLVWo0zGA/preview", 
     //     url:"https://drive.google.com/file/d/1h5fbzNDLwHNfIH7t2EqJWviLLVWo0zGA/view"
     //   },https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view?usp=sharing
+    {  name:'Payment',
+        file:"https://drive.google.com/file/d/18Ue2gwMby56G07dKMmeqCVA_YhOmBpD7/preview", 
+        url:"https://drive.google.com/file/d/18Ue2gwMby56G07dKMmeqCVA_YhOmBpD7/view"
+      },
     {  name:'Team Pricing',
         file:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/preview", 
         url:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view"
@@ -57,6 +61,8 @@ function App() {
           file:"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/preview", 
           url:"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/view"
       }
+    ],
+    classes:[
     ]
   }
 
@@ -73,8 +79,8 @@ function App() {
             <Route path="/clinics" render={props => <Events key={1} {...props} eventList={events} sectionList={sectionListObject.clinics}/>} />
             <Route path="/questions" render={props => <Events key={2}  {...props} eventList={events} sectionList={sectionListObject.questions}/>} />
             <Route path="/members" render={props => <Events key={3}  {...props} eventList={events} sectionList={sectionListObject.members}/>} />
-            <Route path="/lessons" render={props => <Lessons {...props} />} />
-            <Route path="/meetthecoach" render={props => <Coaches {...props} />} />
+            <Route path="/class" render={props => <Events key={3}  {...props} eventList={events} sectionList={sectionListObject.classes}/>} />
+            <Route path="/meetthecoach" render={props => <Coaches {...props} />} /><Route path="/meetthecoach" render={props => <Lessons {...props} />} />
             <Route path="/lessons" render={() => <Contacts />} />
             <Route path="/contacts" render={() => <Contacts />} />
             {/* <Route path="/admin/events/edit" render={props => <EditEvents {...props} />} />
