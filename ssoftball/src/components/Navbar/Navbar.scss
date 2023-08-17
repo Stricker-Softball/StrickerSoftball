@@ -20,7 +20,7 @@
 }
 
 .Navbar .Navbar-items{
-    background: var(--main-lightyellow);
+    background: var(--main-yellow);
     border: 4px solid var(--red);
     box-shadow: 0 0 20px white;
     width: auto;
@@ -76,7 +76,7 @@
 // Tablet styles
 // ===============/
 
-@media (max-width: 860px){
+@media (max-width: 1190px){
     .Navbar{
         min-height: 100px;
         .Navbar-items{

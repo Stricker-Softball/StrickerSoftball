@@ -18,8 +18,10 @@ function Navbar(props) {
 
     let nav_item_list = [
         {name:'Home', link:'/'},
-        {name:'Clinics & Registration', link:'/events'},
-        {name:'Softball Lessons', link:'/lessons'},
+        {name:'Clinics & Registration', link:'/clinics'},
+        {name:'Memberships', link:'/members'},
+        {name:'Q & A', link:'/questions'},
+        {name:'Lessons', link:'/lessons'},
         {name:'Meet The Coaches', link:'/meetthecoach'},
         {name:'Contacts', link:'/contacts'}
     ]
@@ -30,7 +32,7 @@ function Navbar(props) {
  
                 {nav_item_list.map((item) => {
                     
-                    return <NavLink to={item.link}>
+                    return <NavLink key={item.name} to={item.link}>
                         {item.name}
                     </NavLink>
                 })}

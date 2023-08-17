@@ -19,13 +19,47 @@ function App() {
 
   useEffect(() => {
     async function fetchData() {
-      const result = await axios.get(
-        'https://stricker-softball.herokuapp.com/api/events/'
-      )
-      setEvents(result.data);
+      // const result = await axios.get(
+      //   'https://stricker-softball.herokuapp.com/api/events/'
+      // )
+      // setEvents(result.data);
     }
     fetchData();
   }, []);
+  let sectionListObject = {
+    clinics:[
+    // {  name:'',
+    //     file:"https://drive.google.com/file/d/1h5fbzNDLwHNfIH7t2EqJWviLLVWo0zGA/preview", 
+    //     url:"https://drive.google.com/file/d/1h5fbzNDLwHNfIH7t2EqJWviLLVWo0zGA/view"
+    //   },https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view?usp=sharing
+    {  name:'Team Pricing',
+        file:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/preview", 
+        url:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view"
+      },
+      {  name:'Fall 2023 Softball Science Announcement',
+        file:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/preview", 
+        url:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/view"
+      },
+    ],
+    questions:[
+      {  name:'Questions',
+          file:"https://drive.google.com/file/d/1lLEGRyXc0A-3n68ro6_cqgzSVKcH5cIK/preview", 
+          url:"https://drive.google.com/file/d/1lLEGRyXc0A-3n68ro6_cqgzSVKcH5cIK/view"
+      },
+    ],
+    members:[
+      {  name:'Monthly Memberships',
+          file:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/preview", 
+          url:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/view"
+      },
+      {
+        name:'Fall 2023 Hitting Velocity Memberships',
+          file:"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/preview", 
+          url:"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/view"
+      }
+    ]
+  }
+
 
   return (
     <>
@@ -36,13 +70,15 @@ function App() {
           <Route path="/" render={props => <Navbar {...props} />} />
           <div className='container-after'>
             <Route exact path="/" render={props => <Home {...props} />} />
-            <Route path="/events" render={props => <Events {...props} eventList={events} />} />
+            <Route path="/clinics" render={props => <Events key={1} {...props} eventList={events} sectionList={sectionListObject.clinics}/>} />
+            <Route path="/questions" render={props => <Events key={2}  {...props} eventList={events} sectionList={sectionListObject.questions}/>} />
+            <Route path="/members" render={props => <Events key={3}  {...props} eventList={events} sectionList={sectionListObject.members}/>} />
             <Route path="/lessons" render={props => <Lessons {...props} />} />
             <Route path="/meetthecoach" render={props => <Coaches {...props} />} />
             <Route path="/lessons" render={() => <Contacts />} />
             <Route path="/contacts" render={() => <Contacts />} />
-            <Route path="/admin/events/edit" render={props => <EditEvents {...props} />} />
-            <Route path="/admin/events/delete" render={props => <DeleteEvents {...props} eventList={events} />} />
+            {/* <Route path="/admin/events/edit" render={props => <EditEvents {...props} />} />
+            <Route path="/admin/events/delete" render={props => <DeleteEvents {...props} eventList={events} />} /> */}
           </div>
         </div>
         <Footer />

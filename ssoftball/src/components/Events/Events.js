@@ -13,7 +13,7 @@ import sbll4th from  '../../images/pdf/StrickerSoftballAcademySummer.pdf';
 // import bb from '../../../public/web/viewer.html'
 
 
-function Events(props) {
+function Events(props, e) {
     const [events, setEvents] = useState(props.eventList || []);
     const [eventsGroup, setEGroup] = useState([{title:'Clinics'}]);
     eventsGroup[0].links = [
@@ -23,14 +23,17 @@ function Events(props) {
             description:'View and Register for  our Clinics',
         }
     ]
+    if(!props.match.path.includes('clinic')){
+        eventsGroup[0].links = []
+    }
     eventsGroup[0].events = [
         {  name:'Monthly Memberships',
-            file:"https://drive.google.com/file/d/1FWwYMbJoQ0bPpM18o_rFxXlPOhUtMuGR/preview", 
-            url:"https://drive.google.com/file/d/1FWwYMbJoQ0bPpM18o_rFxXlPOhUtMuGR/view"
+            file:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/preview", 
+            url:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/view"
         },
         {  name:'Fall 2023 Softball Science Announcement',
-        file:"https://drive.google.com/file/d/1vItOWaz0XXArYJhQ8_tERKtT_74P7Io-/preview", 
-        url:"https://drive.google.com/file/d/1vItOWaz0XXArYJhQ8_tERKtT_74P7Io-/view"
+        file:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/preview", 
+        url:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/view"
     },
         {  name:'Questions',
             file:"https://drive.google.com/file/d/1lLEGRyXc0A-3n68ro6_cqgzSVKcH5cIK/preview", 
@@ -49,6 +52,10 @@ function Events(props) {
 //             url:"https://drive.google.com/file/d/1kYz6yz6_-t0uWYJbhetrfF_cMTXff2Ot/view"
 //         }
     ]
+    if(props.sectionList && props.sectionList.length){
+        eventsGroup[0].events = props.sectionList;
+        // console.log(eventsGroup[0].events )
+    }
     
 
     // useEffect(() => {
@@ -79,10 +86,10 @@ function Events(props) {
                         {group.links.map((item) => {
                             return (
                                 <>
-                                <div className='link-description' style={{paddingBottom:'0',overflow:'hidden'}}>
+                                <div key={item.name + 'link'} className='link-description' style={{paddingBottom:'0',overflow:'hidden'}}>
                                     {item.description}
                                     </div>
-                                {item.link && <a className='clinic-link pdf-link ' target="_blank" href={item.link}>{item.name}</a>}
+                                {item.link && <a key={item.name + 'a'} className='clinic-link pdf-link ' target="_blank" href={item.link}>{item.name}</a>}
                                 
                                 </>
                             )
@@ -91,9 +98,9 @@ function Events(props) {
                             // console.log(item)
                             return (
                                 <>
-                                {item.url && <a className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>}
-                                <div className='event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
-                                    <iframe frameborder="0" scrolling="no" allowtransparency="true" src={item.file} ></iframe>
+                                {item.url && <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>}
+                                <div key={item.name} className='event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
+                                    <iframe style={{background:'#000000'}} frameBorder="0" scrolling="no" allowtransparency="true" src={item.file} ></iframe>
                                 </div>
                                 </>
                             )
