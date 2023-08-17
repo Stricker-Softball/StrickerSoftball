@@ -26,6 +26,12 @@ function Events(props, e) {
     if(!props.match.path.includes('clinic')){
         eventsGroup[0].links = []
     }
+    if(props.match.path.includes('question')){
+        eventsGroup[0].title = 'Questions & Answers'
+    }else if(props.match.path.includes('member')){
+        eventsGroup[0].title = 'Memberships'
+    }
+
     eventsGroup[0].events = [
         {  name:'Monthly Memberships',
             file:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/preview", 
