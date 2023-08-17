@@ -32,10 +32,7 @@ function App() {
     //     file:"https://drive.google.com/file/d/1h5fbzNDLwHNfIH7t2EqJWviLLVWo0zGA/preview", 
     //     url:"https://drive.google.com/file/d/1h5fbzNDLwHNfIH7t2EqJWviLLVWo0zGA/view"
     //   },https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view?usp=sharing
-    {  name:'Payment',
-        file:"https://drive.google.com/file/d/18Ue2gwMby56G07dKMmeqCVA_YhOmBpD7/preview", 
-        url:"https://drive.google.com/file/d/18Ue2gwMby56G07dKMmeqCVA_YhOmBpD7/view"
-      },
+    
     {  name:'Team Pricing',
         file:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/preview", 
         url:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view"
@@ -43,6 +40,10 @@ function App() {
       {  name:'Fall 2023 Softball Science Announcement',
         file:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/preview", 
         url:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/view"
+      },
+      {  name:'Payment',
+        file:"https://drive.google.com/file/d/18Ue2gwMby56G07dKMmeqCVA_YhOmBpD7/preview", 
+        url:"https://drive.google.com/file/d/18Ue2gwMby56G07dKMmeqCVA_YhOmBpD7/view"
       },
     ],
     questions:[
