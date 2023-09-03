@@ -32,7 +32,10 @@ function App() {
     //     file:"https://drive.google.com/file/d/1h5fbzNDLwHNfIH7t2EqJWviLLVWo0zGA/preview", 
     //     url:"https://drive.google.com/file/d/1h5fbzNDLwHNfIH7t2EqJWviLLVWo0zGA/view"
     //   },https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view?usp=sharing
-    
+    {  name:'Class Anouncement!',
+        file:"https://drive.google.com/file/d/1cjZjzYTTnl0QhZYySQlKaTniGgyETBVv/preview", 
+        url:"https://drive.google.com/file/d/1cjZjzYTTnl0QhZYySQlKaTniGgyETBVv/view"
+      },
     {  name:'Team Pricing',
         file:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/preview", 
         url:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view"
