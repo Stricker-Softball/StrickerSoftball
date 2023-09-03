@@ -79,6 +79,7 @@ function Home(props) {
                 
                 
             </div>
+            <h2>Announcement!</h2>
             <div id="announcementDiv"><iframe src="https://drive.google.com/file/d/1y3XQ461f29FZG2ceD0Kai1cb2ibciMDB/preview" frameBorder="0" scrolling="no" allowtransparency="true" /></div>
             <h2>Coaching and lessons for all levels</h2>
             <div className='buttons'>
