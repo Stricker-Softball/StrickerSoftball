@@ -207,11 +207,39 @@
 .svgContainer{
   max-height: 110px;
 }
+#announcementDiv{
+  aspect-ratio: 2/1;
+  overflow: hidden;
+  width:700px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+ }
+ #announcementDiv iframe{
+  margin: 0 auto;
+   margin-top:-100px;
+   width: 100%;
+   height:calc(100% + 150px);
+ }
 @media only screen and (max-width: 700px) {
   #softballGroup2{
     offset-path: path('M265,200 L590,200');
   }
 }
+@media only screen and (max-width: 780px) {
+  #announcementDiv{
+    aspect-ratio: 2/1;
+    overflow: hidden;
+    width:100%;
+   }
+   #announcementDiv iframe{
+    margin: 0 auto;
+     margin-top:-15%;
+     width: 100%;
+     height:calc(150%);
+   }
+}
+
 // 1301px 
 // 600px 
 #associateSection{

@@ -79,7 +79,7 @@ function Home(props) {
                 
                 
             </div>
-            
+            <div id="announcementDiv"><iframe src="https://drive.google.com/file/d/1y3XQ461f29FZG2ceD0Kai1cb2ibciMDB/preview" frameBorder="0" scrolling="no" allowtransparency="true" /></div>
             <h2>Coaching and lessons for all levels</h2>
             <div className='buttons'>
                 <button className='button-main' onClick={() => buttonPress('/events')}>Clinics</button>
