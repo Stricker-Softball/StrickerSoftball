@@ -209,8 +209,46 @@
 }
 @media only screen and (max-width: 700px) {
   #softballGroup2{
-    offset-path: path('M150,200 L590,200');
+    offset-path: path('M265,200 L590,200');
   }
 }
 // 1301px 
 // 600px 
+#associateSection{
+  display:flex;
+  flex-direction: column;
+  position:absolute;
+  top:20px;
+  left:10px;
+}
+#associateLabel span{
+  display: block;
+  font-size: .8rem;
+}
+#assocateLinks{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px;
+}
+#assocateLinks span{
+  margin-bottom:12px;
+  height:60px;
+  width:60px;
+  border-radius: 100%;
+  display:block;
+  transition: all 0.3s;
+}
+
+#associateBringIt{
+  background-color:red;
+  background-image: url('../../images/bring-it.jpg');
+  background-size: contain;
+}
+#assocateLinks span:hover{
+  height:70px;
+  width:70px;
+  box-shadow: 0 0 20px 0px grey;
+  cursor: pointer;
+}

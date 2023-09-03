@@ -4,8 +4,10 @@ import './Home.scss';
 import EqupmentPile from '../../images/equipment-pile.jpg';
 import MitGlove from '../../images/mit-glove.jpg';
 import Sillouete from '../../images/silouette-player.png';
-
 function Home(props) {
+    function externalLink(link){
+        window.open(link, "_blank");
+    }
     function buttonPress(link) {
         window.scrollTo(0, 0)
         props.history.push(link)
@@ -23,6 +25,12 @@ function Home(props) {
                 </div>
             
             <h1><span>Softball Science</span><span>&</span><span>Stricker Softball</span></h1>
+            <div id="associateSection">
+                <div id="associateLabel"><span>Associated</span><span>sites</span></div>
+                <div id="assocateLinks">
+                    <span id="associateBringIt" onClick={() => externalLink('https://www.bringitsportsacademy.com/')}></span>
+                </div>
+            </div>
             <div class="svgBar">
                 <div class="dnaContainer svgContainer">
                     <svg fill="#FF0082" height="100px" width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
