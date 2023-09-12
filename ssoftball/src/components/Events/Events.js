@@ -25,7 +25,7 @@ function Events(props, e) {
         {
             link:'https://drive.google.com/file/d/1s0yBRV44r9OndDav5A-0alqvXSssIkin/view?usp=sharing',
             name:'Liability Waiver',
-            description:'Softball Science LLC participation Waiver',
+            description:'Download & Fill out Softball Science Waiver',
         }
     ]
     eventsGroup[0].events = []
