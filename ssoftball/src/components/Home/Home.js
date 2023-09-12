@@ -24,7 +24,10 @@ function Home(props) {
                     </svg>
                 </div>
             
-            <h1><span>Softball Science</span><span>&</span><span>Stricker Softball</span></h1>
+            <h1><span>Softball Science</span>
+            {/* <span>&</span>
+            <pan>Stricker Softball</pan> */}
+                </h1>
             <div id="associateSection">
                 <div id="associateLabel"><span>Associated</span><span>sites</span></div>
                 <div id="assocateLinks">
