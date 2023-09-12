@@ -21,6 +21,11 @@ function Events(props, e) {
             link:'https://docs.google.com/forms/d/e/1FAIpQLSdwHUuwZlNp1hWYEGPqPyT1xND-jpHbhXUicZuKzTau9Gxtzg/viewform?usp=sf_link',
             name:'Registration Form',
             description:'View and Register for  our Clinics',
+        },
+        {
+            link:'https://drive.google.com/file/d/1s0yBRV44r9OndDav5A-0alqvXSssIkin/view?usp=sharing',
+            name:'Liability Waiver',
+            description:'Softball Science LLC participation Waiver',
         }
     ]
     eventsGroup[0].events = []
