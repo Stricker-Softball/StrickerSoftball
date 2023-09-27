@@ -281,3 +281,15 @@
   box-shadow: 0 0 20px 0px grey;
   cursor: pointer;
 }
+
+#ssLogoDiv{
+  background-image: url('../../images/ssBackgorund.png');
+  height:300px;
+  width: 300px;
+  background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    border-radius: 100%;
+    margin:-10px auto -96px;
+    
+}

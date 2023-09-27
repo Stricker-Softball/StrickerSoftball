@@ -10,8 +10,7 @@ import Lessons from './components/Lessons/Lessons.js';
 import Coaches from './components/Coaches/Coaches.js';
 import Contacts from './components/Contact/Contact.js';
 import Events from './components/Events/Events.js';
-import EditEvents from './components/Events/EditEvents/EditEvents.js';
-import DeleteEvents from './components/Events/EditEvents/DeleteEvents.js';
+import AdminScreen from './components/Admin/AdminScreen.js'
 
 function App() {
 
@@ -36,6 +35,7 @@ function App() {
     //     file:"https://drive.google.com/file/d/1cjZjzYTTnl0QhZYySQlKaTniGgyETBVv/preview", 
     //     url:"https://drive.google.com/file/d/1cjZjzYTTnl0QhZYySQlKaTniGgyETBVv/view"
     //   },
+    
     {  name:'Team Pricing',
         file:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/preview", 
         url:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view"
@@ -85,10 +85,9 @@ function App() {
             <Route path="/members" render={props => <Events key={3}  {...props} eventList={events} sectionList={sectionListObject.members}/>} />
             <Route path="/classes" render={props => <Events key={4}  {...props} eventList={events} sectionList={sectionListObject.classes}/>} />
             <Route path="/meetthecoach" render={props => <Coaches {...props} />} /><Route path="/meetthecoach" render={props => <Lessons {...props} />} />
-            <Route path="/lessons" render={() => <Contacts />} />
             <Route path="/contacts" render={() => <Contacts />} />
-            {/* <Route path="/admin/events/edit" render={props => <EditEvents {...props} />} />
-            <Route path="/admin/events/delete" render={props => <DeleteEvents {...props} eventList={events} />} /> */}
+            <Route path="/admin/events/edit" render={props => <AdminScreen {...props} eventList={events} allSections={sectionListObject}/>} />
+            {/* <Route path="/admin/events/delete" render={props => <DeleteEvents {...props} eventList={events} />} /> */} 
           </div>
         </div>
         <Footer />

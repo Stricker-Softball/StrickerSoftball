@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom';
 import './MenuNav.scss';
 
 /* App.jsx */
-let textColor = 'rgb(255,0,130)'
+let textColor = '#4F1150'
 
 function App (props){
     let [menuOpen, setMenuOpen] = useState(false);
@@ -117,7 +117,7 @@ function MenuItem (props){
         padding: '1.2rem 0',
         margin: '0 5%',
         cursor: 'pointer',
-        color: 'black',
+        color: 'white',
         transition: 'color 0.2s ease-in-out',
         animation: '0.5s slideIn forwards',
         animationDelay: props.delay,
@@ -191,7 +191,7 @@ function Menu (props){
   /* MenuButton.jsx */
 function MenuButton (props){
     let [open, setOpen] = useState(props.open ? props.open : false)
-    let [color, setColor] = useState('black')
+    let [color, setColor] = useState('white')
   
 
     useEffect( () => {

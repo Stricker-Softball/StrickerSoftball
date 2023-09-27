@@ -4,30 +4,32 @@
 }
 
 :root {
-  --main-lightyellow:  rgb(253, 250, 165);
-  --main-yellow: rgb(255, 250, 104); 
+  --main-lightyellow:  #C15E94;
+  --main-yellow: #C15E94;
   /* --main-lightyellow:  rgb(255, 250, 104);
   --main-yellow: rgb(250, 233, 140);  */
-  --main-darkyellow: rgb(136, 126, 73);
+  --main-darkyellow: #C15E94;
 
   --blue: rgb(54,163,250);
 
-  --pink: rgb(255,102,102);
-  --pink-light: rgb(226,138,126);
+  --pink: #C16794;
+  --pink-light: #C16794;
   /* --red: rgb(255,102,102); */
-  --red:   rgb(255,0,130);
+  --red:   #4F1150;
   /* --red :  rgb(219,13,64); */
-  --red-dark: rgb(219,13,64);
-  --red-dark: rgb(255,132,132);
+  --red-dark: #4F1150;
+  --red-dark: #C16794;
   /* --red: rgb(24,24,24); */
   --light-black: rgb(24,24,24);
-  --black: black;
+  --black: white;
   --black-transparent: rgba(0, 0, 0, 0.73);
 
   --main-padding: 15px;  
 
   --tablet-point:  1005px;
   --phone-point:  705px;
+
+  --event-background : black;
 }
 
 
@@ -56,7 +58,7 @@
 }
 
 .container{
-  padding: 55px 5%;
+  padding: 55px 10px 35px;
   padding-top: 0;
   height: 91%;
   /* background-color: var(--red); */
@@ -73,6 +75,11 @@
   color: white;
   position: relative
 }
+@media only screen and (max-width: 770px) {
+  .container{
+    padding: 0px 0 35px;
+  }
+}
 .button-main{
   font-family: 'Luckiest Guy', cursive;
   background-color: var(--main-yellow);
@@ -80,7 +87,7 @@
   /* border-style: groove; */
   padding: 8px 75px 10px;
   font-size: 1.4rem;
-  color: black;
+  color: var(--black);
   font-weight: bold;
   border-radius: 12px;
   transition: all 0.3s;
@@ -90,7 +97,8 @@
 }
 .button-main:hover{
   background: var(--main-lightyellow);
-  color: var(--red-dark);
+  // color: var(--red-dark);
+  opacity: 0.8;
   border: 4px dashed var(--red-dark);
   box-shadow: 0px 0px 15px 8px rgba(0,0,0, .575);
   cursor: pointer;

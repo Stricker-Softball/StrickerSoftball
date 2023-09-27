@@ -14,7 +14,7 @@ function Home(props) {
     }
     return (
         <div className="Home">
-            <div class="rollingContainer svgContainer">
+            {/* <div class="rollingContainer svgContainer">
                     <svg width="100%" height="300" viewBox="0 0 800 1000">
                         <g id="softballGroup2">
                         <circle cx="200" cy="200" r="150" fill="yellow" stroke="#FF0082" stroke-width="10" />
@@ -22,19 +22,10 @@ function Home(props) {
                         <path d="M310,95 Q200,135 310,310" fill="none" stroke="#FF0082" stroke-dasharray="15 15" stroke-width="10" />
                         </g>
                     </svg>
-                </div>
+                </div> */}
+            <div id="ssLogoDiv"></div>
             
-            <h1><span>Softball Science</span>
-            {/* <span>&</span>
-            <pan>Stricker Softball</pan> */}
-                </h1>
-            <div id="associateSection">
-                <div id="associateLabel"><span>Associated</span><span>sites</span></div>
-                <div id="assocateLinks">
-                    <span id="associateBringIt" onClick={() => externalLink('https://www.bringitsportsacademy.com/')}></span>
-                </div>
-            </div>
-            <div class="svgBar">
+            {/* <div class="svgBar">
                 <div class="dnaContainer svgContainer">
                     <svg fill="#FF0082" height="100px" width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" 
                         viewBox="0 0 511.999 511.999" stroke="#000000">
@@ -81,8 +72,8 @@ function Home(props) {
                 </div>
                 
                 
-            </div>
-            <h2>Announcement!</h2>
+            </div> */}
+            <h2 style={{color:'var(--black)'}}>Announcements</h2>
             <div id="announcementDiv"><iframe src="https://drive.google.com/file/d/1y3XQ461f29FZG2ceD0Kai1cb2ibciMDB/preview" frameBorder="0" scrolling="no" allowtransparency="true" /></div>
             <h2>Coaching and lessons for all levels</h2>
             <div className='buttons'>
@@ -114,7 +105,12 @@ to the field with them as they go through their softball journey!</p>
             </div>
             <h2>Take a look at our Clinics</h2>
             <img className='sillouete' src={Sillouete} alt='sillouete' />
-
+<div id="associateSection">
+                <div id="associateLabel"><span>Associated</span><span>sites</span></div>
+                <div id="assocateLinks">
+                    <span id="associateBringIt" onClick={() => externalLink('https://www.bringitsportsacademy.com/')}></span>
+                </div>
+            </div>
         </div>
     );
 }
