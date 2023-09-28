@@ -23,6 +23,7 @@
   --light-black: rgb(24,24,24);
   --black: white;
   --black-transparent: rgba(0, 0, 0, 0.73);
+  --black-text: black;
 
   --main-padding: 15px;  
 
@@ -47,7 +48,7 @@
   min-height: 100vh;
   /* height: 100vh; */
   background-image: url('./images/Softball-big.jpg');
-  background-image: url('./images/softball-field-background.jpg');
+  background-image: url('./images/softball-field-background-pg.jpg');
   background-repeat: no-repeat, repeat;
   background-size: cover;
   background-position: top;

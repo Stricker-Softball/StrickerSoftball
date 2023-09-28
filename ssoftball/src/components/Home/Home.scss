@@ -248,7 +248,10 @@
   flex-direction: column;
   position:absolute;
   top:20px;
-  left:10px;
+  right:10px;
+  background-color: var(--black-transparent);
+  padding:10px;
+  border-radius: 15px;
 }
 #associateLabel span{
   display: block;
@@ -269,7 +272,23 @@
   display:block;
   transition: all 0.3s;
 }
-
+@media only screen and (max-width: 780px) {
+  #associateSection{
+    top:-85px;
+    right:10px;
+    
+  }
+  #associateLabel span{
+    font-size: .6rem;
+  }
+  #assocateLinks{
+    margin-top:10px;
+  }
+  #assocateLinks span{
+    height:40px;
+    width:40px;
+  }
+}
 #associateBringIt{
   background-color:red;
   background-image: url('../../images/bring-it.jpg');

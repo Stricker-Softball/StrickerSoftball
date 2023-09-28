@@ -16,9 +16,17 @@
     padding: 10px 5px 20px;
     /* display: flex; */
     font-family: 'Luckiest Guy', cursive;
-
+    position: relative;
 }
-
+#navBarLogo{
+position:absolute;
+left:15px;
+top:15px;
+}
+#navBarLogo img{
+    width:55px;
+    height: 55px;
+}
 .Navbar .Navbar-items{
     background: var(--main-yellow);
     border: 4px solid var(--red);

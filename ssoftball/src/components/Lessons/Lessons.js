@@ -23,7 +23,7 @@ function Lessons(props) {
     return (
         <div className="Lessons">
             <h1>Stricker Softball Lessons</h1>
-            <div className="intro-section">
+            <div className="intro-section" id="lessonsintro">
 
                 <img className='stricker-softball-png' src={StrickerSoftballPng} alt='stricker-softball-png' />
                 <p>Private, Semi - Private and Group Sessions</p>

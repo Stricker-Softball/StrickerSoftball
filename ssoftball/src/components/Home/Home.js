@@ -77,8 +77,8 @@ function Home(props) {
             <div id="announcementDiv"><iframe src="https://drive.google.com/file/d/1y3XQ461f29FZG2ceD0Kai1cb2ibciMDB/preview" frameBorder="0" scrolling="no" allowtransparency="true" /></div>
             <h2>Coaching and lessons for all levels</h2>
             <div className='buttons'>
-                <button className='button-main' onClick={() => buttonPress('/events')}>Clinics</button>
-                <button className='button-main' onClick={() => buttonPress('/lessons')}>Lessons</button>
+                <button className='button-main' onClick={() => buttonPress('/clinics')}>Clinics</button>
+                <button className='button-main' onClick={() => buttonPress('/meetthecoach#lessonsintro')}>Lessons</button>
             </div>
             
             <div className='buttons-bottom'>
@@ -105,7 +105,7 @@ to the field with them as they go through their softball journey!</p>
             </div>
             <h2>Take a look at our Clinics</h2>
             <img className='sillouete' src={Sillouete} alt='sillouete' />
-<div id="associateSection">
+            <div id="associateSection">
                 <div id="associateLabel"><span>Associated</span><span>sites</span></div>
                 <div id="assocateLinks">
                     <span id="associateBringIt" onClick={() => externalLink('https://www.bringitsportsacademy.com/')}></span>

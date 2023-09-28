@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import './Navbar.scss';
 
 import MenuNav from './Menu/MenuNav.js';
+import ssLogo from '../../images/ssLogo.png';
 
 function Navbar(props) {
     let [menuOpen, setMenuOpen] = useState(false)
@@ -28,6 +29,9 @@ function Navbar(props) {
 
     return (
         <div className="Navbar">
+            <div id="navBarLogo">
+            <img src={ssLogo} alt='logo' />
+            </div>
             <nav className={'Navbar-items'}>
  
                 {nav_item_list.map((item) => {
