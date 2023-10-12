@@ -25,6 +25,26 @@ function App() {
     }
     fetchData();
   }, []);
+  let annonucementList = []
+  let imgCardList = [
+    // https://drive.google.com/uc?export=view&id=
+    {  name:'',
+          file:"https://drive.google.com/uc?export=view&id=1ILCIuyVKDQhI31oJ3fvJv_q4ORw96181", 
+          url:"https://drive.google.com/file/d/1ILCIuyVKDQhI31oJ3fvJv_q4ORw96181/view"
+      },
+      {  name:'',
+          file:"https://drive.google.com/uc?export=view&id=1gnUIOSvwyU9h-Z0u5TCXGCFwP9jGMpUe", 
+          url:"https://drive.google.com/file/d/1gnUIOSvwyU9h-Z0u5TCXGCFwP9jGMpUe/view"
+      },
+      {  name:'',
+          file:"https://drive.google.com/uc?export=view&id=1IUrf2Q2SmzOi3ADIKBISgO9pgkLcqnmM", 
+          url:"https://drive.google.com/file/d/1IUrf2Q2SmzOi3ADIKBISgO9pgkLcqnmM/view"
+      },
+    {  name:'',
+          file:"https://drive.google.com/uc?export=view&id=1mJ3Y3WTe81k9rGS5Asl63y89lQF3as9j", 
+          url:"https://drive.google.com/file/d/1mJ3Y3WTe81k9rGS5Asl63y89lQF3as9j/view"
+      },
+  ]
   let sectionListObject = {
     clinics:[
     // {  name:'',
@@ -36,18 +56,18 @@ function App() {
     //     url:"https://drive.google.com/file/d/1cjZjzYTTnl0QhZYySQlKaTniGgyETBVv/view"
     //   },
     
-    {  name:'Team Pricing',
-        file:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/preview", 
-        url:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view"
-      },
-      {  name:'Fall 2023 Softball Science Announcement',
-        file:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/preview", 
-        url:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/view"
-      },
-      {  name:'Payment',
-        file:"https://drive.google.com/file/d/18Ue2gwMby56G07dKMmeqCVA_YhOmBpD7/preview", 
-        url:"https://drive.google.com/file/d/18Ue2gwMby56G07dKMmeqCVA_YhOmBpD7/view"
-      },
+    // {  name:'Team Pricing',
+    //     file:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/preview", 
+    //     url:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view"
+    //   },
+      // {  name:'Fall 2023 Softball Science Announcement',
+      //   file:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/preview", 
+      //   url:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/view"
+      // },
+      // {  name:'Payment',
+      //   file:"https://drive.google.com/file/d/18Ue2gwMby56G07dKMmeqCVA_YhOmBpD7/preview", 
+      //   url:"https://drive.google.com/file/d/18Ue2gwMby56G07dKMmeqCVA_YhOmBpD7/view"
+      // },
     ],
     questions:[
       {  name:'Questions',
@@ -66,7 +86,11 @@ function App() {
           url:"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/view"
       }
     ],
-    classes:[
+    teams:[
+      {  name:'Team Pricing',
+        file:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/preview", 
+        url:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view"
+      },
     ]
   }
 
@@ -80,10 +104,10 @@ function App() {
           <Route path="/" render={props => <Navbar {...props} />} />
           <div className='container-after'>
             <Route exact path="/" render={props => <Home {...props} />} />
-            <Route path="/clinics" render={props => <Events key={1} {...props} eventList={events} sectionList={sectionListObject.clinics}/>} />
+            <Route path="/clinics" render={props => <Events key={1} {...props} eventList={events} sectionList={sectionListObject.clinics} imgList={imgCardList}/>} />
             <Route path="/questions" render={props => <Events key={2}  {...props} eventList={events} sectionList={sectionListObject.questions}/>} />
             <Route path="/members" render={props => <Events key={3}  {...props} eventList={events} sectionList={sectionListObject.members}/>} />
-            <Route path="/classes" render={props => <Events key={4}  {...props} eventList={events} sectionList={sectionListObject.classes}/>} />
+            <Route path="/teams" render={props => <Events key={4}  {...props} eventList={events} sectionList={sectionListObject.teams}/>} />
             <Route path="/meetthecoach" render={props => <Coaches {...props} />} /><Route path="/meetthecoach" render={props => <Lessons {...props} />} />
             <Route path="/contacts" render={() => <Contacts />} />
             <Route path="/admin/events/edit" render={props => <AdminScreen {...props} eventList={events} allSections={sectionListObject}/>} />

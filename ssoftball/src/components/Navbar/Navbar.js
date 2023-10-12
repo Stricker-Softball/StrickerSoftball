@@ -20,9 +20,9 @@ function Navbar(props) {
     let nav_item_list = [
         {name:'Home', link:'/'},
         {name:'Clinics & Registration', link:'/clinics'},
-        {name:'Memberships', link:'/members'},
+        // {name:'Memberships', link:'/members'},
         {name:'Q & A', link:'/questions'},
-        {name:'Classes', link:'/classes'},
+        {name:'Teams', link:'/teams'},
         {name:'Coaches & Lessons', link:'/meetthecoach'},
         {name:'Contacts', link:'/contacts'}
     ]

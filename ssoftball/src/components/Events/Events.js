@@ -18,13 +18,20 @@ function Events(props, e) {
     const [eventsGroup, setEGroup] = useState([{title:'Clinics'}]);
     eventsGroup[0].links = [
         {
-            link:'https://docs.google.com/forms/d/e/1FAIpQLSdwHUuwZlNp1hWYEGPqPyT1xND-jpHbhXUicZuKzTau9Gxtzg/viewform?usp=sf_link',
-            name:'Registration Form',
+            buttons: [{
+                 link:'https://forms.gle/fxL3ge69UkqU8ePY6 ',
+                name:'Monthly Clinic Registration',
+            },{
+                link:'https://forms.gle/HedhWfqFkCNQ2sjR6',
+               name:'Holiday Clinic Registration',
+           }],
             description:'View and Register for  our Clinics',
         },
         {
+            buttons: [{
             link:'https://drive.google.com/file/d/1s0yBRV44r9OndDav5A-0alqvXSssIkin/view?usp=sharing',
             name:'Liability Waiver',
+        }],
             description:'Download & Fill out Softball Science Waiver',
         }
     ]
@@ -99,11 +106,29 @@ function Events(props, e) {
                                 <div key={item.name + 'link'} className='link-description' style={{paddingBottom:'0',overflow:'hidden'}}>
                                     {item.description}
                                     </div>
-                                {item.link && <a key={item.name + 'a'} className='clinic-link pdf-link ' target="_blank" href={item.link}>{item.name}</a>}
+                                {item.buttons.map((button) => {
+                                    return (
+                                        <a key={button.name + 'a'} className='clinic-link pdf-link ' target="_blank" href={button.link}>{button.name}</a>
+                                    )
+                                }) }
                                 
                                 </>
                             )
                         })}
+
+                        {props.imgList && props.imgList.map((item) => {
+                            console.log(item)
+                            return (
+                                <>
+                                {item.name && <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>}
+                                <div key={item.name} className='event-item-img event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
+                                    <img style={{background:'#000000'}}  src={item.file} />
+                                </div>
+                                </>
+                            )
+                        })}
+
+
                         {group.events.map((item) => {
                             // console.log(item)
                             return (

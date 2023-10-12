@@ -15,7 +15,8 @@
     min-height: 9%;
     padding: 10px 5px 20px;
     /* display: flex; */
-    font-family: 'Luckiest Guy', cursive;
+    // font-family: 'Luckiest Guy', cursive;
+    font-family: "Open Sans", sans-serif;
     position: relative;
 }
 #navBarLogo{
@@ -73,7 +74,8 @@ top:15px;
 }
 .Navbar .Navbar-items .events span{
     font-size: .8rem;
-    font-family: "Lucida Console", Courier, monospace;
+    // font-family: "Lucida Console", Courier, monospace;
+    font-family: "Open Sans", sans-serif;
     text-decoration: underline;
 }
 .Navbar .Navbar-items .events span::selection{
