@@ -86,12 +86,12 @@ function Home(props) {
             <div className='buttons-bottom'>
                 <button className='button-main' onClick={() => buttonPress('/meetthecoach')}> Coaches</button>
             </div>
-            <p class='science-paragraph'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Softball Science was created by 2 Women who have a vast
+            <p class='science-paragraph'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Softball Science was created by two women with a long history in the world of softball and life. 
             We have used our combined expertise, that includes over 30 years of coaching experience along with
              20 years of data analytics to create Softball Science. We have created a metrically driven program
               specifically designed to enhance the raw power behind your softball swing. All we need from you, 
-              is to.bring the hard work and we will teach your body to supply the power! Our vision is to help 
+              is to bring the hard work and we will teach your body to supply the power! Our vision is to help 
               guide softball players to believe in themselves and support them in every aspect of the game, 
               both physically and mentally. 
               We can't wait to help you unlock the strength you never knew you had! </p>
