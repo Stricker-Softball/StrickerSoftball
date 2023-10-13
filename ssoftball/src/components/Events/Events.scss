@@ -52,7 +52,6 @@
             .event-body{
                 white-space: pre-wrap;
                 line-height: 1.8rem;
-                font-family: 'Open Sans', sans-serif;
                 font-size: 1.05rem;
                 
             }
@@ -110,7 +109,6 @@
             .pdf-link{
                 cursor:pointer;
                 font-size: 1.3rem;
-                font-family: 'Roboto', sans-serif;
                 font-weight: bold;
                 border: 3px dashed var(--main-lightyellow);
                 background-color: var(--event-background);
@@ -133,7 +131,6 @@
     .Events .event-list .clinic-link{
     cursor:pointer;
     font-size: 1.3rem;
-    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     border: 3px dashed var(--main-lightyellow);
     background-color: var(--event-background);

@@ -87,20 +87,14 @@ function Home(props) {
                 <button className='button-main' onClick={() => buttonPress('/meetthecoach')}> Coaches</button>
             </div>
             <p class='science-paragraph'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Softball Science was created by 2 Women who have a vast
-history in the softball realm of today's world. Let’s face it
-technology has become a part of our whole world. We have
-taken our over 30 years of coaching experience along with our
-experience in the technology field, available to us and brought
-them together to create Softball Science.
-
-At Softball Science we have created a metrically driven program
-specifically designed to enhance the raw power behind your
-softball swing. All we need from you is to bring YOUR swing from
-your instructor and we will teach your body to supply the power!
-Our Vision is to let softball players believe in themselves and
-support them in every aspect of the game, physically and
-mentally. We will show them the science of bringing both aspects
-to the field with them as they go through their softball journey!</p>
+            Softball Science was created by two women with a long history in the world of softball and life. 
+            We have used our combined expertise, that includes over 30 years of coaching experience along with
+             20 years of data analytics to create Softball Science. We have created a metrically driven program
+              specifically designed to enhance the raw power behind your softball swing. All we need from you, 
+              is to.bring the hard work and we will teach your body to supply the power! Our vision is to help 
+              guide softball players to believe in themselves and support them in every aspect of the game, 
+              both physically and mentally. 
+              We can't wait to help you unlock the strength you never knew you had! </p>
             <div className='images' >
                 <img src={EqupmentPile} alt='equipment-pile' />
                 <img src={MitGlove} alt='mit-glove' />

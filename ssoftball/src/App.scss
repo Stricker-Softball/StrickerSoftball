@@ -2,6 +2,12 @@
 *{
   box-sizing: border-box; 
 }
+@font-face {
+  font-family: 'Open Sans';
+  src: url('./fonts/AR.ttf') format('ttf');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --main-lightyellow:  #C15E94;
@@ -43,7 +49,7 @@
 
 .App {
   text-align: center;
-  font-family: "Lucida Console", Courier, monospace;
+  font-family: 'Open Sans', sans-serif !important;
   font-weight: 600;
   min-height: 100vh;
   /* height: 100vh; */
