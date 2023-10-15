@@ -41,8 +41,8 @@ function Events(props, e) {
     }
     if(props.match.path.includes('question')){
         eventsGroup[0].title = 'Questions & Answers'
-    }else if(props.match.path.includes('member')){
-        eventsGroup[0].title = 'Memberships'
+    }else if(props.match.path.includes('teams')){
+        eventsGroup[0].title = 'Teams'
     }else if(props.match.path.includes('class')){
         eventsGroup[0].title = 'Classes'
         eventsGroup[0].events = [
