@@ -63,12 +63,15 @@
     transition: top .2s ease;
 }
 .menu-app-container.up{
-  top: -12px;
+  top: -5px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
-
-
+.menu-app-container.is-open{
+  top: -4px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
 
 .menu-menu-container{
     top: 0px;

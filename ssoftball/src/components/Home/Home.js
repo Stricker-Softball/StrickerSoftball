@@ -86,7 +86,7 @@ function Home(props) {
             <div className='buttons-bottom'>
                 <button className='button-main' onClick={() => buttonPress('/meetthecoach')}> Coaches</button>
             </div>
-            <p class='science-paragraph'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <p className='science-paragraph'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Softball Science was created by two women with a long history in the world of softball and life. 
             We have used our combined expertise, that includes over 30 years of coaching experience along with
              20 years of data analytics to create Softball Science. We have created a metrically driven program

@@ -11,10 +11,13 @@ function App (props){
     
     function handleMenuClick(e,ele) {
       setMenuOpen(!menuOpen)
-      if(menuOpen){ 
-        console.log(e, e.currentTarget)
-
-      }
+        if(!menuOpen){
+          if(!Array.from(document.querySelector('.menu-app-container').classList).includes('is-open')){
+            document.querySelector('.menu-app-container').classList.add("is-open");
+          }
+        }else{
+          document.querySelector('.menu-app-container').classList.remove("is-open");
+        }
     }
     
     function handleLinkClick(link) {
@@ -41,11 +44,19 @@ function App (props){
         useEffect(() => {
             if (window.scrollY < 30) {
                 if (pinText != 'down') {
+                  if(menuOpen){
+                    setPinText('down is-open');
+                  }else{
                     setPinText('down');
+                  }
                 }
             } else {
                 if (pinText != 'up') {
-                    setPinText('up');
+                    if(menuOpen){
+                      setPinText('up is-open');
+                    }else{
+                      setPinText('up');
+                    }
                 }
             }
         });
@@ -203,11 +214,9 @@ function MenuButton (props){
     }, [props.open])
     
     function handleClick(){
-
+console.log('clicked')
         setOpen(!open)
-        if(open){
-          
-        }
+        
     }
     
       const styles = {
