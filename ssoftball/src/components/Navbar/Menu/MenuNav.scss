@@ -63,7 +63,9 @@
     transition: top .2s ease;
 }
 .menu-app-container.up{
-  top: -15px;
+  top: -12px;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
 }
 
 

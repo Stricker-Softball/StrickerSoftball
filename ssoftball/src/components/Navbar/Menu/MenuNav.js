@@ -9,8 +9,12 @@ function App (props){
     let [menuOpen, setMenuOpen] = useState(false);
 
     
-    function handleMenuClick() {
+    function handleMenuClick(e,ele) {
       setMenuOpen(!menuOpen)
+      if(menuOpen){ 
+        console.log(e, e.currentTarget)
+
+      }
     }
     
     function handleLinkClick(link) {
@@ -74,7 +78,7 @@ function App (props){
     return(
     <div>
         <div className={`menu-app-container ${pinText}`}>
-        <MenuButton open={menuOpen} onClick={()=> handleMenuClick()} color='white'/>
+        <MenuButton open={menuOpen} onClick={handleMenuClick} color='white'/>
         </div>
         <Menu open={menuOpen}>
         {menuItems}
@@ -201,12 +205,15 @@ function MenuButton (props){
     function handleClick(){
 
         setOpen(!open)
+        if(open){
+          
+        }
     }
     
       const styles = {
         container: {
-          height: '54px',
-          width: '50px',
+          height: '60px',
+          width: '60px',
           display:'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -223,7 +230,9 @@ function MenuButton (props){
         },
         menuText: {
           marginLeft: open ? '-10px':'0px',
-          color: color
+          color: color,
+          marginTop: '5px',
+          fontSize: '12px'
         },
         line: {
           height: '3px',
@@ -236,6 +245,7 @@ function MenuButton (props){
           transform: open ? ' rotate(44deg)':'none',
           transformOrigin: 'top left',
           marginBottom: '5px',
+          marginTop: '5px'
         },
         lineMiddle: {
           opacity: open ? 0: 1,
@@ -252,10 +262,11 @@ function MenuButton (props){
         <div style={styles.container} 
           onClick={ props.onClick ?  props.onClick: 
             ()=> { handleClick();}}>
-              <div style={styles.menuText} >MENU</div>
+              
           <div style={{...styles.line,...styles.lineTop}}/>
           <div style={{...styles.line,...styles.lineMiddle}}/>
           <div style={{...styles.line,...styles.lineBottom}}/>
+          <div style={styles.menuText} >MENU</div>
         </div>
       )
     
