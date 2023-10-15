@@ -233,7 +233,7 @@ console.log('clicked')
           margin: '0 auto',
           borderRight: `2px dashed ${textColor}`,
           borderLeft: `2px dashed ${textColor}`,
-          borderRadius: '5px',
+          borderRadius: open ? '4px':'4px',
           paddingLeft: open ? '14px':'4px',
 
         },
