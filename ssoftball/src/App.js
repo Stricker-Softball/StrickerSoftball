@@ -29,12 +29,12 @@ function App() {
   let imgCardList = [
     // https://drive.google.com/uc?export=view&id=
     {  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1ILCIuyVKDQhI31oJ3fvJv_q4ORw96181", 
-          url:"https://drive.google.com/file/d/1ILCIuyVKDQhI31oJ3fvJv_q4ORw96181/view"
+          file:"https://drive.google.com/uc?export=view&id=1bxidpIXXLvk6aokffvuh4wZbQj3mOIXD", 
+          url:"https://drive.google.com/file/d/1bxidpIXXLvk6aokffvuh4wZbQj3mOIXD/view?usp=sharing"
       },
       {  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1gnUIOSvwyU9h-Z0u5TCXGCFwP9jGMpUe", 
-          url:"https://drive.google.com/file/d/1gnUIOSvwyU9h-Z0u5TCXGCFwP9jGMpUe/view"
+          file:"https://drive.google.com/uc?export=view&id=1a3h47fN4SRDrNAD-XrMZLSmHarmW82fD", 
+          url: "https://drive.google.com/file/d/1a3h47fN4SRDrNAD-XrMZLSmHarmW82fD/view?usp=sharing"
       },
       {  name:'',
           file:"https://drive.google.com/uc?export=view&id=1IUrf2Q2SmzOi3ADIKBISgO9pgkLcqnmM", 
