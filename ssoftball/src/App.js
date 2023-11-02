@@ -44,6 +44,10 @@ function App() {
           file:"https://drive.google.com/uc?export=view&id=1mJ3Y3WTe81k9rGS5Asl63y89lQF3as9j", 
           url:"https://drive.google.com/file/d/1mJ3Y3WTe81k9rGS5Asl63y89lQF3as9j/view"
       },
+    {  name:'',
+          file:"https://drive.google.com/uc?export=view&id=1FbzkuPAbICcVAPDEafRgz9RLyJF-xcAi", 
+          url:"https://drive.google.com/file/d/1FbzkuPAbICcVAPDEafRgz9RLyJF-xcAi/view?usp=sharing"
+      },
   ]
   let sectionListObject = {
     clinics:[
