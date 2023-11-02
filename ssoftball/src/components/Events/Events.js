@@ -20,12 +20,16 @@ function Events(props, e) {
         {
             buttons: [{
                  link:'https://forms.gle/fxL3ge69UkqU8ePY6 ',
-                name:'Monthly Clinic Registration',
+                name:'Monthly Clinic/Class Registration',
             },{
                 link:'https://forms.gle/HedhWfqFkCNQ2sjR6',
                name:'Holiday Clinic Registration',
+           },
+                     {
+                link:'https://forms.gle/b9WVFnG6XLLaCzrT9',
+               name:'Hitting Camp Registration',
            }],
-            description:'View and Register for  our Clinics',
+            description:'View and Register for  our Clinics, Classes & Camps',
         },
         {
             buttons: [{
