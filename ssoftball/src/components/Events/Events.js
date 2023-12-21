@@ -20,7 +20,7 @@ function Events(props, e) {
         {
             buttons: [{
                  link:'https://forms.gle/fxL3ge69UkqU8ePY6 ',
-                name:'Monthly Clinic/Class Registration',
+                name:'Throwing & Fielding Class Registration',
             },{
                 link:'https://forms.gle/HedhWfqFkCNQ2sjR6',
                name:'Holiday Clinic Registration',
