@@ -120,17 +120,7 @@ function Events(props, e) {
                             )
                         })}
 
-                        {props.imgList && props.imgList.map((item) => {
-                            console.log(item)
-                            return (
-                                <>
-                                {item.name && <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>}
-                                <div key={item.name} className='event-item-img event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
-                                    <img style={{background:'#000000'}}  src={item.file} />
-                                </div>
-                                </>
-                            )
-                        })}
+                       
 
 
                         {group.events.map((item) => {
@@ -140,6 +130,18 @@ function Events(props, e) {
                                 {item.url && <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>}
                                 <div key={item.name} className='event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
                                     <iframe style={{background:'#000000'}} frameBorder="0" scrolling="no" allowtransparency="true" src={item.file} ></iframe>
+                                </div>
+                                </>
+                            )
+                        })}
+
+                         {props.imgList && props.imgList.map((item) => {
+                            console.log(item)
+                            return (
+                                <>
+                                {item.name && <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>}
+                                <div key={item.name} className='event-item-img event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
+                                    <img style={{background:'#000000'}}  src={item.file} />
                                 </div>
                                 </>
                             )
