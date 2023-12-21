@@ -28,18 +28,18 @@ function App() {
   let annonucementList = []
   let imgCardList = [
     // https://drive.google.com/uc?export=view&id=
-{  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw", 
-          url:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/view"
-      },
-{  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK", 
-          url:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/view"
-      },
-{  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs", 
-          url:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/view"
-      },
+// {  name:'',
+//           file:"https://drive.google.com/uc?export=view&id=1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw", 
+//           url:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/view"
+//       },
+// {  name:'',
+//           file:"https://drive.google.com/uc?export=view&id=1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK", 
+//           url:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/view"
+//       },
+// {  name:'',
+//           file:"https://drive.google.com/uc?export=view&id=1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs", 
+//           url:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/view"
+//       },
 
     {  name:'',
           file:"https://drive.google.com/uc?export=view&id=16NMqrzub_A5sSqi1GVTDxxqXAaCKzTGc", 
@@ -70,6 +70,18 @@ function App() {
   ]
   let sectionListObject = {
     clinics:[
+      {  name:'',
+        file:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/preview", 
+        url:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/view"
+      },
+            {  name:'',
+        file:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/preview", 
+        url:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/view"
+      },
+            {  name:'',
+        file:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/preview", 
+        url:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/view"
+      },
     // {  name:'',
     //     file:"https://drive.google.com/file/d/1h5fbzNDLwHNfIH7t2EqJWviLLVWo0zGA/preview", 
     //     url:"https://drive.google.com/file/d/1h5fbzNDLwHNfIH7t2EqJWviLLVWo0zGA/view"
