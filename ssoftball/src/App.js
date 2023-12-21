@@ -28,26 +28,40 @@ function App() {
   let annonucementList = []
   let imgCardList = [
     // https://drive.google.com/uc?export=view&id=
+{  name:'',
+          file:"https://drive.google.com/uc?export=view&id=1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw", 
+          url:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/view"
+      },
+{  name:'',
+          file:"https://drive.google.com/uc?export=view&id=1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK", 
+          url:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/view"
+      },
+{  name:'',
+          file:"https://drive.google.com/uc?export=view&id=1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs", 
+          url:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/view"
+      },
+
     {  name:'',
           file:"https://drive.google.com/uc?export=view&id=16NMqrzub_A5sSqi1GVTDxxqXAaCKzTGc", 
           url:"https://drive.google.com/file/d/16NMqrzub_A5sSqi1GVTDxxqXAaCKzTGc/view"
       },
-    {  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1FbzkuPAbICcVAPDEafRgz9RLyJF-xcAi", 
-          url:"https://drive.google.com/file/d/1FbzkuPAbICcVAPDEafRgz9RLyJF-xcAi/view"
-      },
-    {  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1bxidpIXXLvk6aokffvuh4wZbQj3mOIXD", 
-          url:"https://drive.google.com/file/d/1bxidpIXXLvk6aokffvuh4wZbQj3mOIXD/view?usp=sharing"
-      },
-      {  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1a3h47fN4SRDrNAD-XrMZLSmHarmW82fD", 
-          url: "https://drive.google.com/file/d/1a3h47fN4SRDrNAD-XrMZLSmHarmW82fD/view?usp=sharing"
-      },
-      {  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1IUrf2Q2SmzOi3ADIKBISgO9pgkLcqnmM", 
-          url:"https://drive.google.com/file/d/1IUrf2Q2SmzOi3ADIKBISgO9pgkLcqnmM/view"
-      },
+    
+    // {  name:'',
+    //       file:"https://drive.google.com/uc?export=view&id=1FbzkuPAbICcVAPDEafRgz9RLyJF-xcAi", 
+    //       url:"https://drive.google.com/file/d/1FbzkuPAbICcVAPDEafRgz9RLyJF-xcAi/view"
+    //   },
+    // {  name:'',
+    //       file:"https://drive.google.com/uc?export=view&id=1bxidpIXXLvk6aokffvuh4wZbQj3mOIXD", 
+    //       url:"https://drive.google.com/file/d/1bxidpIXXLvk6aokffvuh4wZbQj3mOIXD/view?usp=sharing"
+    //   },
+    //   {  name:'',
+    //       file:"https://drive.google.com/uc?export=view&id=1a3h47fN4SRDrNAD-XrMZLSmHarmW82fD", 
+    //       url: "https://drive.google.com/file/d/1a3h47fN4SRDrNAD-XrMZLSmHarmW82fD/view?usp=sharing"
+    //   },
+    //   {  name:'',
+    //       file:"https://drive.google.com/uc?export=view&id=1IUrf2Q2SmzOi3ADIKBISgO9pgkLcqnmM", 
+    //       url:"https://drive.google.com/file/d/1IUrf2Q2SmzOi3ADIKBISgO9pgkLcqnmM/view"
+    //   },
     {  name:'',
           file:"https://drive.google.com/uc?export=view&id=1mJ3Y3WTe81k9rGS5Asl63y89lQF3as9j", 
           url:"https://drive.google.com/file/d/1mJ3Y3WTe81k9rGS5Asl63y89lQF3as9j/view"
