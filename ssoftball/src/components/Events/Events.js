@@ -15,7 +15,7 @@ import sbll4th from  '../../images/pdf/StrickerSoftballAcademySummer.pdf';
 
 function Events(props, e) {
     const [events, setEvents] = useState(props.eventList || []);
-    const [eventsGroup, setEGroup] = useState([{title:'Clinics'}]);
+    const [eventsGroup, setEGroup] = useState([{title:'Clinics, Classes & Camps'}]);
     eventsGroup[0].links = [
         {
             buttons: [{
