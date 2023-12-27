@@ -19,16 +19,18 @@ function Events(props, e) {
     eventsGroup[0].links = [
         {
             buttons: [{
-                 link:'https://forms.gle/fxL3ge69UkqU8ePY6 ',
-                name:'Throwing & Fielding Class Registration',
-            },{
+                 link:'https://forms.gle/MyQocWS4Xn49293U7',
+                name:'Clinics',
+            },
+                      {
+                link:'https://forms.gle/WnQDvDoz1ZDuEjw47',
+               name:'HS Hitting',
+           },
+                      {
                 link:'https://forms.gle/HedhWfqFkCNQ2sjR6',
                name:'Holiday Clinic Registration',
            },
-                     {
-                link:'https://forms.gle/b9WVFnG6XLLaCzrT9',
-               name:'Hitting Camp Registration',
-           }],
+            ],
             description:'View and Register for  our Clinics, Classes & Camps',
         },
         {
