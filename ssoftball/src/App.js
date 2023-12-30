@@ -33,7 +33,7 @@ useEffect(() => {
   }, []);
   const alertUser = (e) => {
      history.push("/");
-    
+    window.location.href = window.location.origin
     e.preventDefault();
    
   };
