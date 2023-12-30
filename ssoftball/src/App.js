@@ -68,8 +68,8 @@ function App() {
     ],
     teams:[
       {  name:'Team Pricing',
-        file:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/preview", 
-        url:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view"
+        file:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/preview", 
+        url:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/view"
       },
     ]
   }
