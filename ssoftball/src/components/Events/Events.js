@@ -109,12 +109,13 @@ function Events(props, e) {
                                 <div key={item.name + 'link'} className='link-description' style={{paddingBottom:'0',overflow:'hidden'}}>
                                     {item.description}
                                     </div>
+                                         <div className="link-btn-group">
                                 {item.buttons.map((button) => {
                                     return (
                                         <a key={button.name + 'a'} className='clinic-link pdf-link ' target="_blank" href={button.link}>{button.name}</a>
                                     )
                                 }) }
-                                
+                                 </div>
                                 </>
                             )
                         })}
