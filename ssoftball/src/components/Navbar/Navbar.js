@@ -24,7 +24,7 @@ function Navbar(props) {
        
         {name:'Teams', link:'/teams'},
         {name:'Coaches & Lessons', link:'/meetthecoach'},
-        {name:'Q & A', link:'/questions'},
+        // {name:'Q & A', link:'/questions'},
         {name:'Contacts', link:'/contacts'}, 
         
     ]
