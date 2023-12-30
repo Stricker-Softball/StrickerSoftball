@@ -119,7 +119,7 @@ function Events(props, e) {
                                 </>
                             )
                         })}
-<h1>{group.title}</h1>
+<h1 style={{paddingTop: '25px'}}>{group.title}</h1>
                        
 
 
