@@ -33,8 +33,8 @@ useEffect(() => {
   }, []);
   const alertUser = (e) => {
      history.push("/");
+    
     e.preventDefault();
-    e.returnValue = "";
    
   };
 
