@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
-import { Route } from "react-router-dom";
+import { Route, useHistory  } from "react-router-dom";
 import axios from 'axios';
 
 import Navbar from './components/Navbar/Navbar.js'
@@ -15,16 +15,28 @@ import AdminScreen from './components/Admin/AdminScreen.js'
 function App() {
 
   const [events, setEvents] = useState([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      // const result = await axios.get(
-      //   'https://stricker-softball.herokuapp.com/api/events/'
-      // )
-      // setEvents(result.data);
-    }
-    fetchData();
+ const history = useHistory();
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     // const result = await axios.get(
+  //     //   'https://stricker-softball.herokuapp.com/api/events/'
+  //     // )
+  //     // setEvents(result.data);
+  //   }
+  //   fetchData();
+  // }, []);
+useEffect(() => {
+    window.addEventListener("beforeunload", alertUser);
+    return () => {
+      window.removeEventListener("beforeunload", alertUser);
+    };
   }, []);
+  const alertUser = (e) => {
+    e.preventDefault();
+    e.returnValue = "";
+    history.push("/");
+  };
+
   let annonucementList = []
   let imgCardList = [
     // https://drive.google.com/uc?export=view&id=
