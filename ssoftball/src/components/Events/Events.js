@@ -101,7 +101,7 @@ function Events(props, e) {
                     // Pdf's
                     return (
                         <>
-                        <h1>{group.title}</h1>
+                        
                         <div className='event-list'>
                         {group.links.map((item) => {
                             return (
@@ -119,7 +119,7 @@ function Events(props, e) {
                                 </>
                             )
                         })}
-
+<h1>{group.title}</h1>
                        
 
 
