@@ -20,22 +20,19 @@ function Events(props, e) {
         {
             buttons: [{
                  link:'https://forms.gle/MyQocWS4Xn49293U7',
-                name:'Clinics',
+                name:'Clinic & Class Registration',
             },
                       {
                 link:'https://forms.gle/WnQDvDoz1ZDuEjw47',
-               name:'HS Hitting',
+               name:'HS Hitting Registration',
            },
-                      {
-                link:'https://forms.gle/HedhWfqFkCNQ2sjR6',
-               name:'Holiday Clinic Registration',
-           },
+                   
             ],
-            description:'View and Register for  our Clinics, Classes & Camps',
+            description:'Register for  our Clinics, Classes & Camps',
         },
         {
             buttons: [{
-            link:'https://drive.google.com/file/d/1s0yBRV44r9OndDav5A-0alqvXSssIkin/view?usp=sharing',
+            link:'https://drive.google.com/file/d/1ig9mxosUWAuSEHeKxI_NDgqYCUOPQ88K/view?usp=sharing',
             name:'Liability Waiver',
         }],
             description:'Download & Fill out Softball Science Waiver',
