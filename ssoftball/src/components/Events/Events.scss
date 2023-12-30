@@ -111,6 +111,10 @@
 }
 @media (max-width: ($phone + 125px)){
     .Events{
+        h1{
+            padding-left:2px;
+            padding-right: 2px;
+        }
         .event-list{
             display:flex;
             .event-item{
