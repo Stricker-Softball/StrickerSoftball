@@ -6,9 +6,11 @@
     position: relative;
     .link-btn-group{
         display:flex;
+        flex-wrap: wrap;
     }
     .link-btn-group .clinic-link{
-        max-height:4rem;
+        min-height:4rem;
+        min-width:320px;
     }
     .eImage{
         width: 740px;
