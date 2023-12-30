@@ -25,18 +25,18 @@ function App() {
   //   }
   //   fetchData();
   // }, []);
-useEffect(() => {
-    window.addEventListener("beforeunload", alertUser);
-    return () => {
-      window.removeEventListener("beforeunload", alertUser);
-    };
-  }, []);
-  const alertUser = (e) => {
-     history.push("/");
-    window.location.href = window.location.origin
-    e.preventDefault();
+// useEffect(() => {
+//     window.addEventListener("beforeunload", alertUser);
+//     return () => {
+//       window.removeEventListener("beforeunload", alertUser);
+//     };
+//   }, []);
+//   const alertUser = (e) => {
+//      history.push("/");
+//     window.location.href = window.location.origin
+//     e.preventDefault();
    
-  };
+//   };
 
   let annonucementList = []
   let imgCardList = [
