@@ -24,6 +24,7 @@ function AdminScreen(props) {
         tooltip.innerHTML = "Copy to clipboard";
     }
     let allSections = props.allSections;
+    console.log('allSections',allSections)
 
     return (
         <div className="Contact" >

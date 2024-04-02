@@ -1,0 +1,124 @@
+.formGroup{
+    display: flex;
+    flex-direction: column;
+
+}
+textarea{
+    resize: vertical;
+}
+textarea, input{
+    background-color: rgba(255,255,255,0.2);
+    color:white;
+    padding: 15px;
+    margin: 15px 2%;
+    border-radius: 5px;
+}
+label{
+    text-align: left;
+    margin-left:2%;
+}
+.adminCard{
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border: 3px solid white;
+    padding:5px 15px;
+    // border-radius: 10px;
+    // margin-bottom:5px;
+    border-top:none;
+    width:100%;
+}
+.adminCard:first-child{
+    border-top: 3px solid white;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.adminCard:last-of-type, .adminCard:last-child{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.cardDelete{
+    margin-top:20px;
+    height:40px;
+    width:50px;
+    justify-self: flex-end;
+}
+.cardDelete img{
+    height:34px;
+    width:34px;
+    transition: all 0.2s;
+}
+.cardDelete:hover{
+    cursor: pointer;
+}
+.cardDelete:hover img{
+ height:40px;
+ width:40px;   
+}
+.cardDelete:active img{
+    height:35px;
+    width:35px; 
+    opacity: 0.8;  
+   }
+   .preveiewGroup{
+    min-width:150px;
+    padding: 0 5px;
+   }
+   .preveiwImage{
+    height:80px;
+    width:auto;
+    margin: 0 auto;
+   }
+   .adminFormButton{
+    background-color: black;
+    color:white;
+    font-size:1rem;
+    padding:5px 15px;
+    outline: none;
+    border: 2px solid white;
+    transition: all 0.2s;
+    border-radius: 5px;
+    margin-top:15px;
+    margin-right:10px;
+   }
+   .adminFormButton:hover{
+    cursor: pointer;
+    background-color: rgba(255,255,255,0.1);
+   }
+   .adminFormButton:active{
+    background-color: black;
+    color:rgba(255,255,255,0.2);
+   }
+   .admin-modal-action{
+    display:inline;
+    margin-left:35px;
+    margin-top:0;
+   }
+   .modal-footer{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+   }
+    // modal help section stuff
+    #adminUrlHelp{
+        overflow: hidden;
+    }
+    #adminUrlHelp p{
+        text-align: left;
+        margin-left:10%;
+        margin-right: 10%;
+    }
+    #adminUrlHelp a{
+        color:white;
+        
+    }
+    #adminUrlHelp a:hover{
+        color:var(--main-lightyellow);
+    }
+    #adminUrlHelp img{
+        width:80%;
+    }
+    #adminUrlHelp .admin-modal-action{
+        float:left;
+        margin-left:10%;
+    }

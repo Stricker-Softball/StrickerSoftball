@@ -6,7 +6,7 @@ import { useState } from 'react';
 //sftbllcoach@gmail.com
 
 
-function Contact() {
+function Contact(props) {
 
     const [showMail, setMail] = useState(false)
 
@@ -25,6 +25,10 @@ function Contact() {
     function outFunc() {
         var tooltip = document.getElementById("myTooltip");
         tooltip.innerHTML = "Copy to clipboard";
+    }
+    function buttonPress(link) {
+        window.scrollTo(0, 0)
+        props.history.push(link)
     }
 
     return (
@@ -57,7 +61,7 @@ function Contact() {
                 </div>
 
             </div>
-            <div id="adminButtonSection">
+            <div id="adminButtonSection" onClick={() => buttonPress('/admin/events/edit')}>
                 Admin Log in
             </div>
         </div>
