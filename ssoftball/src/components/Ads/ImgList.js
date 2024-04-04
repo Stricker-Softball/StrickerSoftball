@@ -18,7 +18,7 @@ function ImgList(props) {
                 </div>)
              })}
         </div>
-        <div className="ad-link-div"><a class="ad-link button-main " target="_blank" href="https://forms.gle/NabpjajRCTqJwrzc8">Spring 2024 Registration</a></div>
+        <div className="ad-link-div"><a class="ad-link button-main " target="_blank" href="https://forms.gle/NabpjajRCTqJwrzc8">2024 Registration</a></div>
         </>
     );
 }
