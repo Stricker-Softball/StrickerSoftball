@@ -104,6 +104,15 @@
     color: white;
     margin-top:20px;
 }
+.linkParent{
+    // padding:30px;
+    display: flex;
+
+}
+.linkParent img{
+    width:100px;
+    height: 100px;
+}
 @media (max-width: 1200px){
     .Events p{
         display: none;

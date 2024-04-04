@@ -19,12 +19,19 @@ function Events(props, e) {
     eventsGroup[0].links = [
         {
             buttons: [{
+                link:'https://forms.gle/NabpjajRCTqJwrzc8',
+               name:'Spring 2024 Registration',
+               qr: 'https://drive.google.com/thumbnail?id=1PNTSZaTmBVhFgfCOfZgc0jbMhF66m1O-&sz=w500'
+           },
+           {
                  link:'https://forms.gle/MyQocWS4Xn49293U7',
                 name:'Clinic & Class Registration',
+                qr:''
             },
                       {
                 link:'https://forms.gle/WnQDvDoz1ZDuEjw47',
                name:'HS Hitting Registration',
+               qr:''
            },
                    
             ],
@@ -111,8 +118,10 @@ function Events(props, e) {
                                     </div>
                                          <div className="link-btn-group">
                                 {item.buttons.map((button) => {
+                                    console.log(button)
+                                    button.qr = ''
                                     return (
-                                        <a key={button.name + 'a'} className='clinic-link pdf-link ' target="_blank" href={button.link}>{button.name}</a>
+                                        <div className="linkParent">{button.qr?<img src={button.qr}/>:<></>}<a key={button.name + 'a'} className='clinic-link pdf-link ' target="_blank" href={button.link}>{button.name}</a></div>
                                     )
                                 }) }
                                  </div>

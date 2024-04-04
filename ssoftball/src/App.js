@@ -10,7 +10,9 @@ import Lessons from './components/Lessons/Lessons.js';
 import Coaches from './components/Coaches/Coaches.js';
 import Contacts from './components/Contact/Contact.js';
 import Events from './components/Events/Events.js';
-import AdminScreen from './components/Admin/AdminScreen.js'
+import ADS from './components/Ads/ImgList.js';
+import AdminScreen from './components/Admin/AdminScreen.js';
+
 
 function App() {
 
@@ -41,26 +43,26 @@ function App() {
   let annonucementList = []
   let imgCardList = [
     // https://drive.google.com/uc?export=view&id=
-    {  name:'',
-          file:"https://drive.google.com/uc?export=view&id=16NMqrzub_A5sSqi1GVTDxxqXAaCKzTGc", 
-          url:"https://drive.google.com/file/d/16NMqrzub_A5sSqi1GVTDxxqXAaCKzTGc/view"
-      },
+    // {  name:'',
+    //       file:"https://drive.google.com/uc?export=view&id=16NMqrzub_A5sSqi1GVTDxxqXAaCKzTGc", 
+    //       url:"https://drive.google.com/file/d/16NMqrzub_A5sSqi1GVTDxxqXAaCKzTGc/view"
+    //   },
     
   ]
   let sectionListObject = {
     clinics:[
-      {  name:'',
-        file:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/preview", 
-        url:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/view"
-      },
-            {  name:'',
-        file:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/preview", 
-        url:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/view"
-      },
-            {  name:'',
-        file:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/preview", 
-        url:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/view"
-      },
+      // {  name:'',
+      //   file:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/preview", 
+      //   url:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/view"
+      // },
+      //       {  name:'',
+      //   file:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/preview", 
+      //   url:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/view"
+      // },
+      //       {  name:'',
+      //   file:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/preview", 
+      //   url:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/view"
+      // },
     ],
     questions:[
       {  name:'Questions',
@@ -84,6 +86,12 @@ function App() {
         file:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/preview", 
         url:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/view"
       },
+    ],
+    Ads:[
+      'https://drive.google.com/thumbnail?id=1UvbMuN66V_zWR3f5zsEVq4Mec1NIQwgs&sz=w1000',
+      'https://drive.google.com/thumbnail?id=17wteIJlGCPtL2pfX4kY0XsaouWWMk2D1&sz=w1000',
+      'https://drive.google.com/thumbnail?id=1GA8DQGc8wUahEkOAqstmkVjTwpLdLeGQ&sz=w1000',
+      'https://drive.google.com/thumbnail?id=1-V_PuFV5r2vjWPbPdhq8kkanDI_mgtVS&sz=w1000'
     ]
   }
 
@@ -96,7 +104,9 @@ function App() {
         <div className='container'>
           <Route path="/" render={props => <Navbar {...props} />} />
           <div className='container-after'>
+          <Route exact path="/" render={props => <ADS {...props} images={sectionListObject.Ads}/>} />
             <Route exact path="/" render={props => <Home {...props} />} />
+            
             <Route path="/clinics" render={props => <Events key={1} {...props} eventList={events} sectionList={sectionListObject.clinics} imgList={imgCardList}/>} />
             <Route path="/questions" render={props => <Events key={2}  {...props} eventList={events} sectionList={sectionListObject.questions}/>} />
             <Route path="/members" render={props => <Events key={3}  {...props} eventList={events} sectionList={sectionListObject.members}/>} />
