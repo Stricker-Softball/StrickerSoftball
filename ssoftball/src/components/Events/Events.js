@@ -15,21 +15,24 @@ import sbll4th from  '../../images/pdf/StrickerSoftballAcademySummer.pdf';
 
 function Events(props, e) {
     const [events, setEvents] = useState(props.eventList || []);
-    const [eventsGroup, setEGroup] = useState([{title:'Clinics'}]);
+    const [eventsGroup, setEGroup] = useState([{title:'Clinics, Classes & Camps'}]);
     eventsGroup[0].links = [
         {
             buttons: [{
-                 link:'https://forms.gle/fxL3ge69UkqU8ePY6 ',
-                name:'Monthly Clinic Registration',
-            },{
-                link:'https://forms.gle/HedhWfqFkCNQ2sjR6',
-               name:'Holiday Clinic Registration',
-           }],
-            description:'View and Register for  our Clinics',
+                 link:'https://forms.gle/MyQocWS4Xn49293U7',
+                name:'Clinic & Class Registration',
+            },
+                      {
+                link:'https://forms.gle/WnQDvDoz1ZDuEjw47',
+               name:'HS Hitting Registration',
+           },
+                   
+            ],
+            description:'Register for  our Clinics, Classes & Camps',
         },
         {
             buttons: [{
-            link:'https://drive.google.com/file/d/1s0yBRV44r9OndDav5A-0alqvXSssIkin/view?usp=sharing',
+            link:'https://drive.google.com/file/d/1ig9mxosUWAuSEHeKxI_NDgqYCUOPQ88K/view?usp=sharing',
             name:'Liability Waiver',
         }],
             description:'Download & Fill out Softball Science Waiver',
@@ -98,7 +101,7 @@ function Events(props, e) {
                     // Pdf's
                     return (
                         <>
-                        <h1>{group.title}</h1>
+                        
                         <div className='event-list'>
                         {group.links.map((item) => {
                             return (
@@ -106,36 +109,39 @@ function Events(props, e) {
                                 <div key={item.name + 'link'} className='link-description' style={{paddingBottom:'0',overflow:'hidden'}}>
                                     {item.description}
                                     </div>
+                                         <div className="link-btn-group">
                                 {item.buttons.map((button) => {
                                     return (
                                         <a key={button.name + 'a'} className='clinic-link pdf-link ' target="_blank" href={button.link}>{button.name}</a>
                                     )
                                 }) }
-                                
+                                 </div>
                                 </>
                             )
                         })}
+<h1 style={{paddingTop: '5px'}}>{group.title}</h1>
+                       
 
-                        {props.imgList && props.imgList.map((item) => {
+
+                        {group.events.map((item) => {
                             console.log(item)
                             return (
                                 <>
-                                {item.name && <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>}
-                                <div key={item.name} className='event-item-img event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
-                                    <img style={{background:'#000000'}}  src={item.file} />
+                                {item.name && item.name.length  ? <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>:<></>}
+                                <div key={item.name} className='event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
+                                    <iframe style={{background:'#000000'}} frameBorder="0" scrolling="no" allowtransparency="true" src={item.file} ></iframe>
                                 </div>
                                 </>
                             )
                         })}
 
-
-                        {group.events.map((item) => {
+                         {props.imgList && props.imgList.map((item) => {
                             // console.log(item)
                             return (
                                 <>
-                                {item.url && <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>}
-                                <div key={item.name} className='event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
-                                    <iframe style={{background:'#000000'}} frameBorder="0" scrolling="no" allowtransparency="true" src={item.file} ></iframe>
+                                {item.name && <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>}
+                                <div key={item.name} className='event-item-img event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
+                                    <img style={{background:'#000000'}}  src={item.file} />
                                 </div>
                                 </>
                             )

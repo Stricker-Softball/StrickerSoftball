@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.scss';
-import { Route } from "react-router-dom";
+import { Route, useHistory  } from "react-router-dom";
 import axios from 'axios';
 
 import Navbar from './components/Navbar/Navbar.js'
@@ -15,59 +15,52 @@ import AdminScreen from './components/Admin/AdminScreen.js'
 function App() {
 
   const [events, setEvents] = useState([]);
+ const history = useHistory();
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     // const result = await axios.get(
+  //     //   'https://stricker-softball.herokuapp.com/api/events/'
+  //     // )
+  //     // setEvents(result.data);
+  //   }
+  //   fetchData();
+  // }, []);
+// useEffect(() => {
+//     window.addEventListener("beforeunload", alertUser);
+//     return () => {
+//       window.removeEventListener("beforeunload", alertUser);
+//     };
+//   }, []);
+//   const alertUser = (e) => {
+//      history.push("/");
+//     window.location.href = window.location.origin
+//     e.preventDefault();
+   
+//   };
 
-  useEffect(() => {
-    async function fetchData() {
-      // const result = await axios.get(
-      //   'https://stricker-softball.herokuapp.com/api/events/'
-      // )
-      // setEvents(result.data);
-    }
-    fetchData();
-  }, []);
   let annonucementList = []
   let imgCardList = [
     // https://drive.google.com/uc?export=view&id=
     {  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1ILCIuyVKDQhI31oJ3fvJv_q4ORw96181", 
-          url:"https://drive.google.com/file/d/1ILCIuyVKDQhI31oJ3fvJv_q4ORw96181/view"
+          file:"https://drive.google.com/uc?export=view&id=16NMqrzub_A5sSqi1GVTDxxqXAaCKzTGc", 
+          url:"https://drive.google.com/file/d/16NMqrzub_A5sSqi1GVTDxxqXAaCKzTGc/view"
       },
-      {  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1gnUIOSvwyU9h-Z0u5TCXGCFwP9jGMpUe", 
-          url:"https://drive.google.com/file/d/1gnUIOSvwyU9h-Z0u5TCXGCFwP9jGMpUe/view"
-      },
-      {  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1IUrf2Q2SmzOi3ADIKBISgO9pgkLcqnmM", 
-          url:"https://drive.google.com/file/d/1IUrf2Q2SmzOi3ADIKBISgO9pgkLcqnmM/view"
-      },
-    {  name:'',
-          file:"https://drive.google.com/uc?export=view&id=1mJ3Y3WTe81k9rGS5Asl63y89lQF3as9j", 
-          url:"https://drive.google.com/file/d/1mJ3Y3WTe81k9rGS5Asl63y89lQF3as9j/view"
-      },
+    
   ]
   let sectionListObject = {
     clinics:[
-    // {  name:'',
-    //     file:"https://drive.google.com/file/d/1h5fbzNDLwHNfIH7t2EqJWviLLVWo0zGA/preview", 
-    //     url:"https://drive.google.com/file/d/1h5fbzNDLwHNfIH7t2EqJWviLLVWo0zGA/view"
-    //   },https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view?usp=sharing
-    // {  name:'Class Anouncement!',
-    //     file:"https://drive.google.com/file/d/1cjZjzYTTnl0QhZYySQlKaTniGgyETBVv/preview", 
-    //     url:"https://drive.google.com/file/d/1cjZjzYTTnl0QhZYySQlKaTniGgyETBVv/view"
-    //   },
-    
-    // {  name:'Team Pricing',
-    //     file:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/preview", 
-    //     url:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view"
-    //   },
-      // {  name:'Fall 2023 Softball Science Announcement',
-      //   file:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/preview", 
-      //   url:"https://drive.google.com/file/d/1dIXUG7pG--Lz9cw4-L5fnsNVaLr3M0WC/view"
-      // },
-      // {  name:'Payment',
-      //   file:"https://drive.google.com/file/d/18Ue2gwMby56G07dKMmeqCVA_YhOmBpD7/preview", 
-      //   url:"https://drive.google.com/file/d/18Ue2gwMby56G07dKMmeqCVA_YhOmBpD7/view"
-      // },
+      {  name:'',
+        file:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/preview", 
+        url:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/view"
+      },
+            {  name:'',
+        file:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/preview", 
+        url:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/view"
+      },
+            {  name:'',
+        file:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/preview", 
+        url:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/view"
+      },
     ],
     questions:[
       {  name:'Questions',
@@ -88,8 +81,8 @@ function App() {
     ],
     teams:[
       {  name:'Team Pricing',
-        file:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/preview", 
-        url:"https://drive.google.com/file/d/1gfGARrKiKz1ndGVrHXEktxEQKh-Hz7a2/view"
+        file:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/preview", 
+        url:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/view"
       },
     ]
   }
