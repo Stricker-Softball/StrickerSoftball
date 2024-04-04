@@ -61,9 +61,9 @@ function Contact(props) {
                 </div>
 
             </div>
-            <div id="adminButtonSection" onClick={() => buttonPress('/admin/events/edit')}>
+            {/* <div id="adminButtonSection" onClick={() => buttonPress('/admin/events/edit')}>
                 Admin Log in
-            </div>
+            </div> */}
         </div>
     );
 }
