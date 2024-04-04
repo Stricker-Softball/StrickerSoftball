@@ -15,6 +15,13 @@
         height:100%;
     }
 }
+.ad-link{
+    margin-top:5px;
+}
+.ad-link-div{
+    display: flex;
+    justify-content: center;
+}
 @media (max-width: 800px){
     .imgList{
         padding: 0 10px;

@@ -4,8 +4,12 @@ import { useState } from 'react';
 
 
 function ImgList(props) {
+    function buttonPress(link) {
+        window.scrollTo(0, 0)
+        props.history.push(link)
+    }
 
-    return (
+    return (<>
         <div className="imgList" >
              {props.images.map((image) => {
                 console.log(image)
@@ -14,6 +18,8 @@ function ImgList(props) {
                 </div>)
              })}
         </div>
+        <div className="ad-link-div"><a class="ad-link button-main " target="_blank" href="https://forms.gle/NabpjajRCTqJwrzc8">Spring 2024 Registration</a></div>
+        </>
     );
 }
 
