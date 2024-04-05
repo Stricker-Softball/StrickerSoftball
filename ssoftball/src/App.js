@@ -51,10 +51,10 @@ function App() {
   ]
   let sectionListObject = {
     clinics:[
-      // {  name:'',
-      //   file:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/preview", 
-      //   url:"https://drive.google.com/file/d/1mRrTaWkuvZLNpaUJwLWemZ0RvDuUUeUw/view"
-      // },
+      {  name:'',
+        file:"https://drive.google.com/file/d/1q7C49Dd1BfT4ozet6sKQzR57Kzx2k1sS/preview", 
+        url:"https://drive.google.com/file/d/1q7C49Dd1BfT4ozet6sKQzR57Kzx2k1sS/view"
+      },
       //       {  name:'',
       //   file:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/preview", 
       //   url:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/view"
