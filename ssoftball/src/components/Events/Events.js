@@ -23,16 +23,16 @@ function Events(props, e) {
                name:'Spring 2024 Registration',
                qr: 'https://drive.google.com/thumbnail?id=1PNTSZaTmBVhFgfCOfZgc0jbMhF66m1O-&sz=w500'
            },
-           {
-                 link:'https://forms.gle/MyQocWS4Xn49293U7',
-                name:'Clinic & Class Registration',
-                qr:''
-            },
-                      {
-                link:'https://forms.gle/WnQDvDoz1ZDuEjw47',
-               name:'HS Hitting Registration',
-               qr:''
-           },
+        //    {
+        //          link:'https://forms.gle/MyQocWS4Xn49293U7',
+        //         name:'Clinic & Class Registration',
+        //         qr:''
+        //     },
+        //               {
+        //         link:'https://forms.gle/WnQDvDoz1ZDuEjw47',
+        //        name:'HS Hitting Registration',
+        //        qr:''
+        //    },
                    
             ],
             description:'Register for  our Clinics, Classes & Camps',
