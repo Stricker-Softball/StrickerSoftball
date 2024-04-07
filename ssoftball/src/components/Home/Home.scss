@@ -72,9 +72,11 @@
   font-size: 2.4rem;
   color: white;
   margin-bottom: 30px;
-  margin-top: 20px;
-  border-bottom: 2px solid var(--red-dark);
-  
+  margin-top: 1px;
+  padding-top:20px;
+  border-top: 2px solid var(--red-dark);
+  padding-right: 5px;
+     padding-left:5px;
 }
 
 .science-paragraph{

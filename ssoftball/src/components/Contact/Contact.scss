@@ -11,15 +11,16 @@
     width: 90%;
     max-width: 600px;
     margin:  60px auto;
+    border-radius: 50px;
 }
 .Contact .contact-container h2{
     font-size: 3.6rem;
     text-shadow: -5px 0px 0px white;
     padding: 10px 30px;
     color: grey;
-    border-bottom: 2px solid var(--red);
+    // border-bottom: 2px solid var(--red);
     padding: 20px 0 20px;
-    margin: 0 0 40px;
+    margin: 0  40px;
     
   }
 
@@ -37,6 +38,7 @@
     flex-direction: flex-start;
     background-color: var(--black-transparent);
     border: 2px solid var(--red);
+    border-radius: 10px;
     // outline-style: solid;
     // outline-color: white;
     // outline-width: 2px;
@@ -82,6 +84,9 @@
         height: 45px;
         margin-left: 10px;
         color: white;
+        border-radius: 10px;
+        margin-top:5px;
+        margin-bottom:5px;
     }
     #mailInput{
         font-size: 1.1rem;
