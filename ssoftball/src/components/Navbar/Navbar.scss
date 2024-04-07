@@ -36,8 +36,9 @@ top:15px;
     margin: 0 auto;
     margin-top: 12px;
     padding: 0;
-    border-radius: 15px;
-    display: inline-block
+    border-radius: 35px;
+    display: inline-block;
+    overflow: hidden;
 }
 .Navbar .Navbar-items a{
     text-decoration: none;
@@ -72,6 +73,10 @@ top:15px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
+.Navbar .Navbar-items .bar-nav-current{
+    background: var(--main-lightyellow);
+    color: var(--red);
+}
 .Navbar .Navbar-items .events span{
     font-size: .8rem;
     // font-family: "Lucida Console", Courier, monospace;
@@ -82,7 +87,9 @@ top:15px;
     color: none;
     background: none;
 }
-
+.bar-nav-item{
+    // border-radius: 30px;
+}
 // Tablet styles
 // ===============/
 

@@ -79,7 +79,7 @@ function Lessons(props) {
             <img className='heart-ball' src={HeartBall} alt='love-softball' />
             <div className='quote'>
                 <h3>"Great things are done by a series of small things brought together"</h3>
-                <span id='contact-id'>Vincent van Gogh</span>
+                <span id='contact-id'>- Vincent van Gogh -</span>
             </div>
 
         </div>

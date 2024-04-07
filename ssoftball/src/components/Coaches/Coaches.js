@@ -139,7 +139,7 @@ function Coaches() {
                 </div>
                 <div className='end-quote'>
                     <h1>Do today what others won't so tomorrow you can do what others can't.</h1>
-                    <h1>- Jerry Rice</h1>
+                    <h1>- Jerry Rice -</h1>
                 </div>
             </div>
         </>

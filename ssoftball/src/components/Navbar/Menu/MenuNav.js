@@ -79,8 +79,11 @@ function App (props){
     let nav_item_list = props.nav_item_list;
 
     const menuItems = nav_item_list.map((val,index)=>{
+      let isCurrentNav = val.link == window.location.pathname
     return (
         <MenuItem 
+        className={`menu-item${isCurrentNav?' menu-nav-current':''}`}
+        link={val.link}
         key={index} 
         delay={`${index * 0.1}s`}
         onClick={()=>{ handleLinkClick(val.link);}}>{val.name}</MenuItem>)
@@ -112,6 +115,8 @@ function App (props){
   /* MenuItem.jsx*/
 
 function MenuItem (props){
+  console.log(props)
+    let isCurrentNav = props.link == window.location.pathname
     let [hover, setHover] = useState(false)
 
     
@@ -132,7 +137,7 @@ function MenuItem (props){
         padding: '1.2rem 0',
         margin: '0 5%',
         cursor: 'pointer',
-        color: 'white',
+        color: `${isCurrentNav? 'var(--red)': 'white'}`,
         transition: 'color 0.2s ease-in-out',
         animation: '0.5s slideIn forwards',
         animationDelay: props.delay,
@@ -221,8 +226,8 @@ console.log('clicked')
     
       const styles = {
         container: {
-          height: '60px',
-          width: '60px',
+          height: '65px',
+          width: '65px',
           display:'flex',
           flexDirection: 'column',
           justifyContent: 'center',
@@ -231,8 +236,8 @@ console.log('clicked')
           padding: '4px',
           color: textColor,
           margin: '0 auto',
-          borderRight: `2px dashed ${textColor}`,
-          borderLeft: `2px dashed ${textColor}`,
+          // borderRight: `2px dashed ${textColor}`,
+          // borderLeft: `2px dashed ${textColor}`,
           borderRadius: open ? '4px':'4px',
           paddingLeft: open ? '14px':'4px',
 

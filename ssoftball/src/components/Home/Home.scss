@@ -45,7 +45,7 @@
 }
 
 /* buttons */
-.Home .buttons{
+.Home .buttons, .Home .buttons-bottom{
   margin: 40px auto 50px;
   display: flex;
   justify-content: center;
@@ -54,22 +54,26 @@
 .Home .buttons button:first-child{
   margin-right: 190px;
 }
+.Home .buttons button, .Home .buttons-bottom button{
+  width:350px
+}
 
 /* text */
 .Home h1{
   font-size: 3.6rem;
   text-shadow: -6px 0px 0px var(--red);
   padding: 10px 30px;
-  color: var(--main-lightyellow);
+  color:white;
 }
 .Home h1 span{
   display: block;
 }
 .Home h2{
   font-size: 2.4rem;
-  color: var(--red-dark);
+  color: white;
   margin-bottom: 30px;
   margin-top: 70px;
+  border-bottom: 2px solid var(--red-dark);
   
 }
 
@@ -81,7 +85,11 @@
 }
 // Media query phone 
 //@at-root
-
+@media (max-width: 940px){
+  .Home .buttons button:first-child{
+    margin-right: 0px;
+  }
+}
 @media (max-width: $phone){
   .Home{
     h1{
@@ -103,9 +111,12 @@
       }
       
     }
+    .buttons-bottom button{
+      width:90%;
+    }
     .buttons{
       button{
-        width:79%;
+        width:90%;
       }
       button:first-child{
         margin-right: 0;
@@ -213,7 +224,7 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  border-radius: 10px;
+  border-radius: 30px;
  }
  #announcementDiv iframe{
   margin: 0 auto;
@@ -274,7 +285,7 @@
 @media only screen and (max-width: 780px) {
   #associateSection{
     top:-85px;
-    right:10px;
+    right:100px;
     
   }
   #associateLabel span{
@@ -308,6 +319,6 @@
     background-repeat:   no-repeat;
     background-position: center center; 
     border-radius: 100%;
-    margin:-10px auto -96px;
+    margin:-10px auto -36px;
     
 }

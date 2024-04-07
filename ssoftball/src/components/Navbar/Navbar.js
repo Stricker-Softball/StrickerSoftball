@@ -37,8 +37,8 @@ function Navbar(props) {
             <nav className={'Navbar-items'}>
  
                 {nav_item_list.map((item) => {
-                    
-                    return <NavLink key={item.name} to={item.link}>
+                    let isCurrentNav = item.link == window.location.pathname
+                    return <NavLink key={item.name} to={item.link} className={`bar-nav-item${isCurrentNav?' bar-nav-current':''}`}>
                         {item.name}
                     </NavLink>
                 })}
