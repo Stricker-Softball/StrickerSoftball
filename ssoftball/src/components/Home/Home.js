@@ -23,7 +23,7 @@ function Home(props) {
                         </g>
                     </svg>
                 </div> */}
-            <div id="ssLogoDiv"></div>
+            
             
             {/* <div class="svgBar">
                 <div class="dnaContainer svgContainer">
@@ -79,13 +79,14 @@ function Home(props) {
             </div> */}
             <h2>Coaching and lessons for all levels</h2>
             <div className='buttons'>
-                <button className='button-main' onClick={() => buttonPress('/clinics')}>Classes & Clinics</button>
+                <button className='button-main' onClick={() => buttonPress('/clinics')}>Classes & Registration</button>
                 <button className='button-main' onClick={() => buttonPress('/meetthecoach#lessonsintro')}>Lessons</button>
             </div>
             
             <div className='buttons-bottom'>
                 <button className='button-main' onClick={() => buttonPress('/meetthecoach')}> Coaches</button>
             </div>
+            <div id="ssLogoDiv"></div>
             <p className='science-paragraph'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             Softball Science was created by two women with a long history in the world of softball and life. 
             We have used our combined expertise, that includes over 30 years of coaching experience along with
