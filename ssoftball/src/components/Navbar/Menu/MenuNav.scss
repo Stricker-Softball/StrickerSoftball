@@ -46,7 +46,7 @@
 
 .menu-app-container{
     position: absolute;;
-    top: 75px;
+    top: 5px;
     right: 2px;  
     z-index: 99;
     display:flex;
@@ -60,13 +60,13 @@
     border-radius: 28px;
     margin-left: -45px;
     z-index: 20000;
-    transition: top .2s ease, all .2s ease;
+    transition: top .4s ease, all .2s ease;
     // top: -5px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
 }
 .menu-app-container.up{
-  
+  top: 75px;
 }
 .menu-app-container.is-open{
   top: -4px;

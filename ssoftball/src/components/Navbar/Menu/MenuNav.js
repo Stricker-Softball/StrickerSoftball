@@ -42,7 +42,7 @@ function App (props){
         window.addEventListener('scroll', () => updateScroll());
     
         useEffect(() => {
-            if (window.scrollY < 30) {
+            if (window.scrollY < 60) {
                 if (pinText != 'down') {
                   if(menuOpen){
                     setPinText('down is-open');
