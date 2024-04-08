@@ -1,7 +1,9 @@
 import React from 'react';
 import './Contact.scss';
+
 import mail from '../../images/social/mail-100.png'
 import { useState } from 'react';
+// import './Footer.scss';
 //630 3361553
 //sftbllcoach@gmail.com
 
@@ -31,13 +33,18 @@ function Contact(props) {
         props.history.push(link)
     }
 
+    function handleLinkClick(link) {
+        window.scrollTo(0,0)
+        window.open(link, "_blank");
+      }
+
     return (
         <div className="Contact" >
             <div className='contact-container' id='contact'>
                 <h2>Contact Us</h2>
                 <div className='contact-section'>
                     <div className='contact-info'>
-                        <p className='label'>Send an email:</p>
+                        {/* <p className='label'>Send an email:</p> */}
                         <input type="text" className='data' id='mailInput' value='sftbllcoach@gmail.com' readOnly={true} />
                         <div className='mail-div'>
                             {/* <img src={mail} className='gitLogo mail' target="_blank" onClick={() => setMail(!showMail)} /> */}
@@ -51,14 +58,27 @@ function Contact(props) {
                                 </div>
 
                             </div>
+                            
                         </div>
 
                     </div>
                     <div className='contact-info'>
-                        <p className='label'>Call or Text:</p>
+                        {/* <p className='label'>Call or Text:</p> */}
                         <input type="text" className='data' value='630-336-1553' readOnly={true} />
                     </div>
+                    
                 </div>
+                <div className='social-icons'>
+                            <div className='image facebook' 
+                            onClick={() => handleLinkClick('https://www.facebook.com/sftbllcoach/')}>
+                                <div></div></div>
+                            <div className='image instagram'
+                            onClick={() => handleLinkClick('https://www.instagram.com/sftbllcoach/')}>
+                                <div></div></div>
+                            <div className='image twitter'
+                            onClick={() => handleLinkClick('https://www.twitter.com/SueStricker1/')}>
+                                <div></div></div>
+                        </div>
 
             </div>
             {/* <div id="adminButtonSection" onClick={() => buttonPress('/admin/events/edit')}>

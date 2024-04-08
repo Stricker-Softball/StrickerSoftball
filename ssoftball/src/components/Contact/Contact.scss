@@ -1,7 +1,7 @@
 @import '../../utilities/variable.scss';
 
 .Contact{
-    padding: 100px 0;
+    padding: 20px 0 100px;
 }
 
 .Contact .contact-container{
@@ -30,8 +30,11 @@
 .Contact .contact-section .contact-info{
     display: flex;
     margin: 20px 0;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
+}
+.Contact .contact-section .contact-info:first-child{
+    margin-left:32px;
 }
 .Contact .contact-section input{
     // width: 33%;
@@ -44,7 +47,7 @@
     // outline-width: 2px;
     padding: 7px 0 7px 8px;
     color: white;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
     // width: 200px;
     max-height: 46px;
     text-align: center;
@@ -87,9 +90,14 @@
         border-radius: 10px;
         margin-top:5px;
         margin-bottom:5px;
+        transform: all 0.3s;
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: darkgray;
     }
     #mailInput{
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         background: white;
         padding: 5px 10px;
         border-radius: 5px;
@@ -142,8 +150,11 @@
 
 @media (max-width: $phone){
     .Contact .contact-section {
+        .contact-info:first-child{
+            margin-left:0;
+        }
         input{
-            font-size: 1rem;
+            font-size: 1.2rem;
             padding-top: 10px;
             padding-bottom: 10px;
         }
@@ -169,4 +180,74 @@
 #adminButtonSection:hover{
     color:white;
     cursor: pointer;
+}
+
+.social-icons{
+    display: flex;
+    justify-content: space-between;
+    padding:5%;
+    padding-top:0;
+}
+.social-icons .image{
+    background-size: contain;
+    width: 60px;
+    height: 60px;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.3s;
+}
+.social-icons .image div{
+    width: 60px;
+    height: 60px;
+    transition: all 0.3s;
+}
+.social-icons .image:hover{
+    box-shadow: 0px 0px 15px 8px rgba(0,0,0, .475);
+}
+.social-icons .image div:hover{
+    background: rgba(255,255,255, .275);
+    cursor: pointer;
+}
+.social-icons .image div:active{
+    background: rgba(0,0,0, .475);
+}
+/* Social buttons */
+.social-icons .image.facebook{
+    background-image: url('../../images/social/facebook.png');
+}
+.social-icons .image.instagram{
+    background-image: url('../../images/social/instagram.png');
+}
+.social-icons .image.twitter{
+    background-image: url('../../images/social/twitter.png');
+}
+
+// .sub-input{
+//     display: flex;
+//     justify-content: space-between;
+// }
+// .sub-input input{
+//     background-color: var(--black-transparent);
+//     border: 2px solid var(--red);
+//     outline-style: solid;
+//     outline-color: white;
+//     outline-width: 2px;
+//     padding: 10px;
+//     color: white;
+//     font-size: .9rem;
+//     width: 200px;
+// }
+// .sub-input button{
+//     padding: 5px 0;
+//     box-shadow: 0 0 20px black;
+//     font-size: 1rem;
+//     border-radius: 6px;
+//     width: 100px;
+// }
+
+// Meda queries phone
+//
+
+@media (max-width: $phone){
+    
 }
