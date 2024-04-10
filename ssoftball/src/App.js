@@ -18,15 +18,17 @@ function App() {
 
   const [events, setEvents] = useState([]);
  const history = useHistory();
-  // useEffect(() => {
-  //   async function fetchData() {
-  //     // const result = await axios.get(
-  //     //   'https://stricker-softball.herokuapp.com/api/events/'
-  //     // )
-  //     // setEvents(result.data);
-  //   }
-  //   fetchData();
-  // }, []);
+    useEffect(() => {
+      const fetchData = async () => {
+        const result = await axios(
+          `https://softball-science-data.vercel.app/locker`,
+        );
+          console.log(result.data.data)
+        // setData(result.data);
+      };
+   
+      fetchData();
+    },[]);
 // useEffect(() => {
 //     window.addEventListener("beforeunload", alertUser);
 //     return () => {
@@ -113,7 +115,7 @@ function App() {
             <Route path="/teams" render={props => <Events key={4}  {...props} eventList={events} sectionList={sectionListObject.teams}/>} />
             <Route path="/meetthecoach" render={props => <Coaches {...props} />} /><Route path="/meetthecoach" render={props => <Lessons {...props} />} />
             <Route path="/contacts" render={props => <Contacts {...props}/>} />
-            {/* <Route path="/admin/events/edit" render={props => <AdminScreen {...props} eventList={events} allSections={sectionListObject}/>} /> */}
+            <Route path="/admin/events/edit" render={props => <AdminScreen {...props} eventList={events} allSections={sectionListObject}/>} />
             {/* <Route path="/admin/events/delete" render={props => <DeleteEvents {...props} eventList={events} />} /> */} 
           </div>
         </div>

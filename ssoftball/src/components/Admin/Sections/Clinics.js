@@ -5,13 +5,13 @@ import { useState } from 'react';
 import Trash from '../../../images/trash.png';
 
 
-let sectionName = "Clinics"
+let sectionName = "clinics"
 function AdminSection(props) {
-    console.log('clicks run')
+    console.log('clicks run', sectionName, props.tabName)
     let [inputObj, setInput] = useState({name:'', order:'', url:''})
-   let className = "admin-body-group"
+   let className = "edit-section-body"
    if(props.tabName.includes(sectionName)){
-    className += ' active';
+    className += ' section-active';
    }
    function cardDelete(e, element){
     let id = e.target.dataset.id
