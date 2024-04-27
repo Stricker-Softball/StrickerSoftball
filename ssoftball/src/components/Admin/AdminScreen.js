@@ -4,6 +4,7 @@ import { useState } from 'react';
 import axios from 'axios';
 
 import ClinicList from './Sections/Clinics.js'
+import TeamList from './Sections/Teams.js'
 import Modal from './Modals/Modal.js'
 
 const updateData = async () => {
@@ -97,9 +98,10 @@ function AdminScreen(props) {
     }
     function handleAdminTabClick(e){
         let newTab = e.target.dataset.tab
+        setPreFill({url:'',file:'',name:'',id:-1})
         setTab(newTab)
     }
-    let displayTabList=['clinics']
+    let displayTabList=['clinics', 'teams']
 
     return (
         <div className="page" >
@@ -119,6 +121,8 @@ function AdminScreen(props) {
                 </div>
                 <div className="edit-body-wrapper">
                     <ClinicList deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.clinics} setShowModal={setShowModal}/>
+                    <TeamList deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.teams} setShowModal={setShowModal}/>
+                
                 </div>
                 {/* {Object.keys(allSections).map((key) => {
                             

@@ -2,60 +2,71 @@ import React from 'react';
 import './AdminSection.scss';
 import { useState } from 'react';
 
-let sectionName = "Teams"
+import Trash from '../../../images/trash.png';
+
+function setImgThumb(file){
+    let fileName = file.split('d/')[1].split('/preview')[0];
+    let newName = `https://drive.google.com/thumbnail?id=${fileName}&sz=w1000`
+    return newName
+}
+
+let sectionName = "teams"
 function AdminSection(props) {
-    let className = "admin-body-group"
-    if(props.tabName.includes(sectionName)){
-     className += ' active';
+    let [inputObj, setInput] = useState({name:'', order:'', url:''})
+   let className = "edit-section-body"
+   if(props.tabName.includes(sectionName)){
+    className += ' section-active';
+   }
+   function cardDelete(e, element){
+    let id = e.target.dataset.id
+    props.deleteItemFromList(id)
+    // edit our array here
+   }
+   function setupEdit(card){
+        console.log('button click', props, card)
+        props.handleEditClick(card)
     }
-    function cardDelete(e, element){
-     let id = e.target.dataset.id
-     console.log(id)
-     // edit our array here
+    function handleNewCard(){
+        props.handleEditClick({url:'',name:'',id:-1,file:''})
     }
-    function setupEdit(card){
-         // console.log('button click', props, card)
-         props.handleEditClick(card)
-     }
-     function handleNewCard(){
-         props.handleEditClick({url:'',name:'',id:-1,file:''})
-     }
-     console.log(props.teams)
-     return (
-     <div className={className}  data-content={sectionName}>
-         <h3>{sectionName}</h3>
-         <div className="adminCardGroup">
-         {props.teams.map((card, index) => {
-             // name, url , file
-             // console.log(card)
-             return (
-                 <div className="adminCard" key={index}>
-                     <div className="formGroup preveiewGroup">
-                         <img className="preveiwImage" src={card.file} />
-                     </div>
-                     <div className="formGroup">
-                         <label>Name</label>
-                         <p>{card.name}</p>
-                     </div>
-                     <div className="formGroup">
-                         <label>Url</label>
-                         <p>{card.url}</p>
-                     </div>
-                     <div className="formGroup">
-                         <button onClick={()=>setupEdit(card)}>Edit</button>
- 
-                     </div>
-                     <div data-id={index} className="" title="Remove">
-                         {/* <img data-id={index} src={Trash}/> */}
-                         <button data-id={index} className="del-btn" onClick={cardDelete}>Remove</button>
-                     </div>
-                 </div>
-             )
-         })}
-         <button onClick={handleNewCard} className="adminFormButton">Add New Card</button>
-         </div>
-     </div>
+    return (
+    <div className={className}  data-content={sectionName}>
+        {/* <h3>{sectionName}</h3> */}
+        <div className="adminCardGroup">
+        {props.cards.map((card, index) => {
+            // name, url , file
+            let fileImg = setImgThumb(card.file)
+            // console.log(card)
+            return (
+                <div className="adminCard" key={index}>
+                    <div className="formGroup preveiewGroup">
+                        {/* <img className="preveiwImage" src={fileImg} /> */}
+                        <iframe style={{background:'#000000', maxWidth: '300px', maxHeight:"150px"}} frameBorder="0" navpanes="0" scrolling="no" toolbar="0" allowtransparency="true" src={card.file} ></iframe>
+                    </div>
+                    <div className="formGroup">
+                        <label>Name</label>
+                        <p>{card.name}</p>
+                    </div>
+                    <div className="formGroup">
+                        <label>Url</label>
+                        <p>{card.url}</p>
+                    </div>
+                    <div className="formGroup admin-btn-group">
+                        <button className="adminFormButton" onClick={()=>setupEdit(card)}>Edit</button>
+
+                    </div>
+                    <div data-id={card.id} className="admin-btn-group" title="Remove">
+                        {/* <img data-id={index} src={Trash}/> */}
+                        <button data-id={card.id} className="del-btn adminFormButton" onClick={cardDelete}>Remove</button>
+                    </div>
+                </div>
+            )
+        })}
+        <button onClick={handleNewCard} className="adminFormButton">Add New Card</button>
+        </div>
+    </div>
     );
 }
+
 
 export default AdminSection;

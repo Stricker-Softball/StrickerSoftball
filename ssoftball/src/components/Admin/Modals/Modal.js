@@ -19,6 +19,7 @@ function AdminScreen(props) {
                     <div class={"editModal-dialog selected-" + props.dataName}>
                         {props.dataName === 'general' ? <General />:<></>}
                         {props.dataName === 'clinics' ? <Clinics  submitAllSectionsData={props.submitAllSectionsData} preFill={props.preFill} tabName="Clinics" cards={props.allSections.clinics} setShowModal={props.setShowModal} />:<></>}
+                        {props.dataName === 'teams' ? <Clinics  submitAllSectionsData={props.submitAllSectionsData} preFill={props.preFill} tabName="teams" cards={props.allSections.teams} setShowModal={props.setShowModal} />:<></>}
                     </div>
                 </div>
             </div>

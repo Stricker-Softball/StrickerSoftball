@@ -31,8 +31,7 @@ function AdminScreen(props) {
         e.preventDefault()
         setHelp(!helpOpen)
     }
-    if(inputObj.id != props.preFill.id) setInput(props.preFill)
-    // console.log(inputObj)
+    if(inputObj.url != props.preFill.url) setInput(props.preFill)
     return (    
             <div className='modal-section clinics-modal'>
                 <button onClick={handleCancel} className="adminFormButton modalCloseBtn">Close</button>
@@ -67,7 +66,7 @@ function AdminScreen(props) {
                         
                         {/* <p>Click "what url (help)?" to close these instructions.</p> */}
                     </div>
-                    {/* <div className={`formGroup${inputObj.id != -1?' hide-form-group':''}`}>
+                    <div className={`formGroup${inputObj.id != -1?' hide-form-group':''}`}>
                         <label>Add new item to start or end of the current list?</label>
                         <div className="radio-parent">
                             <div className="radio-group">
@@ -79,7 +78,7 @@ function AdminScreen(props) {
                                 <label>Start</label>
                             </div>
                         </div>
-                    </div> */}
+                    </div>
                     <div className="modal-footer">
                         <button type="submit" className="adminFormButton">Save changes</button>
                         <button onClick={handleCancel} className="adminFormButton">Cancel</button>
