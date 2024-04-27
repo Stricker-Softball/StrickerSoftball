@@ -13,21 +13,69 @@ import Events from './components/Events/Events.js';
 import ADS from './components/Ads/ImgList.js';
 import AdminScreen from './components/Admin/AdminScreen.js';
 
-
+let isOffline = false;
 function App() {
-
+  let defaultData = {
+    clinics:[
+      {  name:'',
+        file:"https://drive.google.com/file/d/1q7C49Dd1BfT4ozet6sKQzR57Kzx2k1sS/preview", 
+        url:"https://drive.google.com/file/d/1q7C49Dd1BfT4ozet6sKQzR57Kzx2k1sS/view",
+        id:1,
+      },
+      //       {  name:'',
+      //   file:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/preview", 
+      //   url:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/view"
+      // },
+      //       {  name:'',
+      //   file:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/preview", 
+      //   url:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/view"
+      // },
+    ],
+    members:[
+      {  name:'Monthly Memberships',
+          file:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/preview", 
+          url:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/view",
+          id:1,
+      },
+      {
+        name:'Fall 2023 Hitting Velocity Memberships',
+          file:"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/preview", 
+          url:"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/view",
+          id:1,
+      }
+    ],
+    teams:[
+      {  name:'Team Pricing',
+        file:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/preview", 
+        url:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/view",
+        id:1,
+      },
+    ],
+    Ads:[
+      'https://drive.google.com/thumbnail?id=1UvbMuN66V_zWR3f5zsEVq4Mec1NIQwgs&sz=w1000',
+      'https://drive.google.com/thumbnail?id=17wteIJlGCPtL2pfX4kY0XsaouWWMk2D1&sz=w1000',
+      'https://drive.google.com/thumbnail?id=1GA8DQGc8wUahEkOAqstmkVjTwpLdLeGQ&sz=w1000',
+      'https://drive.google.com/thumbnail?id=1-V_PuFV5r2vjWPbPdhq8kkanDI_mgtVS&sz=w1000'
+    ],
+    AdsRegister: 'https://forms.gle/NabpjajRCTqJwrzc8'
+  }
   const [events, setEvents] = useState([]);
+  const [sectionListObject, setData] = useState({...defaultData})
  const history = useHistory();
     useEffect(() => {
       const fetchData = async () => {
         const result = await axios(
-          `https://softball-science-data.vercel.app/locker`,
-        );
-          console.log(result.data.data)
-        // setData(result.data);
+          `https://softball-science-data.vercel.app/locker/4`,
+        ).then(res => {
+          console.log(res.data.data[0].value)
+          let newData = JSON.parse(res.data.data[0].value)
+          setData(newData);
+        });
+          // console.log(result.data)
+        // setData(result.data[0]);
       };
    
-      fetchData();
+      if(!isOffline) fetchData();
     },[]);
 // useEffect(() => {
 //     window.addEventListener("beforeunload", alertUser);
@@ -42,7 +90,6 @@ function App() {
    
 //   };
 
-  let annonucementList = []
   let imgCardList = [
     // https://drive.google.com/uc?export=view&id=
     // {  name:'',
@@ -51,51 +98,6 @@ function App() {
     //   },
     
   ]
-  let sectionListObject = {
-    clinics:[
-      {  name:'',
-        file:"https://drive.google.com/file/d/1q7C49Dd1BfT4ozet6sKQzR57Kzx2k1sS/preview", 
-        url:"https://drive.google.com/file/d/1q7C49Dd1BfT4ozet6sKQzR57Kzx2k1sS/view"
-      },
-      //       {  name:'',
-      //   file:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/preview", 
-      //   url:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/view"
-      // },
-      //       {  name:'',
-      //   file:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/preview", 
-      //   url:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/view"
-      // },
-    ],
-    questions:[
-      {  name:'Questions',
-          file:"https://drive.google.com/file/d/1lLEGRyXc0A-3n68ro6_cqgzSVKcH5cIK/preview", 
-          url:"https://drive.google.com/file/d/1lLEGRyXc0A-3n68ro6_cqgzSVKcH5cIK/view"
-      },
-    ],
-    members:[
-      {  name:'Monthly Memberships',
-          file:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/preview", 
-          url:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/view"
-      },
-      {
-        name:'Fall 2023 Hitting Velocity Memberships',
-          file:"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/preview", 
-          url:"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/view"
-      }
-    ],
-    teams:[
-      {  name:'Team Pricing',
-        file:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/preview", 
-        url:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/view"
-      },
-    ],
-    Ads:[
-      'https://drive.google.com/thumbnail?id=1UvbMuN66V_zWR3f5zsEVq4Mec1NIQwgs&sz=w1000',
-      'https://drive.google.com/thumbnail?id=17wteIJlGCPtL2pfX4kY0XsaouWWMk2D1&sz=w1000',
-      'https://drive.google.com/thumbnail?id=1GA8DQGc8wUahEkOAqstmkVjTwpLdLeGQ&sz=w1000',
-      'https://drive.google.com/thumbnail?id=1-V_PuFV5r2vjWPbPdhq8kkanDI_mgtVS&sz=w1000'
-    ]
-  }
 
 
   return (
@@ -115,7 +117,7 @@ function App() {
             <Route path="/teams" render={props => <Events key={4}  {...props} eventList={events} sectionList={sectionListObject.teams}/>} />
             <Route path="/meetthecoach" render={props => <Coaches {...props} />} /><Route path="/meetthecoach" render={props => <Lessons {...props} />} />
             <Route path="/contacts" render={props => <Contacts {...props}/>} />
-            <Route path="/admin/events/edit" render={props => <AdminScreen {...props} eventList={events} allSections={sectionListObject}/>} />
+            <Route path="/admin/events/edit" render={props => <AdminScreen {...props} setData={setData} eventList={events} allSections={sectionListObject}/>} />
             {/* <Route path="/admin/events/delete" render={props => <DeleteEvents {...props} eventList={events} />} /> */} 
           </div>
         </div>

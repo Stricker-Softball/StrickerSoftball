@@ -1,7 +1,15 @@
+@import '../../../utilities/variable.scss';
 .formGroup{
     display: flex;
     flex-direction: column;
-
+    max-width:100%;
+}
+.formGroup p{
+    font-size: 0.8rem;
+}
+.formGroup label{
+    margin-top:10px;
+    margin-bottom: 5px;
 }
 textarea{
     resize: vertical;
@@ -69,8 +77,11 @@ label{
     width:auto;
     margin: 0 auto;
    }
+   .admin-btn-group{
+    align-self: center;
+   }
    .adminFormButton{
-    background-color: black;
+    background-color: rgb(80, 80, 80);
     color:white;
     font-size:1rem;
     padding:5px 15px;
@@ -81,13 +92,25 @@ label{
     margin-top:15px;
     margin-right:10px;
    }
+     .admin-btn-group .adminFormButton{
+        margin-top:0px;
+     }
+   .adminFormButton.del-btn{
+    background-color: rgba(250,0,0,0.5)
+   }
    .adminFormButton:hover{
     cursor: pointer;
     background-color: rgba(255,255,255,0.1);
    }
+   .adminFormButton.del-btn:hover{
+    background-color: rgba(200,0,0,0.95)
+   }
    .adminFormButton:active{
     background-color: black;
     color:rgba(255,255,255,0.2);
+   }
+   .adminFormButton.del-btn:active{
+    background-color: rgba(160,0,0,0.95);
    }
    .admin-modal-action{
     display:inline;
@@ -121,4 +144,42 @@ label{
     #adminUrlHelp .admin-modal-action{
         float:left;
         margin-left:10%;
+    }
+    .radio-parent{
+        display: flex;
+        margin-left:3rem;
+    }
+    .radio-group{
+        display:flex;
+        margin-left:3rem;
+    }
+    .radio-group input{
+        margin-right:1rem;
+    }
+    .hide-form-group{
+        display: none;
+    }
+
+    @media (max-width: $phone){
+        .adminCard{
+            flex-direction: column;
+            display:flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            border: 3px solid white;
+            padding:5px 15px;
+            // border-radius: 10px;
+            // margin-bottom:5px;
+            border-top:none;
+            width:100%;
+        }
+        .formGroup p{
+            text-wrap: balance !important;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .formGroup label{
+            text-decoration: underline;
+            
+        }
     }
