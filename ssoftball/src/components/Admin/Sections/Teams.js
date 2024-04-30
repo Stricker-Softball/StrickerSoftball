@@ -43,11 +43,11 @@ function AdminSection(props) {
                         {/* <img className="preveiwImage" src={fileImg} /> */}
                         <iframe style={{background:'#000000', maxWidth: '300px', maxHeight:"150px"}} frameBorder="0" navpanes="0" scrolling="no" toolbar="0" allowtransparency="true" src={card.file} ></iframe>
                     </div>
-                    <div className="formGroup">
+                    <div className="formGroup evenGroup">
                         <label>Name</label>
                         <p>{card.name}</p>
                     </div>
-                    <div className="formGroup">
+                    <div className="formGroup evenGroup">
                         <label>Url</label>
                         <p>{card.url}</p>
                     </div>

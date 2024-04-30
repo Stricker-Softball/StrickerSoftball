@@ -81,10 +81,10 @@ function Events(props, e) {
                     return (
                         <>
                         
-                        <div className='event-list'>
+                        <div className='event-list links-list'>
                         {group.links.map((item) => {
                             return (
-                                <>
+                                <div className="links-section">
                                 <div key={item.name + 'link'} className='link-description' style={{paddingBottom:'0',overflow:'hidden'}}>
                                     {item.description}
                                     </div>
@@ -97,22 +97,23 @@ function Events(props, e) {
                                     )
                                 }) }
                                  </div>
-                                </>
+                                </div>
                             )
                         })}
+                        </div>
+                        <div className='event-list'>
 <h1 style={{paddingTop: '5px'}}>{group.title}</h1>
                        
 
 
                         {group.events.map((item) => {
-                            console.log(item)
                             return (
-                                <>
+                                <div className='event-row'>
                                 {item.name && item.name.length  ? <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>:<></>}
                                 <div key={item.name} className='event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
                                     <iframe style={{background:'#000000'}} frameBorder="0" scrolling="no" allowtransparency="true" src={item.file} ></iframe>
                                 </div>
-                                </>
+                                </div>
                             )
                         })}
 

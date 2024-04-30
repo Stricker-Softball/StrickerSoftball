@@ -35,7 +35,7 @@ function AdminScreen(props) {
                 <form id="clinicsModalForm" onSubmit={handleSubmit} >
                     <div className="formGroup">
                         <label>Password</label>
-                        <input  name="password" data-name="password" />
+                        <input type="password" name="password" data-name="password" />
                     </div>
                     
                     <div className="modal-footer">

@@ -11,11 +11,12 @@
         border-radius: 20px;
     }
     h1{
-        font-size: 3.6rem;
+        font-size: 2.1rem;
         text-shadow: -6px 0px 0px black;
         padding: 50px 30px 10px;
         margin: 0;
         color:white;
+        border-top: 2px solid var(--red-dark);
       }
       p{
           font-size:.4rem;
@@ -28,22 +29,33 @@
         display:flex;
         padding-bottom: 55px;
         flex-wrap: wrap;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
+        h1{
+            width:100%;
+        }
+        .event-row{
+            width: 30%;
+            margin-top: 20px;
+        }
         .event-item{
+            
             border-radius: 10px;
             cursor: pointer;
             background: rgba(0, 0, 0, 0.45);
             border: 3px solid var(--red);
             outline: 3px solid white;
             // width: 75%;
-            width: 830px;
-            min-width: 830px;
+            width: 100%;
+            max-width: 830px;
+            // min-width: 430px;
             margin: 20px auto 20px;
             padding-bottom: 45px;
             // height: 500px;
             iframe{
                 width: 100%;
-                height: 1060px;
+                // height: 1060px;
+                aspect-ratio: 1/1.3;
                 pointer-events:none;
             }
             h3{
@@ -116,13 +128,32 @@
     width:100px;
     height: 100px;
 }
-@media (max-width: 1200px){
+.links-list{
+    display: flex;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 0 !important;
+}
+.links-section{
+    width:50%;
+    min-width: 320px;
+}
+@media (max-width: 1100px){
     .Events p{
         display: none;
+    }
+    .Events{
+        .event-list{
+            .event-row{
+                width: 48%;
+            }
+        }
     }
 }
 @media (max-width: ($phone + 125px)){
     .Events{
+        
         h1{
             padding-left:2px;
             padding-right: 2px;
@@ -130,6 +161,9 @@
         }
         .event-list{
             display:flex;
+            .event-row{
+                width: 100%;
+            }
             .event-item{
                 width: 97%;
                 min-width: 200px;
