@@ -12,11 +12,12 @@ import Contacts from './components/Contact/Contact.js';
 import Events from './components/Events/Events.js';
 import ADS from './components/Ads/ImgList.js';
 import AdminScreen from './components/Admin/AdminScreen.js';
-
 let isOffline = false;
 function App() {
   let defaultData = {
-    clinics:[
+    Switches:{frontPageAds:undefined},
+    questions:[],
+    Clinics:[
       {  name:'',
         file:"https://drive.google.com/file/d/1q7C49Dd1BfT4ozet6sKQzR57Kzx2k1sS/preview", 
         url:"https://drive.google.com/file/d/1q7C49Dd1BfT4ozet6sKQzR57Kzx2k1sS/view",
@@ -31,6 +32,27 @@ function App() {
       //   url:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/view"
       // },
     ],
+    ClassRegistration:
+      [
+        {
+            buttons: [{
+                link:'https://forms.gle/NabpjajRCTqJwrzc8',
+               name:'Spring 2024 Registration',
+               
+           }, 
+            ],
+            description:'Register for  our Clinics, Classes & Camps',
+            id:1
+        },
+        {
+            buttons: [{
+            link:'https://drive.google.com/file/d/1ig9mxosUWAuSEHeKxI_NDgqYCUOPQ88K/view?usp=sharing',
+            name:'Liability Waiver',
+        }],
+            description:'Download & Fill out Softball Science Waiver',
+            id:2
+        }
+    ],
     members:[
       {  name:'Monthly Memberships',
           file:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/preview", 
@@ -44,7 +66,7 @@ function App() {
           id:1,
       }
     ],
-    teams:[
+    Teams:[
       {  name:'Team Pricing',
         file:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/preview", 
         url:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/view",
@@ -64,13 +86,14 @@ function App() {
  const history = useHistory();
     useEffect(() => {
       const fetchData = async () => {
-        const result = await axios(
+        await axios(
           `https://softball-science-data.vercel.app/locker/4`,
         ).then(res => {
           console.log(res.data.data[0].value)
           let newData = JSON.parse(res.data.data[0].value)
           setData(newData);
         });
+
           // console.log(result.data)
         // setData(result.data[0]);
       };
@@ -108,13 +131,13 @@ function App() {
         <div className='container'>
           <Route path="/" render={props => <Navbar {...props} />} />
           <div className='container-after'>
-          <Route exact path="/" render={props => <ADS {...props} images={sectionListObject.Ads}/>} />
+          <Route exact path="/" render={props => <ADS show={sectionListObject.Switches.frontPageAds} {...props} images={sectionListObject.Ads}/>} />
             <Route exact path="/" render={props => <Home {...props} />} />
             
-            <Route path="/clinics" render={props => <Events key={1} {...props} eventList={events} sectionList={sectionListObject.clinics} imgList={imgCardList}/>} />
-            <Route path="/questions" render={props => <Events key={2}  {...props} eventList={events} sectionList={sectionListObject.questions}/>} />
-            <Route path="/members" render={props => <Events key={3}  {...props} eventList={events} sectionList={sectionListObject.members}/>} />
-            <Route path="/teams" render={props => <Events key={4}  {...props} eventList={events} sectionList={sectionListObject.teams}/>} />
+            <Route path="/clinics" render={props => <Events ClassRegistration={sectionListObject.ClassRegistration} key={1} {...props} eventList={events} sectionList={sectionListObject.Clinics} imgList={imgCardList}/>} />
+            <Route path="/questions" render={props => <Events ClassRegistration={[]} key={2}  {...props} eventList={events} sectionList={sectionListObject.questions}/>} />
+            <Route path="/members" render={props => <Events ClassRegistration={[]} key={3}  {...props} eventList={events} sectionList={sectionListObject.members}/>} />
+            <Route path="/teams" render={props => <Events ClassRegistration={[]} key={4}  {...props} eventList={events} sectionList={sectionListObject.Teams}/>} />
             <Route path="/meetthecoach" render={props => <Coaches {...props} />} /><Route path="/meetthecoach" render={props => <Lessons {...props} />} />
             <Route path="/contacts" render={props => <Contacts {...props}/>} />
             <Route path="/admin/events/edit" render={props => <AdminScreen {...props} setData={setData} eventList={events} allSections={sectionListObject}/>} />

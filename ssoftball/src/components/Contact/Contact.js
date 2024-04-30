@@ -6,11 +6,20 @@ import { useState } from 'react';
 // import './Footer.scss';
 //630 3361553
 //sftbllcoach@gmail.com
+import Modal from '../AdminLogin/AdminModal.js';
 
 
 function Contact(props) {
 
     const [showMail, setMail] = useState(false)
+    const [modalOn, setModalOn]= useState(false)
+    function setShowModal(){
+        let hasLoggedSession = sessionStorage.getItem("hasLoggedIn");
+        if(hasLoggedSession && hasLoggedSession == "True"){
+            buttonPress('/admin/events/edit')
+        }
+        setModalOn(!modalOn)
+    }
 
     function myFunction() {
         var copyText = document.getElementById("mailInput");
@@ -81,9 +90,10 @@ function Contact(props) {
                         </div>
 
             </div>
-            <div id="adminButtonSection" onClick={() => buttonPress('/admin/events/edit')}>
+            <div id="adminButtonSection" onClick={() => setShowModal()}>
                 Admin Log in
             </div>
+            <Modal {...props} showModal={modalOn} setShowModal={setShowModal}/>
         </div>
     );
 }

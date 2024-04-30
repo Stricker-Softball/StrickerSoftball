@@ -6,26 +6,18 @@ import axios from 'axios';
 import ClinicList from './Sections/Clinics.js'
 import TeamList from './Sections/Teams.js'
 import Modal from './Modals/Modal.js'
+import RegisterBtns from './Sections/RegisterBtns.js'
+import Switch from './Sections/Switches.js'
 
-const updateData = async () => {
-    let post = {
-        "value": "6"
-    }
-    // const result = await axios.put(
-    //   `https://softball-science-data.vercel.app/locker/4`,
-    //   {post}
-    // ).then(res => console.log(res.data)
-    // ).catch(err => console.log(err))
-    // result()
-    // setData(result.data);
-  };
+
 
 function AdminScreen(props) {
 
     const [showMail, setMail] = useState(false)
-    const [selectedTab, setTab] = useState('clinics')
+    const [selectedTab, setTab] = useState('Clinics')
     const [modalOn, setModalOn]= useState(false)
     const [preFill, setPreFill] = useState({url:'',file:'',name:'',id:-1})
+   
     function setShowModal(){
 
         setModalOn(!modalOn)
@@ -46,7 +38,7 @@ function AdminScreen(props) {
         e.preventDefault()
         let changeForm = e.target;
         let changeId = e.target.dataset.id
-        setShowModal()
+       
         // Set find the data in our lists and change them
         let changedObj = {}
         let formData = new FormData(changeForm)
@@ -58,16 +50,27 @@ function AdminScreen(props) {
             changeIndex = newList.findIndex(obj => obj.id == changeId);
             changedObj = newSections[selectedTab][changeIndex]
         }
-        for (const pair of formData.entries()) {
-            if(pair[0] != "listPos"){
-                if(pair[0] == 'url'){
-                    let value = pair[1].split('?')[0]
-                    changedObj[pair[0]] = value
-                    changedObj['file'] = value.split('/view')[0] + '/preview'
+        if(selectedTab != 'ClassRegistration'){
+            for (const pair of formData.entries()) {
+                if(pair[0] != "listPos"){
+                    if(pair[0] == 'url'){
+                        let value = pair[1].split('?')[0]
+                        changedObj[pair[0]] = value
+                        changedObj['file'] = value.split('/view')[0] + '/preview'
+                    }else{
+                        changedObj[pair[0]] = pair[1]
+                    }
+                    
+                }
+            }
+        }else{
+            changedObj = {buttons:[{}]}
+            for (const pair of formData.entries()) {
+                if(pair[0] == 'name' || pair[0] == 'link'){
+                    changedObj['buttons'][0][pair[0]] = pair[1]
                 }else{
                     changedObj[pair[0]] = pair[1]
                 }
-                
             }
         }
         if(changedObj.id == -1){
@@ -76,11 +79,18 @@ function AdminScreen(props) {
         }else{
             newSections[selectedTab][changeIndex] = {...changedObj}
         }
-        
+        setShowModal()
         props.setData(newSections)
         sendDataToEndpoint(newSections)
 
 
+    }
+    function editSwitchBoolean(switchName, value){
+        console.log(switchName, value)
+        let newSections = {...props.allSections}
+        newSections.Switches[switchName] = value
+        props.setData(newSections)
+        sendDataToEndpoint(newSections)
     }
 
     async function deleteItemFromList(id){
@@ -98,31 +108,36 @@ function AdminScreen(props) {
     }
     function handleAdminTabClick(e){
         let newTab = e.target.dataset.tab
-        setPreFill({url:'',file:'',name:'',id:-1})
+        if(newTab == "ClassRegistration"){
+            setPreFill({description:'', buttons:[{name:'',link:''}],id:-1})
+        }else{
+            setPreFill({url:'',file:'',name:'',id:-1})
+        }
         setTab(newTab)
     }
-    let displayTabList=['clinics', 'teams']
+    let displayTabList=['Clinics', 'Teams', 'ClassRegistration', 'Switches']
 
     return (
         <div className="page" >
             <div>
                 <h6>Edit Sections</h6>
                 <div className="edit-tabs">
-                {Object.keys(props.allSections).map((key) => {
-                            
-                            let items = props.allSections[key]
+                {displayTabList.map((key) => {
+                            let tabName = key.replace(/([A-Z])/g, ' $1').trim()
+                            if(tabName == 'Clinics') tabName = "Classes"
                             if(!displayTabList.includes(key)) return (<></>)
                             return (
                                 <div className={`tab${key === selectedTab?' tab-active':''}`} onClick={handleAdminTabClick} data-tab={key}>
-                                    {key}
+                                    {tabName}
                                 </div>
                             )
                         })}
                 </div>
                 <div className="edit-body-wrapper">
-                    <ClinicList deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.clinics} setShowModal={setShowModal}/>
-                    <TeamList deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.teams} setShowModal={setShowModal}/>
-                
+                    <ClinicList deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.Clinics} setShowModal={setShowModal}/>
+                    <TeamList deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.Teams} setShowModal={setShowModal}/>
+                    <RegisterBtns deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.ClassRegistration} setShowModal={setShowModal}/>
+                    <Switch  {...props} tabName={selectedTab} switches={props.allSections.Switches} editSwitchBoolean={editSwitchBoolean} />
                 </div>
                 {/* {Object.keys(allSections).map((key) => {
                             

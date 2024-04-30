@@ -7,6 +7,8 @@ import step4Img from '../../../images/helpers/step4.png';
 import step5Img from '../../../images/helpers/step5.png';
 import step6Img from '../../../images/helpers/step6.png';
 
+
+
 function AdminScreen(props) {
     // console.log('cmodal',props.preill)
     // return <></>
@@ -18,7 +20,34 @@ function AdminScreen(props) {
         id:props.preFill.id
     })
 
+    function checkUrlValue(url){
+        let urlArray = url.split('/')
+        if(urlArray[0] == 'https:' && urlArray[urlArray.length-1] == 'view'){
+            return true;
+        }else{
+            setInput({url:'',file:'',name:inputObj.name,id:inputObj.id})
+            alert('URL is in the wrong format! Canceling...')
+            return false
+        }
+    
+    }
+
     const handleSubmit = (e) => {
+        let formData = new FormData(e.target)
+        for (const pair of formData.entries()) {
+            if(pair[0] != "listPos"){
+                if(pair[0] == 'url'){
+                    let value = pair[1].split('?')[0]
+                    let passCheck = checkUrlValue(value)
+                    if(!passCheck){
+                        return false;
+                        break;
+                    }
+                   
+                }
+                
+            }
+        }
         if(helpOpen)setHelp(!helpOpen)
         props.submitAllSectionsData(e)
     }
@@ -47,7 +76,7 @@ function AdminScreen(props) {
                     </div>
                     <div className="formGroup">
                         <label>Url<button onClick={handleHelp} className="adminFormButton admin-modal-action">what url (help)?</button></label>
-                        <input defaultValue={inputObj.url} data-name="url" name="url" />
+                        <input id="clinicsUrl" defaultValue={inputObj.url} data-name="url" name="url" />
                     </div>
                     {/* help with url section  */}
                     <div id="adminUrlHelp" className={helpOpen?'adminHelpContainer':'adminHelpContainer hide'}>

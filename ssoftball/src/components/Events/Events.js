@@ -16,35 +16,7 @@ import sbll4th from  '../../images/pdf/StrickerSoftballAcademySummer.pdf';
 function Events(props, e) {
     const [events, setEvents] = useState(props.eventList || []);
     const [eventsGroup, setEGroup] = useState([{title:'Clinics, Classes & Camps'}]);
-    eventsGroup[0].links = [
-        {
-            buttons: [{
-                link:'https://forms.gle/NabpjajRCTqJwrzc8',
-               name:'Spring 2024 Registration',
-               qr: 'https://drive.google.com/thumbnail?id=1PNTSZaTmBVhFgfCOfZgc0jbMhF66m1O-&sz=w500'
-           },
-        //    {
-        //          link:'https://forms.gle/MyQocWS4Xn49293U7',
-        //         name:'Clinic & Class Registration',
-        //         qr:''
-        //     },
-        //               {
-        //         link:'https://forms.gle/WnQDvDoz1ZDuEjw47',
-        //        name:'HS Hitting Registration',
-        //        qr:''
-        //    },
-                   
-            ],
-            description:'Register for  our Clinics, Classes & Camps',
-        },
-        {
-            buttons: [{
-            link:'https://drive.google.com/file/d/1ig9mxosUWAuSEHeKxI_NDgqYCUOPQ88K/view?usp=sharing',
-            name:'Liability Waiver',
-        }],
-            description:'Download & Fill out Softball Science Waiver',
-        }
-    ]
+    eventsGroup[0].links = [...props.ClassRegistration]
     eventsGroup[0].events = []
     if(!props.match.path.includes('clinic')){
         eventsGroup[0].links = []

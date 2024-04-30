@@ -159,8 +159,23 @@ label{
     .hide-form-group{
         display: none;
     }
+    .evenGroup{
+        width:20%;
+    }
+    .evenGroup{
+        text-wrap: balance !important;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+    }
+    .evenGroup .button-main{
+        min-width:260px;
+        max-width:310px;
+    }
 
     @media (max-width: $phone){
+        .evenGroup{
+            width:90%;
+        }
         .adminCard{
             flex-direction: column;
             display:flex;

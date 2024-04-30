@@ -5,6 +5,7 @@ import './Modal.scss';
 // import { useForm } from "react-hook-form"
 import General from '../Sections/General.js'
 import Clinics from '../Modals/ClinicsModal.js'
+import Registation from '../Modals/RegistrationModal.js'
 
 function AdminScreen(props) {
     function onModalClick(e){
@@ -18,8 +19,9 @@ function AdminScreen(props) {
                 <div class="editModal" >
                     <div class={"editModal-dialog selected-" + props.dataName}>
                         {props.dataName === 'general' ? <General />:<></>}
-                        {props.dataName === 'clinics' ? <Clinics  submitAllSectionsData={props.submitAllSectionsData} preFill={props.preFill} tabName="Clinics" cards={props.allSections.clinics} setShowModal={props.setShowModal} />:<></>}
-                        {props.dataName === 'teams' ? <Clinics  submitAllSectionsData={props.submitAllSectionsData} preFill={props.preFill} tabName="teams" cards={props.allSections.teams} setShowModal={props.setShowModal} />:<></>}
+                        {props.dataName === 'Clinics' ? <Clinics  submitAllSectionsData={props.submitAllSectionsData} preFill={props.preFill} tabName="Clinics" cards={props.allSections.Clinics} setShowModal={props.setShowModal} />:<></>}
+                        {props.dataName === 'Teams' ? <Clinics  submitAllSectionsData={props.submitAllSectionsData} preFill={props.preFill} tabName="Teams" cards={props.allSections.Teams} setShowModal={props.setShowModal} />:<></>}
+                        {props.dataName === 'ClassRegistration' ? <Registation  submitAllSectionsData={props.submitAllSectionsData} preFill={props.preFill} tabName="ClassRegistration" cards={props.allSections.ClassRegistration} setShowModal={props.setShowModal} />:<></>}
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@ function ImgList(props) {
     }
 
     return (<>
-        <div className="imgList" >
+        <div className={props.show?"imgList":"imgList hide"} >
              {props.images.map((image) => {
                 console.log(image)
                 return(<div className="adImageDiv">

@@ -10,7 +10,7 @@ function setImgThumb(file){
     return newName
 }
 
-let sectionName = "clinics"
+let sectionName = "Clinics"
 function AdminSection(props) {
     let [inputObj, setInput] = useState({name:'', order:'', url:''})
    let className = "edit-section-body"
@@ -40,7 +40,6 @@ function AdminSection(props) {
             return (
                 <div className="adminCard" key={index}>
                     <div className="formGroup preveiewGroup">
-                        {/* <img className="preveiwImage" src={fileImg} /> */}
                         <iframe style={{background:'#000000', maxWidth: '300px', maxHeight:"150px"}} frameBorder="0" navpanes="0" scrolling="no" toolbar="0" allowtransparency="true" src={card.file} ></iframe>
                     </div>
                     <div className="formGroup">
@@ -56,13 +55,12 @@ function AdminSection(props) {
 
                     </div>
                     <div data-id={card.id} className="admin-btn-group" title="Remove">
-                        {/* <img data-id={index} src={Trash}/> */}
                         <button data-id={card.id} className="del-btn adminFormButton" onClick={cardDelete}>Remove</button>
                     </div>
                 </div>
             )
         })}
-        <button onClick={handleNewCard} className="adminFormButton">Add New Card</button>
+        <button onClick={handleNewCard} className="adminFormButton">Add New PDF to List</button>
         </div>
     </div>
     );
