@@ -172,15 +172,22 @@
 
 #adminButtonSection{
     color: white;
-    text-decoration: underline;
+    background-color: rgb(80, 80, 80);
     position:absolute;
-    bottom:-70px;
-    right:10px;
+    bottom:-75px;
+    right:0px;
     transition: all 0.3s;
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 #adminButtonSection:hover{
-    color:white;
     cursor: pointer;
+    background-color: rgba(255,255,255,0.1);
+}
+#adminButtonSection:active{
+background-color: black;
+color:rgba(255,255,255,0.2);
 }
 
 .social-icons{
