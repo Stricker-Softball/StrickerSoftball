@@ -89,10 +89,12 @@ function App() {
         await axios(
           `https://softball-science-data.vercel.app/locker/4`,
         ).then(res => {
-          console.log(res.data.data[0].value)
           let newData = JSON.parse(res.data.data[0].value)
           setData(newData);
-        });
+        }).catch(err => {
+          console.log(err)
+          // alert('Something went wrong! could not Grab data!')
+      })
 
           // console.log(result.data)
         // setData(result.data[0]);
@@ -125,7 +127,7 @@ function App() {
 
   return (
     <>
-
+      <div id="SaveScreen"><span>Saving...</span></div>
       <div className="App">
 
         <div className='container'>

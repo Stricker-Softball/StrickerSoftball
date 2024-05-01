@@ -30,11 +30,16 @@ function AdminScreen(props) {
         postString
         ).then(res => {
             console.log(res);
+            document.getElementById('SaveScreen').classList.remove('show');
             // props.setData()
         }
-        ).catch(err => console.log(err))
+        ).catch(err => {
+            document.getElementById('SaveScreen').classList.remove('show');
+            alert('Something went wrong! did not save your data!')
+        })
     }
     async function submitAllSectionsData(e){
+        document.getElementById('SaveScreen').classList.add('show')
         e.preventDefault()
         let changeForm = e.target;
         let changeId = e.target.dataset.id
@@ -86,7 +91,8 @@ function AdminScreen(props) {
 
     }
     function editSwitchBoolean(switchName, value){
-        console.log(switchName, value)
+        document.getElementById('SaveScreen').classList.add('show')
+        // console.log(switchName, value)
         let newSections = {...props.allSections}
         newSections.Switches[switchName] = value
         props.setData(newSections)
@@ -94,6 +100,7 @@ function AdminScreen(props) {
     }
 
     async function deleteItemFromList(id){
+        document.getElementById('SaveScreen').classList.add('show')
         let newSections = {...props.allSections}
         let index = newSections[selectedTab].findIndex(item => item.id == id)
         newSections[selectedTab].splice(index, 1);
@@ -115,7 +122,7 @@ function AdminScreen(props) {
         }
         setTab(newTab)
     }
-    let displayTabList=['Clinics', 'Teams', 'ClassRegistration', 'Switches']
+    let displayTabList=['Clinics', 'ClassRegistration', 'Teams', 'Switches']
 
     return (
         <div className="page" >

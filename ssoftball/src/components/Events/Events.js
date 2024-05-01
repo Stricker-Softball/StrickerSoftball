@@ -68,7 +68,7 @@ function Events(props, e) {
     // }, []);
 
 
-    console.log(eventsGroup)
+    // console.log(eventsGroup)
     function PdfClick(link) {
         window.open(link, '_blank');
     }
@@ -80,7 +80,6 @@ function Events(props, e) {
                     // Pdf's
                     return (
                         <>
-                        
                         <div className='event-list links-list'>
                         {group.links.map((item) => {
                             return (
@@ -90,7 +89,7 @@ function Events(props, e) {
                                     </div>
                                          <div className="link-btn-group">
                                 {item.buttons.map((button) => {
-                                    console.log(button)
+                                    // console.log(button)
                                     button.qr = ''
                                     return (
                                         <div className="linkParent">{button.qr?<img src={button.qr}/>:<></>}<a key={button.name + 'a'} className='clinic-link pdf-link ' target="_blank" href={button.link}>{button.name}</a></div>

@@ -23,7 +23,7 @@ function AdminSection(props) {
     // edit our array here
    }
    function setupEdit(card){
-        console.log('button click', props, card)
+        // console.log('button click', props, card)
         props.handleEditClick(card)
     }
     function handleNewCard(){

@@ -40,7 +40,6 @@ function AdminSection(props) {
     if(needsUpdate) setInput({...props.switches})
     return (
     <div className={className}  data-content={sectionName}>
-        {/* <h3>{sectionName}</h3> */}
         <div className="adminCardGroup">
         {Object.keys(props.switches).map((card, index) => {
             let switchName = card.replace(/([A-Z])/g, ' $1').trim()
@@ -55,35 +54,11 @@ function AdminSection(props) {
                                 <input  type="checkbox"  name={card} data-name={card} defaultChecked={inputObj[card]?true:false} onChange={updateCheckbox} />
                                 <label>On</label>
                             </div>
-                            {/* <div className="radio-group"> */}
-                            {/* <input value="false" type="radio"  name={card} data-name={card} checked={inputObj[`${card}`]} /> */}
-                                {/* <label>Off</label> */}
-                            {/* </div> */}
                         </div>
                     </div>
-                    {/* <div className="formGroup evenGroup">
-                        <label>Title</label>
-                        <p>{card.description}</p>
-                    </div>
-                    <div className="formGroup evenGroup">
-                        <label>Button Label</label>
-                        <p className="button-main">{card.buttons[0].name}</p>
-                    </div>
-                    <div className="formGroup evenGroup">
-                        <label>Button Link</label>
-                        <p>{card.buttons[0].link}</p>
-                    </div>
-                    <div className="formGroup admin-btn-group">
-                        <button className="adminFormButton" onClick={()=>setupEdit(card)}>Edit</button>
-
-                    </div>
-                    <div data-id={card.id} className="admin-btn-group" title="Remove">
-                        <button data-id={card.id} className="del-btn adminFormButton" onClick={cardDelete}>Remove</button>
-                    </div> */}
                 </div>
             )
         })}
-        <button onClick={handleNewCard} className="adminFormButton">Add New Button section</button>
         </div>
     </div>
     );
