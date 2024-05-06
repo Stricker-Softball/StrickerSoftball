@@ -40,7 +40,7 @@ function EventsImage(props) {
           img_ele.style.left = (x_cursor - x_img_ele) + 'px';
           img_ele.style.top = ( window.event.clientY - y_img_ele) + 'px';
       
-            console.log(img_ele.style.left+' - '+img_ele.style.top);
+            // console.log(img_ele.style.left+' - '+img_ele.style.top);
       
         }
       }

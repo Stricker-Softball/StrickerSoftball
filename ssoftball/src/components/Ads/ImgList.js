@@ -12,12 +12,11 @@ function ImgList(props) {
     return (<>
         <div className={props.show?"imgList":"imgList hide"} >
              {props.images.map((image) => {
-                console.log(image)
                 return(<div className="adImageDiv">
                 <img src={image} />
                 </div>)
              })}
-             <div className="ad-link-div"><a class="ad-link button-main " target="_blank" href="https://forms.gle/NabpjajRCTqJwrzc8">Get Registered</a></div>
+             <div className="ad-link-div"><a class="ad-link button-main " target="_blank" href="https://forms.gle/uUdafApyuZAGbkhf8">Get Registered</a></div>
         </div>
         </>
     );

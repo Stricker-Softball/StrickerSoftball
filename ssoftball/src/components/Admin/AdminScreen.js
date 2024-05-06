@@ -80,7 +80,7 @@ function AdminScreen(props) {
         }
         if(changedObj.id == -1){
             changedObj.id = changeIndex
-            newSections[selectedTab].push({...changedObj})
+            newSections[selectedTab] = [{...changedObj}, ...newSections[selectedTab]]
         }else{
             newSections[selectedTab][changeIndex] = {...changedObj}
         }

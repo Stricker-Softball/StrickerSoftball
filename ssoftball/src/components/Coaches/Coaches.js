@@ -83,7 +83,6 @@ function Coaches() {
 
 
     function handlePopup(coach = 'None') {
-        console.log(coach)
         if (coach !== 'None') {
             setCoach(coach)
         }

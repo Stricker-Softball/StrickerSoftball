@@ -19,7 +19,6 @@ function AdminSection(props) {
         // e.target.toArray().forEach(ele => {
         //     console.log(ele)
         // })
-        console.log('data', data, e.target, e.target.elements.missionStatement)
     }
 
     const handleChange = (e) => {

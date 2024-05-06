@@ -30,7 +30,6 @@ function AdminSection(props) {
         props.editSwitchBoolean(e.target.dataset.name, e.target.checked)
         // props.handleEditClick({description:'', buttons:[{name:'',link:''}],id:-1})
     }
-    console.log('siwtches:',inputObj,props.switches)
     let needsUpdate = false;
     Object.keys(props.switches).forEach(key => {
         if(props.switches[key] !== inputObj[key]){
@@ -43,7 +42,6 @@ function AdminSection(props) {
         <div className="adminCardGroup">
         {Object.keys(props.switches).map((card, index) => {
             let switchName = card.replace(/([A-Z])/g, ' $1').trim()
-            console.log('name:', inputObj[`${card}`], card)
             return (
                 <div className="adminCard" key={index}>
                     
