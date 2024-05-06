@@ -29,7 +29,6 @@ function AdminScreen(props) {
         `https://softball-science-data.vercel.app/locker/4`,
         postString
         ).then(res => {
-            console.log(res);
             document.getElementById('SaveScreen').classList.remove('show');
             // props.setData()
         }
