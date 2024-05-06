@@ -30,7 +30,7 @@
         padding-bottom: 55px;
         flex-wrap: wrap;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: center;
         h1{
             width:100%;
         }
@@ -136,6 +136,7 @@
 .links-section{
     width:50%;
     min-width: 320px;
+    max-width:400px;
 }
 @media (max-width: 1100px){
     .Events p{
