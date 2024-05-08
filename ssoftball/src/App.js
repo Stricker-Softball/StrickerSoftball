@@ -13,74 +13,10 @@ import Events from './components/Events/Events.js';
 import ADS from './components/Ads/ImgList.js';
 import AdminScreen from './components/Admin/AdminScreen.js';
 let isOffline = false;
+
+
 function App() {
-  let defaultData = {
-    Switches:{frontPageAds:undefined},
-    questions:[],
-    Clinics:[
-      {  name:'',
-        file:"https://drive.google.com/file/d/1q7C49Dd1BfT4ozet6sKQzR57Kzx2k1sS/preview", 
-        url:"https://drive.google.com/file/d/1q7C49Dd1BfT4ozet6sKQzR57Kzx2k1sS/view",
-        id:1,
-      },
-      //       {  name:'',
-      //   file:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/preview", 
-      //   url:"https://drive.google.com/file/d/1s7ueZkS8YdJYB6eP4tmz_kMogFxQ0eHK/view"
-      // },
-      //       {  name:'',
-      //   file:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/preview", 
-      //   url:"https://drive.google.com/file/d/1Gd-MqXe4vz-aXbg7EFZOJ9WzSuUsoELs/view"
-      // },
-    ],
-    ClassRegistration:
-      [
-        {
-            buttons: [{
-                link:'https://forms.gle/NabpjajRCTqJwrzc8',
-               name:'Spring 2024 Registration',
-               
-           }, 
-            ],
-            description:'Register for  our Clinics, Classes & Camps',
-            id:1
-        },
-        {
-            buttons: [{
-            link:'https://drive.google.com/file/d/1ig9mxosUWAuSEHeKxI_NDgqYCUOPQ88K/view?usp=sharing',
-            name:'Liability Waiver',
-        }],
-            description:'Download & Fill out Softball Science Waiver',
-            id:2
-        }
-    ],
-    members:[
-      {  name:'Monthly Memberships',
-          file:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/preview", 
-          url:"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/view",
-          id:1,
-      },
-      {
-        name:'Fall 2023 Hitting Velocity Memberships',
-          file:"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/preview", 
-          url:"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/view",
-          id:1,
-      }
-    ],
-    Teams:[
-      {  name:'Team Pricing',
-        file:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/preview", 
-        url:"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/view",
-        id:1,
-      },
-    ],
-    Ads:[
-      'https://drive.google.com/thumbnail?id=1UvbMuN66V_zWR3f5zsEVq4Mec1NIQwgs&sz=w1000',
-      'https://drive.google.com/thumbnail?id=17wteIJlGCPtL2pfX4kY0XsaouWWMk2D1&sz=w1000',
-      'https://drive.google.com/thumbnail?id=1GA8DQGc8wUahEkOAqstmkVjTwpLdLeGQ&sz=w1000',
-      'https://drive.google.com/thumbnail?id=1-V_PuFV5r2vjWPbPdhq8kkanDI_mgtVS&sz=w1000'
-    ],
-    AdsRegister: 'https://forms.gle/NabpjajRCTqJwrzc8'
-  }
+  let defaultData = JSON.parse("{\"Switches\":{\"frontPageAds\":true},\"questions\":[],\"Clinics\":[{\"name\":\"\",\"url\":\"https://drive.google.com/file/d/1OhTrLKJdvVkbDdmyBnERo25I2-YGl4XK/view\",\"file\":\"https://drive.google.com/file/d/1OhTrLKJdvVkbDdmyBnERo25I2-YGl4XK/preview\",\"id\":1},{\"name\":\"\",\"url\":\"https://drive.google.com/file/d/1t6MNNpxb52ztMvSqRlHrgpCMYyWiGrq5/view\",\"file\":\"https://drive.google.com/file/d/1t6MNNpxb52ztMvSqRlHrgpCMYyWiGrq5/preview\",\"id\":2},{\"name\":\"\",\"url\":\"https://drive.google.com/file/d/1j4VL9QUxhJ4-kdDyEUZS_gypizyqMxXV/view\",\"file\":\"https://drive.google.com/file/d/1j4VL9QUxhJ4-kdDyEUZS_gypizyqMxXV/preview\",\"id\":3}],\"ClassRegistration\":[{\"buttons\":[{\"name\":\"Summer 2024 Registration\",\"link\":\"https://forms.gle/uUdafApyuZAGbkhf8\",\"qr\":\"\"}],\"description\":\"Register for  our Clinics, Classes & Camps\",\"id\":1},{\"buttons\":[{\"link\":\"https://drive.google.com/file/d/1ig9mxosUWAuSEHeKxI_NDgqYCUOPQ88K/view?usp=sharing\",\"name\":\"Liability Waiver\",\"qr\":\"\"}],\"description\":\"Download & Fill out Softball Science Waiver\",\"id\":2},{\"buttons\":[{\"name\":\"Summer Hitting Registration\",\"link\":\"https://forms.gle/iTvAhvuBCLuZna5e7\",\"qr\":\"\"}],\"description\":\"\",\"id\":3}],\"members\":[{\"name\":\"Monthly Memberships\",\"file\":\"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/preview\",\"url\":\"https://drive.google.com/file/d/1R44bgTLfdLdOIUmtejEW2QN1PHP_w3qn/view\",\"id\":1},{\"name\":\"Fall 2023 Hitting Velocity Memberships\",\"file\":\"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/preview\",\"url\":\"https://drive.google.com/file/d/1foIwXa0cCXC2P3JRyQOTaAQ3ffSNCEY0/view\",\"id\":2}],\"Teams\":[{\"name\":\"Team Pricing\",\"file\":\"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/preview\",\"url\":\"https://drive.google.com/file/d/1keimBeNK2_CwZTk8F3GIux0DuaJ5kUkk/view\",\"id\":1}],\"Ads\":[{\"url\":\"https://drive.google.com/thumbnail?id=1UvbMuN66V_zWR3f5zsEVq4Mec1NIQwgs&sz=w1000\",\"id\":1},{\"url\":\"https://drive.google.com/thumbnail?id=17wteIJlGCPtL2pfX4kY0XsaouWWMk2D1&sz=w1000\",\"id\":2},{\"url\":\"https://drive.google.com/thumbnail?id=1m-0AQJDevLz-TgKfytlnTPeuVVOxj3Pb&sz=w1000\",\"id\":3},{\"url\":\"https://drive.google.com/thumbnail?id=1UWCqkuNTZL1C3uxQpLHWghdaHCLwUwgN&sz=w1000\",\"id\":4}],\"AdsRegister\":\"https://forms.gle/NabpjajRCTqJwrzc8\"}")
   const [events, setEvents] = useState([]);
   const [sectionListObject, setData] = useState({...defaultData})
  const history = useHistory();

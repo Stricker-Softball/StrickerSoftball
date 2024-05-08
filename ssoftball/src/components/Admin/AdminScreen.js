@@ -3,6 +3,7 @@ import './AdminScreen.scss';
 import { useState } from 'react';
 import axios from 'axios';
 
+import AdsList from './Sections/Ads.js'
 import ClinicList from './Sections/Clinics.js'
 import TeamList from './Sections/Teams.js'
 import Modal from './Modals/Modal.js'
@@ -99,12 +100,14 @@ function AdminScreen(props) {
     }
 
     async function deleteItemFromList(id){
+        console.log(id)
         document.getElementById('SaveScreen').classList.add('show')
         let newSections = {...props.allSections}
         let index = newSections[selectedTab].findIndex(item => item.id == id)
         newSections[selectedTab].splice(index, 1);
-        props.setData(newSections)
-        sendDataToEndpoint(newSections)
+        console.log(index, newSections)
+        // props.setData(newSections)
+        // sendDataToEndpoint(newSections)
     }
 
 
@@ -131,6 +134,7 @@ function AdminScreen(props) {
                 {displayTabList.map((key) => {
                             let tabName = key.replace(/([A-Z])/g, ' $1').trim()
                             if(tabName == 'Clinics') tabName = "Classes"
+                            if(tabName == 'Ads') tabName = "Front Page Ads"
                             if(!displayTabList.includes(key)) return (<></>)
                             return (
                                 <div className={`tab${key === selectedTab?' tab-active':''}`} onClick={handleAdminTabClick} data-tab={key}>
@@ -140,6 +144,7 @@ function AdminScreen(props) {
                         })}
                 </div>
                 <div className="edit-body-wrapper">
+                    <AdsList deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.Ads} setShowModal={setShowModal}/>
                     <ClinicList deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.Clinics} setShowModal={setShowModal}/>
                     <TeamList deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.Teams} setShowModal={setShowModal}/>
                     <RegisterBtns deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.ClassRegistration} setShowModal={setShowModal}/>

@@ -172,6 +172,12 @@ label{
         min-width:260px;
         max-width:310px;
     }
+    .admin-image{
+        max-width: 160px;
+        max-height: 160px;
+        aspect-ratio: 1/1;
+        margin-bottom: 0;
+    }
 
     @media (max-width: $phone){
         .evenGroup{

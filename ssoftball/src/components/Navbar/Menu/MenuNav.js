@@ -115,7 +115,6 @@ function App (props){
   /* MenuItem.jsx*/
 
 function MenuItem (props){
-  console.log(props)
     let isCurrentNav = props.link == window.location.pathname
     let [hover, setHover] = useState(false)
 
@@ -219,7 +218,6 @@ function MenuButton (props){
     }, [props.open])
     
     function handleClick(){
-console.log('clicked')
         setOpen(!open)
         
     }

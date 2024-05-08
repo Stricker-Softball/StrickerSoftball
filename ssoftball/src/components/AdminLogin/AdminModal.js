@@ -12,7 +12,7 @@ function AdminScreen(props) {
 
     }
     return (
-            <div onMouseDown={onModalClick} className={"modal-container" + `${props.showModal?' modal-show':''}`}>
+            <div onMouseDown={onModalClick} className={"modal-container admin-modal" + `${props.showModal?' modal-show':''}`}>
                 <div class="editModal" >
                     <div class={"editModal-dialog "}>
                         <AdminLogin {...props} setShowModal={props.setShowModal} />
