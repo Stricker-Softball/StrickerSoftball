@@ -92,12 +92,9 @@ function AdminScreen(props) {
             if(!changedObj.id) changedObj['id'] = changeIndex + 1
             newSections[selectedTab][changeIndex] = {...changedObj}
         }
-        console.log(changedObj, selectedTab)
         setShowModal()
         props.setData(newSections)
         sendDataToEndpoint(newSections)
-
-
     }
     function editSwitchBoolean(switchName, value){
         document.getElementById('SaveScreen').classList.add('show')
