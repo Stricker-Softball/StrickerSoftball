@@ -18,6 +18,7 @@ function AdminSection(props) {
     className += ' section-active';
    }
    function cardDelete(e, element){
+    // console.log(e.target)
     let id = e.target.dataset.id
     props.deleteItemFromList(id)
     // edit our array here
@@ -36,7 +37,7 @@ function AdminSection(props) {
         {props.cards.map((card, index) => {
             // name, url , file
             let fileImg = setImgThumb(card.file)
-            console.log(card.id, card)
+            // console.log(card.id, card)
             return (
                 <div className="adminCard" key={index}>
                     <div className="formGroup preveiewGroup">

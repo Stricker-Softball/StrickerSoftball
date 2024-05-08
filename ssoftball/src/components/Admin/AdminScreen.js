@@ -79,9 +79,10 @@ function AdminScreen(props) {
             }
         }
         if(changedObj.id == -1){
-            changedObj.id = changeIndex
+            changedObj.id = newSections[selectedTab].length
             newSections[selectedTab] = [{...changedObj}, ...newSections[selectedTab]]
         }else{
+            if(!changedObj.id) changedObj['id'] = changeIndex + 1
             newSections[selectedTab][changeIndex] = {...changedObj}
         }
         setShowModal()
@@ -100,14 +101,12 @@ function AdminScreen(props) {
     }
 
     async function deleteItemFromList(id){
-        console.log(id)
         document.getElementById('SaveScreen').classList.add('show')
         let newSections = {...props.allSections}
         let index = newSections[selectedTab].findIndex(item => item.id == id)
         newSections[selectedTab].splice(index, 1);
-        console.log(index, newSections)
-        // props.setData(newSections)
-        // sendDataToEndpoint(newSections)
+        props.setData(newSections)
+        sendDataToEndpoint(newSections)
     }
 
 
