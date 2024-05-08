@@ -5,6 +5,7 @@ import './Modal.scss';
 // import { useForm } from "react-hook-form"
 import General from '../Sections/General.js'
 import Clinics from '../Modals/ClinicsModal.js'
+import Ads from '../Modals/AdsModal.js'
 import Registation from '../Modals/RegistrationModal.js'
 
 function AdminScreen(props) {
@@ -22,6 +23,7 @@ function AdminScreen(props) {
                         {props.dataName === 'Clinics' ? <Clinics  submitAllSectionsData={props.submitAllSectionsData} preFill={props.preFill} tabName="Clinics" cards={props.allSections.Clinics} setShowModal={props.setShowModal} />:<></>}
                         {props.dataName === 'Teams' ? <Clinics  submitAllSectionsData={props.submitAllSectionsData} preFill={props.preFill} tabName="Teams" cards={props.allSections.Teams} setShowModal={props.setShowModal} />:<></>}
                         {props.dataName === 'ClassRegistration' ? <Registation  submitAllSectionsData={props.submitAllSectionsData} preFill={props.preFill} tabName="ClassRegistration" cards={props.allSections.ClassRegistration} setShowModal={props.setShowModal} />:<></>}
+                        {props.dataName === 'Ads' ? <Ads  submitAllSectionsData={props.submitAllSectionsData} preFill={props.preFill} tabName="Ads" cards={props.allSections.Ads} setShowModal={props.setShowModal} />:<></>}
                     </div>
                 </div>
             </div>

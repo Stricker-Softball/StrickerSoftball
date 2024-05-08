@@ -59,9 +59,15 @@ function AdminScreen(props) {
             for (const pair of formData.entries()) {
                 if(pair[0] != "listPos"){
                     if(pair[0] == 'url'){
-                        let value = pair[1].split('?')[0]
-                        changedObj[pair[0]] = value
-                        changedObj['file'] = value.split('/view')[0] + '/preview'
+                        if(selectedTab != 'Ads'){
+                            let value = pair[1].split('?')[0]
+                            changedObj[pair[0]] = value
+                            changedObj['file'] = value.split('/view')[0] + '/preview'
+                        }else{
+                            let value = `https://drive.google.com/thumbnail?id=${pair[1].split('/view')[0].split('/d/')[1]}&sz=w1000`
+                            
+                            changedObj[pair[0]] = value
+                        }
                     }else{
                         changedObj[pair[0]] = pair[1]
                     }
@@ -78,6 +84,7 @@ function AdminScreen(props) {
                 }
             }
         }
+        
         if(changedObj.id == -1){
             changedObj.id = newSections[selectedTab].length
             newSections[selectedTab] = [{...changedObj}, ...newSections[selectedTab]]
@@ -85,6 +92,7 @@ function AdminScreen(props) {
             if(!changedObj.id) changedObj['id'] = changeIndex + 1
             newSections[selectedTab][changeIndex] = {...changedObj}
         }
+        console.log(changedObj, selectedTab)
         setShowModal()
         props.setData(newSections)
         sendDataToEndpoint(newSections)
@@ -123,7 +131,7 @@ function AdminScreen(props) {
         }
         setTab(newTab)
     }
-    let displayTabList=['Clinics', 'ClassRegistration', 'Teams', 'Switches']
+    let displayTabList=['Ads','Clinics', 'ClassRegistration', 'Teams', 'Switches']
 
     return (
         <div className="page" >

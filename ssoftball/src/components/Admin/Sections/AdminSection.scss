@@ -36,6 +36,9 @@ label{
     border-top:none;
     width:100%;
 }
+.adsCardGroup .adminCard{
+    justify-content: space-around;
+}
 .adminCard:first-child{
     border-top: 3px solid white;
     border-top-right-radius: 10px;

@@ -28,7 +28,7 @@ function AdminSection(props) {
     return (
     <div className={className}  data-content={sectionName}>
         {/* <h3>{sectionName}</h3> */}
-        <div className="adminCardGroup">
+        <div className="adminCardGroup adsCardGroup">
         {props.cards.map((card, index) => {
             // name, url , file
             // console.log(card)
@@ -37,10 +37,10 @@ function AdminSection(props) {
                     <div className="formGroup adImageDiv admin-image">
                         <img src={card.url} />
                     </div>
-                    <div className="formGroup evenGroup">
+                    {/* <div className="formGroup evenGroup">
                         <label>Url</label>
                         <p>{card.url}</p>
-                    </div>
+                    </div> */}
                     {/* <div className="formGroup admin-btn-group">
                         <button className="adminFormButton" onClick={()=>setupEdit(card)}>Edit</button>
                     </div> */}

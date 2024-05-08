@@ -31,10 +31,10 @@ function AdminScreen(props) {
     }
     return (    
             <div className='modal-section clinics-modal'>
-                <button onClick={handleCancel} className="adminFormButton modalCloseBtn">Close</button>
+                {/* <button onClick={handleCancel} className="adminFormButton modalCloseBtn">Close</button> */}
                 <form id="clinicsModalForm" onSubmit={handleSubmit} >
                     <div className="formGroup">
-                        <label>Password</label>
+                        <label>Admin Password</label>
                         <input type="password" name="password" data-name="password" />
                     </div>
                     

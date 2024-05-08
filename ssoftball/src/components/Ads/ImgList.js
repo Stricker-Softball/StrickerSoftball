@@ -17,7 +17,7 @@ function ImgList(props) {
                 <img src={image.url.trim()} />
                 </div>)
              })}
-             <div className="ad-link-div"><a class="ad-link button-main " target="_blank" href="https://forms.gle/uUdafApyuZAGbkhf8">Get Registered</a></div>
+             {/* <div className="ad-link-div"><a class="ad-link button-main " target="_blank" href="https://forms.gle/uUdafApyuZAGbkhf8">Get Registered</a></div> */}
         </div>
         </>
     );

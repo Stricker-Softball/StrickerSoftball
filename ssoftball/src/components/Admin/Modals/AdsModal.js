@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 // import { useForm } from "react-hook-form"
-import step3Img from '../../../images/helpers/step3.png';
+import step3Img from '../../../images/helpers/step1Img.png';
 import step4Img from '../../../images/helpers/step4.png';
 import step5Img from '../../../images/helpers/step5.png';
 import step6Img from '../../../images/helpers/step6.png';
@@ -15,8 +15,6 @@ function AdminScreen(props) {
     let [helpOpen, setHelp] = useState(false);
     let [inputObj, setInput] = useState({
         url:props.preFill.url, 
-        name:props.preFill.name,
-        file:props.preFill.file,
         id:props.preFill.id
     })
 
@@ -25,7 +23,7 @@ function AdminScreen(props) {
         if(urlArray[0] == 'https:' && urlArray[urlArray.length-1] == 'view'){
             return true;
         }else{
-            setInput({url:'',file:'',name:inputObj.name,id:inputObj.id})
+            setInput({url:'',id:inputObj.id})
             alert('URL is in the wrong format! Canceling...')
             return false
         }
@@ -35,17 +33,13 @@ function AdminScreen(props) {
     const handleSubmit = (e) => {
         let formData = new FormData(e.target)
         for (const pair of formData.entries()) {
-            if(pair[0] != "listPos"){
-                if(pair[0] == 'url'){
-                    let value = pair[1].split('?')[0]
-                    let passCheck = checkUrlValue(value)
-                    if(!passCheck){
-                        return false;
-                        break;
-                    }
-                   
+            if(pair[0] == 'url'){
+                let value = pair[1].split('?')[0]
+                let passCheck = checkUrlValue(value)
+                if(!passCheck){
+                    return false;
+                    break;
                 }
-                
             }
         }
         if(helpOpen)setHelp(!helpOpen)
@@ -65,23 +59,18 @@ function AdminScreen(props) {
     return (    
             <div className='modal-section clinics-modal'>
                 <button onClick={handleCancel} className="adminFormButton modalCloseBtn">Close</button>
-                <form id="clinicsModalForm" onSubmit={handleSubmit} data-id={inputObj.id}>
-                    <div className="formGroup preveiewGroup">
-                        {/* <img className="preveiwImage" src={fileImg} /> */}
-                        {/* <iframe style={{background:'#000000', maxWidth: '300px', maxHeight:"150px", margin:'0 auto'}} frameBorder="0" navpanes="0" scrolling="no" toolbar="0" allowtransparency="true" src={inputObj.file} ></iframe> */}
-                    </div>
-                     <div className="formGroup">
-                        <label>Name (optional)</label>
-                        <input defaultValue={inputObj.name}  name="name" data-name="name" />
-                    </div>
+                <form id="adsModalForm" onSubmit={handleSubmit} data-id={inputObj.id}>
+                {/* <div className="formGroup adImageDiv admin-image">
+                        <img src={inputObj.url} />
+                    </div> */}
                     <div className="formGroup">
                         <label>Url<button onClick={handleHelp} className="adminFormButton admin-modal-action">what url (help)?</button></label>
                         <input id="clinicsUrl" defaultValue={inputObj.url} data-name="url" name="url" />
                     </div>
                     {/* help with url section  */}
                     <div id="adminUrlHelp" className={helpOpen?'adminHelpContainer':'adminHelpContainer hide'}>
-                        <p>1. Download Your PDF</p>
-                        <p>2. Add Your PDF file to <a href="https://drive.google.com/drive/u/0/home">Google Drive</a></p>
+                        <p>1. Download Your Image file ( MUST be .png or .jpeg )</p>
+                        <p>2. Add Your image file to <a href="https://drive.google.com/drive/u/0/home">Google Drive</a></p>
                         <p>3. Right Click the File in Google drive</p>
                         <img src={step3Img} />
                         <p>4. Click the "Share" button in the menu, another "Share" button should pop up, click that as well</p>
