@@ -15,7 +15,7 @@ import Switch from './Sections/Switches.js'
 function AdminScreen(props) {
 
     const [showMail, setMail] = useState(false)
-    const [selectedTab, setTab] = useState('Clinics')
+    const [selectedTab, setTab] = useState('Ads')
     const [modalOn, setModalOn]= useState(false)
     const [preFill, setPreFill] = useState({url:'',file:'',name:'',id:-1})
    
@@ -85,11 +85,11 @@ function AdminScreen(props) {
             }
         }
         
-        if(changedObj.id == -1){
-            changedObj.id = newSections[selectedTab].length
-            newSections[selectedTab] = [{...changedObj}, ...newSections[selectedTab]]
+        if(!changedObj.id || changedObj.id == -1){ 
+            changedObj['id'] = changeIndex + 1
+            let copiedArr = [...newSections[selectedTab]]
+            newSections[selectedTab] = [{...changedObj}, ...copiedArr]
         }else{
-            if(!changedObj.id) changedObj['id'] = changeIndex + 1
             newSections[selectedTab][changeIndex] = {...changedObj}
         }
         setShowModal()
@@ -137,7 +137,8 @@ function AdminScreen(props) {
                 <div className="edit-tabs">
                 {displayTabList.map((key) => {
                             let tabName = key.replace(/([A-Z])/g, ' $1').trim()
-                            if(tabName == 'Clinics') tabName = "Classes"
+                            if(tabName == 'Clinics') tabName = "Class PDfs & Images"
+                            if(tabName == 'Class Registration') tabName = "Class Register Buttons"
                             if(tabName == 'Ads') tabName = "Front Page Ads"
                             if(!displayTabList.includes(key)) return (<></>)
                             return (

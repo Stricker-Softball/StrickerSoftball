@@ -18,7 +18,6 @@ overflow: hidden;
     display: inline-block;
     border-right: 2px dashed var(--red);
     transition: all 0.3s;
-
 }
 .tab:hover{
     background: var(--main-lightyellow);
@@ -45,4 +44,17 @@ overflow: hidden;
 }
 .section-active{
     display: block;
+}
+@media (max-width: 600px){
+    .edit-tabs{
+       flex-direction:column;
+       .tab{
+        border-radius: 0px;
+        width:100%;
+        margin-bottom: 2px;
+       }
+       .tab:last-child{
+        margin-bottom: 0;
+       }
+    }
 }
