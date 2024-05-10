@@ -35,7 +35,7 @@ function Footer(props) {
             <div className='footer-section'>
                 <div className='sub-section copyright'>
                     <div className='sub-container'>
-                        <span>© 2020 - {new Date().getFullYear()} by Softball Science</span></div>
+                        <span>© 2020 - {new Date().getFullYear()} &nbsp; &nbsp; Softball Science. All right Reserved.</span></div>
                 </div>
                 <div className='sub-section social'>
                     <div className='sub-container'>

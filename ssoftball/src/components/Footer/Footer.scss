@@ -97,6 +97,13 @@ import twitterIcon from '../../images/social/twitter.png'; */
 // Meda queries phone
 //
 
+.Footer .footer-section .copyright{
+    margin-top:auto;
+    margin-bottom: 60px;
+}
+.copyright{
+    font-size: .8rem;
+}
 @media (max-width: $phone){
     .Footer .footer-section{
         flex-direction: column-reverse;
