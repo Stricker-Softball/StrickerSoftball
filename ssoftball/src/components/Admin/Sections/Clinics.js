@@ -5,8 +5,11 @@ import { useState } from 'react';
 import Trash from '../../../images/trash.png';
 
 function setImgThumb(file){
+    let newName = ''
+    if(file.includes('d/')){
     let fileName = file.split('d/')[1].split('/preview')[0];
-    let newName = `https://drive.google.com/thumbnail?id=${fileName}&sz=w1000`
+    newName = `https://drive.google.com/thumbnail?id=${fileName}&sz=w1000`
+    }
     return newName
 }
 
