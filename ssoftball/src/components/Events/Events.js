@@ -68,7 +68,7 @@ function Events(props, e) {
     // }, []);
 
 
-    // console.log(eventsGroup)
+    console.log(eventsGroup)
     function PdfClick(link) {
         window.open(link, '_blank');
     }
@@ -76,12 +76,12 @@ function Events(props, e) {
 
         <div className='Events'>
                 
-                {props.pageState == "register" && eventsGroup.map((group) => {
+                { eventsGroup.map((group) => {
                     // Pdf's
                     return (
                         <>
                         <div className='event-list links-list'>
-                        {group.links.map((item) => {
+                        {props.pageState == "register" ? group.links.map((item) => {
                             return (
                                 <div className="links-section">
                                 <div key={item.name + 'link'} className='link-description' style={{paddingBottom:'0',overflow:'hidden'}}>
@@ -98,14 +98,14 @@ function Events(props, e) {
                                  </div>
                                 </div>
                             )
-                        })}
+                        }):<></>}
                         </div>
                         <div className='event-list'>
-{props.pageState == "class" && <h1 style={{paddingTop: '5px'}}>{group.title}</h1>}
+{props.pageState == "class" ? <h1 style={{paddingTop: '5px'}}>{group.title}</h1>:<></>}
                        
 
 
-                        {props.pageState == "class" && group.events.map((item) => {
+                        {props.pageState == "class" ? group.events.map((item) => {
                             return (
                                 <div className='event-row'>
                                 {item.name && item.name.length  ? <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>:<></>}
@@ -114,9 +114,9 @@ function Events(props, e) {
                                 </div>
                                 </div>
                             )
-                        })}
+                        }):<></>}
 
-                         {props.pageState == "class" && props.imgList && props.imgList.map((item) => {
+                         {props.pageState == "class" ? props.imgList && props.imgList.map((item) => {
                             // console.log(item)
                             return (
                                 <>
@@ -126,26 +126,12 @@ function Events(props, e) {
                                 </div>
                                 </>
                             )
-                        })}
+                        }):<></>}
                         </div>
                         </>
                     )
                     
                 })}
-
-            
-                {/* {events.map((item) => {
-                    return (
-                        <div className='event-item'>
-                            <h3>{item.title}</h3>
-                            <div className='event-body'>{item.body}</div>
-                        </div>)
-                })} */}
-
-            <p onClick={() => {
-                window.scrollTo(0, 0)
-                props.history.push('/admin/events/edit')
-            }}>ed</p>
         </div>
     );
 }
