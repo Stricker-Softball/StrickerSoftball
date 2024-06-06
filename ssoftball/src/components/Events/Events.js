@@ -18,14 +18,11 @@ function Events(props, e) {
     const [eventsGroup, setEGroup] = useState([{title:'Clinics, Classes & Camps'}]);
     eventsGroup[0].links = [...props.ClassRegistration]
     eventsGroup[0].events = []
-    if(!props.match.path.includes('clinic')){
-        eventsGroup[0].links = []
-    }
     if(props.match.path.includes('question')){
         eventsGroup[0].title = 'Questions & Answers'
     }else if(props.match.path.includes('teams')){
         eventsGroup[0].title = 'Teams'
-    }else if(props.match.path.includes('class')){
+    }else if(false){
         eventsGroup[0].title = 'Classes'
         eventsGroup[0].events = [
             {
@@ -56,16 +53,6 @@ function Events(props, e) {
         // console.log(eventsGroup[0].events )
     }
     
-
-    // useEffect(() => {
-    //     async function fetchData() {
-    //         const result = await axios.get(
-    //             'https://stricker-softball.herokuapp.com/api/events/'
-    //         )
-    //         setEvents(result.data);
-    //     }
-    //     fetchData();
-    // }, []);
 
 
     console.log(eventsGroup)
