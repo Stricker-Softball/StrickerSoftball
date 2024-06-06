@@ -95,7 +95,7 @@ function Events(props, e) {
                         {props.pageState == "class" ? group.events.map((item) => {
                             return (
                                 <div className='event-row'>
-                                {item.name && item.name.length  ? <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>:<></>}
+                                {item.name && item.name.length  ? <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>:<div className='title-space'></div>}
                                 <div key={item.name} className='event-item' style={{paddingBottom:'0',overflow:'hidden'}} onClick={() => PdfClick(item.url)}>
                                     <iframe style={{background:'#000000'}} frameBorder="0" scrolling="no" allowtransparency="true" src={item.file} ></iframe>
                                 </div>
