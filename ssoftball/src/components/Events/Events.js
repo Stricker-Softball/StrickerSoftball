@@ -76,7 +76,7 @@ function Events(props, e) {
 
         <div className='Events'>
                 
-                {eventsGroup.map((group) => {
+                {props.pageState == "register" && eventsGroup.map((group) => {
                     // Pdf's
                     return (
                         <>
@@ -101,11 +101,11 @@ function Events(props, e) {
                         })}
                         </div>
                         <div className='event-list'>
-<h1 style={{paddingTop: '5px'}}>{group.title}</h1>
+{props.pageState == "class" && <h1 style={{paddingTop: '5px'}}>{group.title}</h1>}
                        
 
 
-                        {group.events.map((item) => {
+                        {props.pageState == "class" && group.events.map((item) => {
                             return (
                                 <div className='event-row'>
                                 {item.name && item.name.length  ? <a key={item.name + 'tag'} className='event-link pdf-link ' target="_blank" href={item.url}>{item.name}</a>:<></>}
@@ -116,7 +116,7 @@ function Events(props, e) {
                             )
                         })}
 
-                         {props.imgList && props.imgList.map((item) => {
+                         {props.pageState == "class" && props.imgList && props.imgList.map((item) => {
                             // console.log(item)
                             return (
                                 <>
