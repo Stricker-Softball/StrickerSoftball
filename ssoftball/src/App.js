@@ -73,7 +73,7 @@ function App() {
             <Route exact path="/" render={props => <Home {...props} />} />
             
             <Route path="/classes" render={props => <Events pageState='class' ClassRegistration={sectionListObject.ClassRegistration} key={1} {...props} eventList={events} sectionList={sectionListObject.Clinics} imgList={imgCardList}/>} />
-            <Route path="/resgister" render={props => <Events pageState='register' ClassRegistration={sectionListObject.ClassRegistration} key={1} {...props} eventList={events} sectionList={sectionListObject.Clinics} imgList={imgCardList}/>} />
+            <Route path="/register" render={props => <Events pageState='register' ClassRegistration={sectionListObject.ClassRegistration} key={1} {...props} eventList={events} sectionList={sectionListObject.Clinics} imgList={imgCardList}/>} />
             <Route path="/questions" render={props => <Events ClassRegistration={[]} key={2}  {...props} eventList={events} sectionList={sectionListObject.questions}/>} />
             <Route path="/members" render={props => <Events ClassRegistration={[]} key={3}  {...props} eventList={events} sectionList={sectionListObject.members}/>} />
             <Route path="/teams" render={props => <Events ClassRegistration={[]} key={4}  {...props} eventList={events} sectionList={sectionListObject.Teams}/>} />

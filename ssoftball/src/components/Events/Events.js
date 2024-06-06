@@ -55,7 +55,7 @@ function Events(props, e) {
     
 
 
-    console.log(eventsGroup)
+    console.log(eventsGroup, props.pageState)
     function PdfClick(link) {
         window.open(link, '_blank');
     }
