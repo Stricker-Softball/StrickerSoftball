@@ -16,7 +16,7 @@ import sbll4th from  '../../images/pdf/StrickerSoftballAcademySummer.pdf';
 function Events(props, e) {
     const [events, setEvents] = useState(props.eventList || []);
     const [eventsGroup, setEGroup] = useState([{title:'Clinics, Classes & Camps'}]);
-    let isClasess = props.match.path.includes('class');
+    // let isClasess = props.match.path.includes('class');
     eventsGroup[0].links = [...props.ClassRegistration]
     eventsGroup[0].events = []
     
@@ -121,9 +121,9 @@ function Events(props, e) {
                     )
                     
                 })}
-                {isClasess? <div className='buttons'>
+                {/* {isClasess? <div className='buttons'>
                 <button className='button-main' onClick={() => buttonPress('/register')}>Registration</button>
-            </div>:<></>}
+            </div>:<></>} */}
         </div>
     );
 }
