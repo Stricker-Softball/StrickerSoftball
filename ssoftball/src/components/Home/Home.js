@@ -79,8 +79,8 @@ function Home(props) {
             </div> */}
             <h2>Coaching and lessons for all levels</h2>
             <div className='buttons'>
-                <button className='button-main' onClick={() => buttonPress('/classes')}>Classes & Registration</button>
-                <button className='button-main' onClick={() => buttonPress('/meetthecoach#lessonsintro')}>Lessons</button>
+                <button className='button-main' onClick={() => buttonPress('/classes')}>Classes</button>
+                <button className='button-main' onClick={() => buttonPress('/register')}>Registration</button>
             </div>
             
             <div className='buttons-bottom'>
