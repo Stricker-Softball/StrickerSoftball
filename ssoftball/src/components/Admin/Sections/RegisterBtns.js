@@ -52,7 +52,7 @@ function AdminSection(props) {
                     </div>
                     <div className="formGroup evenGroup">
                         <label>Button Label</label>
-                        <p className="button-main clinic-link">{card.buttons[0].name}</p>
+                        <a href="#" className="clinic-link">{card.buttons[0].name}</a>
                     </div>
                     <div className="formGroup evenGroup">
                         <label>Button Link</label>
