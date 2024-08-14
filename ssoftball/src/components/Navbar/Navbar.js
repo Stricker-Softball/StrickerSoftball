@@ -29,6 +29,20 @@ function Navbar(props) {
         {name:'Contacts', link:'/contacts'}, 
         
     ]
+    // nav conditionals
+    console.log(props.sectionList.Clinics, props.sectionList.ClassRegistration, props.sectionList.Teams)
+    if(!props.sectionList.Clinics || props.sectionList.Clinics.length == 0){
+        let navIndex = nav_item_list.findIndex(obj => obj.name == 'Classes')
+        nav_item_list.splice(navIndex, 1)
+    }
+    if(!props.sectionList.ClassRegistration || props.sectionList.ClassRegistration.length == 0){
+        let navIndex = nav_item_list.findIndex(obj => obj.name == 'Registration')
+        nav_item_list.splice(navIndex, 1)
+    }
+    if(!props.sectionList.Teams || props.sectionList.Teams.length == 0){
+        let navIndex = nav_item_list.findIndex(obj => obj.name == 'Teams')
+        nav_item_list.splice(navIndex, 1)
+    }
 
     return (
         <div className="Navbar">
