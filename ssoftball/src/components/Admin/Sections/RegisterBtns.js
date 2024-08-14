@@ -46,11 +46,11 @@ function AdminSection(props) {
                     <div className="formGroup preveiewGroup">
                         {/* <iframe style={{background:'#000000', maxWidth: '300px', maxHeight:"150px"}} frameBorder="0" navpanes="0" scrolling="no" toolbar="0" allowtransparency="true" src={card.file} ></iframe> */}
                     </div>
-                    <div className="formGroup evenGroup">
+                    <div className="formGroup evenGroup evenGroup-small">
                         <label>Title</label>
                         <p>{card.description}</p>
                     </div>
-                    <div className="formGroup evenGroup">
+                    <div className="formGroup evenGroup evenGroup-big">
                         <label>Button Label</label>
                         <a href="#" className="clinic-link">{card.buttons[0].name}</a>
                     </div>

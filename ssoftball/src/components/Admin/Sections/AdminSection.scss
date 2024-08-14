@@ -175,6 +175,12 @@ label{
     .evenGroup{
         width:20%;
     }
+    .evenGroup-small{
+        width:10%;
+    }
+    .evenGroup-big{
+        width:30%;
+    }
     .evenGroup{
         text-wrap: balance !important;
             white-space: pre-wrap;
@@ -246,6 +252,7 @@ label{
         color:white;
         max-width:420px;
         text-decoration: none;
+        text-align: center;
     }
     
     .clinic-link:hover{
