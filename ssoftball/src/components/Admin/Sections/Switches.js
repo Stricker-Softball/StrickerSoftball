@@ -16,7 +16,7 @@ function setImgThumb(file){
 let sectionName = "Switches"
 function AdminSection(props) {
     let [inputObj, setInput] = useState({frontPageAds:undefined})
-   let className = "edit-section-body"
+   let className = "edit-section-body edit-section-no-add"
    if(props.tabName.includes(sectionName)){
     className += ' section-active';
    }

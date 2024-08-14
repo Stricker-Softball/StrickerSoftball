@@ -39,7 +39,7 @@ label{
 .adsCardGroup .adminCard{
     justify-content: space-around;
 }
-.adminCard:nth-child(2){
+.adminCard:nth-child(2), .edit-section-no-add .adminCard:first-child{
     border-top: 3px solid white;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
@@ -94,6 +94,7 @@ label{
     border-radius: 20px;
     margin-top:15px;
     margin-right:10px;
+    font-weight: 600;
    }
    .submitFormButton{
     font-size: 18px;
@@ -219,4 +220,24 @@ label{
         .adminFormButton.del-btn{
             margin-top:25px;
         }
+    }
+
+.clinic-link{
+    height:65px;
+            min-width:285px;
+            font-size:20px;
+            width:auto;
+        transition: all 0.3s;
+        background: var(--main-yellow);
+        border: 4px solid var(--red);
+        width:auto;
+    font-size:20px;
+            margin-left: 15px;
+        margin-right: 15px;
+    }
+    
+    .clinic-link:hover{
+        color: var(--main-yellow);
+        border-color:  var(--red);
+        background-color: rgb(59, 59, 59);
     }

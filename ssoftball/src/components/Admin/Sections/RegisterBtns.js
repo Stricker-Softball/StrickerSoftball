@@ -36,7 +36,7 @@ function AdminSection(props) {
     <div className={className}  data-content={sectionName}>
         {/* <h3>{sectionName}</h3> */}
         <div className="adminCardGroup">
-        <button onClick={handleNewCard} className="adminFormButton submitFormButton">Add New Button section</button>
+        <button onClick={handleNewCard} className="adminFormButton submitFormButton">Add New Button</button>
         {props.cards.map((card, index) => {
             // name, url , file
             // let fileImg = setImgThumb(card.file)
@@ -52,7 +52,7 @@ function AdminSection(props) {
                     </div>
                     <div className="formGroup evenGroup">
                         <label>Button Label</label>
-                        <p className="button-main">{card.buttons[0].name}</p>
+                        <p className="button-main clinic-link">{card.buttons[0].name}</p>
                     </div>
                     <div className="formGroup evenGroup">
                         <label>Button Link</label>
