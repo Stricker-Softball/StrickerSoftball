@@ -56,11 +56,12 @@ Email:   Megan_stricker@yahoo.com`
 Contact Info
 Cell:     630-303-8329
 Email:   Luke.a.stricker@gmail.com`
-    },{
-        first_name: 'Kristin', last_name: 'McCue', images: [KristinClose, KristinPortait, KristinPortait], color: 'red',
-        description:
-            `Kristin is a former girls travel softball player of 10 years, primarily playing catcher and 3rd base throughout her career. She later went on to run collegiate cross country. Currently working as a registered dietitian, Kristin is focused on fundamentals and fueling young athletes. She is available for private and group lessons as well as clinics. `
     },
+    // {
+    //     first_name: 'Kristin', last_name: 'McCue', images: [KristinClose, KristinPortait, KristinPortait], color: 'red',
+    //     description:
+    //         `Kristin is a former girls travel softball player of 10 years, primarily playing catcher and 3rd base throughout her career. She later went on to run collegiate cross country. Currently working as a registered dietitian, Kristin is focused on fundamentals and fueling young athletes. She is available for private and group lessons as well as clinics. `
+    // },
     // {
     //     first_name: 'Hunter', last_name: 'Siler', images: [HuntPortrait,BatImg,BatImg], color: 'red',
     //     description:

@@ -133,7 +133,7 @@ function AdminScreen(props) {
     return (
         <div className="page" >
             <div>
-                <h6>Edit Sections</h6>
+                <h6>Choose a list or section to Edit</h6>
                 <div className="edit-tabs">
                 {displayTabList.map((key) => {
                             let tabName = key.replace(/([A-Z])/g, ' $1').trim()

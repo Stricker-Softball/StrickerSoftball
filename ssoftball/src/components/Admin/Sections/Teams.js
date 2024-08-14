@@ -36,6 +36,7 @@ function AdminSection(props) {
     <div className={className}  data-content={sectionName}>
         {/* <h3>{sectionName}</h3> */}
         <div className="adminCardGroup">
+            <button onClick={handleNewCard} className="adminFormButton submitFormButton">Add New PDF to List</button>
         {props.cards.map((card, index) => {
             // name, url , file
             let fileImg = setImgThumb(card.file)
@@ -65,7 +66,7 @@ function AdminSection(props) {
                 </div>
             )
         })}
-        <button onClick={handleNewCard} className="adminFormButton">Add New PDF to List</button>
+        
         </div>
     </div>
     );

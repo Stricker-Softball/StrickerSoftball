@@ -29,6 +29,7 @@ function AdminSection(props) {
     <div className={className}  data-content={sectionName}>
         {/* <h3>{sectionName}</h3> */}
         <div className="adminCardGroup adsCardGroup">
+            <button onClick={handleNewCard} className="adminFormButton submitFormButton">Add New Image to Page</button>
         {props.cards.map((card, index) => {
             // name, url , file
             // console.log(card)
@@ -50,7 +51,7 @@ function AdminSection(props) {
                 </div>
             )
         })}
-        <button onClick={handleNewCard} className="adminFormButton">Add New Image to Page</button>
+        
         </div>
     </div>
     );
