@@ -222,10 +222,10 @@ label{
         }
     }
 
-.clinic-link{
+    .evenGroup .button-main.clinic-link{
     height:65px;
             min-width:285px;
-            font-size:20px;
+            font-size:20px !important;
             width:auto;
         transition: all 0.3s;
         background: var(--main-yellow);
