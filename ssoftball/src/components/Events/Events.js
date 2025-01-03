@@ -14,6 +14,13 @@ import sbll4th from  '../../images/pdf/StrickerSoftballAcademySummer.pdf';
 
 
 function Events(props, e) {
+    useEffect(() => {
+        // Code to run on component load
+        if(props.match.path.includes('stations')){
+            props.setShowModal()
+        }
+      }, []); // Empty dependency array
+
     const [events, setEvents] = useState(props.eventList || []);
     const [eventsGroup, setEGroup] = useState([{title:'Clinics, Classes & Camps'}]);
     // let isClasess = props.match.path.includes('class');
@@ -24,6 +31,8 @@ function Events(props, e) {
         eventsGroup[0].title = 'Questions & Answers'
     }else if(props.match.path.includes('teams')){
         eventsGroup[0].title = 'Teams'
+    }else if(props.match.path.includes('stations')){
+         eventsGroup[0].title = 'Stations'
     }else if(false){
         eventsGroup[0].title = 'Classes'
         eventsGroup[0].events = [
@@ -57,7 +66,6 @@ function Events(props, e) {
     
 
 
-    console.log(eventsGroup, props.pageState)
     function PdfClick(link) {
         window.open(link, '_blank');
     }

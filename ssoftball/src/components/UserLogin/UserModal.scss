@@ -1,0 +1,62 @@
+@import '../../utilities/variable.scss';
+
+.admin-modal.modal-container{
+    background-color: rgba(0,0,0, 0.9);
+}
+
+.modal-show{
+    display: block;
+}
+.admin-modal {
+.editModal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 295px !important;
+    background-color: rgba(0,0,0, 1);
+    overflow-y: auto;
+    margin: 0 auto;
+    border: 3px solid var(--main-yellow);
+    border-radius: 5px;
+    position: relative;
+    margin-top:calc(50vh - 200px);
+    max-width:900px;
+    color:white;
+    text-align: center;
+}
+label{
+    color:white;
+    text-align: center;
+}
+input{
+    margin:15px auto;
+    max-width: 300px;
+}
+.editModal-dialog{
+    width:100%;
+    max-width: 950px;
+    overflow: auto;
+    
+    padding-bottom:15px;
+    // margin: 0 auto;
+}
+.adminHelpContainer{
+    max-height:5000px;
+}
+.adminHelpContainer.hide{
+    max-height: 0px;
+}
+.modalCloseBtn{
+    position: absolute;
+    top:0;
+    right:0;
+    margin-top:3px;
+    margin-right: 3px;
+}
+}
+@media (max-width: $phone){
+    .modal-container{
+        padding:15px 5px; 
+    }
+}

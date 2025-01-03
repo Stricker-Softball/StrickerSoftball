@@ -38,6 +38,18 @@ function App() {
    
       if(!isOffline) fetchData();
     },[]);
+  const [userModalOn, setModalOn]= useState(false)
+      function setShowUserModal(turnoff=false){
+          let hasLoggedSession = sessionStorage.getItem("hasUserLoggedIn");
+          if(hasLoggedSession && hasLoggedSession == "True" || turnoff){
+              setModalOn(false)
+          }else{
+               setModalOn(true)
+          }
+          
+         
+      }
+      
 // useEffect(() => {
 //     window.addEventListener("beforeunload", alertUser);
 //     return () => {
@@ -67,12 +79,13 @@ function App() {
       <div className="App">
 
         <div className='container'>
-          <Route path="/" render={props => <Navbar {...props} sectionList={sectionListObject} />} />
+          <Route path="/" render={props => <Navbar {...props} sectionList={sectionListObject} modalOn={userModalOn} setShowModal={setShowUserModal}/>} />
           <div className='container-after'>
           <Route exact path="/" render={props => <ADS show={sectionListObject.Switches.frontPageAds} {...props} images={sectionListObject.Ads}/>} />
             <Route exact path="/" render={props => <Home {...props} />} />
             
             <Route path="/classes" render={props => <Events pageState='class' ClassRegistration={sectionListObject.ClassRegistration} key={1} {...props} eventList={events} sectionList={sectionListObject.Clinics} imgList={imgCardList}/>} />
+            <Route path="/stations" render={props => <Events pageState='class' ClassRegistration={sectionListObject.ClassRegistration} key={1} {...props} eventList={events} sectionList={sectionListObject.Stations} imgList={[]} setShowModal={setShowUserModal}/> } />
             <Route path="/register" render={props => <Events pageState='register' ClassRegistration={sectionListObject.ClassRegistration} key={1} {...props} eventList={events} sectionList={sectionListObject.Clinics} imgList={imgCardList}/>} />
             <Route path="/questions" render={props => <Events pageState='class' ClassRegistration={[]} key={2}  {...props} eventList={events} sectionList={sectionListObject.questions}/>} />
             <Route path="/members" render={props => <Events pageState='class' ClassRegistration={[]} key={3}  {...props} eventList={events} sectionList={sectionListObject.members}/>} />
@@ -80,7 +93,6 @@ function App() {
             <Route path="/meetthecoach" render={props => <Coaches {...props} />} /><Route path="/meetthecoach" render={props => <Lessons {...props} />} />
             <Route path="/contacts" render={props => <Contacts {...props}/>} />
             <Route path="/admin/events/edit" render={props => <AdminScreen {...props} setData={setData} eventList={events} allSections={sectionListObject}/>} />
-            {/* <Route path="/admin/events/delete" render={props => <DeleteEvents {...props} eventList={events} />} /> */} 
           </div>
         </div>
         <Footer />
