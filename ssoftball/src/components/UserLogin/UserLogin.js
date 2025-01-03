@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 function AdminScreen(props) {
-    let defaultPassword = 'ss2024'
+    let defaultPassword = 'ss2025'
     let [inputObj, setInput] = useState({
         password:''
     })
