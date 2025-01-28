@@ -257,15 +257,18 @@
 
 // 1301px 
 // 600px 
-#associateSection{
+#associateSection, #associateSection2{
   display:flex;
   flex-direction: column;
   position:absolute;
-  top:20px;
+  top:220px;
   right:10px;
   background-color: var(--black-transparent);
   padding:10px;
   border-radius: 15px;
+}
+#associateSection2{
+  top:20px;
 }
 #associateLabel span{
   display: block;
@@ -286,7 +289,33 @@
   display:block;
   transition: all 0.3s;
 }
+#associateLabel2 span{
+  display: block;
+  font-size: .8rem;
+}
+#assocateLinks2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:20px;
+}
+#assocateLinks2 span{
+  margin-bottom:12px;
+  aspect-ratio: 76/60;
+  height:105px;
+  width:80px;
+  border-radius: 3px;
+  display:block;
+  transition: all 0.3s;
+}
+#assocateLinks2 span, #assocateLinks span{
+  cursor: pointer;
+}
 @media only screen and (max-width: 780px) {
+  .imgList{
+    margin-top:40px;
+  }
   #associateSection{
     top:-95px;
     right:100px;
@@ -300,8 +329,25 @@
     margin-top:10px;
   }
   #assocateLinks span{
-    height:40px;
-    width:40px;
+    // height:40px;
+    // width:40px;
+    margin-bottom: 0;
+  }
+  #associateSection2{
+    top:-95px;
+    right:180px;
+    // background-color: transparent;
+    padding-bottom: 5px;
+  }
+  #associateLabel2 span{
+    font-size: .6rem;
+  }
+  #assocateLinks2{
+    margin-top:10px;
+  }
+  #assocateLinks2 span{
+    height:76px;
+    width:60px;
     margin-bottom: 0;
   }
 }
@@ -311,9 +357,11 @@
   background-size: contain;
   padding-bottom: 5px;
 }
-#assocateLinks span:hover{
-  height:70px;
-  width:70px;
+#sponsoredBook{
+  background-image: url('../../images/bookCover.jpg');
+  background-size: cover;
+}
+#assocateLinks span:hover, #assocateLinks2 span:hover{
   box-shadow: 0 0 20px 0px grey;
   cursor: pointer;
 }
@@ -327,5 +375,16 @@
     background-position: center center; 
     border-radius: 100%;
     margin:-10px auto 0px;
+    
+}
+#ssBookCover{
+  background-image: url('../../images/bookCover.jpg');
+  aspect-ratio: 1000/1293;
+  width: 300px;
+  background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center; 
+    border-radius: 3px;
+    margin:30px auto;
     
 }

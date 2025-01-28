@@ -36,7 +36,7 @@
         }
         .event-row{
             width: 30%;
-            margin-top: 0px;
+            margin-top: auto;
         }
         .event-item{
             
@@ -137,6 +137,9 @@
     width:50%;
     min-width: 320px;
     max-width:400px;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
 }
 @media (max-width: 1100px){
     .Events p{

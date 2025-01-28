@@ -113,7 +113,8 @@ label{
    }
    .adminFormButton:hover{
     cursor: pointer;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(0,0,0,1);
+    border-color:lightgray;
    }
    .adminFormButton.del-btn:hover{
     background-color: rgba(200,0,0,0.95)
