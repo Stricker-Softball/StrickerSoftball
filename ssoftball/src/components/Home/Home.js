@@ -100,10 +100,13 @@ function Home(props) {
                 <img src={EqupmentPile} alt='equipment-pile' />
                 <img src={MitGlove} alt='mit-glove' />
             </div>
-            <p className='science-paragraph'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <p className='science-paragraph'>
             Check out The Newly released book Writen by our founder Sue Stricker!</p>
-            <div class="buttons-bottom"><button onClick={() => externalLink('https://www.amazon.com/dp/B0DV5CXX1J?ref_=cm_sw_r_ffobk_cp_ud_dp_2Z12YR9M5JMDMPAABR44_1&skipTwisterOG=1&bestFormat=true&newOGT=1')} className="button-main"> Get a copy</button></div>
+            
               <div id="ssBookCover"></div>
+              <div class="buttons-bottom">
+            <button onClick={() => externalLink('https://www.amazon.com/dp/B0DV5CXX1J?ref_=cm_sw_r_ffobk_cp_ud_dp_2Z12YR9M5JMDMPAABR44_1&skipTwisterOG=1&bestFormat=true&newOGT=1')} className="button-main"> Get a copy</button>
+            </div>
             <h2>Take a look at our Clinics</h2>
             <img className='sillouete' src={Sillouete} alt='sillouete' />
             <div id="associateSection">
