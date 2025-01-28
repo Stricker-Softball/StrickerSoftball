@@ -4,16 +4,11 @@ import './Navbar.scss';
 
 import MenuNav from './Menu/MenuNav.js';
 import ssLogo from '../../images/ssLogo.png';
+import Modal from '../UserLogin/UserModal.js';
 
 function Navbar(props) {
     let [menuOpen, setMenuOpen] = useState(false)
-
-    function handleMenuClick() {
-        setMenuOpen(!menuOpen)
-    }
-    function handleMenuClick() {
-        setMenuOpen(false)
-    }
+    
 
     // Nav item list
 
@@ -25,12 +20,11 @@ function Navbar(props) {
        
         {name:'Teams', link:'/teams'},
         {name:'Coaches & Lessons', link:'/meetthecoach'},
+        {name:'Stations', link:'/stations'},
         // {name:'Q & A', link:'/questions'},
         {name:'Contacts', link:'/contacts'}, 
-        
     ]
     // nav conditionals
-    console.log(props.sectionList.Clinics, props.sectionList.ClassRegistration, props.sectionList.Teams)
     if(!props.sectionList.Clinics || props.sectionList.Clinics.length == 0){
         let navIndex = nav_item_list.findIndex(obj => obj.name == 'Classes')
         nav_item_list.splice(navIndex, 1)
@@ -43,8 +37,14 @@ function Navbar(props) {
         let navIndex = nav_item_list.findIndex(obj => obj.name == 'Teams')
         nav_item_list.splice(navIndex, 1)
     }
+    function handleMenuClick(e) {
+        if(e.target.dataset.key == 'Stations'){
+            props.setShowModal()
+        }
+    }
 
     return (
+        <>
         <div className="Navbar">
             <div id="navBarLogo">
             <img src={ssLogo} alt='logo' />
@@ -53,7 +53,7 @@ function Navbar(props) {
  
                 {nav_item_list.map((item) => {
                     let isCurrentNav = item.link == window.location.pathname
-                    return <NavLink key={item.name} to={item.link} className={`bar-nav-item${isCurrentNav?' bar-nav-current':''}`}>
+                    return <NavLink key={item.name} data-key={item.name} onClick={handleMenuClick} to={item.link} className={`bar-nav-item${isCurrentNav?' bar-nav-current':''}`}>
                         {item.name}
                     </NavLink>
                 })}
@@ -62,7 +62,8 @@ function Navbar(props) {
                 <MenuNav {...props} nav_item_list={nav_item_list}/>
             </div>
         </div>
-    );
+    <Modal {...props} showModal={props.modalOn} setShowModal={props.setShowModal}/>
+    </>);
 }
 
 export default Navbar;

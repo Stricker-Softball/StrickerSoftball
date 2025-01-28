@@ -5,6 +5,7 @@ import axios from 'axios';
 
 import AdsList from './Sections/Ads.js'
 import ClinicList from './Sections/Clinics.js'
+import StationList from './Sections/Stations.js'
 import TeamList from './Sections/Teams.js'
 import Modal from './Modals/Modal.js'
 import RegisterBtns from './Sections/RegisterBtns.js'
@@ -31,10 +32,12 @@ function AdminScreen(props) {
         postString
         ).then(res => {
             document.getElementById('SaveScreen').classList.remove('show');
+            setPreFill({url:'',file:'',name:'',id:-1})
             // props.setData()
         }
         ).catch(err => {
             document.getElementById('SaveScreen').classList.remove('show');
+            setPreFill({url:'',file:'',name:'',id:-1})
             alert('Something went wrong! did not save your data!')
         })
     }
@@ -59,14 +62,18 @@ function AdminScreen(props) {
             for (const pair of formData.entries()) {
                 if(pair[0] != "listPos"){
                     if(pair[0] == 'url'){
-                        if(selectedTab != 'Ads'){
+
+                        if(selectedTab != 'Ads' && pair[1].includes('drive.google.com')){
                             let value = pair[1].split('?')[0]
                             changedObj[pair[0]] = value
                             changedObj['file'] = value.split('/view')[0] + '/preview'
-                        }else{
+                        }else if(selectedTab == 'Ads'){
                             let value = `https://drive.google.com/thumbnail?id=${pair[1].split('/view')[0].split('/d/')[1]}&sz=w1000`
                             
                             changedObj[pair[0]] = value
+                        }else{
+                            changedObj[pair[0]] = pair[1]
+                            changedObj['file'] = pair[1]
                         }
                     }else{
                         changedObj[pair[0]] = pair[1]
@@ -128,7 +135,7 @@ function AdminScreen(props) {
         }
         setTab(newTab)
     }
-    let displayTabList=['Ads','Clinics', 'ClassRegistration', 'Teams', 'Switches']
+    let displayTabList=['Ads','Clinics', 'ClassRegistration', 'Teams', 'Stations', 'Switches']
 
     return (
         <div className="page" >
@@ -153,17 +160,9 @@ function AdminScreen(props) {
                     <ClinicList deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.Clinics} setShowModal={setShowModal}/>
                     <TeamList deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.Teams} setShowModal={setShowModal}/>
                     <RegisterBtns deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.ClassRegistration} setShowModal={setShowModal}/>
+                    <StationList deleteItemFromList={deleteItemFromList} {...props} tabName={selectedTab} handleEditClick={handleEditClick} cards={props.allSections.Stations} setShowModal={setShowModal}/>
                     <Switch  {...props} tabName={selectedTab} switches={props.allSections.Switches} editSwitchBoolean={editSwitchBoolean} />
                 </div>
-                {/* {Object.keys(allSections).map((key) => {
-                            
-                            let items = allSections[key]
-                            console.log(key, items)
-                            return (
-                                <div className={`edit-section-body${key === selectedTab?' section-active':''}`}>
-                                </div>
-                            )
-                        })} */}
 
             </div>
             <Modal submitAllSectionsData={submitAllSectionsData} showModal={modalOn} allSections={props.allSections} preFill={preFill} handleEditClick={handleEditClick}  dataName={selectedTab} setShowModal={setShowModal}/>
