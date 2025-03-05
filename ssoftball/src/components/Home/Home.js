@@ -112,7 +112,8 @@ function Home(props) {
             <div id="associateSection">
                 <div id="associateLabel"><span>Associated</span><span>sites</span></div>
                 <div id="assocateLinks">
-                    <span id="associateBringIt" onClick={() => externalLink('https://www.bringitsportsacademy.com/')}></span>
+                    <span title="Bring It Sports" id="associateBringIt" onClick={() => externalLink('https://www.bringitsportsacademy.com/')}></span>
+                    <span title="Champion Craft Coaching" id="associateChampion" onClick={() => externalLink('https://www.championcraftcoaching.com/')}></span>
                 </div>
             </div>
             <div id="associateSection2">

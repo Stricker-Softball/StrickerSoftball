@@ -13,7 +13,7 @@
     font-size: 30px;
 
     border-bottom: 4px solid rgba(54,0,0, .8);
-    margin: 20px 0 5px;
+    margin: 20px 0 0px;
     width: auto;
     padding-bottom: 25px;
      padding-right: 5px;
@@ -35,7 +35,7 @@ Coach Cards
 
 .Coaches .coach-container .coach-card{
     background: rgba(212, 15, 64, .8);
-    width: 500px;
+    width: 420px;
     min-width: 30%;
     display: flex;
     flex-direction: column;
@@ -57,27 +57,30 @@ Coach Cards
 /* images */
 /* ======================================== */
 .Coaches .coach-container .coach-card .img-div{
-    height: 200px;
-    margin: 30px auto 5px;
+    height: 420px;
+    margin: 0px auto 0px;
     display: flex;
 
 }
 .Coaches .coach-container .coach-card .img-div .img-overflow{
-    width: 120px;
-    height: 200px;
-    border-radius: 10px;
+    width: 100%;
+    height: 420px;
+    // border-radius: 10px;
     overflow: hidden;
     transition: width .7s ;
- 
+    
+}
+.singleCoachImage{
+
 }
 .Coaches .coach-container .coach-card .img-div .active{
-    width: 150px;
-    height: 200px;
+    // width: 150px;
+    // height: 200px;
 }
 
 .Coaches .coach-container .coach-card .img-div img{
     width: 100%;
-    border-radius: 10px;
+    // border-radius: 10px;
     opacity: .89;
     margin: 25px 3px 0px;
     transition: margin .4s, opactiy .4s;
@@ -88,15 +91,14 @@ Coach Cards
     opacity: 1.0;
 }
 .Coaches .coach-container .coach-card .img-div .active img{
-    margin: 0px 3px 0px;
+    margin: 0px 0px 0px;
 }
 .Coaches .coach-container .coach-card .img-div div:last-child img{
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
 .Coaches .coach-container .coach-card .img-div .img-overflow:hover{
-    width: 150px;
-    height:200px;
+    // width: 150px;a
     // margin: 0 4px 0;
     transition: width .7s;
  

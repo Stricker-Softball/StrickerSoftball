@@ -352,9 +352,17 @@
   }
 }
 #associateBringIt{
-  background-color:red;
+  background-color:whitesmoke;
   background-image: url('../../images/bring-it.jpg');
   background-size: contain;
+  padding-bottom: 5px;
+}
+#associateChampion{
+  background-color:whitesmoke;
+  background-image: url('../../images/champion.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   padding-bottom: 5px;
 }
 #sponsoredBook{

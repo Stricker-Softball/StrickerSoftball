@@ -8,7 +8,7 @@ import SuePortriat from '../../images/coaches/sue-portrait.png';
 import MegPortrait from '../../images/coaches/megan-portrait.png';
 import MegHitting from '../../images/edits/megan-hitting-1.jpg';
 import JenaPortrait from '../../images/coaches/jennah-portrait.png';
-import KristinClose from '../../images/coaches/kristinclose.png';
+import ToriImg from '../../images/coaches/tori.jpg';
 import KristinPortait from '../../images/coaches/kristin.jpg';
 import HuntPortrait from '../../images/coaches/hunter.jpg';
 import LukePortrait from '../../images/coaches/luke-portrait.png';
@@ -17,7 +17,7 @@ import LukePortrait from '../../images/coaches/luke-portrait.png';
 
 let coaches = [
     {
-        first_name: 'sue', last_name: 'Stricker', images: [SuePortriat,BatImg,BatImg], color: 'blue',
+        first_name: 'sue', last_name: 'Stricker', images: [SuePortriat], color: 'blue',
         description: `Coach Sue Stricker has been playing and coaching the game for over 20 years. She is currently the Head Coach for the Wasco Daimonds 14 U team, and the General Manager at Bring It Sports where she gives private, small group, and team lessons. Her CUDIT Concentric Hitting lessons bring her hitters in the area to a level like no other.
 
     Sue has coached area teams such as the Wasco Diamonds 14U (Head Coach), Homer Hawks Gold 16U and 18U (Assistant Coach), The Northern Illinois Lightning (Head Coach) 14U and 16U, and the St. Charles Angels (Head Coach). She has also coached Varsity and J.V. High School teams.
@@ -29,7 +29,33 @@ let coaches = [
     Sue is currently the Certified CUDIT Concentric Hitting Coach of four teams and gives lessons to athletes of all ages. Be ready to transform your swing and mindset when working with Coach Sue Stricker!`
     },
     {
-        first_name: 'Megan', last_name: 'Stricker', images: [MegPortrait, MegHitting, MegHitting], color: 'red',
+        first_name: 'Tori', last_name: '(Finucane) Krolikowski', images: [ToriImg ], color: 'red',
+        description:
+            `- Bishop O'Connell High School - Arlington, VA. (2009-2013)
+    ● Two-time NFCA First Team High School All-American
+    ● Two-time Gatorade Player of the Year (Virginia)
+    ● Two-time conference Player of the Year
+    ● ERA of 0.09 (Junior Year), ERA of 0.21 (Senior year)
+
+- University of Missouri - SEC Conference (2013-2016)
+    ● SEC Freshman of the Year
+    ● First Team All-SEC
+    ● NFCA National Freshman of the Year Top 10 Finalist
+    ● NFCA All-Southeast Region Second Team
+    ● Louisville Slugger/NFCA Division I National Player of the Week
+    ● USA Softball National Collegiate Player of the Week
+    ● SEC Pitcher of the Week
+    ● SEC Academic Honor Roll
+    - University of Minnesota - BIG10 Conference (2016-2017)
+    ● Limited to injuries
+    ● 2017 Teammate of the Year, voted on by peers
+    ● Big 10 Regular Season Champion
+    ● Big 10 Tournament Champion
+- Assistant Coach at the University of Maryland - BIG10 Conference (2018-2019)
+            `
+    },
+    {
+        first_name: 'Megan', last_name: 'Stricker', images: [MegHitting ], color: 'red',
         description:
             `Megan  Stricker is a former girls travel softball player of 12 years.  She then went on to play college ball at Waubonsee Community College and Clarke University In Iowa.    In the past she served as an Assistant Coach for the 14U Wasco Diamonds travel program, and Geneva Park District Youth Softball.   She helped take her team to National competition where they won first place in the “A” division. She has been giving private and group lessons as well as running Offensive and Defensive clinics with larger groups for establishments including Geneva Baseball, The Geneva Park District, The Oswego Outlaws  and Elite Sports training. She is looking forward to bringing her expertise to the brand new facility that Bring It! Sports Academy has to offer.
 
@@ -41,7 +67,7 @@ Cell:     630-306-8176
 Email:   Megan_stricker@yahoo.com`
     },
     {
-        first_name: 'Luke', last_name: 'Stricker', images: [LukePortrait,BatImg,BatImg], color: 'blue',
+        first_name: 'Luke', last_name: 'Stricker', images: [LukePortrait], color: 'blue',
         description:
             `Coach Luke Stricker has been a certified speed and agility instructor through Nesta since 2019. Luke grew up playing travel baseball and travel soccer from an early age where his love of sports developed. . He continued his sports career Playing both High School and College sports. He graduated with a degree in Biology with an emphasis on EMT certification, anatomy, and Speed and Agility.  
 
@@ -57,11 +83,7 @@ Contact Info
 Cell:     630-303-8329
 Email:   Luke.a.stricker@gmail.com`
     },
-    // {
-    //     first_name: 'Kristin', last_name: 'McCue', images: [KristinClose, KristinPortait, KristinPortait], color: 'red',
-    //     description:
-    //         `Kristin is a former girls travel softball player of 10 years, primarily playing catcher and 3rd base throughout her career. She later went on to run collegiate cross country. Currently working as a registered dietitian, Kristin is focused on fundamentals and fueling young athletes. She is available for private and group lessons as well as clinics. `
-    // },
+    
     // {
     //     first_name: 'Hunter', last_name: 'Siler', images: [HuntPortrait,BatImg,BatImg], color: 'red',
     //     description:
@@ -121,7 +143,7 @@ function Coaches() {
                                     {coach.images.map((image, index) => {
                                         return (
 
-                                            <div className={`img-overflow index${index} ${index == 0 && ` active`}`} key={`image${coach.first_name}${index}`}>
+                                            <div className={`img-overflow ${coach.images.length<2?'singleCoachImage':''} index${index} ${index == 0 && ` active`}`} key={`image${coach.first_name}${index}`}>
 
                                                 <img src={image} alt={`${coach.first_name} ${index}`} />
                                             </div>
