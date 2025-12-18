@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // import { useForm } from "react-hook-form"
 import step3Img from '../../../images/helpers/step1Img.png';
@@ -20,7 +20,7 @@ function AdminScreen(props) {
 
     function checkUrlValue(url){
         let urlArray = url.split('/')
-        if(urlArray[0] == 'https:' && urlArray[urlArray.length-1] == 'view'){
+        if(urlArray[0] === 'https:' && urlArray[urlArray.length-1] === 'view'){
             return true;
         }else{
             setInput({url:'',id:inputObj.id})
@@ -33,12 +33,11 @@ function AdminScreen(props) {
     const handleSubmit = (e) => {
         let formData = new FormData(e.target)
         for (const pair of formData.entries()) {
-            if(pair[0] == 'url'){
+            if(pair[0] === 'url'){
                 let value = pair[1].split('?')[0]
                 let passCheck = checkUrlValue(value)
                 if(!passCheck){
                     return false;
-                    break;
                 }
             }
         }
@@ -54,7 +53,7 @@ function AdminScreen(props) {
         e.preventDefault()
         setHelp(!helpOpen)
     }
-    if(inputObj.id != props.preFill.id) setInput(props.preFill)
+    if(inputObj.id !== props.preFill.id) setInput(props.preFill)
     // console.log(inputObj)
     return (    
             <div className='modal-section clinics-modal'>
@@ -72,13 +71,13 @@ function AdminScreen(props) {
                         <p>1. Download Your Image file ( MUST be .png or .jpeg )</p>
                         <p>2. Add Your image file to <a href="https://drive.google.com/drive/u/0/home">Google Drive</a></p>
                         <p>3. Right Click the File in Google drive</p>
-                        <img src={step3Img} />
+                        <img src={step3Img} alt="Right click file in Drive" />
                         <p>4. Click the "Share" button in the menu, another "Share" button should pop up, click that as well</p>
-                        <img src={step4Img} />
+                        <img src={step4Img} alt="Share button steps" />
                         <p>5. A window should pop up. In that window, Change "General Access" to  "Anyone with the link"</p>
-                        <img src={step5Img} />
+                        <img src={step5Img} alt="Set access to anyone with link" />
                         <p>6. Click "Copy Link" </p>
-                        <img src={step6Img} />
+                        <img src={step6Img} alt="Copy link step" />
                         <p>7. Paste the copied link into the URL input above! - You did it! Great Job!! Your a rockstar!!!
                         </p>
                         <button onClick={handleHelp} className="adminFormButton admin-modal-action">Close these instructions</button>

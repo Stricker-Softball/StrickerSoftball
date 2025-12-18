@@ -6,7 +6,7 @@ import { useState } from 'react';
 let sectionName = "Q&A"
 function AdminSection(props) {
    let className = "admin-body-group"
-   if(props.tabName == sectionName){
+    if(props.tabName === sectionName){
     className += ' active';
    }
     return (

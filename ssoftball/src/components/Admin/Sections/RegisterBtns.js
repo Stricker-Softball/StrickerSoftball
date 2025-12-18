@@ -1,28 +1,17 @@
 import React from 'react';
 import './AdminSection.scss';
-import { useState } from 'react';
-
-import Trash from '../../../images/trash.png';
-
-function setImgThumb(file){
-    let newName = ''
-    if(file.includes('d/')){
-    let fileName = file.split('d/')[1].split('/preview')[0];
-    newName = `https://drive.google.com/thumbnail?id=${fileName}&sz=w1000`
-    }
-    return newName
-}
+// no local state or helper needed
 
 let sectionName = "ClassRegistration"
 function AdminSection(props) {
-    let [inputObj, setInput] = useState({name:'', order:'', url:''})
+    // inputObj not currently used
    let className = "edit-section-body"
    if(props.tabName.includes(sectionName)){
     className += ' section-active';
    }
-   function cardDelete(e, element){
-    let id = e.target.dataset.id
-    props.deleteItemFromList(id)
+    function cardDelete(e, element){
+     let id = Number(e.target.dataset.id)
+     props.deleteItemFromList(id)
     // edit our array here
    }
    function setupEdit(card){
@@ -52,7 +41,7 @@ function AdminSection(props) {
                     </div>
                     <div className="formGroup evenGroup evenGroup-big">
                         <label>Button Label</label>
-                        <a href="#" className="clinic-link">{card.buttons[0].name}</a>
+                        <span className="clinic-link">{card.buttons[0].name}</span>
                     </div>
                     <div className="formGroup evenGroup">
                         <label>Button Link</label>

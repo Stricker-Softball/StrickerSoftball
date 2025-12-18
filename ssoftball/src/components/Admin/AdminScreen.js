@@ -15,7 +15,6 @@ import Switch from './Sections/Switches.js'
 
 function AdminScreen(props) {
 
-    const [showMail, setMail] = useState(false)
     const [selectedTab, setTab] = useState('Ads')
     const [modalOn, setModalOn]= useState(false)
     const [preFill, setPreFill] = useState({url:'',file:'',name:'',id:-1})
@@ -45,7 +44,7 @@ function AdminScreen(props) {
         document.getElementById('SaveScreen').classList.add('show')
         e.preventDefault()
         let changeForm = e.target;
-        let changeId = e.target.dataset.id
+        let changeId = Number(e.target.dataset.id)
        
         // Set find the data in our lists and change them
         let changedObj = {}
@@ -54,20 +53,20 @@ function AdminScreen(props) {
         let newSections = {...props.allSections}
         let newList = newSections[selectedTab]
         let changeIndex = newList.length;
-        if(changeId != -1){
-            changeIndex = newList.findIndex(obj => obj.id == changeId);
+        if(changeId !== -1){
+            changeIndex = newList.findIndex(obj => obj.id === changeId);
             changedObj = newSections[selectedTab][changeIndex]
         }
-        if(selectedTab != 'ClassRegistration'){
+        if(selectedTab !== 'ClassRegistration'){
             for (const pair of formData.entries()) {
-                if(pair[0] != "listPos"){
-                    if(pair[0] == 'url'){
+                if(pair[0] !== "listPos"){
+                    if(pair[0] === 'url'){
 
-                        if(selectedTab != 'Ads' && pair[1].includes('drive.google.com')){
+                        if(selectedTab !== 'Ads' && pair[1].includes('drive.google.com')){
                             let value = pair[1].split('?')[0]
                             changedObj[pair[0]] = value
                             changedObj['file'] = value.split('/view')[0] + '/preview'
-                        }else if(selectedTab == 'Ads'){
+                        }else if(selectedTab === 'Ads'){
                             let value = `https://drive.google.com/thumbnail?id=${pair[1].split('/view')[0].split('/d/')[1]}&sz=w1000`
                             
                             changedObj[pair[0]] = value
@@ -84,7 +83,7 @@ function AdminScreen(props) {
         }else{
             changedObj = {buttons:[{}]}
             for (const pair of formData.entries()) {
-                if(pair[0] == 'name' || pair[0] == 'link'){
+                    if(pair[0] === 'name' || pair[0] === 'link'){
                     changedObj['buttons'][0][pair[0]] = pair[1]
                 }else{
                     changedObj[pair[0]] = pair[1]
@@ -92,7 +91,7 @@ function AdminScreen(props) {
             }
         }
         
-        if(!changedObj.id || changedObj.id == -1){ 
+        if(!changedObj.id || changedObj.id === -1){ 
             changedObj['id'] = changeIndex + 1
             let copiedArr = [...newSections[selectedTab]]
             newSections[selectedTab] = [{...changedObj}, ...copiedArr]
@@ -115,7 +114,7 @@ function AdminScreen(props) {
     async function deleteItemFromList(id){
         document.getElementById('SaveScreen').classList.add('show')
         let newSections = {...props.allSections}
-        let index = newSections[selectedTab].findIndex(item => item.id == id)
+        let index = newSections[selectedTab].findIndex(item => item.id === id)
         newSections[selectedTab].splice(index, 1);
         props.setData(newSections)
         sendDataToEndpoint(newSections)
@@ -128,7 +127,7 @@ function AdminScreen(props) {
     }
     function handleAdminTabClick(e){
         let newTab = e.target.dataset.tab
-        if(newTab == "ClassRegistration"){
+        if(newTab === "ClassRegistration"){
             setPreFill({description:'', buttons:[{name:'',link:''}],id:-1})
         }else{
             setPreFill({url:'',file:'',name:'',id:-1})
@@ -144,9 +143,9 @@ function AdminScreen(props) {
                 <div className="edit-tabs">
                 {displayTabList.map((key) => {
                             let tabName = key.replace(/([A-Z])/g, ' $1').trim()
-                            if(tabName == 'Clinics') tabName = "Class PDfs & Images"
-                            if(tabName == 'Class Registration') tabName = "Class Register Buttons"
-                            if(tabName == 'Ads') tabName = "Front Page Ads"
+                            if(tabName === 'Clinics') tabName = "Class PDfs & Images"
+                            if(tabName === 'Class Registration') tabName = "Class Register Buttons"
+                            if(tabName === 'Ads') tabName = "Front Page Ads"
                             if(!displayTabList.includes(key)) return (<></>)
                             return (
                                 <div className={`tab${key === selectedTab?' tab-active':''}`} onClick={handleAdminTabClick} data-tab={key}>

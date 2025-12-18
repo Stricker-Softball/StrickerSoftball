@@ -1,0 +1,3 @@
+/* Small overrides to ensure key background utilities exist when Tailwind generation misses them */
+.bg-red-500 { background-color: #ef4444 !important; }
+.bg-sky-100 { background-color: #e0f2fe !important; }

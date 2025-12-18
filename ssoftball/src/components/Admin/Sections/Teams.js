@@ -1,28 +1,16 @@
 import React from 'react';
 import './AdminSection.scss';
-import { useState } from 'react';
-
-import Trash from '../../../images/trash.png';
-
-function setImgThumb(file){
-    let newName = ''
-    if(file.includes('d/')){
-    let fileName = file.split('d/')[1].split('/preview')[0];
-    newName = `https://drive.google.com/thumbnail?id=${fileName}&sz=w1000`
-    }
-    return newName
-}
+// no local state or helper needed
 
 let sectionName = "Teams"
 function AdminSection(props) {
-    let [inputObj, setInput] = useState({name:'', order:'', url:''})
    let className = "edit-section-body"
    if(props.tabName.includes(sectionName)){
     className += ' section-active';
    }
-   function cardDelete(e, element){
-    let id = e.target.dataset.id
-    props.deleteItemFromList(id)
+    function cardDelete(e, element){
+     let id = Number(e.target.dataset.id)
+     props.deleteItemFromList(id)
     // edit our array here
    }
    function setupEdit(card){
@@ -39,13 +27,12 @@ function AdminSection(props) {
             <button onClick={handleNewCard} className="adminFormButton submitFormButton">Add New PDF</button>
         {props.cards.map((card, index) => {
             // name, url , file
-            let fileImg = setImgThumb(card.file)
             // console.log(card)
             return (
                 <div className="adminCard" key={index}>
                     <div className="formGroup preveiewGroup">
-                        {/* <img className="preveiwImage" src={fileImg} /> */}
-                        <iframe style={{background:'#000000', maxWidth: '300px', maxHeight:"150px"}} frameBorder="0" navpanes="0" scrolling="no" toolbar="0" allowtransparency="true" src={card.file} ></iframe>
+                        {/* preview image removed */}
+                        <iframe title={card.name || 'pdf-preview'} style={{background:'#000000', maxWidth: '300px', maxHeight:"150px"}} frameBorder="0" navpanes="0" scrolling="no" toolbar="0" allowtransparency="true" src={card.file} ></iframe>
                     </div>
                     <div className="formGroup evenGroup">
                         <label>Name</label>

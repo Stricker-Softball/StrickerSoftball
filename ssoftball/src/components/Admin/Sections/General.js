@@ -29,7 +29,7 @@ function AdminSection(props) {
     }
 
    let className = "modal-section general-modal admin-body-group"
-   if(props.tabName == sectionName){
+    if(props.tabName === sectionName){
     className += ' active';
    }
     return (

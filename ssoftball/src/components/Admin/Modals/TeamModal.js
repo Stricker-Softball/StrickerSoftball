@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 // import { useForm } from "react-hook-form"
 import step3Img from '../../../images/helpers/step3.png';
@@ -31,7 +31,7 @@ function AdminScreen(props) {
         e.preventDefault()
         setHelp(!helpOpen)
     }
-    if(inputObj.url != props.preFill.url) setInput(props.preFill)
+    if(inputObj.url !== props.preFill.url) setInput(props.preFill)
     return (    
             <div className='modal-section clinics-modal'>
                 <button onClick={handleCancel} className="adminFormButton modalCloseBtn">Close</button>
@@ -53,20 +53,20 @@ function AdminScreen(props) {
                         <p>1. Download Your PDF</p>
                         <p>2. Add Your PDF file to <a href="https://drive.google.com/drive/u/0/home">Google Drive</a></p>
                         <p>3. Right Click the File in Google drive</p>
-                        <img src={step3Img} />
+                        <img src={step3Img} alt="Right click file in Drive" />
                         <p>4. Click the "Share" button in the menu, another "Share" button should pop up, click that as well</p>
-                        <img src={step4Img} />
+                        <img src={step4Img} alt="Share button steps" />
                         <p>5. A window should pop up. In that window, Change "General Access" to  "Anyone with the link"</p>
-                        <img src={step5Img} />
+                        <img src={step5Img} alt="Set access to anyone with link" />
                         <p>6. Click "Copy Link" </p>
-                        <img src={step6Img} />
+                        <img src={step6Img} alt="Copy link step" />
                         <p>7. Paste the link into the URL input above! - You did it! Great Job!! Your a rockstar!!!
                         </p>
                         <button onClick={handleHelp} className="adminFormButton admin-modal-action">Close these instructions</button>
                         
                         {/* <p>Click "what url (help)?" to close these instructions.</p> */}
                     </div>
-                    <div className={`formGroup${inputObj.id != -1?' hide-form-group':''}`}>
+                    <div className={`formGroup${inputObj.id !== -1 ? ' hide-form-group' : ''}`}>
                         <label>Add new item to start or end of the current list?</label>
                         <div className="radio-parent">
                             <div className="radio-group">

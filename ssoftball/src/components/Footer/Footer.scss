@@ -9,18 +9,27 @@ import twitterIcon from '../../images/social/twitter.png'; */
     background-color: var(--black-transparent);
     color: white;
     display:flex;
-    flex-direction: column;
-    justify-self: flex-end;
+    flex-direction: row;
+    justify-self: center;
+    justify-content: center;
+    gap:5vw;
 
 }
 .Footer .footer-section{
     background-color: none;
     display:flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
+    width:fit-content;
     /* padding: 20% 20%; */
 
 
+}
+.footerLogo{
+    display:flex;
+    justify-content: flex-start;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 .Footer .footer-section .sub-section{
     width: 50%;
@@ -104,9 +113,12 @@ import twitterIcon from '../../images/social/twitter.png'; */
 .copyright{
     font-size: .8rem;
 }
+.footerLogo img{
+        aspect-ratio: 1;
+        width: 200px;
+    }
 @media (max-width: $phone){
     .Footer .footer-section{
-        flex-direction: column-reverse;
         margin: 0 auto;
         .info{
             margin-bottom: 0;
@@ -118,6 +130,20 @@ import twitterIcon from '../../images/social/twitter.png'; */
             width:100%;
             padding: 0 7px;
         }
+    }
+    .Footer .social-icons .image{
+        width:40px;
+        height:40px;
+        background-repeat: no-repeat;
+    }
+    .Footer .social-icons .image div{
+        width:40px;
+        height:40px;
+        background-repeat: no-repeat;
+    }
+    .footerLogo img{
+        aspect-ratio: 1;
+        width: 100px;
     }
     
 }

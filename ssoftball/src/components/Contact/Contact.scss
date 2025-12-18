@@ -5,8 +5,6 @@
 }
 
 .Contact .contact-container{
-    background: rgba(0, 0, 0, 0.45);
-    border: 3px solid var(--red);
     outline: 3px solid white;
     width: 90%;
     max-width: 600px;
@@ -15,12 +13,11 @@
 }
 .Contact .contact-container h2{
     font-size: 3.6rem;
-    text-shadow: -5px 0px 0px white;
     padding: 10px 30px;
-    color: grey;
+    color: white;
     // border-bottom: 2px solid var(--red);
     padding: 20px 0 20px;
-    margin: 0  40px;
+    margin: 0  20px;
     
   }
 
@@ -148,6 +145,17 @@
 // phone styles 
 // ========================
 
+#adminButtonSection{
+    color: white;
+    background-color: rgb(80, 80, 80);
+    position:absolute;
+    bottom:-300px;
+    right:0px;
+    transition: all 0.3s;
+    border: 2px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 @media (max-width: $phone){
     .Contact .contact-section {
         .contact-info:first-child{
@@ -168,19 +176,11 @@
         }
     
     }
+    #adminButtonSection{
+    bottom:-20px;
+}
 }
 
-#adminButtonSection{
-    color: white;
-    background-color: rgb(80, 80, 80);
-    position:absolute;
-    bottom:-75px;
-    right:0px;
-    transition: all 0.3s;
-    border: 2px solid white;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
 #adminButtonSection:hover{
     cursor: pointer;
     background-color: rgba(255,255,255,0.1);
@@ -192,7 +192,8 @@ color:rgba(255,255,255,0.2);
 
 .social-icons{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap:16px;
     padding:5%;
     padding-top:0;
 }

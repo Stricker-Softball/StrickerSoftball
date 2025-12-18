@@ -1,25 +1,23 @@
 import React from 'react';
 import './ImgList.scss';
-import { useState } from 'react';
-
-
 function ImgList(props) {
-    function buttonPress(link) {
-        window.scrollTo(0, 0)
-        props.history.push(link)
-    }
+    // buttonPress removed (not used)
+    console.log('')
 
     return (<>
+    {props.images?.length?<>
+    <p className='gradient-text featured-title'>Featured</p>
         <div className={props.show?"imgList":"imgList hide"} >
-             {props.images.map((image) => {
+             {props.images.map((image, i) => {
                 
-                return(<div className="adImageDiv">
-                <img src={image.url.trim()} />
-                </div>)
+                     return(<div className="adImageDiv" key={`img-${i}`}> 
+                     <img src={image.url.trim()} alt={image.name || ''} />
+                     </div>)
              })}
              {/* <div className="ad-link-div"><a class="ad-link button-main " target="_blank" href="https://forms.gle/uUdafApyuZAGbkhf8">Get Registered</a></div> */}
         </div>
-        </>
+        </>:<></>}
+    </>
     );
 }
 

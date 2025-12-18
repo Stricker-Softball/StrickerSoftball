@@ -1,0 +1,51 @@
+/* Styles ported from Tailwind utilities used in Products component */
+.products-container{
+  max-width: 72rem; /* ~1152px */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.products-title{
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 800; /* extra bold */
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.products-grid{
+  display: grid;
+  gap: 2rem; /* gap-8 (approx) */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  place-content: center;
+}
+.partner-card{
+  padding: 1.75rem; /* p-7 */
+  max-width: 300px;
+  margin: 0 auto;
+  border-radius: 15px;
+}
+.product-image-wrap{
+  border-radius: var(--round-xl, 12px);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.img-sm{ width: 4rem; height: 4rem; }
+.img-md{ width: 6rem; height: 6rem; }
+.img-lg{ width: 100%; height: auto; }
+.img-full{ width: 100%; height: 100%; }
+.product-image-wrap img{ width: 100%; height: auto; display:block; }
+.product-title{ font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+.product-body{ color: var(--text-1, #ddd); opacity: 0.9; }
+.product-body.muted{ color: #bfbfbf; opacity: 1; }
+.partner-card .product-link{ display: inline-flex; align-items:center; gap: 0.5rem; text-decoration: none; cursor: pointer; border:2px solid white; }
+.product-link.text-white{ color: #fff; }
+.product-link.text-fg{ color: var(--black-text, #000); }
+.product-link span[aria-hidden]{ margin-left: 0.25rem; }
+
+@media (min-width: 768px){
+  .products-title{ font-size: 3rem; } /* md:text-5xl */
+}
+
+.partners-section{
+  margin-top:40px;
+}

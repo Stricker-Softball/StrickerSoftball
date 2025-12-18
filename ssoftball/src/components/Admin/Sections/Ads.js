@@ -1,27 +1,24 @@
 import React from 'react';
 import './AdminSection.scss';
-import { useState } from 'react';
+// no local state required
 
-import Trash from '../../../images/trash.png';
+// Trash image unused
 
 
 
 let sectionName = "Ads"
 function AdminSection(props) {
-    let [inputObj, setInput] = useState({url:'',id:''})
+    // inputObj not currently used
    let className = "edit-section-body"
    if(props.tabName.includes(sectionName)){
     className += ' section-active';
    }
-   function cardDelete(e, element){
-    let id = e.target.dataset.id
-    props.deleteItemFromList(id)
+    function cardDelete(e, element){
+     let id = Number(e.target.dataset.id)
+     props.deleteItemFromList(id)
     // edit our array here
    }
-   function setupEdit(card){
-        // console.log('button click', props, card)
-        props.handleEditClick(card)
-    }
+   // setupEdit removed (not used)
     function handleNewCard(){
         props.handleEditClick({url:'',id:-1})
     }
@@ -36,7 +33,7 @@ function AdminSection(props) {
             return (
                 <div className="adminCard" key={index}>
                     <div className="formGroup adImageDiv admin-image">
-                        <img src={card.url} />
+                        <img src={card.url} alt={card.name || ''} />
                     </div>
                     {/* <div className="formGroup evenGroup">
                         <label>Url</label>

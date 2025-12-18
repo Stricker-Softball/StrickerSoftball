@@ -1,7 +1,6 @@
 import React from 'react';
 import './Contact.scss';
 
-import mail from '../../images/social/mail-100.png'
 import { useState } from 'react';
 // import './Footer.scss';
 //630 3361553
@@ -11,11 +10,10 @@ import Modal from '../AdminLogin/AdminModal.js';
 
 function Contact(props) {
 
-    const [showMail, setMail] = useState(false)
     const [modalOn, setModalOn]= useState(false)
     function setShowModal(){
         let hasLoggedSession = sessionStorage.getItem("hasLoggedIn");
-        if(hasLoggedSession && hasLoggedSession == "True"){
+        if(hasLoggedSession && hasLoggedSession === "True"){
             buttonPress('/admin/events/edit')
         }
         setModalOn(!modalOn)
@@ -47,10 +45,10 @@ function Contact(props) {
         window.open(link, "_blank");
       }
 
-    return (
+    return (<>
         <div className="Contact" >
-            <div className='contact-container' id='contact'>
-                <h2>Contact Us</h2>
+            <div className='contact-container bg-gradient-1 ' id='contact'>
+                <h2>Contact</h2>
                 <div className='contact-section'>
                     <div className='contact-info'>
                         {/* <p className='label'>Send an email:</p> */}
@@ -77,6 +75,7 @@ function Contact(props) {
                     </div>
                     
                 </div>
+                <h2 style={{marginBottom:'20px'}}>Follow us</h2>
                 <div className='social-icons'>
                             <div className='image facebook' 
                             onClick={() => handleLinkClick('https://www.facebook.com/sftbllcoach/')}>
@@ -90,11 +89,13 @@ function Contact(props) {
                         </div>
 
             </div>
-            <div id="adminButtonSection" onClick={() => setShowModal()}>
+            
+        </div>
+        <div id="adminButtonSection" onClick={() => setShowModal()}>
                 Admin Log in
             </div>
             <Modal {...props} showModal={modalOn} setShowModal={setShowModal}/>
-        </div>
+            </>
     );
 }
 

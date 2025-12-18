@@ -2,16 +2,11 @@ import React, { useState } from 'react';
 import './Coaches.scss';
 
 
-import BatImg from '../../images/batSilo.png';
-import SuePortriat from '../../images/coaches/sue-portrait.png';
+import SuePortriat from '../../images/coaches/sueCoach.jpg';
 // import SueHitting from '../../images/coaches/sue-hitting.png';
-import MegPortrait from '../../images/coaches/megan-portrait.png';
 import MegHitting from '../../images/edits/megan-hitting-1.jpg';
-import JenaPortrait from '../../images/coaches/jennah-portrait.png';
 import ToriImg from '../../images/coaches/tori.jpg';
-import KristinPortait from '../../images/coaches/kristin.jpg';
-import HuntPortrait from '../../images/coaches/hunter.jpg';
-import LukePortrait from '../../images/coaches/luke-portrait.png';
+import LukePortrait from '../../images/coaches/luke.jpg';
 
 
 
@@ -100,59 +95,52 @@ Email:   Luke.a.stricker@gmail.com`
 
 ]
 
-function Coaches() {
-    const [popup, setPopup] = useState(false);
-    const [popupCoach, setCoach] = useState(coaches[1])
-
+function Coaches(props) {
+    const { popup, setPopup, setCoach } = props;
 
     function handlePopup(coach = 'None') {
+        console.log('coach', coach)
         if (coach !== 'None') {
             setCoach(coach)
         }
 
 
-        if (popup == false) {
-            setPopup(true)
-        } else {
-            setPopup(false)
-        }
+        setPopup(!popup)
     }
 
     return (
 
         <>
-            <div className={popup ? 'popup-main' : 'popup-main deactive'}>
-                <div className='popup-window'>
-                    <div className='close-x disable-select' onClick={() => handlePopup()} >X</div>
-                    <h1>{popupCoach.first_name.toUpperCase()} {popupCoach.last_name.toUpperCase()}</h1>
-                    {popupCoach.description && <div className='popup-text'>{popupCoach.description}</div>}
-                    <div className='close-button disable-select' onClick={() => handlePopup()} >CLOSE</div>
-
-                </div>
-            </div>
             <div className="Coaches">
                 <h1>- Changing the game one player at a time -</h1>
                 <div className='coach-container'>
                     {coaches.map((coach, index) => {
+                        let shortDescription = coach.description?.substring(0, 100) + '...';
                         return (
                             <div className={`${coach.color === 'blue' ? 'coach-card card-2nd' : 'coach-card'}`} key={`coach${index}`}>
 
-                                <h2 className='name'>COACH {coach.first_name.toUpperCase()}</h2>
+                                
                                 <div className='img-div'>
 
                                     {coach.images.map((image, index) => {
                                         return (
 
-                                            <div className={`img-overflow ${coach.images.length<2?'singleCoachImage':''} index${index} ${index == 0 && ` active`}`} key={`image${coach.first_name}${index}`}>
-
-                                                <img src={image} alt={`${coach.first_name} ${index}`} />
+                                            <div className={`img-overflow ${coach.images.length<2 ? 'singleCoachImage' : ''} index${index}${index === 0 ? ' active' : ''}`} key={`image${coach.first_name}${index}`}>
+                                                <div
+                                                    className="coach-image"
+                                                    role="img"
+                                                    aria-label={`${coach.first_name} ${index}`}
+                                                    style={{ backgroundImage: `url(${image})` }}
+                                                />
                                             </div>
                                         )
                                     })}
 
                                 </div>
                                 <div className='btn-div'>
-                                    <button onClick={() => handlePopup(coach)} className='button-main'>Profile</button>
+                                    <h2 className='name'>COACH {coach.first_name.toUpperCase()}</h2>
+                                    <p>{shortDescription}</p>
+                                    <button onClick={() => handlePopup(coach)} className='button-main'>Learn more</button>
                                 </div>
                             </div>
                         )

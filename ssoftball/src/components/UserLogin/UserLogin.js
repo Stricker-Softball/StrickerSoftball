@@ -1,20 +1,18 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+// no local state required
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock } from '@fortawesome/free-solid-svg-icons'
 
 function AdminScreen(props) {
     let defaultPassword = 'ss2025'
-    let [inputObj, setInput] = useState({
-        password:''
-    })
+    // input state not needed; form is read via FormData
 
     const handleSubmit = (e) => {
         e.preventDefault()
         let formData = new FormData(e.target)
         for (const pair of formData.entries()) {
-            if(pair[0] == 'password') {
-                if(pair[1] == defaultPassword){
+            if(pair[0] === 'password') {
+                if(pair[1] === defaultPassword){
                     sessionStorage.setItem("hasUserLoggedIn", 'True')
                     props.setShowModal(true)
                 }else{
@@ -28,10 +26,7 @@ function AdminScreen(props) {
         props.setShowModal(true)
         props.history.push('/')
     }
-    function buttonPress(link) {
-        window.scrollTo(0, 0)
-        props.history.push(link)
-    }
+    // buttonPress removed (not used)
     return (    
             <div className='modal-section clinics-modal'>
                 {/* <button onClick={handleCancel} className="adminFormButton modalCloseBtn">Close</button> */}

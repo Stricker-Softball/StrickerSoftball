@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import { withRouter } from 'react-router-dom';
+// withRouter not used
 import './MenuNav.scss';
 
 /* App.jsx */
-let textColor = '#4F1150'
+let textColor = 'white'
 
 function App (props){
     let [menuOpen, setMenuOpen] = useState(false);
@@ -30,20 +30,21 @@ function App (props){
         // determine scroll
 
         const [pinText, setPinText] = useState('down');
-        const [scrollNum, setScroll] = useState(window.scrollY);
+        const [, setScroll] = useState(window.scrollY);
     
         function updateScroll() {
-            if (window.scrolly !== scrollNum) {
-                setScroll(window.scrollY)
-            }
-    
+          // always update current scroll position
+          setScroll(window.scrollY)
         }
-    
-        window.addEventListener('scroll', () => updateScroll());
+
+        useEffect(() => {
+          window.addEventListener('scroll', updateScroll);
+          return () => window.removeEventListener('scroll', updateScroll);
+        }, []);
     
         useEffect(() => {
             if (window.scrollY < 60) {
-                if (pinText != 'down') {
+                if (pinText !== 'down') {
                   if(menuOpen){
                     setPinText('down is-open');
                   }else{
@@ -51,7 +52,7 @@ function App (props){
                   }
                 }
             } else {
-                if (pinText != 'up') {
+                if (pinText !== 'up') {
                     if(menuOpen){
                       setPinText('up is-open');
                     }else{
@@ -59,7 +60,7 @@ function App (props){
                     }
                 }
             }
-        });
+        }, [pinText, menuOpen]);
 
     
     const styles= 
@@ -71,15 +72,14 @@ function App (props){
         alignItems: 'center',
         width: '100%',
         height: menuOpen ? '100vh':'0vh',
-        transition: 'filter .7s ease',
-        transition: 'height .7s ease',
+        transition: 'filter .7s ease, height .7s ease',
         },
     }
 
     let nav_item_list = props.nav_item_list;
 
     const menuItems = nav_item_list.map((val,index)=>{
-      let isCurrentNav = val.link == window.location.pathname
+      let isCurrentNav = val.link === window.location.pathname
     return (
         <MenuItem 
         className={`menu-item${isCurrentNav?' menu-nav-current':''}`}
@@ -115,7 +115,7 @@ function App (props){
   /* MenuItem.jsx*/
 
 function MenuItem (props){
-    let isCurrentNav = props.link == window.location.pathname
+  let isCurrentNav = props.link === window.location.pathname
     let [hover, setHover] = useState(false)
 
     
@@ -136,7 +136,8 @@ function MenuItem (props){
         padding: '1.2rem 0',
         margin: '0 5%',
         cursor: 'pointer',
-        color: `${isCurrentNav? 'var(--red)': 'white'}`,
+        color: `${isCurrentNav? 'white': 'white'}`,
+        background: `${isCurrentNav? 'var(--accent)': 'transparent'}`,
         transition: 'color 0.2s ease-in-out',
         animation: '0.5s slideIn forwards',
         animationDelay: props.delay,
@@ -154,7 +155,7 @@ function MenuItem (props){
     }
     return(
     <div style={styles.container}>
-        {props.delay == '0s' && <div style={styles.line}/>}
+        {props.delay === '0s' && <div style={styles.line}/>}
         <div 
         style={styles.menuItem} 
         onMouseEnter={()=>{ handleHover();}} 
@@ -188,6 +189,7 @@ function Menu (props){
       const styles={
         container: {
           height: open? '100%': 0,
+          maxHeight: open? '100vh': 0,
         },
       }
       return(
@@ -210,7 +212,7 @@ function Menu (props){
   /* MenuButton.jsx */
 function MenuButton (props){
     let [open, setOpen] = useState(props.open ? props.open : false)
-    let [color, setColor] = useState('white')
+    let [color] = useState('white')
   
 
     useEffect( () => {
@@ -292,21 +294,11 @@ function MenuButton (props){
   /* Main.jsx */
 
 function Main (props){
-
-    const styles = {
-    main: {
-        display:'flex',
-        flexDirection:'column',
-        alignItems: 'center',
-        height: '100vh',
-    }
-    }
-
-    return (
-    <div className='menu-main'>
-        <App {...props} />
-    </div>
-    )
+  return (
+  <div className='menu-main'>
+    <App {...props} />
+  </div>
+  )
     
   }
 

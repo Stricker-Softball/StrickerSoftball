@@ -4,7 +4,7 @@
 
 .Events{
     position: relative;
-    
+    min-height: 91vh;
     .eImage{
         width: 740px;
         margin: 25px 0 ;
@@ -16,7 +16,6 @@
         padding: 50px 30px 10px;
         margin: 0;
         color:white;
-        border-top: 2px solid var(--red-dark);
       }
       p{
           font-size:.4rem;
@@ -76,11 +75,10 @@
             width: 100%;
             text-align: center;
             justify-content: center;
-            margin: 45px auto 0;
+            margin: 0px auto 0;
             font-size: 1.4rem;
             cursor:text;
             text-decoration: none;
-            max-width: 420px;
             padding: 10px 5px 11px;
            
             // color: var(--red);
@@ -97,15 +95,15 @@
     .link-btn-group .clinic-link{
         height:65px;
         min-width:285px;
-        font-size:20px;
+        // font-size:20px;
         width:auto;
     }
 }
-.Events .event-list .clinic-link{
-    transition: all 0.3s;
-    background: var(--main-yellow);
-    border: 4px solid var(--red);
-}
+// .Events .event-list .clinic-link{
+//     transition: all 0.3s;
+//     background: var(--main-yellow);
+//     border: 4px solid var(--red);
+// }
 .Events .event-list .event-link{
     cursor:pointer;
     border-radius: 30px;
@@ -118,14 +116,15 @@
     border-color:  var(--red);
     background-color: rgb(59, 59, 59);
 }
-.Events .event-list .clinic-link:hover{
-    color: var(--main-yellow);
-    border-color:  var(--red);
-    background-color: rgb(59, 59, 59);
-}
+// .Events .event-list .clinic-link:hover{
+//     color: var(--main-yellow);
+//     border-color:  var(--red);
+//     background-color: rgb(59, 59, 59);
+// }
 .Events .event-list .link-description{
     color: white;
     margin-top:20px;
+    margin-bottom: 10px;
 }
 .linkParent{
     // padding:30px;
@@ -137,11 +136,13 @@
     height: 100px;
 }
 .links-list{
-    display: flex;
+    display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 0 !important;
+    align-items: center;
+    height:100% !important;
+    padding-bottom: 30px !important;
 }
 .links-section{
     width: 50%;
@@ -180,7 +181,7 @@
             }
             .event-item{
                 // width: 97%;
-                border: 3px solid var(--main-lightyellow);
+                border: 3px solid var(--primary);
                 border-top:none;
                 min-width: 200px;
                 aspect-ratio : 1 / 1.25;
@@ -191,7 +192,7 @@
                 cursor:pointer;
                 font-size: 1.3rem;
                 font-weight: bold;
-                border: 3px solid var(--main-lightyellow);
+                border: 3px solid var(--primary);
                 
                 background-color: var(--event-background);
                 border-radius: 30px;
@@ -208,26 +209,35 @@
         }
       }
     }
-    .Events .event-list .clinic-link{
-    cursor:pointer;
-    font-size: 1.3rem;
-    font-weight: bold;
-    // border: 3px solid var(--main-lightyellow);
-    // background-color: var(--event-background);
-    background: var(--main-yellow);
-    border: 4px solid var(--red);
-    border-radius: 30px;
-    padding: 15px 14px 16px;
-    margin: 15px auto 25px;
-    width:85%;
-    box-shadow: 0px 0px 25px -10px white;
+//     .Events .event-list .clinic-link{
+//     cursor:pointer;
+//     font-size: 1.3rem;
+//     font-weight: bold;
+//     // border: 3px solid var(--main-lightyellow);
+//     // background-color: var(--event-background);
+//     background: var(--main-yellow);
+//     border: 4px solid var(--red);
+//     border-radius: 30px;
+//     padding: 15px 14px 16px;
+//     margin: 15px auto 25px;
+//     width:85%;
+//     box-shadow: 0px 0px 25px -10px white;
 
-}
+// }
 .Events .link-btn-group .clinic-link{
     width:auto;
-font-size:20px;
+// font-size:20px;
         margin-left: 15px;
     margin-right: 15px;
+}
+.clinic-link{
+    text-decoration: none;
+    max-width: 420px;
+    padding: 10px 20px 11px;
+    color: white !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .event-item img{
     width:100%;

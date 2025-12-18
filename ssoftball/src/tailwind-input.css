@@ -1,0 +1,5 @@
+/* Tailwind input file - used by postcss-cli to generate src/tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* removed: tailwind-input.css was used by postcss-cli workaround; not needed with CRACO */

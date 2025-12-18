@@ -1,11 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-
-// import { useForm } from "react-hook-form"
-import step3Img from '../../../images/helpers/step3.png';
-import step4Img from '../../../images/helpers/step4.png';
-import step5Img from '../../../images/helpers/step5.png';
-import step6Img from '../../../images/helpers/step6.png';
+import { useState } from 'react';
 
 
 
@@ -19,23 +13,9 @@ function AdminScreen(props) {
         id:props.preFill.id
     })
 
-    function checkUrlValue(url){
-        // let urlArray = url.split('/')
-        // if(urlArray[0] == 'https:' && urlArray[urlArray.length-1] == 'view'){
-        //     return true;
-        // }else{
-        //     setInput({url:'',file:'',name:inputObj.name,id:inputObj.id})
-        //     alert('URL is in the wrong format! Canceling...')
-        //     return false
-        // }
-        return true
-    
-    }
+    // no-op url checker (kept for reference)
 
     const handleSubmit = (e) => {
-        let formData = new FormData(e.target)
-        for (const pair of formData.entries()) {
-        }
         props.submitAllSectionsData(e)
     }
     const handleCancel = (e) => {
@@ -43,11 +23,8 @@ function AdminScreen(props) {
         if(helpOpen)setHelp(!helpOpen)
         props.setShowModal()
     }
-    const handleHelp = (e) => {
-        e.preventDefault()
-        setHelp(!helpOpen)
-    }
-    if(inputObj.id != props.preFill.id) setInput(props.preFill)
+    // help toggle removed (not used)
+    if(inputObj.id !== props.preFill.id) setInput(props.preFill)
     // console.log(inputObj)
     return (    
             <div className='modal-section clinics-modal'>

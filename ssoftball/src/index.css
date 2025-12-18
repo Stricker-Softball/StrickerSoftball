@@ -11,3 +11,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fallback overrides to ensure a couple of bg utilities exist if Tailwind generation misses them */
+.bg-red-500 { background-color: #ef4444 !important; }
+.bg-sky-100 { background-color: #e0f2fe !important; }

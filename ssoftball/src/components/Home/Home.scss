@@ -13,7 +13,7 @@
 
 .Home{
     height: 100%; 
-
+  padding-bottom: 50px;
     
 }
 
@@ -21,47 +21,33 @@
 .Home .images{
   display: flex;
   justify-content: space-around;
+  flex-direction: column;
 
 }
 
 .Home .images img{
   height: 280px;
-  width: 48%;
+  width: 100%;
   object-fit: cover;
-  margin: 75px 0 50px;
-
-  border-top: 4px solid var(--red);
-  border-bottom: 4px solid var(--red);
+  border-radius: 15px;
 }
-.Home .images img:first-child{
-  margin-right: 4%;
-}
-.Home .sillouete{
-  width: 325px;
-  border-radius: 90%;
-  margin: 75px auto;
-  border: 15px solid var(--red);
-  box-shadow: 0px 10px 8px var(--red);
-}
-
 /* buttons */
 .Home .buttons, .Home .buttons-bottom{
   margin: 40px auto 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-}
-.Home .buttons button:first-child{
-  margin-right: 190px;
+  flex-direction: column;
+  gap:20px;
 }
 .Home .buttons button, .Home .buttons-bottom button{
-  width:410px
+  width:310px
 }
 
 /* text */
 .Home h1{
   font-size: 3.6rem;
-  text-shadow: -6px 0px 0px var(--red);
   padding: 10px 30px;
   color:white;
 }
@@ -69,14 +55,21 @@
   display: block;
 }
 .Home h2{
-  font-size: 2.4rem;
+  font-size: 2.0rem;
   color: white;
   margin-bottom: 30px;
   margin-top: 1px;
   padding-top:20px;
-  border-top: 2px solid var(--red-dark);
   padding-right: 5px;
      padding-left:5px;
+    //  text-align: left;
+    //  max-width: 500px;
+    --font-geist-sans: "Geist", "Geist Fallback";
+        --font-geist-mono: "Geist Mono", "Geist Mono Fallback";
+            font-size: clamp(1.8rem, 6vw, 4rem);
+    line-height: 1.1;
+    font-weight: 900 !important;
+    // letter-spacing: -.02em;
 }
 
 .science-paragraph{
@@ -87,11 +80,6 @@
 }
 // Media query phone 
 //@at-root
-@media (max-width: 1100px){
-  .Home .buttons button:first-child{
-    margin-right: 0px;
-  }
-}
 @media (max-width: $phone){
   .Home{
     h1{
@@ -104,8 +92,8 @@
       img{
         height: 170px;
         margin: 20px 0 90px;
-        width: 96%;
-        
+        width: 100%;
+        border-radius: 0;
       }
       img:first-child{
         margin-right: 0;
@@ -122,21 +110,12 @@
         padding-right:3px;
         padding-left:3px;
       }
-      button:first-child{
-        margin-right: 0;
-        margin-bottom: 60px;
-      }
     }
 
-    .sillouete{
-      // height: 325px;
-      max-width: 96%;
-
-      border-radius: 90%;
-      margin: 75px auto;
-      border: 15px solid var(--red);
-      box-shadow: 0px 3px 8px white;
-    }
+  }
+  #ssLogoDiv{
+    border-radius: 0 !important;
+    margin-top: -15px !important;
   }
 }
 
@@ -376,12 +355,14 @@
 
 #ssLogoDiv{
   background-image: url('../../images/ssBackgorund.png');
-  height:300px;
-  width: 300px;
-  background-size:     500px;                      /* <------ */
+  height:auto;
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-size:     cover;                      /* <------ */
     background-repeat:   no-repeat;
     background-position: center center; 
-    border-radius: 100%;
+    border-radius: 15px;
+    border: 1px solid black;
     margin:-10px auto 0px;
     
 }

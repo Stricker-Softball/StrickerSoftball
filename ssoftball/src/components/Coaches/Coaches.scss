@@ -1,8 +1,7 @@
 @import "../../utilities/variable.scss";
 
 .Coaches{
-    /* background-image: url('../../images/fence-texture-1.png') */
-    background-image: url('../../images/fence-texture-1.png');
+    // background-image: url('../../images/fence-texture-1.png');
 }
 .Coaches h1{
     font-size: 1.5rem;
@@ -12,7 +11,6 @@
 .Coaches h2{
     font-size: 30px;
 
-    border-bottom: 4px solid rgba(54,0,0, .8);
     margin: 20px 0 0px;
     width: auto;
     padding-bottom: 25px;
@@ -34,9 +32,8 @@ Coach Cards
 ========================== */
 
 .Coaches .coach-container .coach-card{
-    background: rgba(212, 15, 64, .8);
-    width: 420px;
-    min-width: 30%;
+    width:100%;
+    max-width: 540px;
     display: flex;
     flex-direction: column;
     margin: 20px 2.5%;
@@ -45,7 +42,6 @@ Coach Cards
 }
 .Coaches .coach-container .card-2nd{
     /* (54,153,236) */
-    background: rgba(54,163,250, .8);
 
 }
 
@@ -60,12 +56,13 @@ Coach Cards
     height: 420px;
     margin: 0px auto 0px;
     display: flex;
+    aspect-ratio: 1;
 
 }
 .Coaches .coach-container .coach-card .img-div .img-overflow{
     width: 100%;
     height: 420px;
-    // border-radius: 10px;
+    border-radius: 10px;
     overflow: hidden;
     transition: width .7s ;
     
@@ -97,6 +94,28 @@ Coach Cards
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
+.Coaches .coach-container .coach-card .img-div .coach-image{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: .89;
+    margin: 25px 3px 0px;
+    transition: margin .4s, opacity .4s, transform .4s;
+    display: block;
+}
+.Coaches .coach-container .coach-card .img-div .coach-image:hover{
+    margin: 0px 3px 0px;
+    opacity: 1.0;
+}
+.Coaches .coach-container .coach-card .img-div .active .coach-image{
+    margin: 0px 0px 0px;
+    opacity: 1.0;
+}
+.Coaches .coach-container .coach-card .img-div div:last-child .coach-image{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
 .Coaches .coach-container .coach-card .img-div .img-overflow:hover{
     // width: 150px;a
     // margin: 0 4px 0;
@@ -120,6 +139,22 @@ Coach Cards
     order: 3;
 }
 
+// .coach-card { background-image: linear-gradient(
+//           to bottom right,
+//           rgb(15, 15, 15) 0%,
+//           rgb(37, 37, 37)  40%,
+//           transparent 70%,
+//           transparent  100%
+//       );
+//       background-size: calc(200% + 4px) calc(100% + 4px);
+//       background-position: 0% 100%;
+//       color: white; max-width: 400px; margin: 0 auto;
+//       border-radius: 15px;
+//       padding:5px;
+//       padding-top:20px;
+//       // box-shadow: var(--elev-2);
+//       border: 2px solid black;
+//     }
 
 @media (max-width: $phone){
     .Coaches .coach-container .coach-card .img-div{
@@ -137,6 +172,15 @@ Coach Cards
             display: none;
         }
     }
+    .Coaches .coach-container .coach-card .img-div{
+    height: 320px;
+
+}
+.Coaches .coach-container .coach-card .img-div .img-overflow{
+    width: 100%;
+    height: 320px;
+    
+}
 }
 
 /* buttons */
@@ -150,7 +194,6 @@ Coach Cards
     // border-radius: 80px;
 }
 .Coaches .coach-container .coach-card .button-main:hover{
-    border: 4px solid rgba(124,193,255, 1);
     cursor: pointer;
 }
 .Coaches .coach-container .coach-card .button-main::after{
@@ -167,8 +210,6 @@ Coach Cards
     // background-color: rgba(124,193,255, 1);
 }
 .Coaches .coach-container .card-2nd .button-main:hover{
-    border: 4px solid rgba(250, 70, 134, 1);
-    background-color: #3b3b3b;
     cursor: pointer;
 }
 
@@ -184,7 +225,7 @@ Coach Cards
     left: 0;
     top: 0;
     width: 100vw;
-    height: 100%;
+    height: 100vh;
     overflow-x: auto;
     overflow-y: scroll;
     position: fixed;
@@ -194,12 +235,15 @@ Coach Cards
     background-size: 300px 300px;
     display: flex;
     /* display:none; */
+    padding:10px;
+    color:white;
 }
 .popup-main.deactive{
     display: none;
 }
 .popup-main .popup-window{
-    width: 50%;
+    width: 100%;
+    max-width: 1200px;
     min-width: 740px;
     min-height: 150px;
     background-color: rgb(50,50,50);
@@ -214,8 +258,11 @@ Coach Cards
 
 @media (max-width: $phone){
     .popup-main .popup-window{
-        width: 94%;
+        width: 100%;
         min-width: 240px;
+    }
+    .popup-main{
+        padding:0;
     }
 }
 

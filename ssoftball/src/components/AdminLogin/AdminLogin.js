@@ -1,18 +1,13 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-
 function AdminScreen(props) {
     let defaultPassword = 'sftbllscnc'
-    let [inputObj, setInput] = useState({
-        password:''
-    })
 
     const handleSubmit = (e) => {
         let formData = new FormData(e.target)
 
         for (const pair of formData.entries()) {
-            if(pair[0] == 'password') {
-                if(pair[1] == defaultPassword){
+            if(pair[0] === 'password') {
+                if(pair[1] === defaultPassword){
                     sessionStorage.setItem("hasLoggedIn", 'True')
                     buttonPress('/admin/events/edit')
                 }else{

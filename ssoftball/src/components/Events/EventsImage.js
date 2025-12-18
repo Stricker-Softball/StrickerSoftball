@@ -5,11 +5,10 @@ import EqupmentPile from '../../images/equipment-pile.jpg';
 
 
 function EventsImage(props) {
-    const [imageObj, setImageObj] = useState({source: EqupmentPile, name:'Equipment Pile'})
+    const [imageObj] = useState({source: EqupmentPile, name:'Equipment Pile'})
 
     var img_ele = null,
     x_cursor = 0,
-    y_cursor = 0,
     x_img_ele = 0,
     y_img_ele = 0;
 
@@ -35,10 +34,9 @@ function EventsImage(props) {
       
       function while_drag() {
         x_cursor = window.event.clientX;
-        y_cursor = window.event.clientY;
         if (img_ele !== null) {
           img_ele.style.left = (x_cursor - x_img_ele) + 'px';
-          img_ele.style.top = ( window.event.clientY - y_img_ele) + 'px';
+          img_ele.style.top = (window.event.clientY - y_img_ele) + 'px';
       
             // console.log(img_ele.style.left+' - '+img_ele.style.top);
       
@@ -57,10 +55,11 @@ function EventsImage(props) {
                 onMouseUp={stop_drag}
             >
                 <img
-                onMouseDown={start_drag} 
-                onDragStart="return false" 
-                id="drag-img" 
-                src={imageObj.source} />
+                onMouseDown={start_drag}
+                onDragStart={(e) => e.preventDefault()}
+                id="drag-img"
+                src={imageObj.source}
+                alt={imageObj.name || ''} />
             </div>
             <input onClick={() => zoom(0.5)} type="button" id="zoomout" class="zoomButton" value="Zoom out"/>
             <input onClick={() => zoom(1.5)} type="button" id="zoomin" class="zoomButton" value="Zoom in"/>
