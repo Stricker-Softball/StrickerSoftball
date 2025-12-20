@@ -8,9 +8,7 @@ import { Products } from '../Products/Products';
 import { Partners } from '../Partners/Partners';
 import  ImgList  from '../Ads/ImgList';
 function Home(props) {
-    function externalLink(link){
-        window.open(link, "_blank");
-    }
+    // externalLink removed (unused)
     function buttonPress(link) {
         // if the link contains a hash (e.g. '/#product-features'),
         // navigate to path part and scroll to the element with that id

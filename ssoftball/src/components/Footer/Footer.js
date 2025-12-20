@@ -61,7 +61,7 @@ function Footer(props) {
             </div>
             <Share />
             <small className='footer-small'>
-                Website created by <a href="https://strickerdigital.com" target="_blank" rel="noopener">
+                Website created by <a href="https://strickerdigital.com" target="_blank" rel="noreferrer noopener">
                 Stricker Digital
                 </a>
             </small>

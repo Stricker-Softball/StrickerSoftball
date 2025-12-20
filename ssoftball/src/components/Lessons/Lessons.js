@@ -1,8 +1,7 @@
 import React from 'react';
 import './Lessons.scss';
 
-import StrickerSoftballPng from '../../images/edits/stricker-softball-1.png';
-import HeartBall from '../../images/heart-ball.png';
+// removed unused image imports
 import SballBig from '../../images/Softball-big.jpg';
 import MitBall from '../../images/mit-ball.jpg';
 
@@ -114,7 +113,7 @@ function Lessons(props) {
                             {overlay && <div className="hero-overlay" />}
 
                             <div className={`hero-inner ${textAlignClass}`}>
-                                <h1 className="hero-title"></h1>
+                                <h1 className="hero-title">{title}</h1>
                                 <h3>"Great things are done by a series of small things brought together"</h3>
                 <span id='contact-id'>- Vincent van Gogh -</span>
                             </div>

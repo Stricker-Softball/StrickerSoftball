@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect } from 'react';
 import './ImgList.scss';
 import defaultImg from '../../images/adExample.png';
 
@@ -14,15 +14,13 @@ function ImgList(props) {
         };
         window.addEventListener('keydown', onKey);
         return () => window.removeEventListener('keydown', onKey);
-    }, [expandedSrc]);
+    }, [expandedSrc, setExpandedSrc]);
 
     function openExpanded(src) {
         setExpandedSrc(src);
     }
 
-    function closeExpanded() {
-        setExpandedSrc(null);
-    }
+    // closeExpanded removed (not used) — use setExpandedSrc(null) directly where needed
     return (<>
     {props.images?.length?<>
     <p className='gradient-text featured-title'>Featured</p>

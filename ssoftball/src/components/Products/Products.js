@@ -29,9 +29,8 @@ export function Products({ id, title, items }) {
         {heading ? <h2 className="products-title">{heading}</h2> : null}
 
         <div className="products-grid">
-          {productItems.map((f, i) => {
+            {productItems.map((f, i) => {
             const fimgUrl = f.imageUrl;
-            const ink = i % 2 === 0; // alternate ink panels
             // allow small/medium/large descriptors or full-size image URLs
             const imgSizeClass = f.imgSize === 'sm' ? 'img-sm' : f.imgSize === 'md' ? 'img-md' : f.imgSize === 'lg' ? 'img-lg' : 'img-full';
             return (
