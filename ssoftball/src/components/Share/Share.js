@@ -12,7 +12,7 @@ import './Share.scss';
 
 export default function Share({
   id = "share",
-  title = "Share this page",
+  title = "Share this Site",
   subtitle = "",
   value = "https://softball-science.com",
   size = 220,
