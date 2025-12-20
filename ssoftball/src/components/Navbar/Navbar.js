@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, useHistory } from "react-router-dom";
 import './Navbar.scss';
 
 import MenuNav from './Menu/MenuNav.js';
@@ -8,6 +8,7 @@ import Modal from '../UserLogin/UserModal.js';
 
 function Navbar(props) {
     // menuOpen state not used here
+    const history = useHistory();
 
     // Nav item list
 
@@ -20,7 +21,7 @@ function Navbar(props) {
         {name:'Coaches & Lessons', link:'/meetthecoach'},
         {name:'Stations', link:'/stations'},
         // {name:'Q & A', link:'/questions'},
-        {name:'Contacts', link:'/contacts'}, 
+        {name:'Contact Us', link:'/contacts'}, 
     ]
     // nav conditionals
     if(!props.sectionList.Clinics || props.sectionList.Clinics.length === 0){
@@ -40,22 +41,33 @@ function Navbar(props) {
             props.setShowModal()
         }
     }
+    function handleContactClick(e) {
+        // programmatic navigation to /contacts
+        e && e.preventDefault && e.preventDefault();
+        history.push('/contacts');
+    }
+    function handleLogoClick(e) {
+        // programmatic navigation to /contacts
+        e && e.preventDefault && e.preventDefault();
+        history.push('/');
+    }
 
     return (
         <>
         <div className="Navbar">
             
             <nav className={'Navbar-items'}>
-            <div id="navBarLogo">
+            <div id="navBarLogo" onClick={handleLogoClick}>
                 <img src={ssLogo} alt='logo' />
             </div>
                 {nav_item_list.map((item) => {
                     let isCurrentNav = item.link === window.location.pathname
-                    return <NavLink key={item.name} data-key={item.name} onClick={handleMenuClick} to={item.link} className={`bar-nav-item${isCurrentNav?' bar-nav-current':''}`}>
+                    return item.link === "/contacts"?<></>:<NavLink key={item.name} data-key={item.name} onClick={handleMenuClick} to={item.link} className={`bar-nav-item${isCurrentNav?' bar-nav-current':''}`}>
                         <span>{item.name}</span>
                     </NavLink>
-                })}
+                })}<button id="contactUsButton" className="button-main" onClick={handleContactClick}>Contact Us</button>
             </nav>
+            
             <div className={`menu-div`}>
                 <MenuNav {...props} nav_item_list={nav_item_list}/>
             </div>

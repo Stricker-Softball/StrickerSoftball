@@ -11,32 +11,18 @@ overflow: hidden;
 }
 .tab{
     text-decoration: none;
-    background: var(--main-yellow);
-    color: var(--black);
     font-size: 1.2rem;
     padding: 6px 20px 8px;
     display: inline-block;
-    border-right: 2px dashed var(--red);
     transition: all 0.3s;
+    border-bottom: 3px solid transparent;
 }
 .tab:hover{
-    background: var(--main-lightyellow);
-    color: var(--red);
+    color: var(--accent);
     cursor: pointer;
 }
-.tab:first-child{
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-}
-.tab:last-child{
-    border-right:none;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-}
 .tab-active{
-    background: var(--main-lightyellow);
-    color: var(--red);
-
+    border-bottom-color: white;
 }
 .edit-section-body{
     display:none;

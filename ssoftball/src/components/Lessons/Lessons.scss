@@ -15,13 +15,10 @@
 
     h1{
       font-size: 3.6rem;
-      text-shadow: -6px 0px 0px var(--red-dark);
       padding: 10px 30px;
-      color: var(--main-lightyellow);
       color:white;
     }
     .intro-section{
-      background:rgba(105, 55, 85, 1);
 
       p{
         font-size: 1.2rem;
@@ -67,31 +64,20 @@
     .info-container{
       position: relative;
       height: 100%;
-      margin-bottom:400px;
+      display:flex;
+      justify-content: center;
       z-index: 1; 
       .info-section{
-        position: absolute;
-        background: var(--main-yellow);
-        color: var(--black);
         width: 90%;
-        left: 5%;
-        top: -390px;
         display: flex;
         justify-content: space-evenly;
-        padding: 40px 20px;
         
         .section{
           width: 48%;
           padding: 20px;
-          border-left: 3px solid var(--red);
           // margin: 30px 0;
         }
-        .section:first-child{
-          border-left: none;
-          border-right: 3px solid var(--red);
-        }
         .section h2{
-          color: var(--red);
           font-weight: bolder;
           font-style: oblique;
           margin-bottom: 40px;
@@ -122,6 +108,59 @@
       }
     }
   }
+
+/* Hero Section (replaces Tailwind utilities) */
+.hero-section{
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 3rem 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &.hero-height-lg{ min-height: 60vh; }
+  &.hero-height-md{ min-height: 40vh; }
+  &.hero-height-sm{ min-height: 28vh; }
+   background-attachment: fixed;
+}
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+}
+.hero-inner{
+  position: relative;
+  z-index: 10;
+  padding: 0 1rem;
+  max-width: 48rem; /* ~3xl */
+  margin: 0 auto;
+  min-height: 180px;
+  &.text-left{ text-align: left; }
+  &.text-center{ text-align: center; }
+}
+.hero-title{
+  color: #fff;
+  font-size: 1.875rem; /* ~text-3xl */
+  font-weight: 600;
+  line-height: 1.1;
+}
+.hero-subtitle{
+  margin-top: 1.5rem;
+  color: rgba(255,255,255,0.9);
+  font-size: 1rem;
+}
+.lesson-type{
+ display:flex;
+ justify-content: center;
+ gap:15px;
+
+}
+
+@media (min-width: 768px){
+  .hero-title{ font-size: 3rem; /* ~md:text-5xl */ }
+  .hero-subtitle{ font-size: 1.125rem; }
+}
   
 // phone styles 
 // =================================
@@ -154,14 +193,7 @@
       }
     }
     .info-container{
-      margin-bottom: 732px;
       .info-section{
-        position: absolute;
-        background: var(--main-yellow);
-        color: var(--black);
-        width: 96%;
-        left: 2%;
-        top: -390px;
         display: flex;
         justify-content: space-evenly;
         padding: 40px 20px;
@@ -170,14 +202,9 @@
         .section{
           width: 98%;
           padding: 1%;
-          border-left: none;
-          border-top: 3px solid var(--red);
 
         }
         .section:first-child{
-          border-right: none;
-          border-top: none;
-          border-bottom: 3px solid var(--red);
           margin-bottom: 5px;
         }
       }

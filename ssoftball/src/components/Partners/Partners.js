@@ -46,7 +46,7 @@ export function Partners({ id, title, items }) {
                   {f.body ? <p className={`product-body ${ink ? '' : 'muted'}`}>{f.body}</p> : null}
                   <div className="mt-6">
                     {f.link ? (
-                      <a href={f.link} className={`product-link button-main ${ink ? 'text-white' : 'text-white'}`}>
+                      <a href={f.link}  target="_blank" rel="noreferrer" className={`product-link button-main ${ink ? 'text-white' : 'text-white'}`}>
                         {f.linkText || 'Learn more'}
                         <span aria-hidden>↗</span>
                       </a>

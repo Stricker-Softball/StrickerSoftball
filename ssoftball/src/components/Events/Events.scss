@@ -17,12 +17,6 @@
         margin: 0;
         color:white;
       }
-      p{
-          font-size:.4rem;
-          position: absolute;
-          left: -62px;
-          bottom:-362px;
-      }
 
     .event-list{
         display:flex;
@@ -153,9 +147,6 @@
     justify-content: flex-end;
 }
 @media (max-width: 1100px){
-    .Events p{
-        display: none;
-    }
     .Events{
         .event-list{
             .event-row{
@@ -238,6 +229,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .event-item img{
     width:100%;

@@ -26,9 +26,12 @@
   --red-dark: #4F1150;
   --red-dark: #d10088;
   --primary: #920dff;
+   --primary-dark: #34005f;
+   --primary-dark-2: #660074;
     --primary-highlight: #cf31ff;
   --accent: #d10088;
   --accent-dark: #4F1150;
+   --accent-light: #f82fb2;
   /* --red: rgb(24,24,24); */
   --light-black: rgb(24,24,24);
   --black: white;
@@ -41,6 +44,40 @@
   --phone-point:  705px;
 
   --event-background : black;
+}
+.wave-section{
+  position: relative;
+}
+.wave-section-top{
+  padding-bottom: 90px;
+}
+.wave-section-bottom{
+  padding-top:70px;
+}
+.bottom-wave{
+  position: absolute;
+    width: 100vw;
+    z-index: 2;
+    margin-top: -10px;
+    transform: rotate(180deg);
+}
+
+.top-wave{
+  position: absolute;
+    width: 100vw;
+    z-index: 2;
+   bottom: calc(100% - 10px);
+}
+.bottom-wave svg, .top-wave svg{
+    width: 100%;
+    height:70px;
+    
+}
+.bottom-wave svg{
+  fill: var(--primary-dark-2);
+}
+.top-wave svg{
+fill: var(--primary-dark);
 }
 
 *{
@@ -137,12 +174,18 @@
 
   background: var(--black-transparent);
   height: 100%; 
-  min-height:91vh;
   padding-top: .1px;  
   color: white;
   // position: relative;
       --tw-backdrop-blur: blur(3px);
   backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+.container-after-admin{
+   background: var(--black-transparent);
+  height: 100%; 
+  min-height:91vh;
+  padding-top: .1px;  
+  color: white;
 }
 @media only screen and (max-width: 1190px) {
   .container-after{
@@ -316,6 +359,18 @@
     padding-top:15px;
     padding-bottom: 15px;
   }
+   .gradient-bg { 
+    background-image: linear-gradient(
+          to bottom,
+          var(--primary-dark) 0%,
+          var(--primary-dark) 40%,
+          var(--primary-dark-2) 70%,
+          var(--primary-dark-2) 100%
+      );
+      background-size: calc(200% + 4px) calc(100% + 4px);
+      background-position: 0% 100%;
+      color: white;
+    }
 
   .card { background-image: linear-gradient(
           to bottom right,
@@ -379,10 +434,25 @@
 .gradient-text {
   background: linear-gradient(
      to  right,
-          var(--primary) 0%,
-          var(--primary) 40%,
-          var(--accent) 70%,
-          var(--accent) 100%
+           rgb(216, 132, 255) 0%,
+          rgb(216, 132, 255) 40%,
+          var( --accent-light) 70%,
+          var( --accent-light) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* Optional but recommended */
+  background-clip: text;
+  color: transparent;
+}
+.gradient-text-white {
+  background: linear-gradient(
+     to  right,
+          rgb(216, 132, 255) 0%,
+          rgb(216, 132, 255) 40%,
+          var( --accent-light) 70%,
+          var( --accent-light) 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

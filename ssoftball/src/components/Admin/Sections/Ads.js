@@ -9,6 +9,7 @@ import './AdminSection.scss';
 let sectionName = "Ads"
 function AdminSection(props) {
     // inputObj not currently used
+    console.log(props)
    let className = "edit-section-body"
    if(props.tabName.includes(sectionName)){
     className += ' section-active';

@@ -142,14 +142,15 @@ function AdminScreen(props) {
                 <h6>Choose a list or section to Edit</h6>
                 <div className="edit-tabs">
                 {displayTabList.map((key) => {
+                            console.log(key)
                             let tabName = key.replace(/([A-Z])/g, ' $1').trim()
-                            if(tabName === 'Clinics') tabName = "Class PDfs & Images"
-                            if(tabName === 'Class Registration') tabName = "Class Register Buttons"
-                            if(tabName === 'Ads') tabName = "Front Page Ads"
+                            if(tabName === 'Clinics') tabName = "Classes PDfs & Images"
+                            if(tabName === 'Class Registration') tabName = "Registration Buttons"
+                            if(tabName === 'Ads') tabName = "Featured Ads"
                             if(!displayTabList.includes(key)) return (<></>)
                             return (
                                 <div className={`tab${key === selectedTab?' tab-active':''}`} onClick={handleAdminTabClick} data-tab={key}>
-                                    {tabName}
+                                    <span  onClick={handleAdminTabClick} data-tab={key}>{tabName}</span>
                                 </div>
                             )
                         })}

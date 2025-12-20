@@ -16,6 +16,8 @@ let isOffline = false;
 
 
 function App() {
+  // Ads Modal
+  const [expandedSrc, setExpandedSrc] = useState(null);
   //COACH MODAL
   const [popup, setPopup] = useState(false);
   const [popupCoach, setCoach] = useState({first_name: '', last_name: '', images: [], color: '',description:''});
@@ -85,21 +87,21 @@ function App() {
           <Route path="/" render={props => <Navbar {...props} sectionList={sectionListObject} modalOn={userModalOn} setShowModal={setShowUserModal}/>} />
           <div className='container-after'>
           {/* <Route exact path="/" render={props => <ADS show={sectionListObject.Switches.frontPageAds} {...props} images={sectionListObject.Ads}/>} /> */}
-            <Route exact path="/" render={props => <Home show={sectionListObject.Switches.frontPageAds} {...props} images={sectionListObject.Ads} />} />
+            <Route exact path="/" render={props => <Home show={sectionListObject.Switches.frontPageAds} {...props} images={sectionListObject.Ads} expandedSrc={expandedSrc} setExpandedSrc={setExpandedSrc} />} />
             
-            <Route path="/classes" render={props => <Events pageState='class' ClassRegistration={sectionListObject.ClassRegistration} key={1} {...props} eventList={events} sectionList={sectionListObject.Clinics} imgList={imgCardList} images={sectionListObject.Ads} show={sectionListObject.Switches.frontPageAds}/>} />
+            <Route path="/classes" render={props => <Events pageState='class' ClassRegistration={sectionListObject.ClassRegistration} key={1} {...props} eventList={events} sectionList={sectionListObject.Clinics} imgList={imgCardList} images={sectionListObject.Ads} expandedSrc={expandedSrc} setExpandedSrc={setExpandedSrc}  show={sectionListObject.Switches.frontPageAds}/>} />
             <Route path="/stations" render={props => <Events pageState='class' ClassRegistration={sectionListObject.ClassRegistration} key={1} {...props} eventList={events} sectionList={sectionListObject.Stations} imgList={[]} setShowModal={setShowUserModal}/> } />
-            <Route path="/register" render={props => <Events pageState='register' ClassRegistration={sectionListObject.ClassRegistration} key={1} {...props} eventList={events} sectionList={sectionListObject.Clinics} imgList={imgCardList} images={sectionListObject.Ads} show={sectionListObject.Switches.frontPageAds} />} />
+            <Route path="/register" render={props => <Events pageState='register' ClassRegistration={sectionListObject.ClassRegistration} key={1} {...props} eventList={events} sectionList={sectionListObject.Clinics} imgList={imgCardList} images={sectionListObject.Ads} expandedSrc={expandedSrc} setExpandedSrc={setExpandedSrc}  show={sectionListObject.Switches.frontPageAds} />} />
             <Route path="/questions" render={props => <Events pageState='class' ClassRegistration={[]} key={2}  {...props} eventList={events} sectionList={sectionListObject.questions}/>} />
             <Route path="/members" render={props => <Events pageState='class' ClassRegistration={[]} key={3}  {...props} eventList={events} sectionList={sectionListObject.members}/>} />
             <Route path="/teams" render={props => <Events pageState='class' ClassRegistration={[]} key={4}  {...props} eventList={events} sectionList={sectionListObject.Teams}/>} />
             <Route path="/meetthecoach" render={props => <Coaches {...props} popup={popup} setPopup={setPopup} setCoach={setCoach}/>} /><Route path="/meetthecoach" render={props => <Lessons {...props} />} />
             <Route path="/contacts" render={props => <Contacts {...props}/>} />
-            <Route path="/admin/events/edit" render={props => <AdminScreen {...props} setData={setData} eventList={events} allSections={sectionListObject}/>} />
           </div>
+          <Route path="/admin/events/edit" render={props => <div className='container-after-admin'><AdminScreen {...props} setData={setData} eventList={events} allSections={sectionListObject}/></div>} />
         </div>
-        <Footer />
-        <CoachModal popup={popup} setPopup={setPopup} coachData={popupCoach} />
+        <Route path="/" render={props => <Footer  {...props}/>} />
+        <CoachModal popup={popup} setPopup={setPopup} coachData={popupCoach} expandedSrc={expandedSrc} setExpandedSrc={setExpandedSrc}  />
       </div>
     </>
   );

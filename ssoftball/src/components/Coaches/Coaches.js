@@ -12,7 +12,7 @@ import LukePortrait from '../../images/coaches/luke.jpg';
 
 let coaches = [
     {
-        first_name: 'sue', last_name: 'Stricker', images: [SuePortriat], color: 'blue',
+        first_name: 'Sue', last_name: 'Stricker', images: [SuePortriat], color: 'blue',
         description: `Coach Sue Stricker has been playing and coaching the game for over 20 years. She is currently the Head Coach for the Wasco Daimonds 14 U team, and the General Manager at Bring It Sports where she gives private, small group, and team lessons. Her CUDIT Concentric Hitting lessons bring her hitters in the area to a level like no other.
 
     Sue has coached area teams such as the Wasco Diamonds 14U (Head Coach), Homer Hawks Gold 16U and 18U (Assistant Coach), The Northern Illinois Lightning (Head Coach) 14U and 16U, and the St. Charles Angels (Head Coach). She has also coached Varsity and J.V. High School teams.
@@ -50,18 +50,6 @@ let coaches = [
             `
     },
     {
-        first_name: 'Megan', last_name: 'Stricker', images: [MegHitting ], color: 'red',
-        description:
-            `Megan  Stricker is a former girls travel softball player of 12 years.  She then went on to play college ball at Waubonsee Community College and Clarke University In Iowa.    In the past she served as an Assistant Coach for the 14U Wasco Diamonds travel program, and Geneva Park District Youth Softball.   She helped take her team to National competition where they won first place in the “A” division. She has been giving private and group lessons as well as running Offensive and Defensive clinics with larger groups for establishments including Geneva Baseball, The Geneva Park District, The Oswego Outlaws  and Elite Sports training. She is looking forward to bringing her expertise to the brand new facility that Bring It! Sports Academy has to offer.
-
-
-
-
-Contact Info
-Cell:     630-306-8176
-Email:   Megan_stricker@yahoo.com`
-    },
-    {
         first_name: 'Luke', last_name: 'Stricker', images: [LukePortrait], color: 'blue',
         description:
             `Coach Luke Stricker has been a certified speed and agility instructor through Nesta since 2019. Luke grew up playing travel baseball and travel soccer from an early age where his love of sports developed. . He continued his sports career Playing both High School and College sports. He graduated with a degree in Biology with an emphasis on EMT certification, anatomy, and Speed and Agility.  
@@ -77,6 +65,18 @@ Email:   Megan_stricker@yahoo.com`
 Contact Info
 Cell:     630-303-8329
 Email:   Luke.a.stricker@gmail.com`
+    },
+    {
+        first_name: 'Megan', last_name: 'Stricker', images: [MegHitting ], color: 'red',
+        description:
+            `Megan  Stricker is a former girls travel softball player of 12 years.  She then went on to play college ball at Waubonsee Community College and Clarke University In Iowa.    In the past she served as an Assistant Coach for the 14U Wasco Diamonds travel program, and Geneva Park District Youth Softball.   She helped take her team to National competition where they won first place in the “A” division. She has been giving private and group lessons as well as running Offensive and Defensive clinics with larger groups for establishments including Geneva Baseball, The Geneva Park District, The Oswego Outlaws  and Elite Sports training. She is looking forward to bringing her expertise to the brand new facility that Bring It! Sports Academy has to offer.
+
+
+
+
+Contact Info
+Cell:     630-306-8176
+Email:   Megan_stricker@yahoo.com`
     },
     
     // {
@@ -138,7 +138,7 @@ function Coaches(props) {
 
                                 </div>
                                 <div className='btn-div'>
-                                    <h2 className='name'>COACH {coach.first_name.toUpperCase()}</h2>
+                                    <h2 className='name gradient-text-white'>{coach.first_name} {coach.last_name}</h2>
                                     <p>{shortDescription}</p>
                                     <button onClick={() => handlePopup(coach)} className='button-main'>Learn more</button>
                                 </div>

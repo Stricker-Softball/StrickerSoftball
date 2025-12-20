@@ -90,10 +90,6 @@ Coach Cards
 .Coaches .coach-container .coach-card .img-div .active img{
     margin: 0px 0px 0px;
 }
-.Coaches .coach-container .coach-card .img-div div:last-child img{
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-}
 .Coaches .coach-container .coach-card .img-div .coach-image{
     width: 100%;
     height: 100%;
@@ -111,10 +107,6 @@ Coach Cards
 .Coaches .coach-container .coach-card .img-div .active .coach-image{
     margin: 0px 0px 0px;
     opacity: 1.0;
-}
-.Coaches .coach-container .coach-card .img-div div:last-child .coach-image{
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
 }
 .Coaches .coach-container .coach-card .img-div .img-overflow:hover{
     // width: 150px;a
@@ -157,6 +149,9 @@ Coach Cards
 //     }
 
 @media (max-width: $phone){
+    .Coaches{
+        padding-top: 60px;
+    }
     .Coaches .coach-container .coach-card .img-div{
         // margin-bottom: 200px;
         flex-wrap: wrap;
@@ -246,11 +241,13 @@ Coach Cards
     max-width: 1200px;
     min-width: 740px;
     min-height: 150px;
-    background-color: rgb(50,50,50);
     margin: auto auto;
     position: relative;
-    border: 3px solid var(--red);
+    border: 3px solid var(--primary);
     padding-bottom: 45px;
+    background-image: linear-gradient(to bottom right, rgb(40,40,40) 15%, var(--primary-dark) 40%);
+    background-size: calc(200% + 4px) calc(160% + 4px);
+    background-position: 0% 42%;
 }
 
 /* Media Queries -- phone and tablet styles 
@@ -275,6 +272,7 @@ Coach Cards
     right: 0;
     padding: 12px 15px;
     background-color: rgba(0,0,0,.5);
+    border-bottom-left-radius: 15px;
 }
 .popup-main .popup-window .close-x:hover{
     color: rgb(155,155,155);
@@ -284,16 +282,10 @@ Coach Cards
 
 .popup-main .popup-window .close-button{
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     right: 40%;
     width: 20%;
     padding: 12px 25px;
-    background-color: rgba(0,0,0,.5);
-}
-.popup-main .popup-window .close-button:hover{
-    color: rgb(155,155,155);
-    background-color: rgba(0,0,0,.6);
-    cursor: pointer;
 }
 
 /* Popup Content  */
@@ -309,14 +301,12 @@ Coach Cards
 
 .popup-main .popup-window h1{
     font-size: 3.6rem;
-    text-shadow: -6px 0px 0px var(--red);
     padding: 10px 30px;
     margin: 30px 0 0;
-    color: var(--main-yellow);
+    font-weight: bold;
 }
 /* Media Queries -- phone and tablet styles 
 */
-
 @media (max-width: $phone){
     .popup-main .popup-window .close-button{
         right: 33%;

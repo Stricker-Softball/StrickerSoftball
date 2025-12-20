@@ -3,6 +3,7 @@ function AdminScreen(props) {
     let defaultPassword = 'sftbllscnc'
 
     const handleSubmit = (e) => {
+        e.preventDefault();
         let formData = new FormData(e.target)
 
         for (const pair of formData.entries()) {

@@ -10,30 +10,49 @@ import MitBall from '../../images/mit-ball.jpg';
 function Lessons(props) {
 
     function scrollToContacts() {
-        // let element = document.getElementById('contact-id');
-        // console.log(element)
-        // setTimeout(function () {
-        //     element.scrollTo({ top: 0 });
-        // }, 2);
         window.scrollTo(0, 0)
         props.history.push('/contacts')
 
     }
+        const {
+                heightClass = '',
+                bgUrl = MitBall,
+                bgUrl2 = SballBig,
+                overlay = true,
+                textAlignClass = '',
+                title = 'Lessons',
+                body = ''
+        } = props;
 
     return (
         <div className="Lessons">
-            <h1>Stricker Softball Lessons</h1>
+                        <section
+                            className={`hero-section ${heightClass}`}
+                            style={
+                                bgUrl2
+                                    ? { backgroundImage: `url(${bgUrl2})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+                                    : undefined
+                            }
+                        >
+                            {overlay && <div className="hero-overlay" />}
+
+                            <div className={`hero-inner ${textAlignClass}`}>
+                                <h1 className="hero-title">{title}</h1>
+                                {body && <p className="hero-subtitle">{body}</p>}
+                            </div>
+                        </section>
+                        {/* <div className="wave-section-top"></div> */}
+            <div className="gradient-bg wave-section">
+                <div className=" top-wave" aria-hidden>
+                    <svg viewBox="0 0 1440 140" className="" preserveAspectRatio="none">
+                    <path d="M0,80 C240,140 480,0 720,60 C960,120 1200,20 1440,80 L1440,140 L0,140 Z" />
+                    </svg>
+                </div>
             <div className="intro-section" id="lessonsintro">
 
-                <img className='stricker-softball-png' src={StrickerSoftballPng} alt='stricker-softball-png' />
-                <p>Private, Semi - Private and Group Sessions</p>
+                <p className="gradient-text">Private, Semi - Private and Group Sessions</p>
 
-                <button className='button-main' onClick={() => scrollToContacts()}>Schedule Appointment</button>
-                <div className='images'>
-                    <img className='mit-ball' src={MitBall} alt='mit-ball' />
-                    <img className='softball-big' src={SballBig} alt='softball-big' />
-
-                </div>
+                <button className='button-main' onClick={() => scrollToContacts()}>Schedule an Appointment</button>
             </div>
             <div className='info-container' >
                 <div className='info-section'>
@@ -61,8 +80,8 @@ function Lessons(props) {
 
                             </div>
                             <div className='lesson-type'>
-                                <p>Hitting</p>
-                                <p>Infield/Outfield</p>
+                                <p>Hitting</p><p>|</p>
+                                <p>Infield/Outfield</p><p>|</p>
                                 <p>Position Specific</p>
                             </div>
                         </div>
@@ -75,12 +94,32 @@ function Lessons(props) {
                         </div>
                     </div>
                 </div>
+            </div><div className=" bottom-wave" aria-hidden>
+                    <svg viewBox="0 0 1440 140" className="" preserveAspectRatio="none">
+                    <path d="M0,80 C240,140 480,0 720,60 C960,120 1200,20 1440,80 L1440,140 L0,140 Z" />
+                    </svg>
+                </div>
             </div>
-            <img className='heart-ball' src={HeartBall} alt='love-softball' />
-            <div className='quote'>
-                <h3>"Great things are done by a series of small things brought together"</h3>
+            
+            {/* <div className="wave-section-bottom"></div> */}
+            {/* <img className='heart-ball' src={HeartBall} alt='love-softball' /> */}
+            <section
+                            className={`hero-section ${heightClass}`}
+                            style={
+                                bgUrl
+                                    ? { backgroundImage: `url(${bgUrl2})`, backgroundSize: 'cover', backgroundPosition: 'center' }
+                                    : undefined
+                            }
+                        >
+                            {overlay && <div className="hero-overlay" />}
+
+                            <div className={`hero-inner ${textAlignClass}`}>
+                                <h1 className="hero-title"></h1>
+                                <h3>"Great things are done by a series of small things brought together"</h3>
                 <span id='contact-id'>- Vincent van Gogh -</span>
-            </div>
+                            </div>
+                        </section>
+            
 
         </div>
     );

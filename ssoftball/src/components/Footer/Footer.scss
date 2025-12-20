@@ -13,6 +13,14 @@ import twitterIcon from '../../images/social/twitter.png'; */
     justify-self: center;
     justify-content: center;
     gap:5vw;
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 15px;;
+          
+}
+.footer-backOverlay{
+    --tw-backdrop-blur: blur(3px);
+  backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 
 }
 .Footer .footer-section{
@@ -44,7 +52,8 @@ import twitterIcon from '../../images/social/twitter.png'; */
 }
 .Footer .social-icons{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap:10px;
 }
 .Footer .social-icons .image{
     background-size: contain;
@@ -113,11 +122,31 @@ import twitterIcon from '../../images/social/twitter.png'; */
 .copyright{
     font-size: .8rem;
 }
+.footer-small{
+    position: absolute;
+    bottom: 5px;
+    left:5px;
+    color: white !important;
+
+}
+.footer-small a{
+color: white !important;
+}
 .footerLogo img{
         aspect-ratio: 1;
         width: 200px;
     }
 @media (max-width: $phone){
+    .footerLogo{
+        justify-content: center;
+    }
+    .Footer{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 10px;
+        padding-top: 25px;
+        padding-bottom: 15px;
+    }
     .Footer .footer-section{
         margin: 0 auto;
         .info{
@@ -128,7 +157,8 @@ import twitterIcon from '../../images/social/twitter.png'; */
         width: 100%;
         .sub-container{
             width:100%;
-            padding: 0 7px;
+            padding: 0 35px;
+            text-align: center;
         }
     }
     .Footer .social-icons .image{

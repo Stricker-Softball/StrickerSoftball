@@ -1,0 +1,90 @@
+.share-section {
+  /* background class is applied via prop (backgroundClass) */
+  padding: 3rem 0;
+}
+
+.share-inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 56rem; /* approx Tailwind max-w-4xl */
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.share-header {
+  text-align: center;
+}
+
+.share-title {
+  font-weight: 800;
+  font-size: 1.1rem; /* text-4xl */
+  margin: 0 0 8px;
+}
+
+@media (min-width: 768px) {
+  .share-title {
+    font-size: 1.1rem; /* md:text-5xl */
+  }
+}
+
+.share-subtitle {
+  margin-top: 0.75rem;
+  color: var(--muted, #6b7280);
+}
+
+.share-grid {
+  display: grid;
+  gap: 0.5rem; /* gap-2 */
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .share-grid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+.share-card {
+  // padding: 1.5rem; /* p-6 */
+}
+
+@media (min-width: 640px) {
+  .share-card {
+    // padding: 2rem; /* sm:p-8 */
+  }
+}
+
+.share-qr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  overflow:hidden;
+}
+.share-qr canvas{
+  border-radius: 15px;
+}
+
+.share-url {
+  margin-top: 1rem; /* mt-4 */
+  font-size: 0.875rem; /* text-sm */
+  opacity: 0.8;
+  overflow-wrap: anywhere;
+}
+
+.share-actions-wrap {
+  /* keeps vertical spacing similar to space-y-4 */
+}
+
+.share-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem; /* gap-3 */
+}
+
+.share-card--actions .button-main{
+  font-size: 1rem;
+  padding:8px 16px;
+  border: 1px solid white;
+}

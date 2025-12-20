@@ -46,7 +46,7 @@ export function Products({ id, title, items }) {
                   {f.body ? <p className={`product-body `}>{f.body}</p> : null}
                   <div className="mt-6">
                     {f.link ? (
-                      <a href={f.link} className={`product-link button-main`}>
+                      <a href={f.link} target="_blank" rel="noreferrer" className={`product-link button-main`}>
                         {f.linkText || 'Learn more'}
                         <span aria-hidden>↗</span>
                       </a>

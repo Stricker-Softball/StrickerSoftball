@@ -2,6 +2,9 @@ import React from 'react';
 import './Footer.scss';
 import ssLogo from '../../images/ssLogo.png';
 
+import Share from '../Share/Share.js';
+import AdminLoginBtn from '../AdminLogin/AdminLoginBtn.js';
+
 function Footer(props) {
 
     function handleLinkClick(link) {
@@ -56,7 +59,13 @@ function Footer(props) {
                     </div>
                 </div>
             </div>
-
+            <Share />
+            <small className='footer-small'>
+                Website created by <a href="https://strickerdigital.com" target="_blank" rel="noopener">
+                Stricker Digital
+                </a>
+            </small>
+            <AdminLoginBtn {...props} />
         </div>
     );
 }

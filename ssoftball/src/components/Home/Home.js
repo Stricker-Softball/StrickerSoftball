@@ -62,7 +62,14 @@ function Home(props) {
                 </div>
             </div>
             <ImgList {...props} />
-            <div className='whole-section-half'>
+            <div className="wave-section-top"></div>
+            <div className="gradient-bg wave-section">
+                <div className=" top-wave" aria-hidden>
+                    <svg viewBox="0 0 1440 140" className="" preserveAspectRatio="none">
+                    <path d="M0,80 C240,140 480,0 720,60 C960,120 1200,20 1440,80 L1440,140 L0,140 Z" />
+                    </svg>
+                </div>
+            <div className='whole-section-half '>
                 <div className='half-section'>
                     <div className='images' >
                         <img src={EqupmentPile} alt='equipment-pile' />
@@ -70,7 +77,7 @@ function Home(props) {
                     </div>
                 </div>
                 <div className='half-section'>
-                    <h3>Who we are</h3>
+                    <h3 className='gradient-text featured-title'>Who we are</h3>
                     <p className='science-paragraph'>
                     Softball Science was created by two women with a long, deep rooted history in the world of softball. 
                     We have used our combined expertise, that includes over 30 years of coaching experience along with
@@ -81,6 +88,7 @@ function Home(props) {
             </div>
             <div className='whole-section-half'>
                 <div className='half-section'>
+                    <h3 className='gradient-text featured-title'>Where you come in</h3>
                     <p className='science-paragraph'> All we need from you, 
                     is to bring the hard work and we will teach your body to supply the power! Our vision is to help 
                     guide softball players to believe in themselves and support them in every aspect of the game, 
@@ -94,6 +102,13 @@ function Home(props) {
                     </div>
                 </div>
             </div>
+            <div className="bottom-wave" aria-hidden>
+                <svg viewBox="0 0 1440 140" className="" preserveAspectRatio="none">
+                <path d="M0,80 C240,140 480,0 720,60 C960,120 1200,20 1440,80 L1440,140 L0,140 Z"  />
+                </svg>
+            </div>
+            </div>
+            <div className="wave-section-bottom"></div>
             <Products />
              <Partners />
         </div>

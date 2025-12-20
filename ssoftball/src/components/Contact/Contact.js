@@ -1,23 +1,12 @@
-import React from 'react';
 import './Contact.scss';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLocationDot, faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
-import { useState } from 'react';
-// import './Footer.scss';
-//630 3361553
-//sftbllcoach@gmail.com
-import Modal from '../AdminLogin/AdminModal.js';
+import {About} from '../About/About.js';
 
 
 function Contact(props) {
 
-    const [modalOn, setModalOn]= useState(false)
-    function setShowModal(){
-        let hasLoggedSession = sessionStorage.getItem("hasLoggedIn");
-        if(hasLoggedSession && hasLoggedSession === "True"){
-            buttonPress('/admin/events/edit')
-        }
-        setModalOn(!modalOn)
-    }
 
     function myFunction() {
         var copyText = document.getElementById("mailInput");
@@ -35,11 +24,6 @@ function Contact(props) {
         var tooltip = document.getElementById("myTooltip");
         tooltip.innerHTML = "Copy to clipboard";
     }
-    function buttonPress(link) {
-        window.scrollTo(0, 0)
-        props.history.push(link)
-    }
-
     function handleLinkClick(link) {
         window.scrollTo(0,0)
         window.open(link, "_blank");
@@ -48,9 +32,10 @@ function Contact(props) {
     return (<>
         <div className="Contact" >
             <div className='contact-container bg-gradient-1 ' id='contact'>
-                <h2>Contact</h2>
+                <h2>Contact Us</h2>
                 <div className='contact-section'>
                     <div className='contact-info'>
+                        <FontAwesomeIcon icon={faEnvelope} className="contact-icon"/>
                         {/* <p className='label'>Send an email:</p> */}
                         <input type="text" className='data' id='mailInput' value='sftbllcoach@gmail.com' readOnly={true} />
                         <div className='mail-div'>
@@ -70,12 +55,18 @@ function Contact(props) {
 
                     </div>
                     <div className='contact-info'>
+                        <FontAwesomeIcon icon={faPhone} className="contact-icon"/>
                         {/* <p className='label'>Call or Text:</p> */}
                         <input type="text" className='data' value='630-336-1553' readOnly={true} />
                     </div>
+                    <div className='contact-info'>
+                        <FontAwesomeIcon icon={faLocationDot} className="contact-icon"/>
+                        {/* <p className='label'>Call or Text:</p> */}
+                        <input type="text" className='data' value='303 N. 4th Street St. Charles' readOnly={true} />
+                    </div>
                     
                 </div>
-                <h2 style={{marginBottom:'20px'}}>Follow us</h2>
+                <h2 style={{marginBottom:'20px'}}>Follow or DM</h2>
                 <div className='social-icons'>
                             <div className='image facebook' 
                             onClick={() => handleLinkClick('https://www.facebook.com/sftbllcoach/')}>
@@ -91,10 +82,7 @@ function Contact(props) {
             </div>
             
         </div>
-        <div id="adminButtonSection" onClick={() => setShowModal()}>
-                Admin Log in
-            </div>
-            <Modal {...props} showModal={modalOn} setShowModal={setShowModal}/>
+        <About {...props} />
             </>
     );
 }
