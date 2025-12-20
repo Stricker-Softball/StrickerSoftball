@@ -81,9 +81,6 @@
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
 }
-.Navbar .Navbar-items .bar-nav-current{
-    // background: var(--main-lightyellow);
-}
 .Navbar .Navbar-items span{
     border-bottom: 3px solid transparent;
     padding-bottom: 4px;
@@ -102,9 +99,6 @@
 .Navbar .Navbar-items .events span::selection{
     color: none;
     background: none;
-}
-.bar-nav-item{
-    // border-radius: 30px;
 }
 // Tablet styles
 // ===============/

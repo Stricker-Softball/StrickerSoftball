@@ -44,15 +44,6 @@
   }
 }
 
-.share-card {
-  // padding: 1.5rem; /* p-6 */
-}
-
-@media (min-width: 640px) {
-  .share-card {
-    // padding: 2rem; /* sm:p-8 */
-  }
-}
 
 .share-qr {
   display: flex;
@@ -72,9 +63,6 @@
   overflow-wrap: anywhere;
 }
 
-.share-actions-wrap {
-  /* keeps vertical spacing similar to space-y-4 */
-}
 
 .share-actions {
   display: flex;
