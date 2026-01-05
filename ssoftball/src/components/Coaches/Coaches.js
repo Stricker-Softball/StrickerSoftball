@@ -131,6 +131,7 @@ function Coaches(props) {
                                                     role="img"
                                                     aria-label={`${coach.first_name} ${index}`}
                                                     style={{ backgroundImage: `url(${image})` }}
+                                                    onClick={() => handlePopup(coach)}
                                                 />
                                             </div>
                                         )

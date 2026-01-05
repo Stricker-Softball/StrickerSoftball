@@ -4,13 +4,15 @@ import { useState } from 'react';
 
 
 function AdminScreen(props) {
-    // console.log('cmodal',props.preill)
+    console.log('cmodal',props.preill)
     // return <></>
     let [helpOpen, setHelp] = useState(false);
+    // Defensive defaults when props.preFill may be undefined
+    const safePreFill = props.preFill || { description: '', buttons: [{ name: '', link: '' }], id: -1 };
     let [inputObj, setInput] = useState({
-        description:props.preFill.description, 
-        buttons:[{link:props.preFill.buttons[0].link,name:props.preFill.buttons[0].name}],
-        id:props.preFill.id
+        description: safePreFill.description ?? '',
+        buttons: [{ link: safePreFill.buttons?.[0]?.link ?? '', name: safePreFill.buttons?.[0]?.name ?? '' }],
+        id: safePreFill.id ?? -1
     })
 
     // no-op url checker (kept for reference)
@@ -24,7 +26,14 @@ function AdminScreen(props) {
         props.setShowModal()
     }
     // help toggle removed (not used)
-    if(inputObj.id !== props.preFill.id) setInput(props.preFill)
+    if(props.preFill && inputObj.id !== props.preFill.id) {
+        // map incoming preFill into the same safe shape we use for state
+        setInput({
+            description: props.preFill.description ?? '',
+            buttons: [{ link: props.preFill.buttons?.[0]?.link ?? '', name: props.preFill.buttons?.[0]?.name ?? '' }],
+            id: props.preFill.id ?? -1
+        });
+    }
     // console.log(inputObj)
     return (    
             <div className='modal-section clinics-modal'>
@@ -40,11 +49,11 @@ function AdminScreen(props) {
                     </div>
                     <div className="formGroup">
                         <label>Button Label</label>
-                        <input defaultValue={inputObj.buttons[0].name}  name="name" data-name="name" />
+                        <input defaultValue={inputObj.buttons?.[0]?.name ?? ''}  name="name" data-name="name" />
                     </div>
                     <div className="formGroup">
                         <label>Button Link</label>
-                        <input defaultValue={inputObj.buttons[0].link}  name="link" data-name="link" />
+                        <input defaultValue={inputObj.buttons?.[0]?.link ?? ''}  name="link" data-name="link" />
                     </div>
                     
                     <div className="modal-footer">

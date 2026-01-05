@@ -41,14 +41,18 @@ function AdminScreen(props) {
         })
     }
     async function submitAllSectionsData(e){
-        document.getElementById('SaveScreen').classList.add('show')
+        const saveEl = document.getElementById('SaveScreen');
+        if (saveEl) saveEl.classList.add('show')
+
         e.preventDefault()
         let changeForm = e.target;
         let changeId = Number(e.target.dataset.id)
+
        
         // Set find the data in our lists and change them
         let changedObj = {}
         let formData = new FormData(changeForm)
+
         
         let newSections = {...props.allSections}
         let newList = newSections[selectedTab]
@@ -81,7 +85,7 @@ function AdminScreen(props) {
                 }
             }
         }else{
-            changedObj = {buttons:[{}]}
+            changedObj = {id:changedObj.id?changedObj.id:-1,buttons:[{}]}
             for (const pair of formData.entries()) {
                     if(pair[0] === 'name' || pair[0] === 'link'){
                     changedObj['buttons'][0][pair[0]] = pair[1]
@@ -96,7 +100,23 @@ function AdminScreen(props) {
             let copiedArr = [...newSections[selectedTab]]
             newSections[selectedTab] = [{...changedObj}, ...copiedArr]
         }else{
-            newSections[selectedTab][changeIndex] = {...changedObj}
+            // Find the first occurrence of the item with this id and update it.
+            const list = newSections[selectedTab] || [];
+            const firstIndex = list.findIndex(obj => obj && obj.id === changedObj.id);
+            if (firstIndex === -1) {
+                // Fallback: not found, append to the end
+                list.push({...changedObj});
+                newSections[selectedTab] = list;
+            } else {
+                // Replace the first occurrence
+                list[firstIndex] = {...changedObj};
+                // Remove any duplicate items with the same id after the first occurrence
+                const cleaned = [
+                    ...list.slice(0, firstIndex + 1),
+                    ...list.slice(firstIndex + 1).filter(item => item.id !== changedObj.id),
+                ];
+                newSections[selectedTab] = cleaned;
+            }
         }
         setShowModal()
         props.setData(newSections)
@@ -123,6 +143,7 @@ function AdminScreen(props) {
 
     function handleEditClick(data){
         setPreFill(data)
+        console.log(preFill)
         setModalOn(!modalOn)
     }
     function handleAdminTabClick(e){

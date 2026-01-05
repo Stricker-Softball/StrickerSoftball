@@ -9,6 +9,7 @@ function AdminScreen(props) {
         for (const pair of formData.entries()) {
             if(pair[0] === 'password') {
                 if(pair[1] === defaultPassword){
+                    props.setShowModal()
                     sessionStorage.setItem("hasLoggedIn", 'True')
                     buttonPress('/admin/events/edit')
                 }else{
