@@ -142,8 +142,8 @@ function AdminScreen(props) {
 
 
     function handleEditClick(data){
+        setPreFill({url:'',file:'',name:'',id:-1})
         setPreFill(data)
-        console.log(preFill)
         setModalOn(!modalOn)
     }
     function handleAdminTabClick(e){
@@ -163,7 +163,6 @@ function AdminScreen(props) {
                 <h6>Choose a list or section to Edit</h6>
                 <div className="edit-tabs">
                 {displayTabList.map((key) => {
-                            console.log(key)
                             let tabName = key.replace(/([A-Z])/g, ' $1').trim()
                             if(tabName === 'Clinics') tabName = "Classes PDfs & Images"
                             if(tabName === 'Class Registration') tabName = "Registration Buttons"

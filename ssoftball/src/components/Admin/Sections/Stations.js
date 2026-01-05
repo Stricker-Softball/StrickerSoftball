@@ -29,7 +29,7 @@ function AdminSection(props) {
         {/* <h3>{sectionName}</h3> */}
         <div className="adminCardGroup">
             <button onClick={handleNewCard} className="adminFormButton submitFormButton">Add New PDF</button>
-        {props.cards.map((card, index) => {
+        {(props.cards || []).map((card, index) => {
             // name, url , file
             // console.log(card.id, card)
             return (

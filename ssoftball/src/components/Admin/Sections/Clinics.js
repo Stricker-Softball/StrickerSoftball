@@ -13,7 +13,7 @@ function setImgThumb(file){
 let sectionName = "Clinics"
 function AdminSection(props) {
    let className = "edit-section-body"
-   if(props.tabName.includes(sectionName)){
+   if(props.tabName && props.tabName.includes(sectionName)){
     className += ' section-active';
    }
     function cardDelete(e, element){
@@ -34,10 +34,9 @@ function AdminSection(props) {
         {/* <h3>{sectionName}</h3> */}
         <div className="adminCardGroup">
             <button onClick={handleNewCard} className="adminFormButton submitFormButton">Add New PDF</button>
-        {props.cards.map((card, index) => {
+        {(props.cards || []).map((card, index) => {
             // name, url , file
             let fileImg = setImgThumb(card.file)
-            console.log(fileImg)
             return (
                 <div className="adminCard" key={index}>
                     <div className="formGroup preveiewGroup">
