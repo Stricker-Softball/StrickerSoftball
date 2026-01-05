@@ -36,7 +36,6 @@ function AdminSection(props) {
             <button onClick={handleNewCard} className="adminFormButton submitFormButton">Add New PDF</button>
         {(props.cards || []).map((card, index) => {
             // name, url , file
-            let fileImg = setImgThumb(card.file)
             return (
                 <div className="adminCard" key={index}>
                     <div className="formGroup preveiewGroup">
